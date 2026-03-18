@@ -1,0 +1,78 @@
+{
+  "ja": {
+    "titleHighlight": "N",
+    "titleRest": "EWS RELEASE",
+    "subTitle": "最新情報",
+    "items": [
+      {
+        "type": "NEWS",
+        "text": "『恋と起業とコファウンダー』のSteamストアページを公開しました。",
+        "date": "2026.03.09"
+      },
+      {
+        "type": "NEWS",
+        "text": "StarQ Soft公式サイトを公開しました。",
+        "date": "2026.03.09"
+      },
+      {
+        "type": "NEWS",
+        "text": "StarQ Softの公式X（旧Twitter）アカウントを開設しました。",
+        "date": "2026.03.07"
+      },
+      {
+        "type": "UPDATE",
+        "text": "『恋と起業とコファウンダー』登場キャラクター設定確定！",
+        "date": "2025.06.20"
+      },
+      {
+        "type": "UPDATE",
+        "text": "デビュー作『恋と起業とコファウンダー』制作決定！",
+        "date": "2025.06.18"
+      }
+    ]
+  },
+  "en": {
+    "titleHighlight": "N",
+    "titleRest": "EWS RELEASE",
+    "subTitle": "Announcements",
+    "items": [
+      {
+        "type": "NEWS",
+        "text": "Steam store page for \"Love, Startup & Co-founder\" is now live.",
+        "date": "2026.03.09"
+      },
+      {
+        "type": "EVENT",
+        "text": "Debut title \"Love, Startup & Co-founder\" announced!",
+        "date": "2026.03.08"
+      },
+      {
+        "type": "NEWS",
+        "text": "StarQ Soft official X (Twitter) account is now open.",
+        "date": "2026.03.07"
+      }
+    ]
+  },
+  "zh": {
+    "titleHighlight": "N",
+    "titleRest": "EWS RELEASE",
+    "subTitle": "最新通知",
+    "items": [
+      {
+        "type": "NEWS",
+        "text": "《恋爱，创业，合伙人》Steam商店页面现已公开！",
+        "date": "2026.03.09"
+      },
+      {
+        "type": "EVENT",
+        "text": "首部新作《恋爱，创业，合伙人》制作决定！",
+        "date": "2026.03.08"
+      },
+      {
+        "type": "NEWS",
+        "text": "StarQ Soft官方X (Twitter) 账号正式公开。",
+        "date": "2026.03.07"
+      }
+    ]
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "ja": {
+    "nav": {
+      "products": "製品一覧",
+      "shop": "オンラインショップ",
+      "support": "サポート",
+      "blog": "スタッフブログ",
+      "events": "イベント情報",
+      "language": "Language ▼"
+    },
+    "hero": {
+      "dateLabel": "開催日",
+      "dateValue": "2026年7月12日(日)",
+      "venueLabel": "会場",
+      "venueValue": "Stellar Ball (品川)",
+      "btnPrimary": "ウィッシュリストに追加",
+      "preorder": "Steamストアページ公開中！"
+    },
+    "product": {
+      "titleHighlight": "P",
+      "titleRest": "roduct",
+      "subTitle": "ゲーム一覧",
+      "btn": "製品ページはこちら",
+      "banners": [
+        {
+          "name": "恋と起業とコファウンダー",
+          "image": "/public/lsc.png",
+          "upcoming": false
+        },
+        {
+          "name": "监修中...",
+          "image": "/public/game2.png",
+          "upcoming": true
+        }
+      ]
+    },
+    "about": {
+      "aboutTitle": "会社概要",
+      "aboutText": "StarQ Softは、多様な二次元ギャルゲースタイルのビジュアルノベルを制作する独立系ゲームスタジオです。忘れられない物語とキャラクターに命を吹き込みます。"
+    },
+    "contact": {
+      "contactTitle": "お問い合わせ",
+      "contactText": "あらゆる種類の協力や交流の機会を歓迎します。ビジネスパートナーシップ、メディアインタビューやコンテンツプロモーションなど、志を同じくするパートナーとのつながりを楽しみにしています。ご感想ご要望などお気軽にお送りください。以下の方法でお気軽にお問い合わせください。できるだけ早くご返信いたします。",
+      "title": "メッセージを送る",
+      "subtitle": "以下のフォームにご記入のうえ、お問い合わせください。",
+      "name": "名前",
+      "email": "メールアドレス",
+      "message": "メッセージ",
+      "agreePrefix": "私は",
+      "terms": "利用規約",
+      "and": "および",
+      "privacy": "プライバシーポリシー",
+      "submit": "送信",
+      "agreeError": "利用規約とプライバシーポリシーに同意する必要があります。",
+      "submitting": "送信中...",
+      "success": "メッセージを送信しました。",
+      "fail": "送信に失敗しました。もう一度お試しください。",
+      "error": "送信中にエラーが発生しました。もう一度お試しください。"
+    },
+    "footer": {
+      "links": [
+        "会社概要",
+        "プライバシーポリシー",
+        "お問い合わせ"
+      ],
+      "copyright": "© 2026 StarQ Soft LLC. All rights reserved."
+    }
+  },
+  "en": {
+    "nav": {
+      "products": "Products",
+      "shop": "Online Shop",
+      "support": "Support",
+      "blog": "Staff Blog",
+      "events": "Events",
+      "language": "Language ▼"
+    },
+    "hero": {
+      "dateLabel": "Date",
+      "dateValue": "Sun, July 12, 2026",
+      "venueLabel": "Venue",
+      "venueValue": "Stellar Ball (Shinagawa)",
+      "btnPrimary": "Add to Wishlist",
+      "preorder": "Steam Store is Now Open!"
+    },
+    "product": {
+      "titleHighlight": "P",
+      "titleRest": "roduct",
+      "subTitle": "Latest Game Info",
+      "btn": "View Product Page",
+      "banners": [
+        {
+          "name": "Love, Startup & Co-founder",
+          "image": "/public/lsc.png",
+          "upcoming": false
+        },
+        {
+          "name": "Upcoming...",
+          "image": "/public/game2.png",
+          "upcoming": true
+        }
+      ]
+    },
+    "about": {
+      "aboutTitle": "About Us",
+      "aboutText": "We are an independent game studio dedicated to creating a diverse lineup of immersive anime galgames. Our goal is to bring unforgettable stories and characters to life across our titles."
+    },
+    "contact": {
+      "contactTitle": "Contact Us",
+      "contactText": "We welcome all kinds of collaboration and communication opportunities. Whether it's business partnerships, media interviews or content promotion, we look forward to connecting with like-minded partners. We welcome your feedback or requests as well! Please reach out to us through the following methods, and we will respond as soon as possible.",
+      "title": "Send Us a Message",
+      "subtitle": "Please fill in the form below to get in touch with us.",
+      "name": "Your name",
+      "email": "Email address",
+      "message": "Message",
+      "agreePrefix": "I've read and agree with",
+      "terms": "Terms of Service",
+      "and": "and",
+      "privacy": "Privacy Policy",
+      "submit": "Submit",
+      "agreeError": "You must agree to the Terms of Service and Privacy Policy.",
+      "submitting": "Submitting...",
+      "success": "Message sent successfully!",
+      "fail": "Failed to send message. Please try again.",
+      "error": "Error submitting form. Please try again."
+    },
+    "footer": {
+      "links": [
+        "Company Profile",
+        "Privacy Policy",
+        "Contact"
+      ],
+      "copyright": "© 2026 StarQ Soft LLC. All rights reserved."
+    }
+  },
+  "zh": {
+    "nav": {
+      "products": "产品一览",
+      "shop": "在线商店",
+      "support": "支持",
+      "blog": "官方博客",
+      "events": "活动信息",
+      "language": "Language ▼"
+    },
+    "hero": {
+      "dateLabel": "举办日",
+      "dateValue": "2026年7月12日(周日)",
+      "venueLabel": "会场",
+      "venueValue": "Stellar Ball (品川)",
+      "btnPrimary": "加入愿望单",
+      "preorder": "Steam商店现已公开！"
+    },
+    "product": {
+      "titleHighlight": "P",
+      "titleRest": "roduct",
+      "subTitle": "最新游戏情报",
+      "btn": "查看产品页面",
+      "banners": [
+        {
+          "name": "恋爱，创业，合伙人",
+          "image": "/public/lsc.png",
+          "upcoming": false
+        },
+        {
+          "name": "敬请期待...",
+          "image": "/public/game2.png",
+          "upcoming": true
+        }
+      ]
+    },
+    "about": {
+      "aboutTitle": "关于我们",
+      "aboutText": "创立于2026年，StarQ Soft是一家具有全球视野的的独立游戏品牌，致力于开发用深刻故事打动人心的二次元Galgame。我们的目标是通过作品为玩家带来难忘的故事与角色体验。"
+    },
+    "contact": {
+      "contactTitle": "联系我们",
+      "contactText": "欢迎各类合作与交流机会！无论是业务合作、媒体采访或内容推广，我们都期待与志同道合的伙伴建立联系。也欢迎随时向我们发送您的意见和建议，请通过以下方式与我们沟通，我们将尽快回复。",
+      "title": "给我们留言",
+      "subtitle": "请填写下面的表单与我们取得联系。",
+      "name": "名字",
+      "email": "邮箱地址",
+      "message": "留言内容",
+      "agreePrefix": "我已阅读并同意",
+      "terms": "服务条款",
+      "and": "和",
+      "privacy": "隐私政策",
+      "submit": "提交",
+      "agreeError": "您必须同意服务条款和隐私政策。",
+      "submitting": "正在提交...",
+      "success": "消息发送成功！",
+      "fail": "发送失败，请稍后重试。",
+      "error": "提交时发生错误，请稍后重试。"
+    },
+    "footer": {
+      "links": [
+        "公司简介",
+        "隐私政策",
+        "联系我们"
+      ],
+      "copyright": "© 2026 StarQ Soft LLC. 版权所有 侵权必究。"
+    }
+  }
+}
