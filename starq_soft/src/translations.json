@@ -1,5 +1,5 @@
 {
-  "ja": {
+  "ja-jp": {
     "nav": {
       "products": "製品一覧",
       "shop": "オンラインショップ",
@@ -25,12 +25,14 @@
         {
           "name": "恋と起業とコファウンダー",
           "image": "/public/lsc.png",
-          "upcoming": false
+          "upcoming": false,
+          "link": "/love-startup-cofounder"
         },
         {
           "name": "监修中...",
           "image": "/public/game2.png",
-          "upcoming": true
+          "upcoming": true,
+          "link": "/upcoming"
         }
       ]
     },
@@ -66,7 +68,7 @@
       "copyright": "© 2026 StarQ Soft LLC. All rights reserved."
     }
   },
-  "en": {
+  "en-us": {
     "nav": {
       "products": "Products",
       "shop": "Online Shop",
@@ -92,12 +94,14 @@
         {
           "name": "Love, Startup & Co-founder",
           "image": "/public/lsc.png",
-          "upcoming": false
+          "upcoming": false,
+          "link": "/love-startup-cofounder"
         },
         {
           "name": "Upcoming...",
           "image": "/public/game2.png",
-          "upcoming": true
+          "upcoming": true,
+          "link": "/upcoming"
         }
       ]
     },
@@ -133,9 +137,9 @@
       "copyright": "© 2026 StarQ Soft LLC. All rights reserved."
     }
   },
-  "zh": {
+  "zh-cn": {
     "nav": {
-      "products": "产品一览",
+      "products": "作品一览",
       "shop": "在线商店",
       "support": "支持",
       "blog": "官方博客",
@@ -153,24 +157,26 @@
     "product": {
       "titleHighlight": "P",
       "titleRest": "roduct",
-      "subTitle": "最新游戏情报",
+      "subTitle": "作品一览",
       "btn": "查看产品页面",
       "banners": [
         {
-          "name": "恋爱，创业，合伙人",
+          "name": "恋爱、创业、合伙人",
           "image": "/public/lsc.png",
-          "upcoming": false
+          "upcoming": false,
+          "link": "/love-startup-cofounder"
         },
         {
           "name": "敬请期待...",
           "image": "/public/game2.png",
-          "upcoming": true
+          "upcoming": true,
+          "link": "/upcoming"
         }
       ]
     },
     "about": {
       "aboutTitle": "关于我们",
-      "aboutText": "创立于2026年，StarQ Soft是一家具有全球视野的的独立游戏品牌，致力于开发用深刻故事打动人心的二次元Galgame。我们的目标是通过作品为玩家带来难忘的故事与角色体验。"
+      "aboutText": "StarQ Soft于2026年在美国加州创立，致力于打造一个具有全球视野的的独立游戏品牌，目标是创作深刻叙事的二次元Galgame打动人心，通过作品为玩家带来难忘的故事与人生体验。"
     },
     "contact": {
       "contactTitle": "联系我们",

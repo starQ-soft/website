@@ -60,7 +60,7 @@ export const NavLinks = styled.div`
   }
 
   a:hover {
-    color: #ec4899;
+    color: #FF5C8A;
   }
 `;
 
@@ -79,7 +79,7 @@ export const DropdownButton = styled.button`
   color: inherit;
   
   &:hover {
-    color: #ec4899;
+    color: #FF5C8A;
   }
 `;
 
@@ -113,11 +113,12 @@ export const NavActions = styled.div`
   gap: 1rem;
 `;
 
-export const Hero = styled.header`
+export const Hero = styled.header<{ $bgImage?: string }>`
   position: relative;
   width: 100%;
   height: 450px;
   background: linear-gradient(to right, #1e3a8a, #6b21a8, #831843);
+  background-image: ${({ $bgImage }) => $bgImage ? `url(${$bgImage})` : 'none'};
   display: flex;
   align-items: center;
   padding: 0 5vw;
@@ -141,7 +142,7 @@ export const EventInfoRow = styled.div`
 `;
 
 export const Badge = styled.span`
-  background-color: #ec4899;
+  background-color: #FF5C8A;
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
   font-weight: bold;
@@ -168,7 +169,7 @@ export const ButtonGroup = styled.div`
 `;
 
 export const PrimaryButton = styled.button`
-  background-color: #ec4899;
+  background: linear-gradient(275deg, #e97aa3 0%, #e97292 50%, #f24677 100%);
   color: white;
   font-weight: bold;
   padding: 0.75rem 1rem;
@@ -181,8 +182,35 @@ export const PrimaryButton = styled.button`
   margin: 0 auto;
 
   &:hover {
-    background-color: #f472b6;
-    transform: scale(1.05);
+    filter: brightness(1.2);
+    transform: scale(1.01);
+  }
+`;
+
+export const ScrollableContainer = styled.section`
+  max-height: 500px;           /* Set your desired height */
+  overflow-y: auto;            /* Enable vertical scrolling */
+  overflow-x: hidden;          /* Prevent horizontal scroll */
+  padding: 1rem 3rem;          /* Space for the scrollbar */
+  border: 1px solid #eee;      /* Optional: visual boundary */
+  border-radius: 8px;
+
+  /* Custom Scrollbar Styling (Optional) */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+
+  /* Keeps the header at the top while scrolling */
+  & > :first-child {
+    position: sticky;
+    top: 0;
+    background-color: white;   /* Match your background color */
+    z-index: 10;
+    padding-bottom: 10px;
   }
 `;
 
@@ -194,10 +222,10 @@ export const SteamIcon = styled.img`
 `;
 
 export const SecondaryButton = styled(PrimaryButton)`
-  background-color: #f97316;
+  background-color: #4A4244;
 
   &:hover {
-    background-color: #fb923c;
+    background-color: #75686b;
   }
 `;
 
@@ -226,7 +254,7 @@ export const SectionHeader = styled.h2`
 `;
 
 export const Highlight = styled.span`
-  color: #ec4899;
+  color: #FF5C8A;
 `;
 
 export const SubHeader = styled.span`
@@ -268,10 +296,11 @@ export const ProductHeaderArea = styled.div`
   justify-content: space-between;
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;
+  color: #db2777;
 `;
 
 export const SmallButton = styled.button`
-  background-color: #ec4899;
+  background-color: #FF5C8A;
   color: white;
   font-size: 0.75rem;
   font-weight: bold;
@@ -343,23 +372,41 @@ export const ProductBanner = styled.div<ProductBannerProps>`
   }
 
   &:hover {
-    box-shadow: ${({ $upcoming }) => $upcoming ? 'none': '0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)'};
-    transform: ${({ $upcoming }) => $upcoming ? 'none': 'translateY(-4px)' };
+    box-shadow: ${({ $upcoming }) => $upcoming ? 'none' : '0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)'};
+    transform: ${({ $upcoming }) => $upcoming ? 'none' : 'translateY(-4px)'};
   }
 `;
 
 
 export const Footer = styled.footer`
   width: 100vw;
-  background: linear-gradient(to bottom, #fbcfe8, #f9a8d4);
-  padding: 4rem 0;
-  text-align: center;
-  border-top: 1px solid #f9a8d4;
+   background: #e87294 ;
+`;
+
+export const FooterTop = styled.footer`
+  width: 100vw;
+  height: 1rem;
+  background: repeating-linear-gradient(
+    -45deg, 
+    #f49bb5, 
+    #f49bb5 15px, 
+    #f8afca 15px, 
+    #f8afca 35px
+  );
 `;
 
 export const FooterContent = styled.div`
   width: 100%;
   padding: 0 5vw; 
+      padding: 4rem 0;
+  text-align: center;
+  padding: 4rem 0;
+  margin-top: auto;
+  opacity: 0.9;
+
+  @media (max-width: 640px) {
+    padding: 40px 15px 15px;
+  }
 `;
 
 export const AboutBox = styled.div`
@@ -428,7 +475,7 @@ export const Input = styled.input`
 
   &:focus {
     outline: none;
-    border-color: #ec4899;
+    border-color: #FF5C8A;
   }
 `;
 
@@ -442,7 +489,7 @@ export const Textarea = styled.textarea`
 
   &:focus {
     outline: none;
-    border-color: #ec4899;
+    border-color: #FF5C8A;
   }
 `;
 
@@ -457,13 +504,13 @@ export const CheckboxContainer = styled.label`
   }
 
   a {
-    color: #ec4899;
+    color: #FF5C8A;
     text-decoration: underline;
   }
 `;
 
 export const SubmitButton = styled.button`
-  background-color: #ec4899;
+  background-color: #FF5C8A;
   color: #fff;
   font-weight: 600;
   padding: 12px 24px;
@@ -473,4 +520,58 @@ export const SubmitButton = styled.button`
   &:hover {
     background-color: #ff76bb;
   }
+`;
+
+export const SocialLinksContainer = styled.div`
+  margin: 2rem auto;
+`;
+
+export const SocialLinks = styled.div`
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+
+  @media (max-width: 640px) {
+    justify-content: center;
+  }
+`;
+
+export const SocialLink = styled.a`
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e25b80;
+
+  &:hover {
+    transform: translateY(-3px);
+    color: #fff;
+    background: linear-gradient(275deg, #e97aa3 0%, #e97292 50%, #f24677 100%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #5f4953;
+  }
+`;
+
+export const SocialIcon = styled.i`
+  transition: transform 0.2s ease;
+
+  ${SocialLink}:hover & {
+    transform: scale(1.1);
+  }
+`;
+
+
+export const Copyright = styled.div`
+  margin-top: 2rem;
+  color: #fff;
+  text-align: center;
 `;

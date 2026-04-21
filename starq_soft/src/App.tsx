@@ -3,13 +3,13 @@ import translations from './translations.json';
 import news from './news.json';
 import logoImage from './assets/StarQ_logo.png';
 import steamLogo from './assets/steam-logo.svg';
-import { GlobalStyle, Nav, Logo, NavLinks, DropdownContainer, DropdownButton, DropdownMenu, DropdownItem, NavActions, GlobalContainer, Hero, HeroContent, EventInfoRow, Badge, HeroDate, ButtonGroup, PrimaryButton, PreorderText, SecondaryButton, Main, SectionHeader, SubHeader, NewsRow, TypeBadge, NewsDate, ProductHeaderArea, SmallButton, ProductGrid, ProductBanner, Footer, FooterContent, AboutBox, FooterLinks, SteamIcon, CheckboxContainer, FormContainer, Input, Row, SubmitButton, Subtitle, Textarea, Title } from './styles';
+import { GlobalStyle, Nav, Logo, NavLinks, DropdownContainer, DropdownButton, DropdownMenu, DropdownItem, NavActions, GlobalContainer, Hero, HeroContent, EventInfoRow, Badge, HeroDate, ButtonGroup, PrimaryButton, PreorderText, SecondaryButton, Main, SectionHeader, SubHeader, NewsRow, TypeBadge, NewsDate, ProductHeaderArea, SmallButton, ProductGrid, ProductBanner, Footer, FooterContent, AboutBox, FooterLinks, SteamIcon, CheckboxContainer, FormContainer, Input, Row, SubmitButton, Subtitle, Textarea, Title, SocialLinks, SocialLink, ScrollableContainer, FooterTop, Copyright } from './styles';
 import BackToTop from './components/BackToTop';
-import AppRouter from './router';
+import { socialLinks } from './components/footer/FooterConstants';
 
 const App = () => {
   const [langOpen, setLangOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState('ja');
+  const [currentLang, setCurrentLang] = useState('ja-jp');
 
   // Helper variable to access the current language data cleanly
   const t = translations[currentLang as keyof typeof translations];
@@ -32,7 +32,6 @@ const App = () => {
     setStatus("Submitting...");
 
     try {
-      // 调用后端 API 转发邮件，隐藏邮箱
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -58,7 +57,7 @@ const App = () => {
   };
 
   interface LanguageCode {
-    code: 'ja' | 'en' | 'zh';
+    code: 'ja-jp' | 'en-us' | 'zh-cn';
   }
 
   const handleLanguageChange = (langCode: LanguageCode['code']): void => {
@@ -68,7 +67,6 @@ const App = () => {
 
   return (
     <>
-      {/* <AppRouter /> */}
       <GlobalStyle />
       <Nav>
         <Logo src={logoImage} alt="StarQ Logo" />
@@ -88,17 +86,16 @@ const App = () => {
             </DropdownButton>
             {langOpen && (
               <DropdownMenu>
-                <DropdownItem onClick={() => handleLanguageChange('ja')}>日本語</DropdownItem>
-                <DropdownItem onClick={() => handleLanguageChange('en')}>English</DropdownItem>
-                <DropdownItem onClick={() => handleLanguageChange('zh')}>中文</DropdownItem>
+                <DropdownItem onClick={() => handleLanguageChange('ja-jp')}>日本語</DropdownItem>
+                <DropdownItem onClick={() => handleLanguageChange('en-us')}>English</DropdownItem>
+                <DropdownItem onClick={() => handleLanguageChange('zh-cn')}>简体中文</DropdownItem>
               </DropdownMenu>
             )}
           </DropdownContainer>
         </NavActions>
       </Nav>
-
       <header>
-        <Hero>
+        <Hero $bgImage="public/banner.png">
           <HeroContent>
             {/* <EventInfoRow>
               <Badge>{t.hero.dateLabel}</Badge>
@@ -113,9 +110,8 @@ const App = () => {
         </Hero>
       </header>
 
-
       <GlobalContainer>
-        <Main>
+        <Main><ScrollableContainer>
           <section>
             <ProductHeaderArea>
               <SectionHeader>
@@ -129,11 +125,16 @@ const App = () => {
                 <TypeBadge style={{ backgroundColor: item.type !== 'UPDATE' ? '#d83c6b' : '#f2c45e' }}>
                   {item.type}
                 </TypeBadge>
-                <a href="#"><strong>{item.text}</strong></a>
-                <NewsDate>{item.date}</NewsDate>
+                <span>
+                  {item.link ? <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    <strong>{item.text}</strong>
+                  </a> : <strong>{item.text}</strong>}
+                  <NewsDate>{item.date}</NewsDate>
+                </span>
               </NewsRow>
             ))}
           </section>
+        </ScrollableContainer>
 
           <section>
             <ProductHeaderArea>
@@ -146,9 +147,11 @@ const App = () => {
 
             <ProductGrid>
               {t.product.banners.map((banner, index) => (
-                <ProductBanner key={index} $bgImage={banner.image} $upcoming={banner.upcoming}>
-                  {banner.name}
-                </ProductBanner>
+                <a href={banner.link} key={index} style={{ textDecoration: 'none' }}>
+                  <ProductBanner key={index} $bgImage={banner.image} $upcoming={banner.upcoming} >
+                    {banner.name}
+                  </ProductBanner>
+                </a>
               ))}
             </ProductGrid>
           </section>
@@ -218,16 +221,23 @@ const App = () => {
       </GlobalContainer>
 
       <Footer>
+        <FooterTop />
         <FooterContent>
-          <FooterLinks>
+          {/* <FooterLinks>
             {t.footer.links.map((link, index) => (
               <a href="#" key={index}>{link}</a>
             ))}
-          </FooterLinks>
-
-          <div style={{ fontSize: '0.75rem', color: '#374151', fontWeight: 500 }}>
+          </FooterLinks> */}
+          <SocialLinks>
+            {socialLinks.map((social, index) => (
+              <SocialLink key={index} href={social.href} target="_blank" aria-label={social.label}>
+                {social.icon}
+              </SocialLink>
+            ))}
+          </SocialLinks>
+          <Copyright >
             {t.footer.copyright}
-          </div>
+          </Copyright>
         </FooterContent>
       </Footer>
       <BackToTop />
