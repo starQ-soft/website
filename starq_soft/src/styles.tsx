@@ -380,7 +380,7 @@ export const ProductBanner = styled.div<ProductBannerProps>`
 
 export const Footer = styled.footer`
   width: 100vw;
-   background: #e87294 ;
+   background: #e17392;
 `;
 
 export const FooterTop = styled.footer`

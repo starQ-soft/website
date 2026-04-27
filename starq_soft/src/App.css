@@ -18,6 +18,27 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+@keyframes fall {
+  0%   { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 0.5; }
+  90%  { opacity: 0.5; }
+  100% { transform: translate(-420px, 520px) rotate(40deg); opacity: 0; }
+}
+
+.star-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent;
+}
+
+.star {
+  position: absolute;
+  opacity: 0;
+  animation: fall linear infinite;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

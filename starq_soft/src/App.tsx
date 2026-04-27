@@ -6,6 +6,7 @@ import steamLogo from './assets/steam-logo.svg';
 import { GlobalStyle, Nav, Logo, NavLinks, DropdownContainer, DropdownButton, DropdownMenu, DropdownItem, NavActions, GlobalContainer, Hero, HeroContent, EventInfoRow, Badge, HeroDate, ButtonGroup, PrimaryButton, PreorderText, SecondaryButton, Main, SectionHeader, SubHeader, NewsRow, TypeBadge, NewsDate, ProductHeaderArea, SmallButton, ProductGrid, ProductBanner, Footer, FooterContent, AboutBox, FooterLinks, SteamIcon, CheckboxContainer, FormContainer, Input, Row, SubmitButton, Subtitle, Textarea, Title, SocialLinks, SocialLink, ScrollableContainer, FooterTop, Copyright } from './styles';
 import BackToTop from './components/BackToTop';
 import { socialLinks } from './components/footer/FooterConstants';
+import FallingStars from './components/FallingStars';
 
 const App = () => {
   const [langOpen, setLangOpen] = useState(false);
@@ -67,6 +68,7 @@ const App = () => {
 
   return (
     <>
+      <FallingStars />
       <GlobalStyle />
       <Nav>
         <Logo src={logoImage} alt="StarQ Logo" />
