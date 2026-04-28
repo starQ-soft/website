@@ -6,7 +6,7 @@
       "support": "サポート",
       "blog": "スタッフブログ",
       "events": "イベント情報",
-      "language": "Language ▼"
+      "language": "言語"
     },
     "hero": {
       "dateLabel": "開催日",
@@ -75,7 +75,7 @@
       "support": "Support",
       "blog": "Staff Blog",
       "events": "Events",
-      "language": "Language ▼"
+      "language": "Language"
     },
     "hero": {
       "dateLabel": "Date",
@@ -144,7 +144,7 @@
       "support": "支持",
       "blog": "官方博客",
       "events": "活动信息",
-      "language": "Language ▼"
+      "language": "语言"
     },
     "hero": {
       "dateLabel": "举办日",

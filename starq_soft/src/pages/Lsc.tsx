@@ -102,6 +102,7 @@ const BackgroundDecoration = styled.div`
 `;
 
 const ContentWrapper = styled.div`
+  background-color: #ffffff;
   width: 80vw;
   margin: 0 auto;
   position: relative;

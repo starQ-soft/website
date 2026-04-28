@@ -1,0 +1,13 @@
+.falling-stars-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.falling-star {
+  position: absolute;
+  opacity: 0;
+  will-change: transform, opacity;
+}

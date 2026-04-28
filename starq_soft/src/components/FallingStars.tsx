@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import "./FallingStars.css";
 
 const COLORS = ["#f9d575", "#E3EFC4", "#fbafcb", "#b9e5ff", "#e56c8f", "#957DAD", "#f67280", "#c06c84", "#6c5b7b", "#355c7d"];
 
@@ -42,13 +43,11 @@ function Star({ id }: StarProps) {
     <>
       <style>{keyframes}</style>
       <div
+        className="falling-star"
         style={{
-          position: "absolute",
           top: startY,
           left: `${startX}%`,
           animation: `fall-${id} ${duration}s linear ${delay}s infinite`,
-          opacity: 0,
-          willChange: "transform, opacity",
         }}
       >
         <svg width={size} height={size} viewBox="0 0 24 24">
@@ -63,15 +62,7 @@ export default function FallingStars() {
   const stars = useMemo(() => Array.from({ length: 24 }, (_, i) => i), []);
 
   return (
-    <div
-      style={{
-        position: "fixed",
-        inset: 0,
-        overflow: "hidden",
-        pointerEvents: "none",
-        zIndex: 0,
-      }}
-    >
+    <div className="falling-stars-container">
       {stars.map((id) => (
         <Star key={id} id={id} />
       ))}

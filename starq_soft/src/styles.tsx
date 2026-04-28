@@ -18,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const GlobalContainer = styled.div`
+  background-color: #ffffff;
   @media (min-width: 768px) {
     width: 80vw;
     margin: 0 auto;
@@ -188,14 +189,15 @@ export const PrimaryButton = styled.button`
 `;
 
 export const ScrollableContainer = styled.section`
-  max-height: 500px;           /* Set your desired height */
-  overflow-y: auto;            /* Enable vertical scrolling */
-  overflow-x: hidden;          /* Prevent horizontal scroll */
-  padding: 1rem 3rem;          /* Space for the scrollbar */
-  border: 1px solid #eee;      /* Optional: visual boundary */
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1rem 3rem;
+  border: 1px solid #eee;
   border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
 
-  /* Custom Scrollbar Styling (Optional) */
   &::-webkit-scrollbar {
     width: 6px;
   }
@@ -204,11 +206,9 @@ export const ScrollableContainer = styled.section`
     border-radius: 10px;
   }
 
-  /* Keeps the header at the top while scrolling */
   & > :first-child {
     position: sticky;
     top: 0;
-    background-color: white;   /* Match your background color */
     z-index: 10;
     padding-bottom: 10px;
   }
@@ -281,6 +281,10 @@ export const TypeBadge = styled.span`
   border-radius: 0.25rem;
   font-size: 0.75rem;
   font-weight: bold;
+  width: 80px;
+  text-align: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
 `;
 
 export const NewsDate = styled.span`
@@ -440,10 +444,12 @@ export const FooterLinks = styled.div`
 `;
 
 export const FormContainer = styled.form`
-  max-width: 600px;
+  max-width: 50vw;
   margin: 0 auto;
   padding: 32px;
-  background-color: #f9f9f9;
+  background-color: rgba(240, 240, 240, 0.85);
+  border: 1px solid #eee;
+  backdrop-filter: blur(4px);
   border-radius: 8px;
   font-family: sans-serif;
 `;
@@ -511,6 +517,7 @@ export const CheckboxContainer = styled.label`
 
 export const SubmitButton = styled.button`
   background-color: #FF5C8A;
+  width: 100%;
   color: #fff;
   font-weight: 600;
   padding: 12px 24px;
