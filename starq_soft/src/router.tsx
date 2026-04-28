@@ -40,7 +40,6 @@
 import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import App from "./App"
-import { translations } from "./pages/translations"
 import Lsc from "./pages/Lsc"
 import AIGirlfriend from "./pages/test"
 
@@ -49,7 +48,7 @@ const AppRouter: React.FC = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/love-startup-cofounder" element={<Lsc t={translations['zh-cn']} />} />
+        <Route path="/love-startup-cofounder" element={<Lsc />} />
        {/* <Route path="/love-startup-cofounder" element={< AIGirlfriend />} /> */}
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>

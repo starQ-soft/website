@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import logoImage from '../assets/StarQ_logo.png';
 import styled from 'styled-components';
 import { LoveCofounderCharacter } from './CharacterGallery';
 import { LoveCofounder } from './LoveCofounder';
@@ -7,10 +8,12 @@ import CherryBlossomBackground from './CherryBlossomBackground';
 import TransparentBanner from './TransparentBanner';
 import { LscGlobalStyle } from './LscStyles';
 import BackToTop from '../components/BackToTop';
+import { NavActions, DropdownContainer, DropdownButton, DropdownMenu, DropdownItem, LangButtonContent, Nav, Logo } from '../styles';
 
 const contents = {
   'zh-cn': {
     langName: '简体中文',
+    navLanguage: '语言',
     pvTitle: 'P V',
     introTitle: '游戏简介',
     introText: [
@@ -48,6 +51,7 @@ const contents = {
   },
   'ja-jp': {
     langName: '日本語',
+    navLanguage: '言語',
     pvTitle: 'P V',
     introTitle: 'ゲーム紹介',
     introText: [
@@ -84,6 +88,19 @@ const contents = {
     footerInfo: 'Developer team 最新開発進捗確認'
   }
 };
+
+
+export const LscNav = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;   
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+`;
+
 
 const LscContainer = styled.div`
   min-height: 100vh;
@@ -503,13 +520,55 @@ const ScreenshotImage = styled.img`
   display: block;
 `
 
-const Lsc = ({ t }) => {
+const Lsc = () => {
+  const [currentLang, setCurrentLang] = useState<'zh-cn' | 'ja-jp'>('zh-cn');
+  const [langOpen, setLangOpen] = useState(false);
+
+  const t = contents[currentLang];
+
+  const handleLanguageChange = (lang: 'zh-cn' | 'ja-jp') => {
+    setCurrentLang(lang);
+    setLangOpen(false);
+  };
+
   return (
     <LscContainer>
       <LscGlobalStyle />
+      <LscNav>
+        <a href="/">
+          <Logo src={logoImage} alt="StarQ Logo" />
+        </a>
+        <LangSwitcherContainer>
+          <NavActions>
+            <DropdownContainer>
+              <DropdownButton onClick={() => setLangOpen(!langOpen)}>
+                <LangButtonContent>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M9.5,17c0.6,3.1,1.7,5,2.5,5s1.9-1.9,2.5-5H9.5z M16.6,17c-0.3,1.7-0.8,3.3-1.4,4.5c2.3-0.8,4.3-2.4,5.5-4.5H16.6z M3.3,17c1.2,2.1,3.2,3.7,5.5,4.5c-0.6-1.2-1.1-2.8-1.4-4.5H3.3z M16.9,15h4.7c0.2-0.9,0.4-2,0.4-3s-0.2-2.1-0.5-3h-4.7c0.2,1,0.2,2,0.2,3S17,14,16.9,15z M9.2,15h5.7c0.1-0.9,0.2-1.9,0.2-3S15,9.9,14.9,9H9.2C9.1,9.9,9,10.9,9,12C9,13.1,9.1,14.1,9.2,15z M2.5,15h4.7c-0.1-1-0.1-2-0.1-3s0-2,0.1-3H2.5C2.2,9.9,2,11,2,12S2.2,14.1,2.5,15z M16.6,7h4.1c-1.2-2.1-3.2-3.7-5.5-4.5C15.8,3.7,16.3,5.3,16.6,7z M9.5,7h5.1c-0.6-3.1-1.7-5-2.5-5C11.3,2,10.1,3.9,9.5,7z M3.3,7h4.1c0.3-1.7,0.8-3.3,1.4-4.5C6.5,3.3,4.6,4.9,3.3,7z" />
+                  </svg>
+                  {t.navLanguage}
+                </LangButtonContent>
+              </DropdownButton>
+              {langOpen && (
+                <DropdownMenu>
+                  <DropdownItem onClick={() => handleLanguageChange('ja-jp')}>日本語</DropdownItem>
+                  <DropdownItem onClick={() => handleLanguageChange('zh-cn')}>简体中文</DropdownItem>
+                </DropdownMenu>
+              )}
+            </DropdownContainer>
+          </NavActions>
+        </LangSwitcherContainer>
+      </LscNav>
       <CherryBlossomBackground petalCount={80} />
-      <TransparentBanner 
-        src="/lsc.png" 
+      <TransparentBanner
+        src="/lsc.png"
         title="Cherry Blossom"
         description="Steam商店页面现已公开！"
       />
@@ -631,40 +690,40 @@ const Lsc = ({ t }) => {
 
         <Section>
           <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.8 }}
-              viewport={{ once: true }}
-              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-            >
-          <SectionTitle $accentColor="#ff69b4" $marginBottom="2rem">
-            <span>♥</span> {t.progressTitle} <span>♥</span>
-          </SectionTitle>
-          <ProgressBoard>
-            {t.progressNotes.map((note, index) => {
-              const rotation = (Math.random() * 6 - 3).toFixed(2);
-              return (
-                <StickyNote key={index} $rotation={rotation}>
-                  <p className="date">{note.date}</p>
-                  <p className="text">{note.text}</p>
-                </StickyNote>
-              );
-            })}
-          </ProgressBoard>
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.8 }}
+            viewport={{ once: true }}
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+          >
+            <SectionTitle $accentColor="#ff69b4" $marginBottom="2rem">
+              <span>♥</span> {t.progressTitle} <span>♥</span>
+            </SectionTitle>
+            <ProgressBoard>
+              {t.progressNotes.map((note, index) => {
+                const rotation = (Math.random() * 6 - 3).toFixed(2);
+                return (
+                  <StickyNote key={index} $rotation={rotation}>
+                    <p className="date">{note.date}</p>
+                    <p className="text">{note.text}</p>
+                  </StickyNote>
+                );
+              })}
+            </ProgressBoard>
 
-          <PromotionCard>
-            <div className="promo-image">[替换为: 赛博创业团 宣传图]</div>
-            <div className="promo-details">
-              <h4>{t.promoTitle}</h4>
-              <ul>
-                {t.promoFeatures.map((feature, idx) => <li key={idx}>• {feature}</li>)}
-              </ul>
-              <div className="btn-group">
-                <button>{t.btnWishlist}</button>
-                <button>{t.btnPreorder}</button>
+            <PromotionCard>
+              <div className="promo-image">[替换为: 赛博创业团 宣传图]</div>
+              <div className="promo-details">
+                <h4>{t.promoTitle}</h4>
+                <ul>
+                  {t.promoFeatures.map((feature, idx) => <li key={idx}>• {feature}</li>)}
+                </ul>
+                <div className="btn-group">
+                  <button>{t.btnWishlist}</button>
+                  <button>{t.btnPreorder}</button>
+                </div>
               </div>
-            </div>
-          </PromotionCard>
+            </PromotionCard>
           </motion.div>
         </Section>
 
