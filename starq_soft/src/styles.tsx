@@ -274,8 +274,8 @@ export const NewsRow = styled.div`
   margin-bottom: 1rem;
 `;
 
-export const TypeBadge = styled.span`
-  background-color: #16a34a;
+export const TypeBadge = styled.span<{ $bgColor?: string }>`
+  background-color: ${({ $bgColor }) => $bgColor ?? '#16a34a'};
   color: white;
   padding: 0.125rem 0.75rem;
   border-radius: 0.25rem;
@@ -581,4 +581,21 @@ export const Copyright = styled.div`
   margin-top: 2rem;
   color: #fff;
   text-align: center;
+`;
+
+export const LangButtonContent = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #333;
+`;
+
+export const ProductBannerLink = styled.a`
+  text-decoration: none;
+`;
+
+export const StatusMessage = styled.p`
+  margin-top: 12px;
+  font-size: 14px;
 `;
