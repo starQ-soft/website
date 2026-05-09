@@ -397,7 +397,6 @@ export const ScreenshotsContainer = styled.div`
 `
 
 export const Screenshot = styled.div`
-  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
@@ -413,7 +412,6 @@ export const ScreenshotImage = styled.img`
   display: block;
 `
 
-// Animation variants
 export const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },

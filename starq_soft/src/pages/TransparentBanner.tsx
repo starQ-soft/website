@@ -1,7 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import steamLogo from "../assets/steam-logo.svg";
 import { SteamIcon } from "../styles";
+
+const riseIn = keyframes`
+  from { opacity: 0; transform: translate(-50%, 40px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+`;
 
 const BannerContainer = styled.section`
   position: relative;
@@ -11,35 +16,30 @@ const BannerContainer = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: transparent; 
+  background: transparent;
   overflow: hidden;
 `;
 
-const TransparentImage = styled.img`
-position: absolute;
-  bottom: 0; 
+const LayeredImage = styled.img<{ $delay: number }>`
+  position: absolute;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%; 
+  width: 100%;
   height: 100vh;
   object-fit: cover;
-  
   z-index: 1;
   pointer-events: none;
-  
-  animation: fadeInProps 1.5s ease-out forwards;
-
-  @keyframes fadeInProps {
-    from { opacity: 0; transform: translate(-50%, 20px); }
-    to { opacity: 1; transform: translate(-50%, 0); }
-  }
+  opacity: 0;
+  animation: ${riseIn} 2s ease-out forwards;
+  animation-delay: ${({ $delay }) => $delay}s;
 `;
 
 const ContentBox = styled.div`
   position: relative;
-  z-index: 2; /* 在图片之上 */
+  z-index: 2;
   text-align: center;
-  color: #333; /* 假设是浅色背景，如果是深色请改为 white */
+  color: #333;
   max-width: 800px;
   padding: 0 20px;
 
@@ -59,22 +59,28 @@ const ContentBox = styled.div`
   }
 `;
 
-
 interface TransparentBannerProps {
-    src: string;
+    images: string[];
     title?: string;
     description?: string;
 }
 
 const TransparentBanner: React.FC<TransparentBannerProps> = ({
-    src,
+    images,
     title = "春色正浓",
     description = "透明 PNG 完美融合了背景中的樱花动画，呈现出多维度的视觉层次。"
 }) => {
     return (
         <BannerContainer>
-            <TransparentImage src={src} alt="Decorative Banner" />
-            <ContentBox>
+            {images.map((src, i) => (
+                <LayeredImage
+                    key={src}
+                    src={src}
+                    alt={`Banner layer ${i + 1}`}
+                    $delay={i * 0.6}
+                />
+            ))}
+            {/* <ContentBox>
                 <h1>{title}</h1>
                 <p>{description}</p>
                 <button style={{
@@ -88,7 +94,7 @@ const TransparentBanner: React.FC<TransparentBannerProps> = ({
                     <SteamIcon src={steamLogo} />
                     Add to Wishlist
                 </button>
-            </ContentBox>
+            </ContentBox> */}
         </BannerContainer>
     );
 };

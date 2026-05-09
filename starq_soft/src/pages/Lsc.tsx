@@ -164,7 +164,6 @@ const PvContainer = styled.div`
   max-width: 48rem;
   aspect-ratio: 16 / 9;
   background-color: black;
-  border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -490,24 +489,20 @@ const GameDescription = styled.p`
 
 const ScreenshotsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 3rem;
-
-  @media (max-width: 991px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 `
 
 const Screenshot = styled.div`
-  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 5px rgba(119, 105, 110, 0.3);
   transition: transform 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.02);
@@ -520,9 +515,49 @@ const ScreenshotImage = styled.img`
   display: block;
 `
 
+const ModalOverlay = styled.div`
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+
+  .modal-content {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+  }
+
+  img {
+    display: block;
+    max-width: 80vw;
+    max-height: 65vh;
+    object-fit: contain;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 0.5rem solid white;
+  }
+
+  button {
+    position: absolute;
+    top: -4rem;
+    right: -5rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+  }
+`;
+
 const Lsc = () => {
   const [currentLang, setCurrentLang] = useState<'zh-cn' | 'ja-jp'>('zh-cn');
   const [langOpen, setLangOpen] = useState(false);
+  const [selectedImg, setSelectedImg] = useState<{ src: string; alt: string } | null>(null);
 
   const t = contents[currentLang];
 
@@ -568,31 +603,44 @@ const Lsc = () => {
       </LscNav>
       <CherryBlossomBackground petalCount={80} />
       <TransparentBanner
-        src="/lsc.png"
+        images={["/lsc-haruka.png", "/lsc-rin.png", "/lsc-natsumi.png", "/lsc-shizuka.png", "/lsc-nana.png",]}
         title="Cherry Blossom"
         description="Steam商店页面现已公开！"
       />
       <ContentWrapper>
         <LoveCofounder />
         <Section>
-          <div style={{ marginTop: '3rem', width: '100%' }}>
-            <SectionTitle $accentColor="#ffb6c1">
-              <span>◆</span> {t.charTitle} <span>◆</span>
-            </SectionTitle>
-            {/* <CharacterCarousel>
-              <button className="nav-btn">«</button>
-              <div className="char-list">
-                {t.characters.map((char, index) => (
-                  <CharacterCard key={index}>
-                    <div className="avatar">[立绘]</div>
-                    <h4>{char.name}</h4>
-                  </CharacterCard>
-                ))}
-              </div>
-              <button className="nav-btn">»</button>
-            </CharacterCarousel> */}
-            <LoveCofounderCharacter />
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.8 }}
+            viewport={{ once: true }}
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+          >
+            <div style={{ marginTop: '3rem', width: '100%' }}>
+              <SectionTitle $accentColor="#ffb6c1">
+                <span>◆</span> {t.charTitle} <span>◆</span>
+              </SectionTitle>
+
+              <GameDescription>
+                Immerse yourself in the stunning visuals and detailed environments
+                of SevenFold Mirrors.
+              </GameDescription>
+              {/* <CharacterCarousel>
+                <button className="nav-btn">«</button>
+                <div className="char-list">
+                  {t.characters.map((char, index) => (
+                    <CharacterCard key={index}>
+                      <div className="avatar">[立绘]</div>
+                      <h4>{char.name}</h4>
+                    </CharacterCard>
+                  ))}
+                </div>
+                <button className="nav-btn">»</button>
+              </CharacterCarousel> */}
+              <LoveCofounderCharacter />
+            </div>
+          </motion.div>
         </Section>
 
         <Section>
@@ -640,48 +688,20 @@ const Lsc = () => {
               <SectionTitle $accentColor="#ffb6c1">
                 <span>◆</span> Gallery <span>◆</span>
               </SectionTitle>
-              <GameDescription>
-                Immerse yourself in the stunning visuals and detailed environments
-                of SevenFold Mirrors.
-              </GameDescription>
 
               <ScreenshotsContainer>
-                <Screenshot>
-                  <ScreenshotImage
-                    src="cg_thumbnail_1.png"
-                    alt="SevenFold Mirrors - Forest Scene"
-                  />
-                </Screenshot>
-                <Screenshot>
-                  <ScreenshotImage
-                    src="cg_thumbnail_2.png"
-                    alt="SevenFold Mirrors - Battle Scene"
-                  />
-                </Screenshot>
-                <Screenshot>
-                  <ScreenshotImage
-                    src="cg_thumbnail_3.png"
-                    alt="SevenFold Mirrors - Castle"
-                  />
-                </Screenshot>
-                <Screenshot>
-                  <ScreenshotImage
-                    src="cg_thumbnail_4.png"
-                    alt="SevenFold Mirrors - Dragon"
-                  />
-                </Screenshot>
-                <Screenshot>
-                  <ScreenshotImage
-                    src="cg_thumbnail_5.png"
-                    alt="SevenFold Mirrors - Village"
-                  />
-                </Screenshot>
-                <Screenshot>
-                  <ScreenshotImage
-                    src="cg_thumbnail_6.png"
-                    alt="SevenFold Mirrors - Magic Spell"
-                  />
-                </Screenshot>
+                {[
+                  { src: 'cg_thumbnail_1.png', alt: 'LSC-Forest Scene' },
+                  { src: 'cg_thumbnail_2.png', alt: 'LSC-Battle Scene' },
+                  { src: 'cg_thumbnail_3.png', alt: 'LSC-Castle' },
+                  { src: 'cg_thumbnail_4.png', alt: 'LSC-Dragon' },
+                  { src: 'cg_thumbnail_5.png', alt: 'LSC-Village' },
+                  { src: 'cg_thumbnail_6.png', alt: 'LSC-Magic Spell' },
+                ].map((img) => (
+                  <Screenshot key={img.src} onClick={() => setSelectedImg(img)}>
+                    <ScreenshotImage src={img.src} alt={img.alt} />
+                  </Screenshot>
+                ))}
               </ScreenshotsContainer>
             </motion.div>
           </SectionContent>
@@ -741,6 +761,14 @@ const Lsc = () => {
         </Footer>
       </ContentWrapper>
       <BackToTop />
+      {selectedImg && (
+        <ModalOverlay onClick={() => setSelectedImg(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={selectedImg.src} alt={selectedImg.alt} />
+            <button onClick={() => setSelectedImg(null)}>✕</button>
+          </div>
+        </ModalOverlay>
+      )}
     </LscContainer>
   );
 };

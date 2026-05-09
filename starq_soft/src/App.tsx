@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 import translations from './translations.json';
 import news from './news.json';
 import logoImage from './assets/StarQ_logo.png';
@@ -127,110 +128,131 @@ const App = () => {
       <GlobalContainer>
         <Main>
           <ScrollableContainer>
-            <section>
-              <ProductHeaderArea>
-                <SectionHeader>
-                  {/* <Highlight>{t.news.titleHighlight}</Highlight>{t.news.titleRest} */}
-                  {n.subTitle}
-                </SectionHeader>
-              </ProductHeaderArea>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.8 }}
+              viewport={{ once: true }}
+            >
+              <section>
+                <ProductHeaderArea>
+                  <SectionHeader>
+                    {/* <Highlight>{t.news.titleHighlight}</Highlight>{t.news.titleRest} */}
+                    {n.subTitle}
+                  </SectionHeader>
+                </ProductHeaderArea>
 
-              {n.items.map((item, index) => (
-                <NewsRow key={index}>
-                  <TypeBadge $bgColor={item.type !== 'UPDATE' ? '#d83c6b' : '#f2c45e'}>
-                    {item.type}
-                  </TypeBadge>
-                  <span>
-                    {item.link ? <a href={item.link} target="_blank" rel="noopener noreferrer">
-                      <strong>{item.text}</strong>
-                    </a> : <strong>{item.text}</strong>}
-                  </span>
-                  <NewsDate>{item.date}</NewsDate>
-                </NewsRow>
-              ))}
-            </section>
+                {n.items.map((item, index) => (
+                  <NewsRow key={index}>
+                    <TypeBadge $bgColor={item.type !== 'UPDATE' ? '#d83c6b' : '#f2c45e'}>
+                      {item.type}
+                    </TypeBadge>
+                    <span>
+                      {item.link ? <a href={item.link} target="_blank" rel="noopener noreferrer">
+                        <strong>{item.text}</strong>
+                      </a> : <strong>{item.text}</strong>}
+                    </span>
+                    <NewsDate>{item.date}</NewsDate>
+                  </NewsRow>
+                ))}
+              </section>
+            </motion.div>
           </ScrollableContainer>
 
           <section>
-            <ProductHeaderArea>
-              <SectionHeader>
-                {/* <Highlight>{t.product.titleHighlight}</Highlight>{t.product.titleRest} */}
-                {t.product.subTitle}
-              </SectionHeader>
-              {/* <SmallButton>{t.product.btn}</SmallButton> */}
-            </ProductHeaderArea>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.8 }}
+              viewport={{ once: true }}
+              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+            >
+              <ProductHeaderArea>
+                <SectionHeader>
+                  {/* <Highlight>{t.product.titleHighlight}</Highlight>{t.product.titleRest} */}
+                  {t.product.subTitle}
+                </SectionHeader>
+                {/* <SmallButton>{t.product.btn}</SmallButton> */}
+              </ProductHeaderArea>
 
-            <ProductGrid>
-              {t.product.banners.map((banner, index) => (
-                <ProductBannerLink href={banner.link} key={index}>
-                  <ProductBanner key={index} $bgImage={banner.image} $upcoming={banner.upcoming} >
-                    {banner.name}
-                  </ProductBanner>
-                </ProductBannerLink>
-              ))}
-            </ProductGrid>
+              <ProductGrid>
+                {t.product.banners.map((banner, index) => (
+                  <ProductBannerLink href={banner.link} key={index}>
+                    <ProductBanner key={index} $bgImage={banner.image} $upcoming={banner.upcoming} >
+                      {banner.name}
+                    </ProductBanner>
+                  </ProductBannerLink>
+                ))}
+              </ProductGrid>
+            </motion.div>
           </section>
 
           <section>
-            <AboutBox>
-              <SectionHeader>
-                {t.about.aboutTitle}</SectionHeader>
-              <p>{t.about.aboutText}</p>
-            </AboutBox>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.8 }}
+              viewport={{ once: true }}
+            >
+              <AboutBox>
+                <SectionHeader>
+                  {t.about.aboutTitle}</SectionHeader>
+                <p>{t.about.aboutText}</p>
+              </AboutBox>
 
-            <AboutBox>
-              <SectionHeader>
-                {t.contact.contactTitle} </SectionHeader>
-              <p>{t.contact.contactText}</p>
+              <AboutBox>
+                <SectionHeader>
+                  {t.contact.contactTitle} </SectionHeader>
+                <p>{t.contact.contactText}</p>
+              </AboutBox>
+              <FormContainer onSubmit={handleSubmit}>
+                <Title>{t.contact.title}</Title>
+                <Subtitle>{t.contact.subtitle}</Subtitle>
 
-            </AboutBox>
-            <FormContainer onSubmit={handleSubmit}>
-              <Title>{t.contact.title}</Title>
-              <Subtitle>{t.contact.subtitle}</Subtitle>
+                <Row>
+                  <Input
+                    type="text"
+                    name="Name"
+                    placeholder={t.contact.name}
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
 
-              <Row>
-                <Input
-                  type="text"
-                  name="Name"
-                  placeholder={t.contact.name}
-                  value={formData.name}
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder={t.contact.email}
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </Row>
+
+                <Textarea
+                  name="message"
+                  placeholder={t.contact.message}
+                  rows={5}
+                  value={formData.message}
                   onChange={handleChange}
                   required
                 />
 
-                <Input
-                  type="email"
-                  name="email"
-                  placeholder={t.contact.email}
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </Row>
+                <CheckboxContainer>
+                  <input
+                    type="checkbox"
+                    name="agree"
+                    checked={formData.agree}
+                    onChange={handleChange}
+                  />
+                  {t.contact.agreePrefix} <a href="/terms">{t.contact.terms}</a> {t.contact.and}{" "}
+                  <a href="/privacy">{t.contact.privacy}</a>.
+                </CheckboxContainer>
 
-              <Textarea
-                name="message"
-                placeholder={t.contact.message}
-                rows={5}
-                value={formData.message}
-                onChange={handleChange}
-                required
-              />
-
-              <CheckboxContainer>
-                <input
-                  type="checkbox"
-                  name="agree"
-                  checked={formData.agree}
-                  onChange={handleChange}
-                />
-                {t.contact.agreePrefix} <a href="/terms">{t.contact.terms}</a> {t.contact.and}{" "}
-                <a href="/privacy">{t.contact.privacy}</a>.
-              </CheckboxContainer>
-
-              <SubmitButton type="submit">{t.contact.submit}</SubmitButton>
-              {status && <StatusMessage>{status}</StatusMessage>}
-            </FormContainer>
+                <SubmitButton type="submit">{t.contact.submit}</SubmitButton>
+                {status && <StatusMessage>{status}</StatusMessage>}
+              </FormContainer>
+            </motion.div>
           </section>
         </Main>
       </GlobalContainer>

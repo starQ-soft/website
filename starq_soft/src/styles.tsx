@@ -384,7 +384,7 @@ export const ProductBanner = styled.div<ProductBannerProps>`
 
 export const Footer = styled.footer`
   width: 100vw;
-   background: #e17392;
+   background:  linear-gradient(180deg, #ff668f 0%, #e97292 50%, #f993b0 100%);
 `;
 
 export const FooterTop = styled.footer`
@@ -392,10 +392,10 @@ export const FooterTop = styled.footer`
   height: 1rem;
   background: repeating-linear-gradient(
     -45deg, 
-    #f49bb5, 
-    #f49bb5 15px, 
-    #f8afca 15px, 
-    #f8afca 35px
+    #ff9fb8, 
+    #ff9fb8 15px, 
+    #eb7897 15px, 
+    #eb7897 35px
   );
 `;
 
@@ -404,7 +404,7 @@ export const FooterContent = styled.div`
   padding: 0 5vw; 
       padding: 4rem 0;
   text-align: center;
-  padding: 4rem 0;
+  padding: 5rem 0 2rem 0;
   margin-top: auto;
   opacity: 0.9;
 
@@ -554,7 +554,7 @@ export const SocialLink = styled.a`
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #e25b80;
+  background: #e79eb8;
 
   &:hover {
     transform: translateY(-3px);

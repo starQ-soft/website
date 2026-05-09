@@ -236,7 +236,7 @@ const scaleOnHover = {
 export const LoveCofounder: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const heroImages = [
-    "lsc.png",
+    "lsc-nana.png",
     // "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=1200&h=800&fit=crop",
     // "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop",
   ];
@@ -337,8 +337,7 @@ export const LoveCofounder: React.FC = () => {
         />
       </HeroSection>
 
-      {/* Featured Games */}
-      <Section $background="muted">
+      <Section>
         <StoryContainer>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
