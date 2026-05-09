@@ -9,7 +9,9 @@ const riseIn = keyframes`
 `;
 
 const BannerContainer = styled.section`
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -18,6 +20,7 @@ const BannerContainer = styled.section`
   justify-content: center;
   background: transparent;
   overflow: hidden;
+  z-index: 0;
 `;
 
 const LayeredImage = styled.img<{ $delay: number }>`

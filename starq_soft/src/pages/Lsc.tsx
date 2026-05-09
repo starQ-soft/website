@@ -94,11 +94,11 @@ export const LscNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;   
-  position: sticky;
+  padding: 1rem;
+  position: fixed;
   top: 0;
   z-index: 100;
-  background-color: #fff;
+  width: 100vw;
 `;
 
 
@@ -106,7 +106,7 @@ const LscContainer = styled.div`
   min-height: 100vh;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
   position: relative;
-  overflow: hidden;
+  overflow-x: clip;
   width: 100vw;
 `;
 
@@ -119,11 +119,13 @@ const BackgroundDecoration = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  background-color: #ffffff;
-  width: 80vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(1px);
   margin: 0 auto;
   position: relative;
   z-index: 10;
+  border-radius: 1.5rem 1.5rem 0 0;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.08);
 `;
 
 const Section = styled.section`
@@ -607,6 +609,7 @@ const Lsc = () => {
         title="Cherry Blossom"
         description="Steam商店页面现已公开！"
       />
+      <div style={{ height: '100vh', position: 'relative', zIndex: 1 }} />
       <ContentWrapper>
         <LoveCofounder />
         <Section>
