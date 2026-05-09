@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import logoImage from '../assets/StarQ_logo.png';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { LoveCofounderCharacter } from './CharacterGallery';
 import { LoveCofounder } from './LoveCofounder';
 import { motion } from 'framer-motion';
@@ -118,6 +118,11 @@ const BackgroundDecoration = styled.div`
   opacity: 0.5;
 `;
 
+const contentAppear = keyframes`
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+`;
+
 const ContentWrapper = styled.div`
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(1px);
@@ -126,6 +131,8 @@ const ContentWrapper = styled.div`
   z-index: 10;
   border-radius: 1.5rem 1.5rem 0 0;
   box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  animation: ${contentAppear} 1.2s ease-out 4.5s forwards;
 `;
 
 const Section = styled.section`
@@ -609,7 +616,7 @@ const Lsc = () => {
         title="Cherry Blossom"
         description="Steam商店页面现已公开！"
       />
-      <div style={{ height: '100vh', position: 'relative', zIndex: 1 }} />
+      {/* <div style={{ height: '100vh', position: 'relative', zIndex: 1 }} /> */}
       <ContentWrapper>
         <LoveCofounder />
         <Section>
