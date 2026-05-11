@@ -268,7 +268,7 @@ const CharacterCard = styled.div`
     border-radius: 0.375rem;
     margin-bottom: 0.5rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     font-size: 0.75rem;
     color: #9ca3af;
@@ -623,6 +623,30 @@ const Lsc = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+    const prevBodyOverflow = document.body.style.overflow;
+    const prevHtmlOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
+    const bannerImageCount = 5;
+    const stagger = 0.6;
+    const animationDuration = 2;
+    const unlockDelayMs = (bannerImageCount * stagger + animationDuration) * 1000;
+
+    const timer = window.setTimeout(() => {
+      document.body.style.overflow = prevBodyOverflow;
+      document.documentElement.style.overflow = prevHtmlOverflow;
+    }, unlockDelayMs);
+
+    return () => {
+      window.clearTimeout(timer);
+      document.body.style.overflow = prevBodyOverflow;
+      document.documentElement.style.overflow = prevHtmlOverflow;
+    };
+  }, []);
+
+  useEffect(() => {
     if (selectedIndex === null) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') showPrev();
@@ -835,7 +859,7 @@ const Lsc = () => {
           </div>
         </Footer>
       </ContentWrapper>
-      <BackToTop />
+      <BackToTop variant="lsc" />
       {selectedIndex !== null && (
         <ModalOverlay onClick={() => setSelectedIndex(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>

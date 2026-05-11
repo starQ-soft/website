@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { CharacterCard, type SectionTitle, CharacterCarousel } from "./LscStyles";
 
-const avatars: any[] = ["character_me-1.png", "character_haijin.png", "character_tani.png", "character_hayashi.png", "character_nana.png", "character_natsumi.png", "character_rei.png", "character_gi.png"];
+const avatars: any[] = ["me-1.png", "haijin.png", "tani.png", "hayashi.png", "nana.png", "natsumi.png", "rin.png", "takagi.png"];
 
 const characters: any[] = [
   {
@@ -15,7 +15,7 @@ const characters: any[] = [
     role: "大学应届毕业生（待业中）",
     description:
       "本作主人公。茨木大学计算机系毕业，曾是众人眼中的“优等生”，毕业后却在经济下行和内卷加剧等多重打击下，求职路上接连碰壁，只能暂时宅在出租屋中成为一名「社畜候补」。为人认真踏实，冷静可靠，拥有强烈的社会责任感。",
-    image: "character_me-1.png",
+    image: "me-1.png",
     age: "24",
     height: "178cm",
     weight: "68kg",
@@ -32,7 +32,7 @@ const characters: any[] = [
     role: "大学应届毕业生（待业中）",
     description:
       "茨木大学工商管理系毕业，男主的合租室友兼多年玩伴。曾经是个教科书级的富二代，后来家道中落。天性散漫，做事全凭一时兴起。虽然有点吊儿郎当，却意外了解不少旁门左道，一开口就是金句频出，擅长嘴皮子功夫，堪称画饼届鬼才。",
-    image: "character_haijin.png",
+    image: "haijin.png",
     age: "24",
     height: "175cm",
     weight: "62kg",
@@ -51,7 +51,7 @@ const characters: any[] = [
     role: "UI/UX设计师（实习生）",
     description:
       "茨木大学视觉设计系大二在校生，拥有极强的审美直觉和绘画天赋。平时话很少却观察力惊人，对色彩感知敏锐，对美感有强烈的追求，非常注重细节。性格并不张扬却意外地有主见，莫名地容易害羞，内心情感细腻。",
-    image: "character_tani.png",
+    image: "tani.png",
     age: "20",
     height: "158cm",
     weight: "42kg",
@@ -71,7 +71,7 @@ const characters: any[] = [
     role: "前端工程师",
     description:
       "侧面扎着单马尾的女生，总是戴着一副细框眼镜，安静内向，不爱说话，似乎有点轻微社恐，对大多数社交场合感到局促，总是埋头默默写代码，认为还是跟机器打交道轻松。对待工作非常努力认真，经常加班到很晚。",
-    image: "character_hayashi.png",
+    image: "hayashi.png",
     age: "24",
     height: "162cm",
     weight: "48kg",
@@ -91,7 +91,7 @@ const characters: any[] = [
     role: "营销策划",
     description:
       "16岁便开始投身自媒体，因敏锐的流量嗅觉被知名MCN相中并成为头部主播，打造过多支病毒式传播的爆款短视频，后来逐渐意识到被当作工具人难以长久而主动退出。凭借多年打磨出的直觉，对人性弱点和传播逻辑有着极高的洞察力。",
-    image: "character_nana.png",
+    image: "nana.png",
     age: "21",
     height: "160cm",
     weight: "45kg",
@@ -111,7 +111,7 @@ const characters: any[] = [
     role: "产品经理",
     description:
       "对产品有自己的理解和追求，注重用户体验，不想为了数据美观而妥协，愿意花大量时间进行市场调研，在当今这种商业背景下显得有点理想主义，希望打造用户真正需要的产品。",
-    image: "character_natsumi.png",
+    image: "natsumi.png",
     age: "25",
     height: "165cm",
     weight: "50kg",
@@ -124,14 +124,14 @@ const characters: any[] = [
   },
   {
     "name": {
-      "japanese": ["森", "玲"],
-      "read": ["もり", "れい"],
-      "english": "Mori Rei"
+      "japanese": ["森", "鈴"],
+      "read": ["もり", "りん"],
+      "english": "Mori Rin"
     },
     role: "天使投资人",
     description:
       "Woman Combination (WC) 投资基金创始人。在创投圈被尊称为「神之天使投资人」，她出手的项目几乎都能获得超额回报，命中率率高达90%。总是身穿干练西装与包臀短裙，高跟鞋一踏地，气场瞬间两米八。眼神锐利，对市场方向敏锐且有独到见解，投资判断极其精准，擅长用犀利的提问将创业者击溃。",
-    image: "character_rei.png",
+    image: "rin.png",
     age: "30",
     height: "173cm",
     weight: "55kg",
@@ -151,7 +151,7 @@ const characters: any[] = [
     role: "明星创业公司CEO",
     description:
       "AI创业公司「SYNTH♥」创始人兼CEO，思丹佛大学计算机科学+MBA双学位，拥有惊人的执行力和商业洞见。中学时代便以独立开发者的身份活跃在各大极客社区，连续三次创业都颇有成绩，曾在知名科技公司CloseAI工作，参与过大型多模态训练项目。",
-    image: "character_takaki.png",
+    image: "takagi.png",
     age: "28",
     height: "181cm",
     weight: "72kg",

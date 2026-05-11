@@ -30,8 +30,14 @@ const TopButton = styled.button`
   }
 `;
 
-const BackToTop = () => {
+type BackToTopProps = {
+  variant?: 'main' | 'lsc';
+};
+
+const BackToTop = ({ variant = 'main' }: BackToTopProps) => {
   const [isVisible, setIsVisible] = useState(false);
+  const imgSrc =
+    variant === 'lsc' ? 'public/topbutton.png' : 'public/main_top_button.png';
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -60,7 +66,7 @@ const BackToTop = () => {
       onClick={scrollToTop}
       aria-label="back to top"
     >
-      <img src="public/topbutton.png" alt="back to top" />
+      <img src={imgSrc} alt="back to top" />
     </TopButton>
   );
 };

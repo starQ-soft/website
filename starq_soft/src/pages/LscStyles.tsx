@@ -284,7 +284,7 @@ export const StoryContainer = styled.section`
 export const StoryTitle = styled.h2`
   font-size: 5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #ff4f8a 0%, #A7C5FF 100%);
+  background: linear-gradient(135deg, #dd6f94 0%, #F89BB0 50%, #A7C5FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
