@@ -6,7 +6,7 @@ import { LoveCofounder } from './LoveCofounder';
 import { motion } from 'framer-motion';
 import CherryBlossomBackground from './CherryBlossomBackground';
 import TransparentBanner from './TransparentBanner';
-import { LscGlobalStyle } from './LscStyles';
+import { LscGlobalStyle, StoryTitle } from './LscStyles';
 import BackToTop from '../components/BackToTop';
 import { NavActions, DropdownContainer, DropdownButton, DropdownMenu, DropdownItem, LangButtonContent, Nav, Logo } from '../styles';
 
@@ -124,6 +124,7 @@ const contentAppear = keyframes`
 `;
 
 const ContentWrapper = styled.div`
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(1px);
   margin: 0 auto;
@@ -140,20 +141,9 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
 `;
 
-const SectionTitle = styled.h3`
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  color: ${(props) => '#ffb6c1' || '#5c3a21'};
-  span { color: ${(props) => props.$accentColor || '#ffb6c1'}; }
-`;
 
 const HeroBanner = styled.div`
   width: 100%;
@@ -385,6 +375,7 @@ const PromotionCard = styled.div`
 `;
 
 const Footer = styled.footer`
+  font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
   padding-top: 3rem;
   padding-bottom: 1.5rem;
   backdrop-filter: blur(1px);
@@ -639,7 +630,25 @@ const Lsc = () => {
       else if (e.key === 'Escape') setSelectedIndex(null);
     };
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+
+    const scrollY = window.scrollY;
+    const prevBodyOverflow = document.body.style.overflow;
+    const prevBodyPosition = document.body.style.position;
+    const prevBodyTop = document.body.style.top;
+    const prevBodyWidth = document.body.style.width;
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
+
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prevBodyOverflow;
+      document.body.style.position = prevBodyPosition;
+      document.body.style.top = prevBodyTop;
+      document.body.style.width = prevBodyWidth;
+      window.scrollTo(0, scrollY);
+    };
   }, [selectedIndex]);
 
   return (
@@ -695,9 +704,8 @@ const Lsc = () => {
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
             <div style={{ marginTop: '3rem', width: '100%' }}>
-              <SectionTitle>
-                <span>♥</span> {t.charTitle} <span>♥</span>
-              </SectionTitle>
+
+              <StoryTitle>♥ {t.charTitle} ♥</StoryTitle>
 
               <GameDescription>
                 Immerse yourself in the stunning visuals and detailed environments
@@ -728,9 +736,8 @@ const Lsc = () => {
             viewport={{ once: true }}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            <SectionTitle>
-               <span>♥</span> {t.pvTitle} <span>♥</span>
-            </SectionTitle>
+
+            <StoryTitle>♥ {t.pvTitle} ♥</StoryTitle>
             <PvContainer>
               <button>▶</button>
             </PvContainer>
@@ -762,9 +769,9 @@ const Lsc = () => {
               viewport={{ once: true }}
               style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
             >
-              <SectionTitle>
-                <span>♥</span> Gallery <span>♥</span>
-              </SectionTitle>
+
+
+              <StoryTitle>♥ Gallery ♥</StoryTitle>
 
               <ScreenshotsContainer>
                 {screenshots.map((img, index) => (
@@ -786,9 +793,7 @@ const Lsc = () => {
             viewport={{ once: true }}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            <SectionTitle>
-              <span>♥</span> {t.progressTitle} <span>♥</span>
-            </SectionTitle>
+            <StoryTitle>♥ {t.progressTitle} ♥</StoryTitle>
             <ProgressBoard>
               {t.progressNotes.map((note, index) => {
                 const rotation = (Math.random() * 6 - 3).toFixed(2);

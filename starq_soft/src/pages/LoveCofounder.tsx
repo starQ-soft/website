@@ -148,12 +148,14 @@ const GradientText = styled.span`
 
 const HeroDescription = styled(motion.p)`
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: hsl(215.4 16.3% 46.9%);
-  margin-bottom: 2rem;
+  margin: 5rem auto;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+
+  p {
+    margin-top: 1.5rem;
+  }
 `;
 
 const HeroActions = styled(motion.div)`

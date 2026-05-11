@@ -271,7 +271,7 @@ export const FloatingElement = styled(motion.div) <{
 
 export const StoryContainer = styled.section`
   padding: 100px 20px;
-  background-color: #rgba(255, 255, 255, 0.2);
+  // background-color: #rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -282,10 +282,13 @@ export const StoryContainer = styled.section`
 `;
 
 export const StoryTitle = styled.h2`
-  font-size: 80px;
+  font-size: 5rem;
   font-weight: 700;
-  color: #F89BB0;
-  margin: 0;
+  background: linear-gradient(135deg, #ff4f8a 0%, #A7C5FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 5rem 0;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -298,7 +301,7 @@ export const StoryTitle = styled.h2`
     left: 110px;
     bottom: 12px;
     width: 60px;
-    height: 1px;
+    height: 2px;
     background-color: #F89BB0;
   }
 `;
@@ -758,6 +761,14 @@ export const CharacterCard = styled.div`
     justify-content: center;
     font-size: 0.75rem;
     color: #9ca3af;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   }
 
   h4 { font-weight: bold; font-size: 0.875rem; margin: 0; }

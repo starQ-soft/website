@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { CharacterCard, type SectionTitle, CharacterCarousel } from "./LscStyles";
 
+const avatars: any[] = ["character_me-1.png", "character_haijin.png", "character_tani.png", "character_hayashi.png", "character_nana.png", "character_natsumi.png", "character_rei.png", "character_gi.png"];
+
 const characters: any[] = [
   {
     "name": {
@@ -181,7 +183,9 @@ export const LoveCofounderCharacter: React.FC = () => {
               <CharacterCard key={index} 
               // $isSelected={selectedCharacter === index}
                 onClick={() => setSelectedCharacter(index)}>
-                <div className="avatar">[立绘]</div>
+                <div className="avatar">
+                  <img src={avatars[index]} alt={char.name.english} />
+                </div>
                 <div>{char.name.japanese}</div>
                 {/* <div>{char.name.english}</div> */}
               </CharacterCard>
