@@ -38,7 +38,7 @@ const contents = {
       { date: '2022/03/29', text: 'AI 互动系统 调试中！' },
       { date: '2022/03/29', text: 'AI 特效表现 测试中！' }
     ],
-    promoTitle: '赛博创业团',
+    promoTitle: '赛博创业团♥ ',
     promoFeatures: [
       '赛博商战化运作',
       'AI女友互动体验',
@@ -729,7 +729,7 @@ const Lsc = () => {
           >
             <div style={{ marginTop: '3rem', width: '100%' }}>
 
-              <StoryTitle>♥ {t.charTitle} ♥</StoryTitle>
+              <StoryTitle>{t.charTitle}</StoryTitle>
 
               <GameDescription>
                 Immerse yourself in the stunning visuals and detailed environments
@@ -761,7 +761,7 @@ const Lsc = () => {
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
 
-            <StoryTitle>♥ {t.pvTitle} ♥</StoryTitle>
+            <StoryTitle>{t.pvTitle}</StoryTitle>
             <PvContainer>
               <button>▶</button>
             </PvContainer>
@@ -795,7 +795,7 @@ const Lsc = () => {
             >
 
 
-              <StoryTitle>♥ Gallery ♥</StoryTitle>
+              <StoryTitle>Gallery</StoryTitle>
 
               <ScreenshotsContainer>
                 {screenshots.map((img, index) => (
@@ -817,7 +817,7 @@ const Lsc = () => {
             viewport={{ once: true }}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            <StoryTitle>♥ {t.progressTitle} ♥</StoryTitle>
+            <StoryTitle>{t.progressTitle}</StoryTitle>
             <ProgressBoard>
               {t.progressNotes.map((note, index) => {
                 const rotation = (Math.random() * 6 - 3).toFixed(2);

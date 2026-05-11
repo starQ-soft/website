@@ -330,7 +330,7 @@ export const StoryDescription = styled.div`
   }
 
   strong {
-    color: #a9c1fd;
+    color: #9aaad2;
     font-weight: 600;
   }
 
