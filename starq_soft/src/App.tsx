@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import translations from './translations.json';
 import news from './news.json';
@@ -8,6 +8,7 @@ import { GlobalStyle, Nav, Logo, NavLinks, DropdownContainer, DropdownButton, Dr
 import BackToTop from './components/BackToTop';
 import { socialLinks } from './components/footer/FooterConstants';
 import FallingStars from './components/FallingStars';
+import type { LanguageCode } from './Language';
 
 const App = () => {
   const [langOpen, setLangOpen] = useState(false);
@@ -57,10 +58,6 @@ const App = () => {
       setStatus("Error submitting form. Please try again.");
     }
   };
-
-  interface LanguageCode {
-    code: 'ja-jp' | 'en-us' | 'zh-cn';
-  }
 
   const handleLanguageChange = (langCode: LanguageCode['code']): void => {
     setCurrentLang(langCode);

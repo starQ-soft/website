@@ -247,8 +247,9 @@ export const SectionHeader = styled.h2`
   font-size: 2.25rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  // display: flex;
+  padding-bottom: 0.25rem;
+  color: #FF5C8A;
+  border-bottom: 2px #FF5C8A solid;
   align-items: baseline;
   margin: 1rem auto;
 `;
@@ -384,18 +385,18 @@ export const ProductBanner = styled.div<ProductBannerProps>`
 
 export const Footer = styled.footer`
   width: 100vw;
-   background:  linear-gradient(180deg, #ff668f 0%, #e97292 50%, #f993b0 100%);
+  background:  linear-gradient(180deg, #ff668f 0%, #e97292 50%, #f993b0 100%);
 `;
 
 export const FooterTop = styled.footer`
   width: 100vw;
-  height: 1rem;
+  height: 0.5rem;
   background: repeating-linear-gradient(
     -45deg, 
-    #ff9fb8, 
-    #ff9fb8 15px, 
-    #eb7897 15px, 
-    #eb7897 35px
+    #ffd88f, 
+    #ffd88f 20px, 
+    #ee819e 20px, 
+    #ee819e 40px
   );
 `;
 
@@ -554,17 +555,16 @@ export const SocialLink = styled.a`
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #e79eb8;
+  background: rgb(252, 175, 202);
 
   &:hover {
     transform: translateY(-3px);
     color: #fff;
-    background: linear-gradient(275deg, #e97aa3 0%, #e97292 50%, #f24677 100%);
+    background: linear-gradient(275deg, rgb(230, 103, 150) 0%, #eb386b 50%, #f24677 100%);
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #5f4953;
   }
 `;
 

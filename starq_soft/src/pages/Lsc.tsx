@@ -30,7 +30,7 @@ const contents = {
       { name: '投资', title: 'Investor', quote: '「这点钱，能做出什么花样？」' },
       { name: 'YOU', title: 'Protagonist', quote: '「……作为，发起人。」' }
     ],
-    progressTitle: '最新开发进展',
+    progressTitle: '开发进展',
     progressNotes: [
       { date: '2022/01/20', text: 'Script 开发完成！' },
       { date: '2022/02/28', text: 'UI 替换包 成功入库！' },
@@ -146,13 +146,12 @@ const SectionTitle = styled.h3`
   text-align: center;
   font-size: 1.25rem;
   font-weight: bold;
-  margin-bottom: ${(props) => props.$marginBottom || '2rem'};
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: ${(props) => props.$color || '#5c3a21'};
-
+  color: ${(props) => '#ffb6c1' || '#5c3a21'};
   span { color: ${(props) => props.$accentColor || '#ffb6c1'}; }
 `;
 
@@ -388,7 +387,8 @@ const PromotionCard = styled.div`
 const Footer = styled.footer`
   padding-top: 3rem;
   padding-bottom: 1.5rem;
-  border-top: 2px dashed #ffb6c1;
+  backdrop-filter: blur(1px);
+  background-color: rgba(255, 255, 255, 0.1);
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
@@ -468,8 +468,6 @@ const LangMenu = styled.div`
 
 const ContentSection = styled.section`
   padding: 80px 20px;
-  background-color: #fff;
-  color: white;
 
   @media (max-width: 768px) {
     padding: 60px 15px;
@@ -628,8 +626,8 @@ const Lsc = () => {
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
             <div style={{ marginTop: '3rem', width: '100%' }}>
-              <SectionTitle $accentColor="#ffb6c1">
-                <span>◆</span> {t.charTitle} <span>◆</span>
+              <SectionTitle>
+                <span>♥</span> {t.charTitle} <span>♥</span>
               </SectionTitle>
 
               <GameDescription>
@@ -661,8 +659,8 @@ const Lsc = () => {
             viewport={{ once: true }}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            <SectionTitle $accentColor="#ffb6c1">
-              <span>◆</span>   {t.pvTitle} <span>◆</span>
+            <SectionTitle>
+               <span>♥</span> {t.pvTitle} <span>♥</span>
             </SectionTitle>
             <PvContainer>
               <button>▶</button>
@@ -695,8 +693,8 @@ const Lsc = () => {
               viewport={{ once: true }}
               style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
             >
-              <SectionTitle $accentColor="#ffb6c1">
-                <span>◆</span> Gallery <span>◆</span>
+              <SectionTitle>
+                <span>♥</span> Gallery <span>♥</span>
               </SectionTitle>
 
               <ScreenshotsContainer>
@@ -726,7 +724,7 @@ const Lsc = () => {
             viewport={{ once: true }}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            <SectionTitle $accentColor="#ff69b4" $marginBottom="2rem">
+            <SectionTitle>
               <span>♥</span> {t.progressTitle} <span>♥</span>
             </SectionTitle>
             <ProgressBoard>

@@ -292,21 +292,10 @@ export const StoryTitle = styled.h2`
   align-items: flex-start;
   position: relative;
 
-  &::after {
-    content: "ストーリー";
-    font-size: 16px;
-    letter-spacing: 0.2em;
-    margin-top: -10px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-
-  /* 标题左侧的装饰细线 */
   &::before {
     content: "";
     position: absolute;
-    left: 110px; /* 根据 "STORY" 文字长度调整 */
+    left: 110px;
     bottom: 12px;
     width: 60px;
     height: 1px;
@@ -328,9 +317,8 @@ export const StorySubtitle = styled.div`
 `;
 
 export const StoryDescription = styled.div`
-  max-width: 800px;
   text-align: center;
-  font-size: 16px;
+  font-size: 1.5rem;
   color: #444;
   font-weight: 500;
 
@@ -339,8 +327,13 @@ export const StoryDescription = styled.div`
   }
 
   strong {
-    color: #F89BB0;
+    color: #a9c1fd;
     font-weight: 600;
+  }
+
+  span {
+    color: #F89BB0;
+    font-size: 2rem;
   }
 `;
 
