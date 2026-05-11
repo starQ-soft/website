@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import logoImage from '../assets/StarQ_logo.png';
 import styled, { keyframes } from 'styled-components';
 import { LoveCofounderCharacter } from './CharacterGallery';
@@ -547,7 +547,7 @@ const ModalOverlay = styled.div`
     border: 0.5rem solid white;
   }
 
-  button {
+  .close-btn {
     position: absolute;
     top: -4rem;
     right: -5rem;
@@ -559,12 +559,62 @@ const ModalOverlay = styled.div`
     line-height: 1;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
   }
+
+  .nav-btn {
+    position: absolute;
+    top: 40%;
+    background: transparent;
+    transform: translateY(-50%);
+    border: none;
+    color: white;
+    width: 3rem;
+    height: 5rem;
+    font-size: 5rem;
+    font-weight: 200;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    transition: opacity 0.2s ease;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .nav-btn.prev {
+    left: -8vw;
+  }
+
+  .nav-btn.next {
+    right: -8vw;
+  }
+
+  @media (max-width: 768px) {
+    .nav-btn.prev {
+      left: 0.5rem;
+    }
+    .nav-btn.next {
+      right: 0.5rem;
+    }
+  }
 `;
+
+const screenshots = [
+  { src: 'cg_thumbnail_1.png', alt: 'LSC-Forest Scene' },
+  { src: 'cg_thumbnail_2.png', alt: 'LSC-Battle Scene' },
+  { src: 'cg_thumbnail_3.png', alt: 'LSC-Castle' },
+  { src: 'cg_thumbnail_4.png', alt: 'LSC-Dragon' },
+  { src: 'cg_thumbnail_5.png', alt: 'LSC-Village' },
+  { src: 'cg_thumbnail_6.png', alt: 'LSC-Magic Spell' },
+];
 
 const Lsc = () => {
   const [currentLang, setCurrentLang] = useState<'zh-cn' | 'ja-jp'>('zh-cn');
   const [langOpen, setLangOpen] = useState(false);
-  const [selectedImg, setSelectedImg] = useState<{ src: string; alt: string } | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const t = contents[currentLang];
 
@@ -572,6 +622,25 @@ const Lsc = () => {
     setCurrentLang(lang);
     setLangOpen(false);
   };
+
+  const showPrev = () => {
+    setSelectedIndex((i) => (i === null ? i : (i - 1 + screenshots.length) % screenshots.length));
+  };
+
+  const showNext = () => {
+    setSelectedIndex((i) => (i === null ? i : (i + 1) % screenshots.length));
+  };
+
+  useEffect(() => {
+    if (selectedIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') showPrev();
+      else if (e.key === 'ArrowRight') showNext();
+      else if (e.key === 'Escape') setSelectedIndex(null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [selectedIndex]);
 
   return (
     <LscContainer>
@@ -698,15 +767,8 @@ const Lsc = () => {
               </SectionTitle>
 
               <ScreenshotsContainer>
-                {[
-                  { src: 'cg_thumbnail_1.png', alt: 'LSC-Forest Scene' },
-                  { src: 'cg_thumbnail_2.png', alt: 'LSC-Battle Scene' },
-                  { src: 'cg_thumbnail_3.png', alt: 'LSC-Castle' },
-                  { src: 'cg_thumbnail_4.png', alt: 'LSC-Dragon' },
-                  { src: 'cg_thumbnail_5.png', alt: 'LSC-Village' },
-                  { src: 'cg_thumbnail_6.png', alt: 'LSC-Magic Spell' },
-                ].map((img) => (
-                  <Screenshot key={img.src} onClick={() => setSelectedImg(img)}>
+                {screenshots.map((img, index) => (
+                  <Screenshot key={img.src} onClick={() => setSelectedIndex(index)}>
                     <ScreenshotImage src={img.src} alt={img.alt} />
                   </Screenshot>
                 ))}
@@ -769,11 +831,14 @@ const Lsc = () => {
         </Footer>
       </ContentWrapper>
       <BackToTop />
-      {selectedImg && (
-        <ModalOverlay onClick={() => setSelectedImg(null)}>
+      {selectedIndex !== null && (
+        <ModalOverlay onClick={() => setSelectedIndex(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <img src={selectedImg.src} alt={selectedImg.alt} />
-            <button onClick={() => setSelectedImg(null)}>✕</button>
+            <img src={screenshots[selectedIndex].src} alt={screenshots[selectedIndex].alt} />
+            <h1>dfsdfdsa</h1>
+            <button className="close-btn" onClick={() => setSelectedIndex(null)} aria-label="Close">✕</button>
+            <button className="nav-btn prev" onClick={showPrev} aria-label="Previous image">‹</button>
+            <button className="nav-btn next" onClick={showNext} aria-label="Next image">›</button>
           </div>
         </ModalOverlay>
       )}
