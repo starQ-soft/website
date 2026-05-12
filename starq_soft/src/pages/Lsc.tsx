@@ -698,29 +698,29 @@ const Lsc = () => {
     setSelectedIndex((i) => (i === null ? i : (i + 1) % screenshots.length));
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    const prevBodyOverflow = document.body.style.overflow;
-    const prevHtmlOverflow = document.documentElement.style.overflow;
-    document.body.style.overflow = 'hidden';
-    document.documentElement.style.overflow = 'hidden';
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  //   const prevBodyOverflow = document.body.style.overflow;
+  //   const prevHtmlOverflow = document.documentElement.style.overflow;
+  //   document.body.style.overflow = 'hidden';
+  //   document.documentElement.style.overflow = 'hidden';
 
-    const bannerImageCount = 5;
-    const stagger = 0.6;
-    const animationDuration = 2;
-    const unlockDelayMs = (bannerImageCount * stagger + animationDuration) * 1000;
+  //   const bannerImageCount = 5;
+  //   const stagger = 0.6;
+  //   const animationDuration = 2;
+  //   const unlockDelayMs = (bannerImageCount * stagger + animationDuration) * 1000;
 
-    const timer = window.setTimeout(() => {
-      document.body.style.overflow = prevBodyOverflow;
-      document.documentElement.style.overflow = prevHtmlOverflow;
-    }, unlockDelayMs);
+  //   const timer = window.setTimeout(() => {
+  //     document.body.style.overflow = prevBodyOverflow;
+  //     document.documentElement.style.overflow = prevHtmlOverflow;
+  //   }, unlockDelayMs);
 
-    return () => {
-      window.clearTimeout(timer);
-      document.body.style.overflow = prevBodyOverflow;
-      document.documentElement.style.overflow = prevHtmlOverflow;
-    };
-  }, []);
+  //   return () => {
+  //     window.clearTimeout(timer);
+  //     document.body.style.overflow = prevBodyOverflow;
+  //     document.documentElement.style.overflow = prevHtmlOverflow;
+  //   };
+  // }, []);
 
   useEffect(() => {
     if (selectedIndex === null) return;

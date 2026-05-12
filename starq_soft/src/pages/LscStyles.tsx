@@ -14,6 +14,15 @@ export const LscGlobalStyle = createGlobalStyle`
     min-height: 100%;
     overflow-x: hidden; /* 防止移动端左右晃动 */
   }
+
+  body {
+    display: block; /* override index.css flex centering so #root spans full width on wide screens */
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+  }
 `;
 
 export const Container = styled.div`
