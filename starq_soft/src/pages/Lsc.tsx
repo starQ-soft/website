@@ -98,7 +98,12 @@ export const LscNav = styled.nav`
   position: fixed;
   top: 0;
   z-index: 100;
-  width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 0.75rem;
+  }
 `;
 
 
@@ -107,7 +112,8 @@ const LscContainer = styled.div`
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
   position: relative;
   overflow-x: clip;
-  width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
 `;
 
 const BackgroundDecoration = styled.div`
@@ -134,14 +140,23 @@ const ContentWrapper = styled.div`
   box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.08);
   opacity: 0;
   animation: ${contentAppear} 1.2s ease-out 4.5s forwards;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 `;
 
 const Section = styled.section`
-  padding: 2.5rem 0;
+  padding: 2.5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 0.75rem;
+  }
 `;
 
 
@@ -168,6 +183,10 @@ const PvContainer = styled.div`
   align-items: center;
   justify-content: center;
   border: 4px solid white;
+
+  @media (max-width: 768px) {
+    border-width: 2px;
+  }
 
   button {
     position: relative;
@@ -196,8 +215,15 @@ const IntroBox = styled.div`
   gap: 1.5rem;
   align-items: center;
   width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 
   @media (min-width: 768px) { flex-direction: row; }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    border-width: 2px;
+  }
 
   .content {
     flex: 1;
@@ -214,6 +240,7 @@ const IntroBox = styled.div`
 
   .image-placeholder {
     width: 20rem;
+    max-width: 100%;
     height: 10rem;
     background-color: white;
     border: 2px solid #ffb6c1;
@@ -223,6 +250,11 @@ const IntroBox = styled.div`
     justify-content: center;
     font-size: 0.75rem;
     color: #9ca3af;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 8rem;
+    }
   }
 `;
 
@@ -290,6 +322,13 @@ const ProgressBoard = styled.div`
   margin-bottom: 2rem;
   border: 4px solid #d2a679;
   width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 0.75rem;
+    border-width: 2px;
+    gap: 0.5rem;
+  }
 `;
 
 const StickyNote = styled.div`
@@ -298,6 +337,11 @@ const StickyNote = styled.div`
   padding: 0.75rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transform: rotate(${(props) => props.$rotation}deg);
+
+  @media (max-width: 480px) {
+    width: calc((100% - 0.5rem) / 2);
+    padding: 0.5rem;
+  }
 
   .date {
     font-size: 0.75rem;
@@ -320,8 +364,14 @@ const PromotionCard = styled.div`
   gap: 1.5rem;
   align-items: center;
   width: 100%;
+  box-sizing: border-box;
 
   @media (min-width: 768px) { flex-direction: row; }
+
+  @media (max-width: 768px) {
+    border-width: 2px;
+    gap: 1rem;
+  }
 
   .promo-image {
     width: 100%;
@@ -378,17 +428,27 @@ const Footer = styled.footer`
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
   padding-top: 3rem;
   padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   backdrop-filter: blur(1px);
   background-color: rgba(255, 255, 255, 0.1);
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 
   .social-links {
     display: flex;
     gap: 2rem;
     margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (max-width: 480px) {
+      gap: 1rem;
+    }
 
     .social-item {
       display: flex;
@@ -536,6 +596,12 @@ const ModalOverlay = styled.div`
     object-fit: contain;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border: 0.5rem solid white;
+
+    @media (max-width: 768px) {
+      max-width: 92vw;
+      max-height: 70vh;
+      border-width: 0.25rem;
+    }
   }
 
   .close-btn {
@@ -549,6 +615,11 @@ const ModalOverlay = styled.div`
     cursor: pointer;
     line-height: 1;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+
+    @media (max-width: 768px) {
+      top: -2.5rem;
+      right: 0;
+    }
   }
 
   .nav-btn {
@@ -584,6 +655,11 @@ const ModalOverlay = styled.div`
   }
 
   @media (max-width: 768px) {
+    .nav-btn {
+      font-size: 3rem;
+      width: 2rem;
+      height: 3rem;
+    }
     .nav-btn.prev {
       left: 0.5rem;
     }

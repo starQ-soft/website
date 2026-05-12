@@ -308,6 +308,13 @@ const EnglishText = styled.h3`
 const GalleryContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 0 0.75rem;
+  }
 `;
 
 const CharacterList = styled.div`
@@ -348,16 +355,28 @@ const CharacterDisplay = styled.div`
 
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
   }
 `;
 
 const CharacterImage = styled.img`
   width: 100%;
   height: auto;
+
+  @media (max-width: 1024px) {
+    max-width: 360px;
+  }
 `;
 
 const CharacterInfo = styled.div`
   padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 1024px) {
+    padding: 0.5rem 0;
+  }
 `;
 
 const CharacterHeader = styled.div`
@@ -394,6 +413,10 @@ const Details = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const DetailItem = styled.div``;

@@ -295,6 +295,22 @@ export const StoryTitle = styled.h2`
   align-items: flex-start;
   position: relative;
 
+  @media (max-width: 1024px) {
+    font-size: 3.5rem;
+    margin: 3rem 0;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    align-items: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -303,6 +319,10 @@ export const StoryTitle = styled.h2`
     width: 60px;
     height: 2px;
     background-color: #F89BB0;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 `;
 
@@ -735,13 +755,30 @@ export const CharacterCarousel = styled.div`
     gap: 1rem;
     overflow-x: auto;
     padding-bottom: 1rem;
-    scrollbar-width: none; 
+    scrollbar-width: none;
     &::-webkit-scrollbar { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .nav-btn {
+      display: none;
+    }
+
+    .char-list {
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow-x: visible;
+      width: 100%;
+    }
   }
 `;
 
 export const CharacterCard = styled.div`
   min-width: 120px;
+  flex: 0 0 auto;
   background-color: #fff0f5;
   border: 2px solid #ffb6c1;
   border-radius: 0.75rem;
@@ -749,6 +786,12 @@ export const CharacterCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 480px) {
+    min-width: 0;
+    width: calc((100% - 2rem) / 3);
+    .avatar { height: 5rem; }
+  }
 
   .avatar {
     width: 100%;
