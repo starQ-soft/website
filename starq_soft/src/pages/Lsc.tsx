@@ -125,8 +125,8 @@ const BackgroundDecoration = styled.div`
 `;
 
 const contentAppear = keyframes`
-  from { opacity: 0; transform: translateY(40px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 `;
 
 const ContentWrapper = styled.div`
@@ -803,7 +803,6 @@ const Lsc = () => {
             viewport={{ once: true }}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            <div style={{ marginTop: '3rem', width: '100%' }}>
 
               <StoryTitle>{t.charTitle}</StoryTitle>
 
@@ -824,7 +823,6 @@ const Lsc = () => {
                 <button className="nav-btn">»</button>
               </CharacterCarousel> */}
               <LoveCofounderCharacter />
-            </div>
           </motion.div>
         </Section>
 
@@ -924,10 +922,10 @@ const Lsc = () => {
 
         <Footer>
           <div className="social-links">
-            <div className="social-item"><div className="icon" style={{ color: '#ff69b4' }}>📺</div><span>Bilibili</span></div>
-            <div className="social-item"><div className="icon" style={{ color: 'black' }}>𝕏</div><span>Twitter</span></div>
-            <div className="social-item"><div className="icon" style={{ color: '#5865F2' }}>👾</div><span>Discord</span></div>
-            <div className="social-item"><div className="icon" style={{ color: '#3b82f6' }}>🐧</div><span>QQ 群</span></div>
+            <div className="social-item"><div className="icon" style={{ color: '#ff69b4' }}>📺</div></div>
+            <div className="social-item"><div className="icon" style={{ color: 'black' }}>𝕏</div></div>
+            <div className="social-item"><div className="icon" style={{ color: '#5865F2' }}>👾</div></div>
+            <div className="social-item"><div className="icon" style={{ color: '#3b82f6' }}>🐧</div></div>
           </div>
           <div className="copyright">
             Official copyright info. Cyber Co creation Info<br />

@@ -323,9 +323,9 @@ export const StoryTitle = styled.h2`
   &::before {
     content: "";
     position: absolute;
-    left: 110px;
-    bottom: 12px;
-    width: 60px;
+    left: 5%;
+    bottom: -2rem;
+    width: 60%;
     height: 2px;
     background-color: #F89BB0;
 

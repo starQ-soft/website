@@ -177,7 +177,7 @@ export const LoveCofounderCharacter: React.FC = () => {
     <GalleryContainer>
       <CharacterList>
         <CharacterCarousel>
-          <button className="nav-btn">«</button>
+          {/* <button className="nav-btn">«</button> */}
           <div className="char-list">
             {characters.map((char, index) => (
               <CharacterCard key={index} 
@@ -191,7 +191,7 @@ export const LoveCofounderCharacter: React.FC = () => {
               </CharacterCard>
             ))}
           </div>
-          <button className="nav-btn">»</button>
+          {/* <button className="nav-btn">»</button> */}
         </CharacterCarousel>
         {/* {characters.map((character, index) => (
           <CharacterTab
@@ -373,6 +373,7 @@ const CharacterInfo = styled.div`
   padding: 1rem;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 5rem;
 
   @media (max-width: 1024px) {
     padding: 0.5rem 0;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const TopButton = styled.button`
   position: fixed;
   bottom: 2rem;
-  width: 10rem; 
+  width: 10rem;
   height: 10rem;
   right: 5vw;
   padding: 0;
@@ -27,6 +27,18 @@ const TopButton = styled.button`
     height: 100%;
     object-fit: contain;
     display: block;
+  }
+
+  @media (max-width: 768px) {
+    width: 5rem;
+    height: 5rem;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 4rem;
+    height: 4rem;
   }
 `;
 
