@@ -72,13 +72,14 @@ export const DropdownContainer = styled.div`
 export const DropdownButton = styled.button`
   background: none;
   border: none;
+  padding: 0;
   font-weight: bold;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.25rem;
   color: inherit;
-  
+
   &:hover {
     color: #FF5C8A;
   }
@@ -87,8 +88,8 @@ export const DropdownButton = styled.button`
 export const DropdownMenu = styled.div`
   position: absolute;
   top: 100%;
-  right: 0;
-  margin-top: 0.5rem;
+  left: 0;
+  margin-top: 1.5rem;
   background: white;
   border: 1px solid #e5e7eb;
   border-radius: 0.25rem;
@@ -112,6 +113,7 @@ export const NavActions = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: 10rem;
 `;
 
 export const Hero = styled.header<{ $bgImage?: string }>`

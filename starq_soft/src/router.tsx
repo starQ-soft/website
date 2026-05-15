@@ -42,17 +42,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import App from "./App"
 import Lsc from "./pages/Lsc"
 import AIGirlfriend from "./pages/test"
+import { LanguageProvider } from "./LanguageContext"
 
 const AppRouter: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/love-startup-cofounder" element={<Lsc />} />
-       {/* <Route path="/love-startup-cofounder" element={< AIGirlfriend />} /> */}
-        {/* <Route path="*" element={<NotFound />} /> */}
-      </Routes>
-    </BrowserRouter >
+    <LanguageProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/love-startup-cofounder" element={<Lsc />} />
+         {/* <Route path="/love-startup-cofounder" element={< AIGirlfriend />} /> */}
+          {/* <Route path="*" element={<NotFound />} /> */}
+        </Routes>
+      </BrowserRouter >
+    </LanguageProvider>
   )
 }
 

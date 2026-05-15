@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/github/starq_web/**)",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\).on\\('end',\\(\\)=>{try{console.log\\(JSON.stringify\\(JSON.parse\\(d\\).scripts,null,2\\)\\)}catch\\(e\\){console.log\\('no parent pkg'\\)}}\\)\")",
+      "Bash(node -e \"console.log\\(JSON.stringify\\(require\\('./package.json'\\).scripts,null,2\\)\\)\")",
+      "Bash(ls node_modules)",
+      "Bash(npx tsc *)"
+    ]
+  }
+}

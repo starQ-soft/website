@@ -8,7 +8,11 @@ import CherryBlossomBackground from './CherryBlossomBackground';
 import TransparentBanner from './TransparentBanner';
 import { LscGlobalStyle, StoryTitle } from './LscStyles';
 import BackToTop from '../components/BackToTop';
-import { NavActions, DropdownContainer, DropdownButton, DropdownMenu, DropdownItem, LangButtonContent, Nav, Logo } from '../styles';
+import { Logo } from '../styles';
+import LangSelector from '../LangSelector';
+import { useLanguage } from '../LanguageContext';
+
+const pv_thumbnails: any[] = ["pv_shizuka.png", "pv_shizuka.png", "pv_shizuka.png","pv_shizuka.png","pv_shizuka.png","pv_shizuka.png"];
 
 const contents = {
   'zh-cn': {
@@ -136,8 +140,6 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
   position: relative;
   z-index: 10;
-  border-radius: 1.5rem 1.5rem 0 0;
-  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.08);
   opacity: 0;
   animation: ${contentAppear} 1.2s ease-out 4.5s forwards;
   width: 100%;
@@ -214,7 +216,8 @@ const IntroBox = styled.div`
   flex-direction: column;
   gap: 1.5rem;
   align-items: center;
-  width: 100%;
+  justify-content: space-evenly;
+  width: 60%;
   box-sizing: border-box;
   flex-wrap: wrap;
 
@@ -250,6 +253,14 @@ const IntroBox = styled.div`
     justify-content: center;
     font-size: 0.75rem;
     color: #9ca3af;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     @media (max-width: 768px) {
       width: 100%;
@@ -479,6 +490,7 @@ const LangSwitcherContainer = styled.div`
   top: 1rem;
   right: 1rem;
   z-index: 50;
+  width: 8rem;
 `;
 
 const LangButton = styled.button`
@@ -669,6 +681,40 @@ const ModalOverlay = styled.div`
   }
 `;
 
+.slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    display: block;
+    width: 4em;
+    height: 4em;
+    padding: 0;
+    color: transparent;
+    cursor: pointer;
+    background: #3a3343;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.slick-prev::before, .slick-next::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 1em;
+    height: 1em;
+    content: "";
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
 const screenshots = [
   { src: 'cg_thumbnail_1.png', alt: 'LSC-Forest Scene' },
   { src: 'cg_thumbnail_2.png', alt: 'LSC-Battle Scene' },
@@ -679,16 +725,10 @@ const screenshots = [
 ];
 
 const Lsc = () => {
-  const [currentLang, setCurrentLang] = useState<'zh-cn' | 'ja-jp'>('zh-cn');
-  const [langOpen, setLangOpen] = useState(false);
+  const { lang } = useLanguage();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const t = contents[currentLang];
-
-  const handleLanguageChange = (lang: 'zh-cn' | 'ja-jp') => {
-    setCurrentLang(lang);
-    setLangOpen(false);
-  };
+  const t = contents[lang as keyof typeof contents] ?? contents['ja-jp'];
 
   const showPrev = () => {
     setSelectedIndex((i) => (i === null ? i : (i - 1 + screenshots.length) % screenshots.length));
@@ -759,31 +799,7 @@ const Lsc = () => {
           <Logo src={logoImage} alt="StarQ Logo" />
         </a>
         <LangSwitcherContainer>
-          <NavActions>
-            <DropdownContainer>
-              <DropdownButton onClick={() => setLangOpen(!langOpen)}>
-                <LangButtonContent>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M12,24C5.4,24,0,18.6,0,12S5.4,0,12,0s12,5.4,12,12S18.6,24,12,24z M9.5,17c0.6,3.1,1.7,5,2.5,5s1.9-1.9,2.5-5H9.5z M16.6,17c-0.3,1.7-0.8,3.3-1.4,4.5c2.3-0.8,4.3-2.4,5.5-4.5H16.6z M3.3,17c1.2,2.1,3.2,3.7,5.5,4.5c-0.6-1.2-1.1-2.8-1.4-4.5H3.3z M16.9,15h4.7c0.2-0.9,0.4-2,0.4-3s-0.2-2.1-0.5-3h-4.7c0.2,1,0.2,2,0.2,3S17,14,16.9,15z M9.2,15h5.7c0.1-0.9,0.2-1.9,0.2-3S15,9.9,14.9,9H9.2C9.1,9.9,9,10.9,9,12C9,13.1,9.1,14.1,9.2,15z M2.5,15h4.7c-0.1-1-0.1-2-0.1-3s0-2,0.1-3H2.5C2.2,9.9,2,11,2,12S2.2,14.1,2.5,15z M16.6,7h4.1c-1.2-2.1-3.2-3.7-5.5-4.5C15.8,3.7,16.3,5.3,16.6,7z M9.5,7h5.1c-0.6-3.1-1.7-5-2.5-5C11.3,2,10.1,3.9,9.5,7z M3.3,7h4.1c0.3-1.7,0.8-3.3,1.4-4.5C6.5,3.3,4.6,4.9,3.3,7z" />
-                  </svg>
-                  {t.navLanguage}
-                </LangButtonContent>
-              </DropdownButton>
-              {langOpen && (
-                <DropdownMenu>
-                  <DropdownItem onClick={() => handleLanguageChange('ja-jp')}>日本語</DropdownItem>
-                  <DropdownItem onClick={() => handleLanguageChange('zh-cn')}>简体中文</DropdownItem>
-                </DropdownMenu>
-              )}
-            </DropdownContainer>
-          </NavActions>
+          <LangSelector />
         </LangSwitcherContainer>
       </LscNav>
       <CherryBlossomBackground petalCount={80} />
@@ -849,11 +865,9 @@ const Lsc = () => {
                 ))}
               </p>
             </div> */}
-              <div className="image-placeholder">[替换为: 游戏UI截图]</div>
-              <div className="image-placeholder">[替换为: 游戏UI截图]</div>
-              <div className="image-placeholder">[替换为: 游戏UI截图]</div>
-              <div className="image-placeholder">[替换为: 游戏UI截图]</div>
-              <div className="image-placeholder">[替换为: 游戏UI截图]</div>
+              {pv_thumbnails.map((thumb, index) => (
+                <div key={index} className="image-placeholder"><img src={thumb} alt={thumb} /></div>
+              ))}
             </IntroBox>
           </motion.div>
         </Section>
@@ -938,7 +952,6 @@ const Lsc = () => {
         <ModalOverlay onClick={() => setSelectedIndex(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <img src={screenshots[selectedIndex].src} alt={screenshots[selectedIndex].alt} />
-            <h1>dfsdfdsa</h1>
             <button className="close-btn" onClick={() => setSelectedIndex(null)} aria-label="Close">✕</button>
             <button className="nav-btn prev" onClick={showPrev} aria-label="Previous image">‹</button>
             <button className="nav-btn next" onClick={showNext} aria-label="Next image">›</button>
