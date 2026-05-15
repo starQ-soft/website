@@ -348,7 +348,7 @@ export const LoveCofounder: React.FC = () => {
             viewport={{ once: true }}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            <StoryTitle>STORY</StoryTitle>
+            <StoryTitle>// STORY</StoryTitle>
 
             <StorySubtitle>
               共同开启的冒险!<br />

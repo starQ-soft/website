@@ -280,7 +280,10 @@ export const FloatingElement = styled(motion.div) <{
 
 export const StoryContainer = styled.section`
   padding: 100px 20px;
-  // background-color: #rgba(255, 255, 255, 0.2);
+  background-color: #fff;
+  width: 60%;
+  margin: 0 auto;
+  opacity: 0.8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -291,7 +294,7 @@ export const StoryContainer = styled.section`
 `;
 
 export const StoryTitle = styled.h2`
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 700;
   background: linear-gradient(135deg, #dd6f94 0%, #F89BB0 50%, #A7C5FF 100%);
   -webkit-background-clip: text;
@@ -323,11 +326,12 @@ export const StoryTitle = styled.h2`
   &::before {
     content: "";
     position: absolute;
-    left: 5%;
+    right: 0;
     bottom: -2rem;
     width: 60%;
-    height: 2px;
-    background-color: #F89BB0;
+    min-width: 100px;
+    height: 1px;
+    background-color: #3a3a3a;
 
     @media (max-width: 768px) {
       display: none;

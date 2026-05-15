@@ -12,7 +12,7 @@ import { Logo } from '../styles';
 import LangSelector from '../LangSelector';
 import { useLanguage } from '../LanguageContext';
 
-const pv_thumbnails: any[] = ["pv_shizuka.png", "pv_shizuka.png", "pv_shizuka.png","pv_shizuka.png","pv_shizuka.png","pv_shizuka.png"];
+const pv_thumbnails: any[] = ["pv_shizuka.png", "pv_shizuka.png", "pv_shizuka.png", "pv_shizuka.png", "pv_shizuka.png", "pv_shizuka.png"];
 
 const contents = {
   'zh-cn': {
@@ -411,9 +411,31 @@ const PromotionCard = styled.div`
     ul {
       font-size: 0.75rem;
       margin-bottom: 1rem;
-      line-height: 1.5;
+      line-height: 1.8;
       list-style: none;
       padding: 0;
+      width: 100%;
+    }
+
+    ul li {
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      column-gap: 0.75rem;
+      align-items: start;
+      text-align: left;
+      padding: 0.15rem 0;
+      margin: 0.5rem 0;
+    }
+
+    ul li span {
+      background-color: #afa28b;
+      color: #fff;
+      font-weight: bold;
+      padding: 0.1rem 0.5rem;
+      border-radius: 0.25rem;
+      text-align: center;
+      box-sizing: border-box;
+      width: 80%;
     }
 
     .btn-group {
@@ -785,13 +807,13 @@ const Lsc = () => {
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
 
-              <StoryTitle>{t.charTitle}</StoryTitle>
+            <StoryTitle>// {t.charTitle}</StoryTitle>
 
-              <GameDescription>
-                Immerse yourself in the stunning visuals and detailed environments
-                of SevenFold Mirrors.
-              </GameDescription>
-              {/* <CharacterCarousel>
+            <GameDescription>
+              Immerse yourself in the stunning visuals and detailed environments
+              of SevenFold Mirrors.
+            </GameDescription>
+            {/* <CharacterCarousel>
                 <button className="nav-btn">«</button>
                 <div className="char-list">
                   {t.characters.map((char, index) => (
@@ -803,7 +825,7 @@ const Lsc = () => {
                 </div>
                 <button className="nav-btn">»</button>
               </CharacterCarousel> */}
-              <LoveCofounderCharacter />
+            <LoveCofounderCharacter />
           </motion.div>
         </Section>
 
@@ -816,20 +838,20 @@ const Lsc = () => {
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
 
-            <StoryTitle>{t.pvTitle}</StoryTitle>
+            <StoryTitle>// {t.pvTitle}</StoryTitle>
             <PvContainer>
               <button>▶</button>
             </PvContainer>
             <br />
             <IntroBox>
-              {/* <div className="content">
-              <h3>{t.introTitle}</h3>
-              <p>
+              <div className="content">
+                <h3>キャラ紹介ムービー</h3>
+                {/* <p>
                 {t.introText.map((line, idx) => (
                   <React.Fragment key={idx}>{line}<br /></React.Fragment>
                 ))}
-              </p>
-            </div> */}
+              </p> */}
+              </div>
               {pv_thumbnails.map((thumb, index) => (
                 <div key={index} className="image-placeholder"><img src={thumb} alt={thumb} /></div>
               ))}
@@ -837,18 +859,19 @@ const Lsc = () => {
           </motion.div>
         </Section>
 
-        <ContentSection>
-          <SectionContent>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.8 }}
-              viewport={{ once: true }}
-              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-            >
+        <Section>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.8 }}
+            viewport={{ once: true }}
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+          >
 
 
-              <StoryTitle>Gallery</StoryTitle>
+            <StoryTitle>// Gallery</StoryTitle>
+            <SectionContent>
 
               <ScreenshotsContainer>
                 {screenshots.map((img, index) => (
@@ -857,10 +880,11 @@ const Lsc = () => {
                   </Screenshot>
                 ))}
               </ScreenshotsContainer>
-            </motion.div>
-          </SectionContent>
+            </SectionContent>
+          </motion.div>
 
-        </ContentSection>
+
+        </Section>
 
         <Section>
           <motion.div
@@ -870,7 +894,7 @@ const Lsc = () => {
             viewport={{ once: true }}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            <StoryTitle>{t.progressTitle}</StoryTitle>
+            <StoryTitle>// {t.progressTitle}</StoryTitle>
             <ProgressBoard>
               {t.progressNotes.map((note, index) => {
                 const rotation = (Math.random() * 6 - 3).toFixed(2);
@@ -883,12 +907,32 @@ const Lsc = () => {
               })}
             </ProgressBoard>
 
+            <StoryTitle>// Spec</StoryTitle>
             <PromotionCard>
-              <div className="promo-image">[替换为: 赛博创业团 宣传图]</div>
+              {/* <div className="promo-image">[替换为: 赛博创业团 宣传图]</div> */}
               <div className="promo-details">
                 <h4>{t.promoTitle}</h4>
                 <ul>
-                  {t.promoFeatures.map((feature, idx) => <li key={idx}>• {feature}</li>)}
+                  <li><span>タイトル</span>恋と創業とコファウンダー</li>
+                  <li><span>ブランド</span>スターQソフト</li>
+                  <li><span>ジャンル</span>青春創業ＡＤＶ</li>
+                  <li><span>レーティング</span>全年齢対象</li>
+                  {/* <li><span>発売日</span>2025年09月26日(金)</li> */}
+                  {/* <li><span>価格</span>通常版：￥10,989(税込)・プレミアム版：￥24,200(税込)※両版ともにDLコード付き・ＤＬ版：￥8,470(税込)</li> */}
+                  <li><span>対応OS</span>Windows　10・11</li>
+                  <li><span>CPU</span>Intel Core i3搭載機と同等以上推奨</li>
+                  <li><span>対応OS</span>Windows　10・11</li>
+                  <li><span>MEMORY</span>	1GB／2GB以上推奨</li>
+                  <li><span>HDD</span>	6GB以上</li>
+                  <li><span>原画／SD／背景</span>眞海</li>
+                  <li><span>キャラクターデザイン</span>眞海</li>
+
+                  {/* <li><span>音楽</span>Famishin・Angel Note・zippy 他</li>
+                  <li><span>ＣＧ</span>中乃・トミフミ 他</li>
+                  <li><span>背景</span>Ｒｙｏｕｍａ・わいっしゅ・ろど・ニライカナイ</li>
+                  <li><span>ムービー</span>ろど 他</li>
+                  <li><span>ディレクター</span>ろど</li>
+                  <li><span>特別協力</span>bamboo(milktub/exOVERDRIVE)</li> */}
                 </ul>
                 <div className="btn-group">
                   <button>{t.btnWishlist}</button>
