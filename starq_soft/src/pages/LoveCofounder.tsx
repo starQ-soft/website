@@ -84,8 +84,12 @@ const Badge = styled(motion.div)`
 const HeroTitle = styled(motion.h1)`
   font-size: 3rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1;
   margin-bottom: 1.5rem;
+
+  p {
+    margin: 1rem 0;
+  }
 
   @media (min-width: 768px) {
     font-size: 4.5rem;
@@ -228,7 +232,8 @@ export const LoveCofounder: React.FC = () => {
               animate="animate"
             >
               <HeroTitle variants={fadeInUp}>
-                <GradientText>恋と起業とコファウンダー</GradientText>
+                <p><GradientText><span>恋と</span>&nbsp;<span>起業と</span></GradientText></p>
+                <p><GradientText><span>コファウンダー</span></GradientText></p>
               </HeroTitle>
 
               <HeroDescription variants={fadeInUp}>
