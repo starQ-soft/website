@@ -36,70 +36,23 @@ export const Container = styled.div`
   }
 `;
 
-export const Button = styled(motion.button) <{
-  variant?: "primary" | "outline" | "ghost";
-  size?: "sm" | "md" | "lg";
-}>`
+export const Button = styled(motion.button)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  border-radius: 0.5rem;
   font-weight: 500;
   transition: all 0.15s ease;
   cursor: pointer;
+  margin-top: 20px;
+  padding: 12px 30px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #f99bb3 0%, #a3c1f3 100%, #ffd7e6 100%);
+  color: white;
 
-  ${({ variant = "primary" }) => {
-    switch (variant) {
-      case "primary":
-        return `
-          background: linear-gradient(135deg, #F89BB0 0%, #9c27b0 100%);
-          color: white;
-          &:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-          }
-        `;
-      case "outline":
-        return `
-          border: 1px solid hsl(var(--primary));
-          color: hsl(var(--primary));
-          background: transparent;
-          &:hover {
-            background: hsl(var(--primary));
-            color: white;
-          }
-        `;
-      case "ghost":
-        return `
-          color: hsl(222.2 84% 4.9%);
-          background: transparent;
-          &:hover {
-            background: hsl(210 40% 98%);
-          }
-        `;
-    }
-  }}
-
-  ${({ size = "md" }) => {
-    switch (size) {
-      case "sm":
-        return `
-          padding: 0.5rem 1rem;
-          font-size: 0.875rem;
-        `;
-      case "md":
-        return `
-          padding: 1rem 1.5rem;
-          font-size: 1rem;
-        `;
-      case "lg":
-        return `
-          padding: 1.5rem 2rem;
-          font-size: 1.125rem;
-        `;
-    }
-  }}
+  &:hover {
+    transform: translateY(-1px);
+  }
 `;
 
 export const HeroSection = styled.section`

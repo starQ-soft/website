@@ -4,7 +4,7 @@ import { Play, Heart, Star, Download, Calendar, Users } from "lucide-react";
 import { useState, useEffect } from "react";
 import steamLogo from "../assets/steam-logo.svg";
 import { SteamIcon } from "../styles";
-import { StoryContainer, StoryTitle, StorySubtitle, StoryDescription } from "./LscStyles";
+import { StoryContainer, StoryTitle, StorySubtitle, StoryDescription, GameDescription } from "./LscStyles";
 
 // Styled Components
 const Container = styled.div`
@@ -17,70 +17,23 @@ const Container = styled.div`
   }
 `;
 
-const Button = styled(motion.button) <{
-  variant?: "primary" | "outline" | "ghost";
-  size?: "sm" | "md" | "lg";
-}>`
+const Button = styled(motion.button)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  border-radius: 0.5rem;
   font-weight: 500;
   transition: all 0.15s ease;
   cursor: pointer;
+  margin-top: 20px;
+  padding: 12px 30px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #f99bb3 0%, #a3c1f3 100%, #ffd7e6 100%);
+  color: white;
 
-  ${({ variant = "primary" }) => {
-    switch (variant) {
-      case "primary":
-        return `
-          background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
-          color: white;
-          &:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-          }
-        `;
-      case "outline":
-        return `
-          border: 1px solid hsl(var(--primary));
-          color: hsl(var(--primary));
-          background: transparent;
-          &:hover {
-            background: hsl(var(--primary));
-            color: white;
-          }
-        `;
-      case "ghost":
-        return `
-          color: hsl(222.2 84% 4.9%);
-          background: transparent;
-          &:hover {
-            background: hsl(210 40% 98%);
-          }
-        `;
-    }
-  }}
-
-  ${({ size = "md" }) => {
-    switch (size) {
-      case "sm":
-        return `
-          padding: 0.5rem 1rem;
-          font-size: 0.875rem;
-        `;
-      case "md":
-        return `
-          padding: 1rem 1.5rem;
-          font-size: 1rem;
-        `;
-      case "lg":
-        return `
-          padding: 1.5rem 2rem;
-          font-size: 1.125rem;
-        `;
-    }
-  }}
+  &:hover {
+    transform: translateY(-1px);
+  }
 `;
 
 const HeroSection = styled.section`
@@ -283,9 +236,15 @@ export const LoveCofounder: React.FC = () => {
                 <p>和一段热血、迷茫、令人心动的共创旅程。</p>
               </HeroDescription>
 
+
+              <GameDescription>
+                Immerse yourself in the stunning visuals and detailed environments
+                of SevenFold Mirrors.
+              </GameDescription>
+
               <HeroActions variants={fadeInUp}>
                 <motion.div {...scaleOnHover}>
-                  <Button size="lg">
+                  <Button>
                     {/* <Play size={20} /> */}
                     <SteamIcon src={steamLogo} />
                     Add to Wishlist

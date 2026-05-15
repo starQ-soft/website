@@ -23,10 +23,16 @@ const TopButton = styled.button`
     transform: ${({ $isVisible }) => ($isVisible ? 'scale(1.05)' : 'translateY(20px)')};
   }
   img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
+    transition: opacity 0.3s ease-in-out;
+  }
+  img.hover {
+    opacity: ${({ $isHovered }) => ($isHovered ? 1 : 0)};
   }
 
   @media (max-width: 768px) {
@@ -48,8 +54,9 @@ type BackToTopProps = {
 
 const BackToTop = ({ variant = 'main' }: BackToTopProps) => {
   const [isVisible, setIsVisible] = useState(false);
-  const imgSrc =
-    variant === 'lsc' ? 'public/topbutton.png' : 'public/main_top_button.png';
+  const [isHovered, setIsHovered] = useState(false);
+  const baseSrc =
+    variant === 'lsc' ? 'public/topbutton' : 'public/main_top_button';
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -75,10 +82,14 @@ const BackToTop = ({ variant = 'main' }: BackToTopProps) => {
   return (
     <TopButton
       $isVisible={isVisible}
+      $isHovered={isHovered}
       onClick={scrollToTop}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       aria-label="back to top"
     >
-      <img src={imgSrc} alt="back to top" />
+      <img className="base" src={`${baseSrc}.png`} alt="back to top" />
+      <img className="hover" src={`${baseSrc}_hover.png`} alt="" aria-hidden="true" />
     </TopButton>
   );
 };

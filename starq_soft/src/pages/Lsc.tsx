@@ -808,11 +808,6 @@ const Lsc = () => {
           >
 
             <StoryTitle>// {t.charTitle}</StoryTitle>
-
-            <GameDescription>
-              Immerse yourself in the stunning visuals and detailed environments
-              of SevenFold Mirrors.
-            </GameDescription>
             {/* <CharacterCarousel>
                 <button className="nav-btn">«</button>
                 <div className="char-list">
