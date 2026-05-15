@@ -634,54 +634,7 @@ const ModalOverlay = styled.div`
     }
   }
 
-  .nav-btn {
-    position: absolute;
-    top: 40%;
-    background: transparent;
-    transform: translateY(-50%);
-    border: none;
-    color: white;
-    width: 3rem;
-    height: 5rem;
-    font-size: 5rem;
-    font-weight: 200;
-    cursor: pointer;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
-    transition: opacity 0.2s ease;
-    opacity: 0.8;
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  .nav-btn.prev {
-    left: -8vw;
-  }
-
-  .nav-btn.next {
-    right: -8vw;
-  }
-
-  @media (max-width: 768px) {
-    .nav-btn {
-      font-size: 3rem;
-      width: 2rem;
-      height: 3rem;
-    }
-    .nav-btn.prev {
-      left: 0.5rem;
-    }
-    .nav-btn.next {
-      right: 0.5rem;
-    }
-  }
-`;
-
-.slick-prev, .slick-next {
+  .slick-prev, .slick-next {
     position: absolute;
     top: 50%;
     z-index: 10;
@@ -691,19 +644,16 @@ const ModalOverlay = styled.div`
     padding: 0;
     color: transparent;
     cursor: pointer;
-    background: #3a3343;
+    background: #262526;
     border: none;
+    opacity: 0.8;
     border-radius: 50%;
     outline: none;
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s;
-    -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-}
+  }
 
-.slick-prev::before, .slick-next::before {
+  .slick-prev::before, .slick-next::before {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -713,7 +663,22 @@ const ModalOverlay = styled.div`
     content: "";
     border-top: 1px solid #fff;
     border-right: 1px solid #fff;
-}
+  }
+
+  .slick-prev { left: -6em; }
+  .slick-next { right: -6em; }
+  .slick-prev::before { transform: translate(-25%, -50%) rotate(-135deg); }
+  .slick-next::before { transform: translate(-75%, -50%) rotate(45deg); }
+
+  @media (max-width: 768px) {
+    .slick-prev, .slick-next {
+      width: 2.5em;
+      height: 2.5em;
+    }
+    .slick-prev { left: 0.5rem; }
+    .slick-next { right: 0.5rem; }
+  }
+`;
 
 const screenshots = [
   { src: 'cg_thumbnail_1.png', alt: 'LSC-Forest Scene' },
@@ -953,8 +918,8 @@ const Lsc = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <img src={screenshots[selectedIndex].src} alt={screenshots[selectedIndex].alt} />
             <button className="close-btn" onClick={() => setSelectedIndex(null)} aria-label="Close">✕</button>
-            <button className="nav-btn prev" onClick={showPrev} aria-label="Previous image">‹</button>
-            <button className="nav-btn next" onClick={showNext} aria-label="Next image">›</button>
+            <button className="slick-prev" onClick={showPrev} aria-label="Previous image" />
+            <button className="slick-next" onClick={showNext} aria-label="Next image" />
           </div>
         </ModalOverlay>
       )}
