@@ -82,9 +82,7 @@ const Badge = styled(motion.div)`
 `;
 
 const HeroTitle = styled(motion.h1)`
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1;
+  line-height: 1.4;
   margin-bottom: 1.5rem;
 
   p {
@@ -97,10 +95,19 @@ const HeroTitle = styled(motion.h1)`
 `;
 
 const GradientText = styled.span`
-  background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+  font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
+  background: linear-gradient(135deg, #e91e63 0%, #342b36 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-size: 1.2em;
+  line-height: 1.4;
+
+  b {
+    font-weight: 800;
+    font-size: 1.5em;
+    line-height: 1;
+  }
 `;
 
 const HeroDescription = styled(motion.p)`
@@ -186,6 +193,24 @@ const staggerContainer = {
   },
 };
 
+const titleSpanStagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const titleSpanFadeIn = {
+  initial: { opacity: 0, y: 30 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
 const scaleOnHover = {
   whileHover: { scale: 1.02 },
   whileTap: { scale: 0.95 },
@@ -231,9 +256,37 @@ export const LoveCofounder: React.FC = () => {
               initial="initial"
               animate="animate"
             >
-              <HeroTitle variants={fadeInUp}>
-                <p><GradientText><span>恋と</span>&nbsp;<span>起業と</span></GradientText></p>
-                <p><GradientText><span>コファウンダー</span></GradientText></p>
+              <HeroTitle>
+                <p>
+                  <GradientText>
+                    <motion.span
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        
+                    >
+                      <b>恋</b>と
+                    </motion.span>
+                    <motion.span
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                    >
+                      <b>起業</b>と
+                    </motion.span>
+                  </GradientText>
+                </p>
+                <p>
+                  <GradientText>
+                    <motion.span
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+                    >
+                      <b>コファウンダー</b>
+                    </motion.span>
+                  </GradientText>
+                </p>
               </HeroTitle>
 
               <HeroDescription variants={fadeInUp}>

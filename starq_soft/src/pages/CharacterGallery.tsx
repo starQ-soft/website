@@ -20,7 +20,8 @@ const characters: any[] = [
     height: "178cm",
     weight: "68kg",
     likes: ["编程", "摄影", "组装模型", "看纪录片"],
-    voiceActor: "",
+    voiceActor: "（无）",
+    sampleVoices: [""],
     bloodType: "A型"
   },
   {
@@ -36,8 +37,9 @@ const characters: any[] = [
     age: "24",
     height: "175cm",
     weight: "62kg",
-    likes: [ "赛车", "玩德扑","打台球","电子游戏"],
+    likes: ["赛车", "玩德扑", "打台球", "电子游戏"],
     voiceActor: "大卫",
+    sampleVoices: ["CV/haijin-1.m4a", "CV/haijin-2.m4a"],
     zodiac: "射手座",
     birthday: "12月4日",
     bloodType: "AB型"
@@ -56,8 +58,9 @@ const characters: any[] = [
     height: "158cm",
     weight: "42kg",
     BWH: "78/58/80(cm)",
-    likes: ["绘画", "逛画展",  "做手工", "户外写生"],
+    likes: ["绘画", "逛画展", "做手工", "户外写生"],
     voiceActor: "溯月",
+    sampleVoices: ["CV/tani-1.m4a", "CV/tani-2.m4a"],
     zodiac: "双鱼座",
     birthday: "3月9日",
     bloodType: "A型"
@@ -78,6 +81,7 @@ const characters: any[] = [
     BWH: "86/62/85(cm)",
     likes: ["记手账", "逛书店", "追电视剧", "整理房间"],
     voiceActor: "缘梦",
+    sampleVoices: ["CV/hayashi-1.m4a", "CV/hayashi-2.m4a"],
     zodiac: "处女座",
     birthday: "9月17日",
     bloodType: "O型"
@@ -96,8 +100,9 @@ const characters: any[] = [
     height: "160cm",
     weight: "45kg",
     BWH: "80/60/82(cm)",
-    likes: ["购物", "炒股", "看综艺","美食探店"],
+    likes: ["购物", "炒股", "看综艺", "美食探店"],
     voiceActor: "小鼓单",
+    sampleVoices: ["CV/nana-1.m4a", "CV/nana-2.m4a"],
     zodiac: "狮子座",
     birthday: "8月7日",
     bloodType: "AB型"
@@ -116,8 +121,9 @@ const characters: any[] = [
     height: "165cm",
     weight: "50kg",
     BWH: "82/62/83(cm)",
-    likes: ["插花", "看话剧", "听音乐会","喝下午茶"],
+    likes: ["插花", "看话剧", "听音乐会", "喝下午茶"],
     voiceActor: "阿魂",
+    sampleVoices: ["CV/natsumi-1.m4a", "CV/natsumi-2.m4a"],
     zodiac: "巨蟹座",
     birthday: "7月8日",
     bloodType: "O型"
@@ -136,8 +142,9 @@ const characters: any[] = [
     height: "173cm",
     weight: "55kg",
     BWH: "90/66/88(cm)",
-    likes: ["潜水", "滑雪","红酒品鉴","古董收藏"],
+    likes: ["潜水", "滑雪", "红酒品鉴", "古董收藏"],
     voiceActor: "Satori",
+    sampleVoices: ["CV/rin-1.m4a", "CV/rin-2.m4a"],
     zodiac: "摩羯座",
     birthday: "1月9日",
     bloodType: "B型"
@@ -157,6 +164,7 @@ const characters: any[] = [
     weight: "72kg",
     likes: ["阅读", "攀岩", "拼乐高", "分析财报"],
     voiceActor: "烧麦",
+    sampleVoices: ["CV/takagi-1.m4a", "CV/takagi-2.m4a"],
     zodiac: "白羊座",
     birthday: "3月28日",
     bloodType: "B型"
@@ -173,6 +181,38 @@ export const LoveCofounderCharacter: React.FC = () => {
     background-clip: text;
   `;
 
+  const SampleVoice = styled.button`
+    display: inline-grid;
+    width: 38px;
+    height: 38px;
+    background-color: #CC1075;
+    border: none;
+    border-radius: 50%;
+    place-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 0;
+    transition: transform 0.2s;
+
+    &:hover {
+      background-color: #e91e63;
+      transform: background-color;
+    }
+
+    &::after {
+      display: block;
+      width: 15px;
+      height: 22px;
+      content: url("/voice-play.svg");
+    }
+  `;
+
+  const playSample = (src: string) => {
+    if (!src) return;
+    const audio = new Audio(src);
+    audio.play().catch(() => {});
+  };
+
   return (
     <GalleryContainer>
       <CharacterList>
@@ -180,14 +220,13 @@ export const LoveCofounderCharacter: React.FC = () => {
           {/* <button className="nav-btn">«</button> */}
           <div className="char-list">
             {characters.map((char, index) => (
-              <CharacterCard key={index} 
-              // $isSelected={selectedCharacter === index}
+              <CharacterCard key={index}
+                // $isSelected={selectedCharacter === index}
                 onClick={() => setSelectedCharacter(index)}>
                 <div className="avatar">
                   <img src={avatars[index]} alt={char.name.english} />
                 </div>
                 <div>{char.name.japanese}</div>
-                {/* <div>{char.name.english}</div> */}
               </CharacterCard>
             ))}
           </div>
@@ -224,53 +263,66 @@ export const LoveCofounderCharacter: React.FC = () => {
                   {characters[selectedCharacter].name.english}
                 </EnglishName>
               </div>
+              <div>CV: {characters[selectedCharacter].voiceActor}
+                <SampleVoice  />
+                {/* {characters[selectedCharacter].sampleVoices
+                  .filter((src: string) => !!src)
+                  .map((src: string, i: number) => (
+                    <SampleVoice
+                      key={i}
+                      type="button"
+                      aria-label={`Play sample voice ${i + 1}`}
+                      onClick={() => playSample(src)}
+                    />
+                  ))} */}
+              </div>
             </div>
             <Role>{characters[selectedCharacter].role}</Role>
           </CharacterHeader>
-          <Description>
-            {characters[selectedCharacter].description}
-          </Description>
-          <Details>
-            <DetailItem>
-              <Label>Age</Label>
-              <Value>{characters[selectedCharacter].age}</Value>
-            </DetailItem>
-            <DetailItem>
-              <Label>Blood Type</Label>
-              <Value>{characters[selectedCharacter].bloodType || '??'}</Value>
-            </DetailItem>
-          </Details>
-          <Details>
-            <DetailItem>
-              <Label>Height</Label>
-              <Value>{characters[selectedCharacter].height}</Value>
-            </DetailItem>
-            <DetailItem>
-              <Label>Weight</Label>
-              <Value>{characters[selectedCharacter].weight || '??'}</Value>
-            </DetailItem>
-          </Details>
-          <Details>
-            <DetailItem>
-              <Label>Birthday</Label>
-              <Value>{characters[selectedCharacter].birthday || '??'}</Value>
-            </DetailItem>
-            <DetailItem>
-              <Label>Zodiac</Label>
-              <Value>{characters[selectedCharacter].zodiac || '??'}</Value>
-            </DetailItem>
-          </Details>
-          <Likes>
-            <Label>Likes</Label>
-            <LikesList>
-              {characters[selectedCharacter].likes.map((like) => (
-                <LikeItem key={like}>{like}</LikeItem>
-              ))}
-            </LikesList>
-          </Likes>
-        </CharacterInfo>
-      </CharacterDisplay>
-    </GalleryContainer>
+        <Description>
+          {characters[selectedCharacter].description}
+        </Description>
+        <Details>
+          <DetailItem>
+            <Label>Age</Label>
+            <Value>{characters[selectedCharacter].age}</Value>
+          </DetailItem>
+          <DetailItem>
+            <Label>Blood Type</Label>
+            <Value>{characters[selectedCharacter].bloodType || '??'}</Value>
+          </DetailItem>
+        </Details>
+        <Details>
+          <DetailItem>
+            <Label>Height</Label>
+            <Value>{characters[selectedCharacter].height}</Value>
+          </DetailItem>
+          <DetailItem>
+            <Label>Weight</Label>
+            <Value>{characters[selectedCharacter].weight || '??'}</Value>
+          </DetailItem>
+        </Details>
+        <Details>
+          <DetailItem>
+            <Label>Birthday</Label>
+            <Value>{characters[selectedCharacter].birthday || '??'}</Value>
+          </DetailItem>
+          <DetailItem>
+            <Label>Zodiac</Label>
+            <Value>{characters[selectedCharacter].zodiac || '??'}</Value>
+          </DetailItem>
+        </Details>
+        <Likes>
+          <Label>Likes</Label>
+          <LikesList>
+            {characters[selectedCharacter].likes.map((like) => (
+              <LikeItem key={like}>{like}</LikeItem>
+            ))}
+          </LikesList>
+        </Likes>
+      </CharacterInfo>
+    </CharacterDisplay>
+    </GalleryContainer >
   );
 };
 
