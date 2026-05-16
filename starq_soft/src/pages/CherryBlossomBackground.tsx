@@ -4,16 +4,16 @@ import styled, { keyframes } from 'styled-components';
 
 interface PetalConfig {
   id: number;
-  left: string;
-  duration: string;
-  delay: string;
-  size: string;
-  color: string;
-  drift: string;
-  rotation: string;
-  timing: string;
-  swayDuration: string;
-  blur: string;
+  $left: string;
+  $duration: string;
+  $delay: string;
+  $size: string;
+  $color: string;
+  $drift: string;
+  $rotation: string;
+  $timing: string;
+  $swayDuration: string;
+  $blur: string;
 }
 
 const COLORS = {
@@ -60,19 +60,19 @@ const Container = styled.div`
 
 const SakuraPetal = styled.div<PetalConfig>`
   position: absolute;
-  left: ${props => props.left};
-  width: ${props => props.size};
-  height: ${props => props.size};
-  background: ${props => props.color};
+  left: ${props => props.$left};
+  width: ${props => props.$size};
+  height: ${props => props.$size};
+  background: ${props => props.$color};
   border-radius: 15px 0px;
   opacity: 0.7;
-  filter: blur(${props => props.blur});
-  transform: rotate(${props => props.rotation});
-  animation: 
-    ${props => fallAndRotate(props.drift)} ${props => props.duration} ${props => props.timing} infinite,
-    ${sway} ${props => props.swayDuration} ease-in-out infinite;
-  
-  animation-delay: ${props => props.delay};
+  filter: blur(${props => props.$blur});
+  transform: rotate(${props => props.$rotation});
+  animation:
+    ${props => fallAndRotate(props.$drift)} ${props => props.$duration} ${props => props.$timing} infinite,
+    ${sway} ${props => props.$swayDuration} ease-in-out infinite;
+
+  animation-delay: ${props => props.$delay};
 
   &::after {
     content: "";
@@ -111,16 +111,16 @@ const CherryBlossomBackground: React.FC<{ count?: number }> = ({ count = 65 }) =
 
       return {
         id: i,
-        left: `${Math.random() * 100}%`,
-        duration: `${(25 + Math.random() * 12) * speedMultiplier}s`, // 8s-20s 速度差
-        delay: `${Math.random() * -20}s`, // 负延迟让背景瞬间填满
-        size: `${(10 + Math.random() * 10) * sizeMultiplier}px`, // 10px-20px 之间
-        color: Math.random() > 0.4 ? COLORS.PINK : COLORS.BLUE,
-        drift: `${(Math.random() - 0.5) * 350}px`, // 水平漂移量
-        rotation: `${Math.random() * 360}deg`, // 初始旋转
-        timing: timings[Math.floor(Math.random() * timings.length)],
-        swayDuration: `${5 + Math.random() * 4}s`, // 摇摆频率
-        blur: `${blurValue}px`, // 景深模糊值
+        $left: `${Math.random() * 100}%`,
+        $duration: `${(25 + Math.random() * 12) * speedMultiplier}s`, // 8s-20s 速度差
+        $delay: `${Math.random() * -20}s`, // 负延迟让背景瞬间填满
+        $size: `${(10 + Math.random() * 10) * sizeMultiplier}px`, // 10px-20px 之间
+        $color: Math.random() > 0.4 ? COLORS.PINK : COLORS.BLUE,
+        $drift: `${(Math.random() - 0.5) * 350}px`, // 水平漂移量
+        $rotation: `${Math.random() * 360}deg`, // 初始旋转
+        $timing: timings[Math.floor(Math.random() * timings.length)],
+        $swayDuration: `${5 + Math.random() * 4}s`, // 摇摆频率
+        $blur: `${blurValue}px`, // 景深模糊值
       };
     });
   }, [count]);

@@ -745,10 +745,8 @@ export const CharacterCarousel = styled.div`
 export const CharacterCard = styled.div`
   min-width: 120px;
   flex: 0 0 auto;
-  background-color: #fff0f5;
   border: 2px solid #ffb6c1;
-  border-radius: 0.75rem;
-  padding: 0.5rem;
+  // border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -763,20 +761,21 @@ export const CharacterCard = styled.div`
     width: 100%;
     height: 8rem;
     background-color: white;
-    border-radius: 0.375rem;
-    margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.75rem;
-    color: #9ca3af;
+    // color: #9ca3af;
     overflow: hidden;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transform: scale(2) translateY(45%); 
+    transform-origin: bottom center;
+    display: block;
     }
   }
 

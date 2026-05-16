@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { CharacterCard, type SectionTitle, CharacterCarousel } from "./LscStyles";
 
@@ -181,7 +181,8 @@ export const LoveCofounderCharacter: React.FC = () => {
     background-clip: text;
   `;
 
-  const SampleVoice = styled.button`
+
+  const VoiceIcon = styled.div`
     display: inline-grid;
     width: 38px;
     height: 38px;
@@ -192,25 +193,60 @@ export const LoveCofounderCharacter: React.FC = () => {
     cursor: pointer;
     margin-left: 10px;
     padding: 0;
-    transition: transform 0.2s;
-
-    &:hover {
-      background-color: #e91e63;
-      transform: background-color;
-    }
-
-    &::after {
-      display: block;
-      width: 15px;
-      height: 22px;
-      content: url("/voice-play.svg");
-    }
   `;
+
+  // const VoiceButton = styled.img`
+  //   display: inline-grid;
+  //   width: 38px;
+  //   height: 38px;
+  //   background-color: #CC1075;
+  //   border: none;
+  //   border-radius: 50%;
+  //   place-items: center;
+  //   cursor: pointer;
+  //   margin-left: 10px;
+  //   padding: 0;
+  //   transition: background-color 0.2s;
+
+  //   &:hover {
+  //     background-color: #e91e63;
+  //   }
+  // `;
+
+  const currentAudioRef = useRef<HTMLAudioElement | null>(null);
+  const [playingSrc, setPlayingSrc] = useState<string | null>(null);
+
+  const stopCurrent = () => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+      currentAudioRef.current = null;
+    }
+    setPlayingSrc(null);
+  };
 
   const playSample = (src: string) => {
     if (!src) return;
+    if (playingSrc === src) {
+      stopCurrent();
+      return;
+    }
+    stopCurrent();
     const audio = new Audio(src);
-    audio.play().catch(() => {});
+    audio.addEventListener("ended", () => {
+      if (currentAudioRef.current === audio) {
+        currentAudioRef.current = null;
+        setPlayingSrc(null);
+      }
+    });
+    currentAudioRef.current = audio;
+    setPlayingSrc(src);
+    audio.play().catch(() => {
+      if (currentAudioRef.current === audio) {
+        currentAudioRef.current = null;
+        setPlayingSrc(null);
+      }
+    });
   };
 
   return (
@@ -264,64 +300,86 @@ export const LoveCofounderCharacter: React.FC = () => {
                 </EnglishName>
               </div>
               <div>CV: {characters[selectedCharacter].voiceActor}
-                <SampleVoice  />
-                {/* {characters[selectedCharacter].sampleVoices
+                {characters[selectedCharacter].sampleVoices
                   .filter((src: string) => !!src)
                   .map((src: string, i: number) => (
-                    <SampleVoice
+                    <a
                       key={i}
-                      type="button"
-                      aria-label={`Play sample voice ${i + 1}`}
-                      onClick={() => playSample(src)}
-                    />
-                  ))} */}
+                      href={src}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        playSample(src);
+                      }}
+                    >
+                      <div style={{
+                        display: "inline-grid",
+                        width: "38px",
+                        height: "38px",
+                        backgroundColor: "#CC1075",
+                        border: "none",
+                        borderRadius: "50%",
+                        placeItems: "center",
+                        cursor: "pointer",
+                        marginLeft: "10px",
+                        padding: 0
+                      }}>
+                        <img
+                          src={playingSrc === src ? "voice-stop.svg" : "voice-play.svg"}
+                          alt={playingSrc === src ? "stop" : "play"}
+                          style={{ width: "15px", height: "20px" }
+                          }
+
+                        />
+                      </div>
+                    </a>
+                  ))}
               </div>
             </div>
             <Role>{characters[selectedCharacter].role}</Role>
           </CharacterHeader>
-        <Description>
-          {characters[selectedCharacter].description}
-        </Description>
-        <Details>
-          <DetailItem>
-            <Label>Age</Label>
-            <Value>{characters[selectedCharacter].age}</Value>
-          </DetailItem>
-          <DetailItem>
-            <Label>Blood Type</Label>
-            <Value>{characters[selectedCharacter].bloodType || '??'}</Value>
-          </DetailItem>
-        </Details>
-        <Details>
-          <DetailItem>
-            <Label>Height</Label>
-            <Value>{characters[selectedCharacter].height}</Value>
-          </DetailItem>
-          <DetailItem>
-            <Label>Weight</Label>
-            <Value>{characters[selectedCharacter].weight || '??'}</Value>
-          </DetailItem>
-        </Details>
-        <Details>
-          <DetailItem>
-            <Label>Birthday</Label>
-            <Value>{characters[selectedCharacter].birthday || '??'}</Value>
-          </DetailItem>
-          <DetailItem>
-            <Label>Zodiac</Label>
-            <Value>{characters[selectedCharacter].zodiac || '??'}</Value>
-          </DetailItem>
-        </Details>
-        <Likes>
-          <Label>Likes</Label>
-          <LikesList>
-            {characters[selectedCharacter].likes.map((like) => (
-              <LikeItem key={like}>{like}</LikeItem>
-            ))}
-          </LikesList>
-        </Likes>
-      </CharacterInfo>
-    </CharacterDisplay>
+          <Description>
+            {characters[selectedCharacter].description}
+          </Description>
+          <Details>
+            <DetailItem>
+              <Label>Age</Label>
+              <Value>{characters[selectedCharacter].age}</Value>
+            </DetailItem>
+            <DetailItem>
+              <Label>Blood Type</Label>
+              <Value>{characters[selectedCharacter].bloodType || '??'}</Value>
+            </DetailItem>
+          </Details>
+          <Details>
+            <DetailItem>
+              <Label>Height</Label>
+              <Value>{characters[selectedCharacter].height}</Value>
+            </DetailItem>
+            <DetailItem>
+              <Label>Weight</Label>
+              <Value>{characters[selectedCharacter].weight || '??'}</Value>
+            </DetailItem>
+          </Details>
+          <Details>
+            <DetailItem>
+              <Label>Birthday</Label>
+              <Value>{characters[selectedCharacter].birthday || '??'}</Value>
+            </DetailItem>
+            <DetailItem>
+              <Label>Zodiac</Label>
+              <Value>{characters[selectedCharacter].zodiac || '??'}</Value>
+            </DetailItem>
+          </Details>
+          <Likes>
+            <Label>Likes</Label>
+            <LikesList>
+              {characters[selectedCharacter].likes.map((like) => (
+                <LikeItem key={like}>{like}</LikeItem>
+              ))}
+            </LikesList>
+          </Likes>
+        </CharacterInfo>
+      </CharacterDisplay>
     </GalleryContainer >
   );
 };

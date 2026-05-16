@@ -81,9 +81,10 @@ const Badge = styled(motion.div)`
   margin-bottom: 1rem;
 `;
 
-const HeroTitle = styled(motion.h1)`
+const HeroTitle = styled(motion.div)`
   line-height: 1.4;
   margin-bottom: 1.5rem;
+  font-weight: 700;
 
   p {
     margin: 1rem 0;
@@ -110,7 +111,7 @@ const GradientText = styled.span`
   }
 `;
 
-const HeroDescription = styled(motion.p)`
+const HeroDescription = styled(motion.div)`
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
   font-size: 1.5rem;
   color: hsl(215.4 16.3% 46.9%);
