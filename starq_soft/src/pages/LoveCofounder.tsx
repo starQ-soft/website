@@ -27,12 +27,21 @@ const Button = styled(motion.button)`
   cursor: pointer;
   margin-top: 20px;
   padding: 12px 30px;
+  border: none;
+  outline: none;
   border-radius: 50px;
-  background: linear-gradient(135deg, #f99bb3 0%, #a3c1f3 100%, #ffd7e6 100%);
+  background: linear-gradient(135deg,  #ffd7e6 0%, #f99bb3 15%, #a3c1f3 100%);
   color: white;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active,
+  &:focus-visible {
+    outline: none;
+    border: none;
     transform: translateY(-1px);
+    filter: saturate(1.5);
+    drop-shadow: 0 1rem 2rem rgba(255, 172, 191, 0.6);
   }
 `;
 

@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { CharacterCard, type SectionTitle, CharacterCarousel } from "./LscStyles";
 
@@ -39,7 +39,7 @@ const characters: any[] = [
     weight: "62kg",
     likes: ["赛车", "玩德扑", "打台球", "电子游戏"],
     voiceActor: "大卫",
-    sampleVoices: ["CV/haijin-1.m4a", "CV/haijin-2.m4a"],
+    sampleVoices: ["CV/haijin-1.mp3", "CV/haijin-2.mp3", "CV/haijin-3.mp3"],
     zodiac: "射手座",
     birthday: "12月4日",
     bloodType: "AB型"
@@ -60,7 +60,7 @@ const characters: any[] = [
     BWH: "78/58/80(cm)",
     likes: ["绘画", "逛画展", "做手工", "户外写生"],
     voiceActor: "溯月",
-    sampleVoices: ["CV/tani-1.m4a", "CV/tani-2.m4a"],
+    sampleVoices: ["CV/tani-1.mp3", "CV/tani-2.mp3", "CV/tani-3.mp3"],
     zodiac: "双鱼座",
     birthday: "3月9日",
     bloodType: "A型"
@@ -81,7 +81,7 @@ const characters: any[] = [
     BWH: "86/62/85(cm)",
     likes: ["记手账", "逛书店", "追电视剧", "整理房间"],
     voiceActor: "缘梦",
-    sampleVoices: ["CV/hayashi-1.m4a", "CV/hayashi-2.m4a"],
+    sampleVoices: ["CV/hayashi-1.mp3", "CV/hayashi-2.mp3", "CV/hayashi-3.mp3"],
     zodiac: "处女座",
     birthday: "9月17日",
     bloodType: "O型"
@@ -102,7 +102,7 @@ const characters: any[] = [
     BWH: "80/60/82(cm)",
     likes: ["购物", "炒股", "看综艺", "美食探店"],
     voiceActor: "小鼓单",
-    sampleVoices: ["CV/nana-1.m4a", "CV/nana-2.m4a"],
+    sampleVoices: ["CV/nana-1.mp3", "CV/nana-2.mp3", "CV/nana-3.mp3"],
     zodiac: "狮子座",
     birthday: "8月7日",
     bloodType: "AB型"
@@ -123,7 +123,7 @@ const characters: any[] = [
     BWH: "82/62/83(cm)",
     likes: ["插花", "看话剧", "听音乐会", "喝下午茶"],
     voiceActor: "阿魂",
-    sampleVoices: ["CV/natsumi-1.m4a", "CV/natsumi-2.m4a"],
+    sampleVoices: ["CV/natsumi-1.mp3", "CV/natsumi-2.mp3", "CV/natsumi-3.mp3"],
     zodiac: "巨蟹座",
     birthday: "7月8日",
     bloodType: "O型"
@@ -144,7 +144,7 @@ const characters: any[] = [
     BWH: "90/66/88(cm)",
     likes: ["潜水", "滑雪", "红酒品鉴", "古董收藏"],
     voiceActor: "Satori",
-    sampleVoices: ["CV/rin-1.m4a", "CV/rin-2.m4a"],
+    sampleVoices: ["CV/rin-1.mp3", "CV/rin-2.mp3", "CV/rin-3.mp3"],
     zodiac: "摩羯座",
     birthday: "1月9日",
     bloodType: "B型"
@@ -164,7 +164,7 @@ const characters: any[] = [
     weight: "72kg",
     likes: ["阅读", "攀岩", "拼乐高", "分析财报"],
     voiceActor: "烧麦",
-    sampleVoices: ["CV/takagi-1.m4a", "CV/takagi-2.m4a"],
+    sampleVoices: ["CV/takagi-1.mp3", "CV/takagi-2.mp3", "CV/takagi-3.mp3"],
     zodiac: "白羊座",
     birthday: "3月28日",
     bloodType: "B型"
@@ -249,6 +249,16 @@ export const LoveCofounderCharacter: React.FC = () => {
     });
   };
 
+  useEffect(() => {
+    stopCurrent();
+  }, [selectedCharacter]);
+
+  useEffect(() => {
+    return () => {
+      stopCurrent();
+    };
+  }, []);
+
   return (
     <GalleryContainer>
       <CharacterList>
@@ -258,9 +268,12 @@ export const LoveCofounderCharacter: React.FC = () => {
             {characters.map((char, index) => (
               <CharacterCard key={index}
                 // $isSelected={selectedCharacter === index}
-                onClick={() => setSelectedCharacter(index)}>
+                onClick={() => {
+                  stopCurrent();
+                  setSelectedCharacter(index);
+                }}>
                 <div className="avatar">
-                  <img src={avatars[index]} alt={char.name.english} />
+                  <img src={avatars[index].replace(/\.png$/, "-avatar.png")} alt={char.name.english} />
                 </div>
                 <div>{char.name.japanese}</div>
               </CharacterCard>

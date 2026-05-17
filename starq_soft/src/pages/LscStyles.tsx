@@ -36,24 +36,6 @@ export const Container = styled.div`
   }
 `;
 
-export const Button = styled(motion.button)`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-weight: 500;
-  transition: all 0.15s ease;
-  cursor: pointer;
-  margin-top: 20px;
-  padding: 12px 30px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #f99bb3 0%, #a3c1f3 100%, #ffd7e6 100%);
-  color: white;
-
-  &:hover {
-    transform: translateY(-1px);
-  }
-`;
 
 export const HeroSection = styled.section`
   position: relative;
@@ -708,6 +690,11 @@ export const CharacterCarousel = styled.div`
   gap: 0.5rem;
   width: 100%;
 
+  :hover {
+    border-color: #ff0088;
+    opacity: 1;
+  }
+
   .nav-btn {
     color: #ffb6c1;
     font-size: 1.875rem;
@@ -745,16 +732,24 @@ export const CharacterCarousel = styled.div`
 export const CharacterCard = styled.div`
   min-width: 120px;
   flex: 0 0 auto;
-  border: 2px solid #ffb6c1;
-  // border-radius: 0.75rem;
+  border: 2px solid #CC1075;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(135deg,  #e73996 0%, #f96db8 45%, #a3c1f3 100%);
+  color: #fffcfb;
+  opacity: 0.9;
+  cursor: pointer;
 
   @media (max-width: 480px) {
     min-width: 0;
     width: calc((100% - 2rem) / 3);
     .avatar { height: 5rem; }
+  }
+
+  :hover {
+   opacity: 1; 
+   transition: opacity 0.3s ease;
   }
 
   .avatar {
@@ -765,17 +760,12 @@ export const CharacterCard = styled.div`
     align-items: center;
     justify-content: center;
     font-size: 0.75rem;
-    // color: #9ca3af;
     overflow: hidden;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
-    transform: scale(2) translateY(45%); 
-    transform-origin: bottom center;
-    display: block;
     }
   }
 
