@@ -705,7 +705,7 @@ export const CharacterCarousel = styled.div`
 
   .char-list {
     display: flex;
-    gap: 1rem;
+    gap: 1.25rem;
     overflow-x: auto;
     padding-bottom: 1rem;
     scrollbar-width: none;
@@ -732,13 +732,13 @@ export const CharacterCarousel = styled.div`
 export const CharacterCard = styled.div`
   min-width: 120px;
   flex: 0 0 auto;
-  border: 2px solid #CC1075;
+  border: 2px solid #f69db3;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(135deg,  #e73996 0%, #f96db8 45%, #a3c1f3 100%);
+  background: linear-gradient(135deg,  #f69db3 0%, rgb(251, 146, 202) 45%, #d0e1fd 100%);
   color: #fffcfb;
-  opacity: 0.9;
+  opacity: 0.8;
   cursor: pointer;
 
   @media (max-width: 480px) {

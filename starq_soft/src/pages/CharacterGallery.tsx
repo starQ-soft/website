@@ -275,7 +275,7 @@ export const LoveCofounderCharacter: React.FC = () => {
                 <div className="avatar">
                   <img src={avatars[index].replace(/\.png$/, "-avatar.png")} alt={char.name.english} />
                 </div>
-                <div>{char.name.japanese}</div>
+                {/* <div>{char.name.japanese}</div> */}
               </CharacterCard>
             ))}
           </div>
