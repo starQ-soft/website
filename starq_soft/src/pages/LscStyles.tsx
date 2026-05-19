@@ -691,7 +691,7 @@ export const CharacterCarousel = styled.div`
   width: 100%;
 
   :hover {
-    border-color: #ff0088;
+    border-color: #f69db3;
     opacity: 1;
   }
 
@@ -729,16 +729,16 @@ export const CharacterCarousel = styled.div`
   }
 `;
 
-export const CharacterCard = styled.div`
+export const CharacterCard = styled.div<{ $isSelected?: boolean }>`
   min-width: 120px;
   flex: 0 0 auto;
-  border: 2px solid #f69db3;
+  border: 2px solid ${(props) => (props.$isSelected ? "#ff0088" : "#aaa")};
   display: flex;
   flex-direction: column;
   align-items: center;
   background: linear-gradient(135deg,  #f69db3 0%, rgb(251, 146, 202) 45%, #d0e1fd 100%);
   color: #fffcfb;
-  opacity: 0.8;
+  opacity: ${(props) => (props.$isSelected ? 1 : 0.8)};
   cursor: pointer;
 
   @media (max-width: 480px) {
