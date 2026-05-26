@@ -26,21 +26,13 @@ const contents = {
       '在虚拟与现实的交织中，你将如何抉择……',
       '一段充满恋爱与梦想的理想性硬派流程！'
     ],
-    charTitle: '登场角色',
-    characters: [
-      { name: '石原', title: 'Main Heroine', quote: '「……所以，你是？」' },
-      { name: '设计', title: 'Designer', quote: '「这可是我熬夜做出来的！」' },
-      { name: '管理', title: 'Operations Manager', quote: '「……明天前，把这搞定。」' },
-      { name: '投资', title: 'Investor', quote: '「这点钱，能做出什么花样？」' },
-      { name: 'YOU', title: 'Protagonist', quote: '「……作为，发起人。」' }
-    ],
     progressTitle: '开发进展',
     progressNotes: [
-      { date: '2022/01/20', text: 'Script 开发完成！' },
-      { date: '2022/02/28', text: 'UI 替换包 成功入库！' },
-      { date: '2022/03/27', text: 'AI 交互系统 测试中！' },
-      { date: '2022/03/29', text: 'AI 互动系统 调试中！' },
-      { date: '2022/03/29', text: 'AI 特效表现 测试中！' }
+      { date: '2026/01/20', text: 'Script 开发完成！' },
+      { date: '2026/02/28', text: 'UI 替换包 成功入库！' },
+      { date: '2026/03/27', text: 'AI 交互系统 测试中！' },
+      { date: '2026/03/29', text: 'AI 互动系统 调试中！' },
+      { date: '2026/03/29', text: 'AI 特效表现 测试中！' }
     ],
     promoTitle: '赛博创业团♥ ',
     promoFeatures: [
@@ -74,11 +66,11 @@ const contents = {
     ],
     progressTitle: '最新の開発進捗',
     progressNotes: [
-      { date: '2022/01/20', text: 'スクリプト開発完了！' },
-      { date: '2022/02/28', text: 'UI パッケージ実装成功！' },
-      { date: '2022/03/27', text: 'AI 対話システム テスト中！' },
-      { date: '2022/03/29', text: 'AI 連携システム 調整中！' },
-      { date: '2022/03/29', text: 'AI エフェクト テスト中！' }
+      { date: '2026/01/20', text: 'スクリプト開発完了！' },
+      { date: '2026/02/28', text: 'UI パッケージ実装成功！' },
+      { date: '2026/03/27', text: 'AI 対話システム テスト中！' },
+      { date: '2026/03/29', text: 'AI 連携システム 調整中！' },
+      { date: '2026/03/29', text: 'AI エフェクト テスト中！' }
     ],
     promoTitle: 'サイバースタートアップ',
     promoFeatures: [
@@ -185,6 +177,7 @@ const PvContainer = styled.div`
   align-items: center;
   justify-content: center;
   border: 4px solid white;
+  margin: 2rem 0;
 
   @media (max-width: 768px) {
     border-width: 2px;
@@ -208,18 +201,18 @@ const PvContainer = styled.div`
 `;
 
 const IntroBox = styled.div`
-  background-color: #ffe4e1;
+  background-color: rgba(255, 228, 228, 0.6);
   border: 4px solid white;
-  border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.5rem;
   align-items: center;
   justify-content: space-evenly;
   width: 60%;
   box-sizing: border-box;
   flex-wrap: wrap;
+  margin: 2rem 0;
 
   @media (min-width: 768px) { flex-direction: row; }
 
@@ -242,18 +235,18 @@ const IntroBox = styled.div`
   }
 
   .image-placeholder {
-    width: 20rem;
+    width: 22rem;
     max-width: 100%;
-    height: 10rem;
+    height: 12rem;
     background-color: white;
     border: 2px solid #ffb6c1;
-    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.75rem;
     color: #9ca3af;
     overflow: hidden;
+    cursor: pointer;
 
     img {
       width: 100%;
@@ -834,19 +827,24 @@ const Lsc = () => {
           >
 
             <StoryTitle>// {t.pvTitle}</StoryTitle>
+            <h2>OPムービー</h2>
             <PvContainer>
               <button>▶</button>
             </PvContainer>
             <br />
+            <h2>キャラ紹介ムービー</h2>
+            <PvContainer>
+              <button>▶</button>
+            </PvContainer>
             <IntroBox>
-              <div className="content">
-                <h3>キャラ紹介ムービー</h3>
-                {/* <p>
+              {/* <div className="content"> */}
+              {/* <h3>キャラ紹介ムービー</h3> */}
+              {/* <p>
                 {t.introText.map((line, idx) => (
                   <React.Fragment key={idx}>{line}<br /></React.Fragment>
                 ))}
               </p> */}
-              </div>
+              {/* </div> */}
               {pv_thumbnails.map((thumb, index) => (
                 <div key={index} className="image-placeholder"><img src={thumb} alt={thumb} /></div>
               ))}
@@ -921,8 +919,8 @@ const Lsc = () => {
                   <li><span>HDD</span>	6GB以上</li>
                   <li><span>原画／SD／背景</span>眞海</li>
                   <li><span>キャラクターデザイン</span>眞海</li>
-
-                  {/* <li><span>音楽</span>Famishin・Angel Note・zippy 他</li>
+                  <li><span>音楽</span>Wedoso</li>
+                  {/* 
                   <li><span>ＣＧ</span>中乃・トミフミ 他</li>
                   <li><span>背景</span>Ｒｙｏｕｍａ・わいっしゅ・ろど・ニライカナイ</li>
                   <li><span>ムービー</span>ろど 他</li>

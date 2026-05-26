@@ -119,7 +119,8 @@ export const NavActions = styled.div`
 export const Hero = styled.header<{ $bgImage?: string }>`
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 60vh;
+  min-height: 600px;
   background: linear-gradient(to right, #1e3a8a, #6b21a8, #831843);
   background-image: ${({ $bgImage }) => $bgImage ? `url(${$bgImage})` : 'none'};
   display: flex;
@@ -243,6 +244,7 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  margin-top: 5rem;
 `;
 
 export const SectionHeader = styled.h2`
@@ -250,8 +252,8 @@ export const SectionHeader = styled.h2`
   font-weight: 900;
   margin-bottom: 1.5rem;
   padding-bottom: 0.25rem;
-  color: #FF5C8A;
-  border-bottom: 2px #FF5C8A solid;
+  color: #e45580;
+  // border-bottom: 2px #ec799a solid;
   align-items: baseline;
   margin: 1rem auto;
 `;
@@ -422,7 +424,7 @@ export const AboutBox = styled.div`
   justify-content: space-between;
   margin-bottom: 2rem;
   width: 80%;
-  margin: 0 auto;
+  margin: 5rem auto;
 
   p {
     font-size: 0.875rem;

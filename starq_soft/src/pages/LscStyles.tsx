@@ -214,7 +214,8 @@ export const FloatingElement = styled(motion.div) <{
 // `;
 
 export const StoryContainer = styled.section`
-  padding: 100px 20px;
+  border: 2px solid #ffe4e4;
+  padding: 2rem 1rem;
   background-color: #fff;
   width: 60%;
   margin: 0 auto;

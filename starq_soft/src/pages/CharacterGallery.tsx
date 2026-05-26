@@ -326,20 +326,20 @@ export const LoveCofounderCharacter: React.FC = () => {
                     >
                       <div style={{
                         display: "inline-grid",
-                        width: "38px",
-                        height: "38px",
+                        width: "30px",
+                        height: "30px",
                         backgroundColor: "#e186b4",
                         border: "none",
                         borderRadius: "50%",
                         placeItems: "center",
                         cursor: "pointer",
-                        marginLeft: "10px",
+                        marginLeft: "8px",
                         padding: 0
                       }}>
                         <img
                           src={playingSrc === src ? "voice-stop.svg" : "voice-play.svg"}
                           alt={playingSrc === src ? "stop" : "play"}
-                          style={{ width: "15px", height: "20px" }
+                          style={{ width: "12px", height: "16px" }
                           }
 
                         />
