@@ -19,10 +19,16 @@ const characters: any[] = [
     age: "24",
     height: "178cm",
     weight: "68kg",
+    BWH: "92/74/93(cm)",
     likes: ["编程", "摄影", "模型组装"],
     voiceActor: "（无）",
     sampleVoices: [""],
-    bloodType: "A型"
+    bloodType: "A型",
+    quotes: [
+      "虽然现在看起来毫无头绪，但只要把问题拆解开，总能找到解决的办法。",
+      "既然决定要做，我就会负责到底，半途而废不是我的风格。",
+      "又被拒了吗……没关系，重新整理一下简历，明天继续投递吧。"
+    ]
   },
   {
     "name": {
@@ -37,12 +43,18 @@ const characters: any[] = [
     age: "24",
     height: "175cm",
     weight: "62kg",
+    BWH: "86/70/87(cm)",
     likes: ["玩德扑", "打台球", "电子游戏"],
     voiceActor: "大卫",
-    sampleVoices: ["CV/haijin-1.mp3", "CV/haijin-2.mp3", "CV/haijin-3.mp3"],
+    sampleVoices: ["CV/haijin-1.m4a", "CV/haijin-2.m4a", "CV/haijin-3.m4a"],
     zodiac: "射手座",
     birthday: "12月4日",
-    bloodType: "AB型"
+    bloodType: "AB型",
+    quotes: [
+      "兄弟，格局！格局要打开！现在的投资圈看的是什么？是产品吗？错！是情绪价值！",
+      "我出钱，你出命，一起走向人生巅峰！",
+      "你懂什么？初创公司要的就是气场！"
+    ]
   },
   {
     "name": {
@@ -63,7 +75,12 @@ const characters: any[] = [
     sampleVoices: ["CV/tani-1.mp3", "CV/tani-2.mp3", "CV/tani-3.mp3"],
     zodiac: "双鱼座",
     birthday: "3月9日",
-    bloodType: "A型"
+    bloodType: "A型",
+    quotes: [
+      "我、我觉得……这里有点怪怪的……可以让我修改一下吗？",
+      "交给我吧！我一定会创作出最完美的作品！",
+      "那个……请相信我吧！因为……我相信学长你！"
+    ]
   },
   {
     "name": {
@@ -84,7 +101,12 @@ const characters: any[] = [
     sampleVoices: ["CV/hayashi-1.mp3", "CV/hayashi-2.mp3", "CV/hayashi-3.mp3"],
     zodiac: "处女座",
     birthday: "9月17日",
-    bloodType: "O型"
+    bloodType: "O型",
+    quotes: [
+      "那个……之前交代的事情都做好了……还有什么需要帮忙的吗？",
+      "果然……还是跟电脑打交道比较轻松……",
+      "对不起……我会努力不拖大家的后腿的……"
+    ]
   },
   {
     name: {
@@ -105,7 +127,12 @@ const characters: any[] = [
     sampleVoices: ["CV/nana-1.mp3", "CV/nana-2.mp3", "CV/nana-3.mp3"],
     zodiac: "狮子座",
     birthday: "8月7日",
-    bloodType: "AB型"
+    bloodType: "AB型",
+    quotes: [
+      "哼哼！听我的！这些都是流量密码，包你直接原地起飞！",
+      "什么情怀不情怀的，在互联网上，抓不住眼球的东西统统都是垃圾！",
+      "先说好了，娶我可是很贵的！得加钱！"
+    ]
   },
   {
     name: {
@@ -121,12 +148,17 @@ const characters: any[] = [
     height: "165cm",
     weight: "50kg",
     BWH: "82/62/83(cm)",
-    likes: ["插花", "看话剧", "听音乐会"],
+    likes: ["插花", "芭蕾舞", "听音乐会"],
     voiceActor: "阿魂",
     sampleVoices: ["CV/natsumi-1.mp3", "CV/natsumi-2.mp3", "CV/natsumi-3.mp3"],
     zodiac: "巨蟹座",
     birthday: "7月8日",
-    bloodType: "O型"
+    bloodType: "O型",
+    quotes: [
+      "我只是想做一些温柔而有价值的东西。",
+      "不管路有多远，只要方向是对的，我们总能到达。",
+      "这就妥协了？向现实低头可不是你的风格。"
+    ]
   },
   {
     "name": {
@@ -147,7 +179,12 @@ const characters: any[] = [
     sampleVoices: ["CV/rin-1.mp3", "CV/rin-2.mp3", "CV/rin-3.mp3"],
     zodiac: "摩羯座",
     birthday: "1月9日",
-    bloodType: "B型"
+    bloodType: "B型",
+    quotes: [
+      "我投资的，不是你们现在的产品，而是你，和你的未来。",
+      "别用梦想打动我，用数据和执行力说话。",
+      "只有足够强大，才能主宰自己的命运！"
+    ]
   },
   {
     "name": {
@@ -162,13 +199,19 @@ const characters: any[] = [
     age: "28",
     height: "181cm",
     weight: "72kg",
+    BWH: "96/78/96(cm)",
     likes: ["阅读", "财报分析", "股市研究"],
     voiceActor: "烧麦",
     sampleVoices: ["CV/takagi-1.mp3", "CV/takagi-2.mp3", "CV/takagi-3.mp3"],
     zodiac: "白羊座",
     birthday: "3月28日",
-    bloodType: "B型"
-  },
+    bloodType: "B型",
+    quotes: [
+      "在绝对的技术壁垒面前，任何花哨的营销手段都只是徒劳。",
+      "这个市场的容错率是零。如果你跟不上我的节奏，就只能被淘汰。",
+      "有趣的想法，但缺乏商业护城河。给你三分钟，说服我它值得被收购。"
+    ]
+  }
 ];
 
 export const LoveCofounderCharacter: React.FC = () => {
@@ -215,6 +258,7 @@ export const LoveCofounderCharacter: React.FC = () => {
 
   const currentAudioRef = useRef<HTMLAudioElement | null>(null);
   const [playingSrc, setPlayingSrc] = useState<string | null>(null);
+  const [selectedVoiceIndex, setSelectedVoiceIndex] = useState(0);
 
   const stopCurrent = () => {
     if (currentAudioRef.current) {
@@ -251,6 +295,7 @@ export const LoveCofounderCharacter: React.FC = () => {
 
   useEffect(() => {
     stopCurrent();
+    setSelectedVoiceIndex(0);
   }, [selectedCharacter]);
 
   useEffect(() => {
@@ -321,6 +366,7 @@ export const LoveCofounderCharacter: React.FC = () => {
                       href={src}
                       onClick={(e) => {
                         e.preventDefault();
+                        setSelectedVoiceIndex(characters[selectedCharacter].sampleVoices.indexOf(src));
                         playSample(src);
                       }}
                     >
@@ -359,22 +405,6 @@ export const LoveCofounderCharacter: React.FC = () => {
               <Value>{characters[selectedCharacter].age}</Value>
             </DetailItem>
             <DetailItem>
-              <Label>Blood Type</Label>
-              <Value>{characters[selectedCharacter].bloodType || '??'}</Value>
-            </DetailItem>
-          </Details>
-          <Details>
-            <DetailItem>
-              <Label>Height</Label>
-              <Value>{characters[selectedCharacter].height}</Value>
-            </DetailItem>
-            <DetailItem>
-              <Label>Weight</Label>
-              <Value>{characters[selectedCharacter].weight || '??'}</Value>
-            </DetailItem>
-          </Details>
-          <Details>
-            <DetailItem>
               <Label>Birthday</Label>
               <Value>{characters[selectedCharacter].birthday || '??'}</Value>
             </DetailItem>
@@ -382,7 +412,20 @@ export const LoveCofounderCharacter: React.FC = () => {
               <Label>Zodiac</Label>
               <Value>{characters[selectedCharacter].zodiac || '??'}</Value>
             </DetailItem>
+            <DetailItem>
+              <Label>Blood Type</Label>
+              <Value>{characters[selectedCharacter].bloodType || '??'}</Value>
+            </DetailItem>
+            <DetailItem>
+              <Label>Height/Weight</Label>
+              <Value>{characters[selectedCharacter].height} / {characters[selectedCharacter].weight || '??'}</Value>
+            </DetailItem>
+            <DetailItem>
+              <Label>BWH</Label>
+              <Value>{characters[selectedCharacter].BWH || '??'}</Value>
+            </DetailItem>
           </Details>
+          <p>"{characters[selectedCharacter].quotes[selectedVoiceIndex]}"</p>
           <Likes>
             <Label>Likes</Label>
             <LikesList>
