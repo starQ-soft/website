@@ -12,7 +12,38 @@ import { Logo } from '../styles';
 import LangSelector from '../LangSelector';
 import { useLanguage } from '../LanguageContext';
 
-const pv_thumbnails: any[] = ["pv_shizuka.png", "pv_shizuka.png", "pv_shizuka.png", "pv_shizuka.png", "pv_shizuka.png", "pv_shizuka.png"];
+const pv_data = [
+  {
+    thumbnail: "pv_haruka.png",
+    url: "https://www.youtube.com/watch?v=2QZj23vzcsY",
+    title: "haruka",
+  },
+  {
+    thumbnail: "pv_shizuka.png",
+    url: "https://www.youtube.com/watch?v=9xKjmQ3jpHY",
+    title: "shizuka",
+  },
+  {
+    thumbnail: "pv_nana.png",
+    url: "https://www.youtube.com/watch?v=TYZ7KtprkDc&t=45s",
+    title: "nana",
+  },
+  {
+    thumbnail: "pv_natsumi.png",
+    url: "https://www.youtube.com/watch?v=rhEGAtehJbo&t=4s",
+    title: "natsumi",
+  },
+  {
+    thumbnail: "pv_rin.png",
+    url: "https://www.youtube.com/watch?v=W_wDK8K1LY0",
+    title: "rin",
+  },
+  {
+    thumbnail: "pv_shizuka.png",
+    url: "https://www.youtube.com/watch?v=Vh2y25FXlDQ",
+    title: "shizuka",
+  },
+];
 
 const contents = {
   'zh-cn': {
@@ -704,11 +735,25 @@ const screenshots = [
   { src: 'cg_thumbnail_6.png', alt: 'LSC-Magic Spell' },
 ];
 
+const getYoutubeEmbedUrl = (url: string) => {
+  try {
+    const u = new URL(url);
+    const videoId = u.searchParams.get('v') ?? '';
+    const t = u.searchParams.get('t');
+    const startSeconds = t ? parseInt(t.replace(/\D/g, ''), 10) : 0;
+    return `https://www.youtube.com/embed/${videoId}${startSeconds ? `?start=${startSeconds}` : ''}`;
+  } catch {
+    return url;
+  }
+};
+
 const Lsc = () => {
   const { lang } = useLanguage();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [selectedPvIndex, setSelectedPvIndex] = useState(0);
 
   const t = contents[lang as keyof typeof contents] ?? contents['ja-jp'];
+  const selectedPv = pv_data[selectedPvIndex];
 
   const showPrev = () => {
     setSelectedIndex((i) => (i === null ? i : (i - 1 + screenshots.length) % screenshots.length));
@@ -829,24 +874,47 @@ const Lsc = () => {
             <StoryTitle>// {t.pvTitle}</StoryTitle>
             <h2>OPムービー</h2>
             <PvContainer>
-              <button>▶</button>
+              <iframe
+                src="https://www.youtube.com/embed/lg0mlF05LPs"
+                title="OPムービー"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                style={{ width: '100%', height: '100%', border: 0 }}
+              />
             </PvContainer>
             <br />
             <h2>キャラ紹介ムービー</h2>
             <PvContainer>
-              <button>▶</button>
+              <iframe
+                key={selectedPv.url}
+                src={getYoutubeEmbedUrl(selectedPv.url)}
+                title={selectedPv.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                style={{ width: '100%', height: '100%', border: 0 }}
+              />
             </PvContainer>
             <IntroBox>
-              {/* <div className="content"> */}
-              {/* <h3>キャラ紹介ムービー</h3> */}
-              {/* <p>
-                {t.introText.map((line, idx) => (
-                  <React.Fragment key={idx}>{line}<br /></React.Fragment>
-                ))}
-              </p> */}
-              {/* </div> */}
-              {pv_thumbnails.map((thumb, index) => (
-                <div key={index} className="image-placeholder"><img src={thumb} alt={thumb} /></div>
+              {pv_data.map((pv, index) => (
+                <div
+                  key={index}
+                  onClick={() => setSelectedPvIndex(index)}
+                  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}
+                >
+                  <div
+                    className="image-placeholder"
+                    style={{
+                      outline: index === selectedPvIndex ? '3px solid #ff69b4' : 'none',
+                    }}
+                  >
+                    <img src={pv.thumbnail} alt={pv.title} />
+                  </div>
+                  <span style={{ fontSize: '0.875rem', fontWeight: 600, color: '#5c3a21' }}>{pv.title}</span>
+                </div>
               ))}
             </IntroBox>
           </motion.div>
