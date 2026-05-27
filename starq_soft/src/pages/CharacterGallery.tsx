@@ -25,7 +25,7 @@ const characters: any[] = [
     sampleVoices: [""],
     bloodType: "A型",
     quotes: [
-      "虽然现在看起来毫无头绪，但只要把问题拆解开，总能找到解决的办法。",
+      "虽然看起来毫无头绪，但只要把问题逐个拆解开，总能找到解决办法。",
       "既然决定要做，我就会负责到底，半途而废不是我的风格。",
       "又被拒了吗……没关系，重新整理一下简历，明天继续投递吧。"
     ]
@@ -69,7 +69,7 @@ const characters: any[] = [
     age: "20",
     height: "158cm",
     weight: "42kg",
-    BWH: "78/58/80(cm)",
+    BWH: "75A/58/80(cm)",
     likes: ["逛画展", "做手工", "户外写生"],
     voiceActor: "溯月",
     sampleVoices: ["CV/tani-1.mp3", "CV/tani-2.mp3", "CV/tani-3.mp3"],
@@ -95,7 +95,7 @@ const characters: any[] = [
     age: "24",
     height: "162cm",
     weight: "48kg",
-    BWH: "86/62/85(cm)",
+    BWH: "86D/62/85(cm)",
     likes: ["记手账", "逛书店", "追电视剧"],
     voiceActor: "缘梦",
     sampleVoices: ["CV/hayashi-1.mp3", "CV/hayashi-2.mp3", "CV/hayashi-3.mp3"],
@@ -121,7 +121,7 @@ const characters: any[] = [
     age: "21",
     height: "160cm",
     weight: "45kg",
-    BWH: "80/60/82(cm)",
+    BWH: "80B/60/82(cm)",
     likes: ["购物", "看综艺", "美食探店"],
     voiceActor: "小鼓单",
     sampleVoices: ["CV/nana-1.mp3", "CV/nana-2.mp3", "CV/nana-3.mp3"],
@@ -147,7 +147,7 @@ const characters: any[] = [
     age: "25",
     height: "165cm",
     weight: "50kg",
-    BWH: "82/62/83(cm)",
+    BWH: "82C/62/83(cm)",
     likes: ["插花", "芭蕾舞", "听音乐会"],
     voiceActor: "阿魂",
     sampleVoices: ["CV/natsumi-1.mp3", "CV/natsumi-2.mp3", "CV/natsumi-3.mp3"],
@@ -173,7 +173,7 @@ const characters: any[] = [
     age: "30",
     height: "173cm",
     weight: "55kg",
-    BWH: "90/66/88(cm)",
+    BWH: "90E/66/88(cm)",
     likes: ["滑雪", "红酒品鉴", "古董收藏"],
     voiceActor: "Satori",
     sampleVoices: ["CV/rin-1.mp3", "CV/rin-2.mp3", "CV/rin-3.mp3"],
@@ -207,9 +207,9 @@ const characters: any[] = [
     birthday: "3月28日",
     bloodType: "B型",
     quotes: [
-      "在绝对的技术壁垒面前，任何花哨的营销手段都只是徒劳。",
-      "这个市场的容错率是零。如果你跟不上我的节奏，就只能被淘汰。",
-      "有趣的想法，但缺乏商业护城河。给你三分钟，说服我它值得被收购。"
+      "人类的情感，本质上是一种模式混沌，但模式是可以被建模的。",
+      "恋爱？那是一种低效率、高耗能、高风险且充满冗余的激素博弈。",
+      "你们那种草台班子，不倒闭就谢天谢地了。"
     ]
   }
 ];
@@ -425,7 +425,9 @@ export const LoveCofounderCharacter: React.FC = () => {
               <Value>{characters[selectedCharacter].BWH || '??'}</Value>
             </DetailItem>
           </Details>
-          <p>"{characters[selectedCharacter].quotes[selectedVoiceIndex]}"</p>
+          <QuoteMarkLeft>❝</QuoteMarkLeft>
+          <QuoteText>{characters[selectedCharacter].quotes[selectedVoiceIndex]}</QuoteText>
+          <QuoteMarkRight>❞</QuoteMarkRight>
           <Likes>
             <Label>Likes</Label>
             <LikesList>
@@ -596,6 +598,29 @@ const Label = styled.div`
 
 const Value = styled.div`
   font-size: 1.25rem;
+`;
+
+const QuoteText = styled.div`
+    color: #907683;
+    font-family: serif;
+    font-size: 1.5rem;
+    letter-spacing: .1em;
+    position: relative;
+    padding: 1rem 1.5em;
+`;
+
+const QuoteMarkLeft = styled.p`
+    color: #a57a8f;
+    text-align: left;
+    margin: 0;
+    font-size: 2rem;
+`;
+
+const QuoteMarkRight = styled.p`
+    color: #a57a8f;
+    text-align: right;
+    margin: 0;
+    font-size: 2rem;
 `;
 
 const Likes = styled.div`

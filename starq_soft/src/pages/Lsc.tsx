@@ -6,7 +6,7 @@ import { LoveCofounder } from './LoveCofounder';
 import { motion } from 'framer-motion';
 import CherryBlossomBackground from './CherryBlossomBackground';
 import TransparentBanner from './TransparentBanner';
-import { LscGlobalStyle, StoryTitle } from './LscStyles';
+import { LscGlobalStyle, FirstWrapper, SectionSubtitle, StoryTitle, SecondWrapper } from './LscStyles';
 import BackToTop from '../components/BackToTop';
 import { Logo } from '../styles';
 import LangSelector from '../LangSelector';
@@ -862,160 +862,169 @@ const Lsc = () => {
           </motion.div>
         </Section>
 
-        <Section>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.8 }}
-            viewport={{ once: true }}
-            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-          >
+        <FirstWrapper>
+          <br />
+          <br />
+          <br />
+          <br />
+          <Section>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.8 }}
+              viewport={{ once: true }}
+              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+            >
 
-            <StoryTitle>// {t.pvTitle}</StoryTitle>
-            <h2>OPムービー</h2>
-            <PvContainer>
-              <iframe
-                src="https://www.youtube.com/embed/lg0mlF05LPs"
-                title="OPムービー"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                style={{ width: '100%', height: '100%', border: 0 }}
-              />
-            </PvContainer>
-            <br />
-            <h2>キャラ紹介ムービー</h2>
-            <PvContainer>
-              <iframe
-                key={selectedPv.url}
-                src={getYoutubeEmbedUrl(selectedPv.url)}
-                title={selectedPv.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                style={{ width: '100%', height: '100%', border: 0 }}
-              />
-            </PvContainer>
-            <IntroBox>
-              {pv_data.map((pv, index) => (
-                <div
-                  key={index}
-                  onClick={() => setSelectedPvIndex(index)}
-                  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}
-                >
+              <StoryTitle>// {t.pvTitle}</StoryTitle>
+              <SectionSubtitle>OPムービー</SectionSubtitle>
+              <PvContainer>
+                <iframe
+                  src="https://www.youtube.com/embed/lg0mlF05LPs"
+                  title="OPムービー"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  style={{ width: '100%', height: '100%', border: 0 }}
+                />
+              </PvContainer>
+              <br />
+              <SectionSubtitle>キャラ紹介ムービー</SectionSubtitle>
+              <PvContainer>
+                <iframe
+                  key={selectedPv.url}
+                  src={getYoutubeEmbedUrl(selectedPv.url)}
+                  title={selectedPv.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  style={{ width: '100%', height: '100%', border: 0 }}
+                />
+              </PvContainer>
+              <IntroBox>
+                {pv_data.map((pv, index) => (
                   <div
-                    className="image-placeholder"
-                    style={{
-                      outline: index === selectedPvIndex ? '3px solid #ff69b4' : 'none',
-                    }}
+                    key={index}
+                    onClick={() => setSelectedPvIndex(index)}
+                    style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}
                   >
-                    <img src={pv.thumbnail} alt={pv.title} />
+                    <div
+                      className="image-placeholder"
+                      style={{
+                        outline: index === selectedPvIndex ? '3px solid #ff69b4' : 'none',
+                      }}
+                    >
+                      <img src={pv.thumbnail} alt={pv.title} />
+                    </div>
+                    <span style={{ fontSize: '0.875rem', fontWeight: 600, color: '#5c3a21' }}>{pv.title}</span>
                   </div>
-                  <span style={{ fontSize: '0.875rem', fontWeight: 600, color: '#5c3a21' }}>{pv.title}</span>
-                </div>
-              ))}
-            </IntroBox>
-          </motion.div>
-        </Section>
-
-        <Section>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.8 }}
-            viewport={{ once: true }}
-            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-          >
-
-
-            <StoryTitle>// Gallery</StoryTitle>
-            <SectionContent>
-
-              <ScreenshotsContainer>
-                {screenshots.map((img, index) => (
-                  <Screenshot key={img.src} onClick={() => setSelectedIndex(index)}>
-                    <ScreenshotImage src={img.src} alt={img.alt} />
-                  </Screenshot>
                 ))}
-              </ScreenshotsContainer>
-            </SectionContent>
-          </motion.div>
+              </IntroBox>
+            </motion.div>
+          </Section>
+
+          <Section>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.8 }}
+              viewport={{ once: true }}
+              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+            >
 
 
-        </Section>
+              <StoryTitle>// Gallery</StoryTitle>
+              <SectionContent>
 
-        <Section>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.8 }}
-            viewport={{ once: true }}
-            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-          >
-            <StoryTitle>// {t.progressTitle}</StoryTitle>
-            <ProgressBoard>
-              {t.progressNotes.map((note, index) => {
-                const rotation = (Math.random() * 6 - 3).toFixed(2);
-                return (
-                  <StickyNote key={index} $rotation={rotation}>
-                    <p className="date">{note.date}</p>
-                    <p className="text">{note.text}</p>
-                  </StickyNote>
-                );
-              })}
-            </ProgressBoard>
+                <ScreenshotsContainer>
+                  {screenshots.map((img, index) => (
+                    <Screenshot key={img.src} onClick={() => setSelectedIndex(index)}>
+                      <ScreenshotImage src={img.src} alt={img.alt} />
+                    </Screenshot>
+                  ))}
+                </ScreenshotsContainer>
+              </SectionContent>
+            </motion.div>
+          </Section>
 
-            <StoryTitle>// Spec</StoryTitle>
-            <PromotionCard>
-              {/* <div className="promo-image">[替换为: 赛博创业团 宣传图]</div> */}
-              <div className="promo-details">
-                <h4>{t.promoTitle}</h4>
-                <ul>
-                  <li><span>タイトル</span>恋と創業とコファウンダー</li>
-                  <li><span>ブランド</span>スターQソフト</li>
-                  <li><span>ジャンル</span>青春創業ＡＤＶ</li>
-                  <li><span>レーティング</span>全年齢対象</li>
-                  {/* <li><span>発売日</span>2025年09月26日(金)</li> */}
-                  {/* <li><span>価格</span>通常版：￥10,989(税込)・プレミアム版：￥24,200(税込)※両版ともにDLコード付き・ＤＬ版：￥8,470(税込)</li> */}
-                  <li><span>対応OS</span>Windows　10・11</li>
-                  <li><span>CPU</span>Intel Core i3搭載機と同等以上推奨</li>
-                  <li><span>対応OS</span>Windows　10・11</li>
-                  <li><span>MEMORY</span>	1GB／2GB以上推奨</li>
-                  <li><span>HDD</span>	6GB以上</li>
-                  <li><span>原画／SD／背景</span>眞海</li>
-                  <li><span>キャラクターデザイン</span>眞海</li>
-                  <li><span>音楽</span>Wedoso</li>
-                  {/* 
+          <SecondWrapper>
+            <br />
+            <br />
+            <br />
+            <br />
+            <Section>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.8 }}
+                viewport={{ once: true }}
+                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+              >
+                <StoryTitle>// {t.progressTitle}</StoryTitle>
+                <ProgressBoard>
+                  {t.progressNotes.map((note, index) => {
+                    const rotation = (Math.random() * 6 - 3).toFixed(2);
+                    return (
+                      <StickyNote key={index} $rotation={rotation}>
+                        <p className="date">{note.date}</p>
+                        <p className="text">{note.text}</p>
+                      </StickyNote>
+                    );
+                  })}
+                </ProgressBoard>
+
+                <StoryTitle>// 製品情報</StoryTitle>
+                <PromotionCard>
+                  {/* <div className="promo-image">[替换为: 赛博创业团 宣传图]</div> */}
+                  <div className="promo-details">
+                    <h4>{t.promoTitle}</h4>
+                    <ul>
+                      <li><span>タイトル</span>恋と創業とコファウンダー</li>
+                      <li><span>ブランド</span>スターQソフト</li>
+                      <li><span>ジャンル</span>青春創業ＡＤＶ</li>
+                      <li><span>レーティング</span>全年齢対象</li>
+                      {/* <li><span>発売日</span>2025年09月26日(金)</li> */}
+                      {/* <li><span>価格</span>通常版：￥10,989(税込)・プレミアム版：￥24,200(税込)※両版ともにDLコード付き・ＤＬ版：￥8,470(税込)</li> */}
+                      <li><span>対応OS</span>Windows　10・11</li>
+                      <li><span>CPU</span>Intel Core i3搭載機と同等以上推奨</li>
+                      <li><span>対応OS</span>Windows　10・11</li>
+                      <li><span>MEMORY</span>	1GB／2GB以上推奨</li>
+                      <li><span>HDD</span>	6GB以上</li>
+                      <li><span>原画／SD／背景</span>眞海</li>
+                      <li><span>キャラクターデザイン</span>眞海</li>
+                      <li><span>音楽</span>Wedoso</li>
+                      {/* 
                   <li><span>ＣＧ</span>中乃・トミフミ 他</li>
                   <li><span>背景</span>Ｒｙｏｕｍａ・わいっしゅ・ろど・ニライカナイ</li>
                   <li><span>ムービー</span>ろど 他</li>
                   <li><span>ディレクター</span>ろど</li>
                   <li><span>特別協力</span>bamboo(milktub/exOVERDRIVE)</li> */}
-                </ul>
-                <div className="btn-group">
-                  <button>{t.btnWishlist}</button>
-                  <button>{t.btnPreorder}</button>
-                </div>
-              </div>
-            </PromotionCard>
-          </motion.div>
-        </Section>
+                    </ul>
+                    <div className="btn-group">
+                      <button>{t.btnWishlist}</button>
+                      <button>{t.btnPreorder}</button>
+                    </div>
+                  </div>
+                </PromotionCard>
+              </motion.div>
+            </Section>
 
-        <Footer>
-          <div className="social-links">
-            <div className="social-item"><div className="icon" style={{ color: '#ff69b4' }}>📺</div></div>
-            <div className="social-item"><div className="icon" style={{ color: 'black' }}>𝕏</div></div>
-            <div className="social-item"><div className="icon" style={{ color: '#5865F2' }}>👾</div></div>
-            <div className="social-item"><div className="icon" style={{ color: '#3b82f6' }}>🐧</div></div>
-          </div>
-          <div className="copyright">
-            Official copyright info. Cyber Co creation Info<br />
-            {t.footerInfo}
-          </div>
-        </Footer>
+            <Footer>
+              <div className="social-links">
+                <div className="social-item"><div className="icon" style={{ color: '#ff69b4' }}>📺</div></div>
+                <div className="social-item"><div className="icon" style={{ color: 'black' }}>𝕏</div></div>
+                <div className="social-item"><div className="icon" style={{ color: '#5865F2' }}>👾</div></div>
+                <div className="social-item"><div className="icon" style={{ color: '#3b82f6' }}>🐧</div></div>
+              </div>
+              <div className="copyright">
+                © 2026 StarQ Soft LLC. All rights reserved.<br />
+                {t.footerInfo}
+              </div>
+            </Footer>
+          </SecondWrapper>
+        </FirstWrapper>
       </ContentWrapper>
       <BackToTop variant="lsc" />
       {selectedIndex !== null && (

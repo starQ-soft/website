@@ -273,7 +273,7 @@ export const LoveCofounder: React.FC = () => {
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        
+
                     >
                       <b>恋</b>と
                     </motion.span>
@@ -379,14 +379,17 @@ export const LoveCofounder: React.FC = () => {
 
             <StorySubtitle>
               共同开启的冒险!<br />
-              「我们一起创业吧！」
             </StorySubtitle>
 
             <StoryDescription>
+              <span>「我们一起创业吧！」</span>
+              <br />
               <p>大学毕业后，求职无果的你，被室友一顿忽悠，<br />莫名其妙地踏上了一段从未设想过的道路……</p>
               <p><strong>零经验、零资源、零薪资——</strong></p>
               <p>唯一拥有的，是一个比你还不靠谱的合伙人，<br />以及一款连名字都没取好的<span>「AI女友计划」</span>。</p>
               <p>这是一次不知能否成功的冒险，在人生的空白期里，<br />尝试去<span>「创造自己的答案」</span>。</p>
+              <br />
+              <br />
             </StoryDescription>
           </motion.div>
         </StoryContainer>

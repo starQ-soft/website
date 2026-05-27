@@ -275,6 +275,11 @@ export const StoryTitle = styled.h2`
   }
 `;
 
+export const SectionSubtitle = styled.h2`
+    border-bottom: 1px dashed #9b96af;
+    color: #9b96af;
+  `
+
 export const StorySubtitle = styled.div`
   font-size: 42px;
   color: #F89BB0;
@@ -291,6 +296,7 @@ export const StorySubtitle = styled.div`
 export const StoryDescription = styled.div`
   text-align: center;
   font-size: 1.5rem;
+  line-height: 5rem;
   color: #444;
   font-weight: 500;
 
@@ -304,8 +310,8 @@ export const StoryDescription = styled.div`
   }
 
   span {
-    color: #F89BB0;
-    font-size: 2rem;
+    color: #CC1075;
+    font-size: 2.5rem;
   }
 `;
 
@@ -949,4 +955,22 @@ export const LangMenu = styled.div`
     font-size: 0.875rem;
     border-bottom: 1px solid #fce7f3;
   }
+`;
+
+export const FirstWrapper = styled.p`
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%);
+    background-color: #fff;
+    opacity: 0.8;
+`;
+
+export const SecondWrapper = styled.p`
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 5vw, 100% 100%, 0 100%);
+    background-color: #f7f7f7;
+    opacity: 1;
 `;

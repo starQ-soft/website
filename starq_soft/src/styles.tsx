@@ -274,7 +274,7 @@ export const NewsRow = styled.div`
   align-items: center;
   gap: 1rem;
   font-size: 0.875rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px dashed #e5e7eb;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 `;
