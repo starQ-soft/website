@@ -579,21 +579,6 @@ const SectionContent = styled.div`
   margin: 0 auto;
 `
 
-const GameDescription = styled.p`
-  font-size: 1.5rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  color: #ccc;
-  text-align: center;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
-`
-
 const ScreenshotsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -738,6 +723,29 @@ const getYoutubeEmbedUrl = (url: string) => {
   }
 };
 
+const MotionStoryTitle = motion.create(StoryTitle);
+
+// Two-step reveal: the StoryTitle animates in first, then the
+// remaining section content follows via staggerChildren.
+const sectionReveal = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.5 },
+  },
+};
+
+const itemReveal = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+
+const stepStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  width: '100%',
+} as const;
+
 const Lsc = () => {
   const { lang } = useLanguage();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -821,22 +829,20 @@ const Lsc = () => {
       <CherryBlossomBackground petalCount={80} />
       <TransparentBanner
         images={["/lsc-haruka.png", "/lsc-rin.png", "/lsc-natsumi.png", "/lsc-shizuka.png", "/lsc-nana.png",]}
-        title="Cherry Blossom"
-        description="Steam商店页面现已公开！"
       />
       {/* <div style={{ height: '100vh', position: 'relative', zIndex: 1 }} /> */}
       <ContentWrapper>
         <LoveCofounder />
         <Section>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.8 }}
+            variants={sectionReveal}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
 
-            <StoryTitle>// {t.charTitle}</StoryTitle>
+            <MotionStoryTitle variants={itemReveal}>// {t.charTitle}</MotionStoryTitle>
             {/* <CharacterCarousel>
                 <button className="nav-btn">«</button>
                 <div className="char-list">
@@ -849,7 +855,9 @@ const Lsc = () => {
                 </div>
                 <button className="nav-btn">»</button>
               </CharacterCarousel> */}
-            <LoveCofounderCharacter />
+            <motion.div variants={itemReveal} style={stepStyle}>
+              <LoveCofounderCharacter />
+            </motion.div>
           </motion.div>
         </Section>
 
@@ -860,14 +868,15 @@ const Lsc = () => {
           <br />
           <Section>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.8 }}
+              variants={sectionReveal}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
               style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
             >
 
-              <StoryTitle>// {t.pvTitle}</StoryTitle>
+              <MotionStoryTitle variants={itemReveal}>// {t.pvTitle}</MotionStoryTitle>
+              <motion.div variants={itemReveal} style={stepStyle}>
               <SectionSubtitle>OPムービー</SectionSubtitle>
               <PvContainer>
                 <iframe
@@ -913,20 +922,22 @@ const Lsc = () => {
                   </div>
                 ))}
               </IntroBox>
+              </motion.div>
             </motion.div>
           </Section>
 
           <Section>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.8 }}
+              variants={sectionReveal}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
               style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
             >
 
 
-              <StoryTitle>// Gallery</StoryTitle>
+              <MotionStoryTitle variants={itemReveal}>// Gallery</MotionStoryTitle>
+              <motion.div variants={itemReveal} style={stepStyle}>
               <SectionContent>
 
                 <ScreenshotsContainer>
@@ -937,6 +948,7 @@ const Lsc = () => {
                   ))}
                 </ScreenshotsContainer>
               </SectionContent>
+              </motion.div>
             </motion.div>
           </Section>
 
@@ -947,13 +959,14 @@ const Lsc = () => {
             <br />
             <Section>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.8 }}
+                variants={sectionReveal}
+                initial="hidden"
+                whileInView="visible"
                 viewport={{ once: true }}
                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
               >
-                <StoryTitle>// {t.progressTitle}</StoryTitle>
+                <MotionStoryTitle variants={itemReveal}>// {t.progressTitle}</MotionStoryTitle>
+                <motion.div variants={itemReveal} style={stepStyle}>
                 <ProgressBoard>
                   {t.progressNotes.map((note, index) => {
                     const rotation = (Math.random() * 6 - 3).toFixed(2);
@@ -965,8 +978,10 @@ const Lsc = () => {
                     );
                   })}
                 </ProgressBoard>
+                </motion.div>
 
-                <StoryTitle>// 製品情報</StoryTitle>
+                <MotionStoryTitle variants={itemReveal}>// 製品情報</MotionStoryTitle>
+                <motion.div variants={itemReveal} style={stepStyle}>
                 <PromotionCard>
                   <div className="promo-details">
                     <h4>{t.promoTitle}</h4>
@@ -994,6 +1009,7 @@ const Lsc = () => {
                     </ul>
                   </div>
                 </PromotionCard>
+                </motion.div>
               </motion.div>
               <div className="btn-group">
                 <button>{t.btnWishlist}</button>

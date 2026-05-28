@@ -341,8 +341,11 @@ export const SectionContent = styled.div`
 export const GameDescription = styled.p`
   font-size: 1.5rem;
   line-height: 1.6;
-  margin-bottom: 30px;
-  color: #ccc;
+  background: linear-gradient(135deg,  #ffd7e6 0%, #f99bb3 15%, #a3c1f3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
   text-align: center;
   max-width: 800px;
   margin-left: auto;

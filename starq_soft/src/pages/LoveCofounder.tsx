@@ -105,6 +105,7 @@ const HeroTitle = styled(motion.div)`
 `;
 
 const GradientText = styled.span`
+  display: inline-block; /* 👈 添加这一行，让容器高度能包裹住大字体的子元素 */
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
   background: linear-gradient(135deg, #e91e63 0%, #342b36 100%);
   -webkit-background-clip: text;
@@ -112,6 +113,7 @@ const GradientText = styled.span`
   background-clip: text;
   font-size: 1.2em;
   line-height: 1.4;
+  padding-bottom: 0.1em; 
 
   b {
     font-weight: 800;
@@ -306,8 +308,7 @@ export const LoveCofounder: React.FC = () => {
 
 
               <GameDescription>
-                Immerse yourself in the stunning visuals and detailed environments
-                of SevenFold Mirrors.
+                Steam商店页面现已公开！
               </GameDescription>
 
               <HeroActions variants={fadeInUp}>

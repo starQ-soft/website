@@ -69,9 +69,7 @@ interface TransparentBannerProps {
 }
 
 const TransparentBanner: React.FC<TransparentBannerProps> = ({
-    images,
-    title = "春色正浓",
-    description = "透明 PNG 完美融合了背景中的樱花动画，呈现出多维度的视觉层次。"
+    images
 }) => {
     return (
         <BannerContainer>
@@ -83,21 +81,6 @@ const TransparentBanner: React.FC<TransparentBannerProps> = ({
                     $delay={i * 0.6}
                 />
             ))}
-            {/* <ContentBox>
-                <h1>{title}</h1>
-                <p>{description}</p>
-                <button style={{
-                    marginTop: '20px',
-                    padding: '12px 30px',
-                    borderRadius: '25px',
-                    border: 'none',
-                    background: '#ffd7e6',
-                    cursor: 'pointer'
-                }}>
-                    <SteamIcon src={steamLogo} />
-                    Add to Wishlist
-                </button>
-            </ContentBox> */}
         </BannerContainer>
     );
 };
