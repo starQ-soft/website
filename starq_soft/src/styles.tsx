@@ -129,6 +129,50 @@ export const Hero = styled.header<{ $bgImage?: string }>`
   overflow: hidden;
 `;
 
+// Holds the sliding banner slides behind the hero content.
+export const HeroSlides = styled.div`
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+`;
+
+export const HeroSlide = styled.div<{ $bgImage?: string }>`
+  position: absolute;
+  inset: 0;
+  background-image: ${({ $bgImage }) => $bgImage ? `url(${$bgImage})` : 'none'};
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+`;
+
+export const HeroDots = styled.div`
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 0.625rem;
+`;
+
+export const HeroDot = styled.button<{ $active?: boolean }>`
+  width: 0.75rem;
+  height: 0.75rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: ${({ $active }) => ($active ? '#ffffff' : 'rgba(255, 255, 255, 0.5)')};
+  transition: background 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background: #ffffff;
+    transform: scale(1.2);
+  }
+`;
+
 export const HeroContent = styled.div`
   position: relative;
   z-index: 10;

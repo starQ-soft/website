@@ -501,7 +501,7 @@ const Value = styled.div`
 `;
 
 const QuoteText = styled.div`
-    color: #907683;
+    color: #a896af;
     font-family: serif;
     font-size: 1.5rem;
     letter-spacing: .1em;
@@ -510,14 +510,14 @@ const QuoteText = styled.div`
 `;
 
 const QuoteMarkLeft = styled.p`
-    color: #a57a8f;
+    color: #a896af;
     text-align: left;
     margin: 0;
     font-size: 2rem;
 `;
 
 const QuoteMarkRight = styled.p`
-    color: #a57a8f;
+    color: #a896af;
     text-align: right;
     margin: 0;
     font-size: 2rem;

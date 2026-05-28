@@ -1,16 +1,17 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import translations from './translations.json';
 import news from './news.json';
 import logoImage from './assets/StarQ_logo.png';
 import steamLogo from './assets/steam-logo.svg';
-import { GlobalStyle, Nav, Logo, NavLinks, NavActions, GlobalContainer, Hero, HeroContent, ButtonGroup, PrimaryButton, PreorderText, Main, SectionHeader, NewsRow, TypeBadge, NewsDate, ProductHeaderArea, ProductGrid, ProductBanner, ProductBannerLink, Footer, FooterContent, AboutBox, SteamIcon, CheckboxContainer, FormContainer, Input, Row, SubmitButton, Subtitle, Textarea, Title, SocialLinks, SocialLink, ScrollableContainer, FooterTop, Copyright, StatusMessage } from './styles';
+import { GlobalStyle, Nav, Logo, NavLinks, NavActions, GlobalContainer, Hero, HeroSlides, HeroSlide, HeroDots, HeroDot, HeroContent, ButtonGroup, PrimaryButton, PreorderText, Main, SectionHeader, NewsRow, TypeBadge, NewsDate, ProductHeaderArea, ProductGrid, ProductBanner, ProductBannerLink, Footer, FooterContent, AboutBox, SteamIcon, CheckboxContainer, FormContainer, Input, Row, SubmitButton, Subtitle, Textarea, Title, SocialLinks, SocialLink, ScrollableContainer, FooterTop, Copyright, StatusMessage } from './styles';
 import BackToTop from './components/BackToTop';
 import { socialLinks } from './components/footer/FooterConstants';
 import FallingStars from './components/FallingStars';
 import LangSelector from './LangSelector';
 import { useLanguage } from './LanguageContext';
 
+const MotionHeroSlide = motion.create(HeroSlide);
 const MotionProductHeaderArea = motion.create(ProductHeaderArea);
 const MotionProductGrid = motion.create(ProductGrid);
 const MotionAboutBox = motion.create(AboutBox);
@@ -33,10 +34,25 @@ const itemReveal = {
 
 const App = () => {
   const { lang } = useLanguage();
-
-  // Helper variable to access the current language data cleanly
   const t = translations[lang as keyof typeof translations];
   const n = news[lang as keyof typeof news];
+
+  const banners = ['public/banner1.png', 'public/banner2.png', 'public/banner3.png'];
+
+  // direction drives whether slides enter from the right (1) or left (-1).
+  const [[bannerIndex, direction], setBanner] = useState([0, 1]);
+
+  const goToBanner = (index: number) => {
+    setBanner(([prev]) => [index, index > prev ? 1 : -1]);
+  };
+
+  // Auto-advance the hero carousel.
+  useEffect(() => {
+    const id = setInterval(() => {
+      setBanner(([prev]) => [(prev + 1) % banners.length, 1]);
+    }, 5000);
+    return () => clearInterval(id);
+  }, [banners.length]);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -99,7 +115,30 @@ const App = () => {
         </NavActions>
       </Nav>
       <header>
-        <Hero $bgImage="public/banner.png">
+        <Hero>
+          <HeroSlides>
+            <AnimatePresence initial={false} custom={direction}>
+              <MotionHeroSlide
+                key={bannerIndex}
+                custom={direction}
+                $bgImage={banners[bannerIndex]}
+                initial={(dir: number) => ({ x: `${dir * 100}%` })}
+                animate={{ x: 0 }}
+                exit={(dir: number) => ({ x: `${dir * -100}%` })}
+                transition={{ duration: 0.8, ease: 'easeInOut' }}
+              />
+            </AnimatePresence>
+            <HeroDots>
+              {banners.map((_, index) => (
+                <HeroDot
+                  key={index}
+                  $active={index === bannerIndex}
+                  onClick={() => goToBanner(index)}
+                  aria-label={`Go to banner ${index + 1}`}
+                />
+              ))}
+            </HeroDots>
+          </HeroSlides>
           <HeroContent>
             {/* <EventInfoRow>
               <Badge>{t.hero.dateLabel}</Badge>

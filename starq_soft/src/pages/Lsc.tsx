@@ -97,9 +97,10 @@ const contents = {
     ],
     progressTitle: '最新の開発進捗',
     progressNotes: [
-      { date: '2026/01/20', text: 'スクリプト開発完了！' },
-      { date: '2026/02/28', text: 'UI パッケージ実装成功！' },
-      { date: '2026/03/27', text: 'AI 対話システム テスト中！' },
+      { date: '2026/01/20', text: '公式サイトを公開しました。' },
+      { date: '2026/02/28', text: 'OPムービーを公開しました。' },
+      { date: '2026/03/27', text: 'Steamストアページを公開しました。' },
+      { date: '2026/03/27', text: 'Steamストアページを公開しました。' },
       { date: '2026/03/29', text: 'AI 連携システム 調整中！' },
       { date: '2026/03/29', text: 'AI エフェクト テスト中！' }
     ],
@@ -857,11 +858,11 @@ const Lsc = () => {
                   <div className="promo-details">
                     <h4>{t.promoTitle}</h4>
                     <ul>
-                      <li><span>タイトル</span>恋と創業とコファウンダー</li>
+                      <li><span>タイトル</span>恋と起業とコファウンダー</li>
                       <li><span>ブランド</span>スターQソフト</li>
                       <li><span>ジャンル</span>青春創業ＡＤＶ</li>
                       <li><span>レーティング</span>全年齢対象</li>
-                      <li><span>発売日</span>2025年09月26日(金)</li>
+                      <li><span>発売日</span>2027年09月26日(金)</li>
                       <li><span>価格</span>通常版：￥10,989(税込)・プレミアム版：￥24,200(税込)※両版ともにDLコード付き・ＤＬ版：￥8,470(税込)</li>
                       <li><span>対応OS</span>Windows　10・11</li>
                       <li><span>CPU</span>Intel Core i3搭載機と同等以上推奨</li>
@@ -873,7 +874,6 @@ const Lsc = () => {
                       <li><span>音楽</span>Wedoso</li>
 
                       <li><span>ＣＧ</span>中乃・トミフミ 他</li>
-                      <li><span>背景</span>Ｒｙｏｕｍａ・わいっしゅ・ろど・ニライカナイ</li>
                       <li><span>ムービー</span>ろど 他</li>
                       <li><span>ディレクター</span>ろど</li>
                       <li><span>特別協力</span>bamboo(milktub/exOVERDRIVE)</li>
