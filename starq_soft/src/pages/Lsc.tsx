@@ -143,14 +143,6 @@ const LscContainer = styled.div`
   box-sizing: border-box;
 `;
 
-const BackgroundDecoration = styled.div`
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-repeat: repeat;
-  opacity: 0.5;
-`;
-
 const contentAppear = keyframes`
   from { opacity: 0; }
   to   { opacity: 1; }
@@ -184,18 +176,6 @@ const Section = styled.section`
   }
 `;
 
-
-const HeroBanner = styled.div`
-  width: 100%;
-  height: 20rem;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 0.75rem;
-  border: 2px dashed #ffb6c1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ff69b4;
-`;
 
 const PvContainer = styled.div`
   width: 100%;
@@ -291,59 +271,6 @@ const IntroBox = styled.div`
       height: 8rem;
     }
   }
-`;
-
-const CharacterCarousel = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
-
-  .nav-btn {
-    color: #ffb6c1;
-    font-size: 1.875rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  .char-list {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    padding-bottom: 1rem;
-    scrollbar-width: none; 
-    &::-webkit-scrollbar { display: none; }
-  }
-`;
-
-const CharacterCard = styled.div`
-  min-width: 120px;
-  background-color: #fff0f5;
-  border: 2px solid #ffb6c1;
-  border-radius: 0.75rem;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .avatar {
-    width: 100%;
-    height: 8rem;
-    background-color: white;
-    border-radius: 0.375rem;
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    font-size: 0.75rem;
-    color: #9ca3af;
-  }
-
-  h4 { font-weight: bold; font-size: 0.875rem; margin: 0; }
-  span { font-size: 0.625rem; color: #6b7280; margin-bottom: 0.25rem; }
-  p { font-size: 0.625rem; text-align: center; font-style: italic; margin-top: auto; }
 `;
 
 const ProgressBoard = styled.div`
@@ -529,50 +456,6 @@ const LangSwitcherContainer = styled.div`
   z-index: 50;
   width: 8rem;
 `;
-
-const LangButton = styled.button`
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 2px solid #ffb6c1;
-  color: #ff69b4;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-weight: bold;
-  cursor: pointer;
-`;
-
-const LangMenu = styled.div`
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 0.5rem;
-  background-color: white;
-  border: 2px solid #ffb6c1;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  display: ${props => props.$isOpen ? 'block' : 'none'};
-  min-width: 100px;
-
-  button {
-    display: block;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    text-align: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #5c3a21;
-    font-size: 0.875rem;
-    border-bottom: 1px solid #fce7f3;
-  }
-`;
-
-const ContentSection = styled.section`
-  padding: 80px 20px;
-
-  @media (max-width: 768px) {
-    padding: 60px 15px;
-  }
-`
 
 const SectionContent = styled.div`
   max-width: 1200px;
@@ -843,18 +726,6 @@ const Lsc = () => {
           >
 
             <MotionStoryTitle variants={itemReveal}>// {t.charTitle}</MotionStoryTitle>
-            {/* <CharacterCarousel>
-                <button className="nav-btn">«</button>
-                <div className="char-list">
-                  {t.characters.map((char, index) => (
-                    <CharacterCard key={index}>
-                      <div className="avatar">[立绘]</div>
-                      <h4>{char.name}</h4>
-                    </CharacterCard>
-                  ))}
-                </div>
-                <button className="nav-btn">»</button>
-              </CharacterCarousel> */}
             <motion.div variants={itemReveal} style={stepStyle}>
               <LoveCofounderCharacter />
             </motion.div>

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
-import { CharacterCard, type SectionTitle, CharacterCarousel } from "./LscStyles";
+import { CharacterCard, CharacterCarousel } from "./LscStyles";
 
 const avatars: any[] = ["me-1.png", "haijin.png", "tani.png", "hayashi.png", "nana.png", "natsumi.png", "rin.png", "takagi.png"];
 
@@ -217,45 +217,6 @@ const characters: any[] = [
 export const LoveCofounderCharacter: React.FC = () => {
   const [selectedCharacter, setSelectedCharacter] = useState(0);
 
-  const GradientText = styled.span`
-    background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  `;
-
-
-  const VoiceIcon = styled.div`
-    display: inline-grid;
-    width: 38px;
-    height: 38px;
-    background-color: #CC1075;
-    border: none;
-    border-radius: 50%;
-    place-items: center;
-    cursor: pointer;
-    margin-left: 10px;
-    padding: 0;
-  `;
-
-  // const VoiceButton = styled.img`
-  //   display: inline-grid;
-  //   width: 38px;
-  //   height: 38px;
-  //   background-color: #CC1075;
-  //   border: none;
-  //   border-radius: 50%;
-  //   place-items: center;
-  //   cursor: pointer;
-  //   margin-left: 10px;
-  //   padding: 0;
-  //   transition: background-color 0.2s;
-
-  //   &:hover {
-  //     background-color: #e91e63;
-  //   }
-  // `;
-
   const currentAudioRef = useRef<HTMLAudioElement | null>(null);
   const [playingSrc, setPlayingSrc] = useState<string | null>(null);
   const [selectedVoiceIndex, setSelectedVoiceIndex] = useState(0);
@@ -326,18 +287,6 @@ export const LoveCofounderCharacter: React.FC = () => {
           </div>
           {/* <button className="nav-btn">»</button> */}
         </CharacterCarousel>
-        {/* {characters.map((character, index) => (
-          <CharacterTab
-            key={index}
-            $isSelected={selectedCharacter === index}
-            onClick={() => setSelectedCharacter(index)}
-          >
-            <CharacterName>
-              <div>{character.name.japanese}</div>
-              <div>{character.name.english}</div>
-            </CharacterName>
-          </CharacterTab>
-        ))} */}
       </CharacterList>
       <CharacterDisplay>
         <CharacterImage
@@ -447,32 +396,6 @@ const fadeIn = keyframes`
   to { opacity: 1; transform: translateY(0); }
 `;
 
-const Section = styled.section`
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #ffbaeb, #ffbacc);
-  color: black;
-`;
-
-const Title = styled.div`
-  text-align: center;
-  margin-bottom: 60px;
-`;
-
-const JapaneseText = styled.h2`
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 36px;
-  margin: 0;
-`;
-
-const EnglishText = styled.h3`
-  font-family: "Cinzel", serif;
-  font-size: 24px;
-  color: #CC1075;
-  margin: 10px 0 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-`;
-
 const GalleryContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
@@ -490,29 +413,6 @@ const CharacterList = styled.div`
   justify-content: center;
   gap: 20px;
   margin-bottom: 40px;
-`;
-
-const CharacterTab = styled.button<{ $isSelected: boolean }>`
-  background: ${(props) =>
-    props.$isSelected
-      ? "linear-gradient(45deg, #e186b4, #fc5296)"
-      : "transparent"};
-  border: 3px solid ${(props) => (props.$isSelected ? "#aa336a" : "#fff")};
-  color: white;
-  padding: 15px 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 30px;
-
-  &:hover {
-    border-color: #e186b4;
-    box-shadow: 0 6px 20px rgba(200, 255, 255, 0.4);
-  }
-`;
-
-const CharacterName = styled.div`
-  text-align: center;
-  font-family: "Noto Sans JP", sans-serif;
 `;
 
 const CharacterDisplay = styled.div`
@@ -640,5 +540,3 @@ const LikeItem = styled.span`
   border-radius: 0.5rem;
   font-size: 1.25rem;;
 `;
-
-const VoiceActor = styled.div``;

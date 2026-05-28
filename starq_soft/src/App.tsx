@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import translations from './translations.json';
 import news from './news.json';
 import logoImage from './assets/StarQ_logo.png';
 import steamLogo from './assets/steam-logo.svg';
-import { GlobalStyle, Nav, Logo, NavLinks, NavActions, GlobalContainer, Hero, HeroContent, EventInfoRow, Badge, HeroDate, ButtonGroup, PrimaryButton, PreorderText, SecondaryButton, Main, SectionHeader, SubHeader, NewsRow, TypeBadge, NewsDate, ProductHeaderArea, SmallButton, ProductGrid, ProductBanner, ProductBannerLink, Footer, FooterContent, AboutBox, FooterLinks, SteamIcon, CheckboxContainer, FormContainer, Input, Row, SubmitButton, Subtitle, Textarea, Title, SocialLinks, SocialLink, ScrollableContainer, FooterTop, Copyright, StatusMessage } from './styles';
+import { GlobalStyle, Nav, Logo, NavLinks, NavActions, GlobalContainer, Hero, HeroContent, ButtonGroup, PrimaryButton, PreorderText, Main, SectionHeader, NewsRow, TypeBadge, NewsDate, ProductHeaderArea, ProductGrid, ProductBanner, ProductBannerLink, Footer, FooterContent, AboutBox, SteamIcon, CheckboxContainer, FormContainer, Input, Row, SubmitButton, Subtitle, Textarea, Title, SocialLinks, SocialLink, ScrollableContainer, FooterTop, Copyright, StatusMessage } from './styles';
 import BackToTop from './components/BackToTop';
 import { socialLinks } from './components/footer/FooterConstants';
 import FallingStars from './components/FallingStars';

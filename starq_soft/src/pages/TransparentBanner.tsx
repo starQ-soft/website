@@ -1,7 +1,5 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import steamLogo from "../assets/steam-logo.svg";
-import { SteamIcon } from "../styles";
 
 const riseIn = keyframes`
   from { opacity: 0; transform: translate(-50%, 40px); }
@@ -38,34 +36,8 @@ const LayeredImage = styled.img<{ $delay: number }>`
   animation-delay: ${({ $delay }) => $delay}s;
 `;
 
-const ContentBox = styled.div`
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: #333;
-  max-width: 800px;
-  padding: 0 20px;
-
-  h1 {
-    font-size: clamp(2rem, 8vw, 4rem);
-    margin-bottom: 0.5rem;
-    background: linear-gradient(45deg, #ffb7c5, #95c4ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 800;
-  }
-
-  p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #666;
-  }
-`;
-
 interface TransparentBannerProps {
     images: string[];
-    title?: string;
-    description?: string;
 }
 
 const TransparentBanner: React.FC<TransparentBannerProps> = ({

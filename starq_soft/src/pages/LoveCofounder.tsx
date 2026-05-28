@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { Play, Heart, Star, Download, Calendar, Users } from "lucide-react";
 import { useState, useEffect } from "react";
 import steamLogo from "../assets/steam-logo.svg";
 import { SteamIcon } from "../styles";
@@ -78,16 +77,6 @@ const HeroContent = styled.div`
   margin: 0 auto;
   text-align: center;
   padding: 6rem 1rem;
-`;
-
-const Badge = styled(motion.div)`
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 1px solid hsl(var(--primary));
-  border-radius: 9999px;
-  color: hsl(var(--primary));
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
 `;
 
 const HeroTitle = styled(motion.div)`
@@ -172,24 +161,6 @@ const Section = styled.section<{ $background?: string }>`
     $background && `background-color: hsl(210 40% 98%);`}
 `;
 
-const SectionTitle = styled(motion.h2)`
-  font-size: 2.25rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-`;
-
-const SectionDescription = styled.p`
-  text-align: center;
-  color: hsl(215.4 16.3% 46.9%);
-  font-size: 1.125rem;
-  margin-bottom: 4rem;
-`;
-
 // Animation variants
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -202,24 +173,6 @@ const staggerContainer = {
     transition: {
       staggerChildren: 0.3,
     },
-  },
-};
-
-const titleSpanStagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const titleSpanFadeIn = {
-  initial: { opacity: 0, y: 30 },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
   },
 };
 

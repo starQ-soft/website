@@ -139,31 +139,6 @@ export const HeroContent = styled.div`
   gap: 1.25rem;
 `;
 
-export const EventInfoRow = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-`;
-
-export const Badge = styled.span`
-  background-color: #FF5C8A;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.75rem;
-  font-weight: bold;
-  border-radius: 0.25rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-`;
-
-export const HeroDate = styled.span`
-  font-size: 1.25rem;
-  font-weight: bold;
-  letter-spacing: 0.05em;
-
-  strong {
-    font-size: 1.875rem;
-  }
-`;
-
 export const ButtonGroup = styled.div`
   display: flex;
   flex-direction: column;
@@ -224,14 +199,6 @@ export const SteamIcon = styled.img`
   vertical-align: middle;
 `;
 
-export const SecondaryButton = styled(PrimaryButton)`
-  background-color: #4A4244;
-
-  &:hover {
-    background-color: #75686b;
-  }
-`;
-
 export const PreorderText = styled.div`
   font-size: 1.75rem;
   text-align: center;
@@ -256,17 +223,6 @@ export const SectionHeader = styled.h2`
   // border-bottom: 2px #ec799a solid;
   align-items: baseline;
   margin: 1rem auto;
-`;
-
-export const Highlight = styled.span`
-  color: #FF5C8A;
-`;
-
-export const SubHeader = styled.span`
-  font-size: 0.875rem;
-  color: #1f2937;
-  margin-left: 1rem;
-  font-weight: bold;
 `;
 
 export const NewsRow = styled.div`
@@ -306,21 +262,6 @@ export const ProductHeaderArea = styled.div`
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;
   color: #db2777;
-`;
-
-export const SmallButton = styled.button`
-  background-color: #FF5C8A;
-  color: white;
-  font-size: 0.75rem;
-  font-weight: bold;
-  padding: 0.5rem 1.25rem;
-  border: none;
-  border-radius: 9999px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #f472b6;
-  }
 `;
 
 export const ProductGrid = styled.div`
@@ -435,19 +376,6 @@ export const AboutBox = styled.div`
   }
 `;
 
-export const FooterLinks = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  font-size: 0.875rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-
-  a:hover {
-    color: #db2777;
-  }
-`;
-
 export const FormContainer = styled.form`
   max-width: 50vw;
   margin: 0 auto;
@@ -536,10 +464,6 @@ export const SubmitButton = styled.button`
   }
 `;
 
-export const SocialLinksContainer = styled.div`
-  margin: 2rem auto;
-`;
-
 export const SocialLinks = styled.div`
   display: flex;
   gap: 20px;
@@ -571,14 +495,6 @@ export const SocialLink = styled.a`
 
   &:focus {
     outline: none;
-  }
-`;
-
-export const SocialIcon = styled.i`
-  transition: transform 0.2s ease;
-
-  ${SocialLink}:hover & {
-    transform: scale(1.1);
   }
 `;
 
