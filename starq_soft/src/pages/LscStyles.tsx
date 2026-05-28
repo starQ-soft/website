@@ -214,9 +214,10 @@ export const FloatingElement = styled(motion.div) <{
 // `;
 
 export const StoryContainer = styled.section`
-  border: 2px solid #ffe4e4;
+  border: 2px solid #f5d2d2;
   padding: 2rem 1rem;
   background-color: #fff;
+  backdrop-filter: blur(1px);
   width: 60%;
   margin: 0 auto;
   opacity: 0.8;
@@ -323,9 +324,9 @@ export const SectionDescription = styled.p`
 `;
 
 export const ContentSection = styled.section`
-  padding: 80px 20px;
   background-color: #fff;
   color: white;
+  backdrop-filter: blur(1px);
 
   @media (max-width: 768px) {
     padding: 60px 15px;
@@ -825,19 +826,6 @@ export const PromotionCard = styled.div`
 
   @media (min-width: 768px) { flex-direction: row; }
 
-  .promo-image {
-    width: 100%;
-    height: 10rem;
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #9ca3af;
-    @media (min-width: 768px) { width: 50%; }
-  }
-
   .promo-details {
     flex: 1;
     display: flex;
@@ -960,6 +948,7 @@ export const LangMenu = styled.div`
 export const FirstWrapper = styled.p`
     width: 100%;
     height: 100%;
+    margin: 0;
     z-index: -1;
     clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%);
     background-color: #fff;
@@ -969,6 +958,7 @@ export const FirstWrapper = styled.p`
 export const SecondWrapper = styled.p`
     width: 100%;
     height: 100%;
+    margin: 0;
     z-index: -1;
     clip-path: polygon(0 0, 100% 5vw, 100% 100%, 0 100%);
     background-color: #f7f7f7;

@@ -218,7 +218,9 @@ const App = () => {
                   <a href="/privacy">{t.contact.privacy}</a>.
                 </CheckboxContainer>
 
-                <SubmitButton type="submit">{t.contact.submit}</SubmitButton>
+                <div style={{ textAlign: "center" }}>
+                  <SubmitButton type="submit">{t.contact.submit}</SubmitButton>
+                </div>
                 {status && <StatusMessage>{status}</StatusMessage>}
               </FormContainer>
             </motion.div>

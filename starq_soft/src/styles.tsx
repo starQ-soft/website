@@ -451,7 +451,7 @@ export const FooterLinks = styled.div`
 export const FormContainer = styled.form`
   max-width: 50vw;
   margin: 0 auto;
-  padding: 32px;
+  padding: 3rem 5rem;
   background-color: rgba(240, 240, 240, 0.85);
   border: 1px solid #eee;
   backdrop-filter: blur(4px);
@@ -507,8 +507,9 @@ export const Textarea = styled.textarea`
 export const CheckboxContainer = styled.label`
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 12px;
-  margin-bottom: 16px;
+  margin: 1rem 0;
 
   input {
     margin-right: 8px;
@@ -522,13 +523,14 @@ export const CheckboxContainer = styled.label`
 
 export const SubmitButton = styled.button`
   background-color: #FF5C8A;
-  width: 100%;
+  width: 50%;
   color: #fff;
   font-weight: 600;
   padding: 12px 24px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin: 1rem auto;
   &:hover {
     background-color: #ff76bb;
   }

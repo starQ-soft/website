@@ -356,7 +356,7 @@ const ProgressBoard = styled.div`
   gap: 1rem;
   margin-bottom: 2rem;
   border: 4px solid #d2a679;
-  width: 100%;
+  width: 80%;
   box-sizing: border-box;
 
   @media (max-width: 768px) {
@@ -390,15 +390,12 @@ const StickyNote = styled.div`
 `;
 
 const PromotionCard = styled.div`
-  background-color: #f5deb3;
-  border: 4px solid #deb887;
-  border-radius: 1rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   align-items: center;
-  width: 100%;
+  width: 80%;
   box-sizing: border-box;
 
   @media (min-width: 768px) { flex-direction: row; }
@@ -406,19 +403,6 @@ const PromotionCard = styled.div`
   @media (max-width: 768px) {
     border-width: 2px;
     gap: 1rem;
-  }
-
-  .promo-image {
-    width: 100%;
-    height: 10rem;
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #9ca3af;
-    @media (min-width: 768px) { width: 50%; }
   }
 
   .promo-details {
@@ -439,27 +423,36 @@ const PromotionCard = styled.div`
       list-style: none;
       padding: 0;
       width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 1.5rem;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+      }
     }
 
     ul li {
       display: grid;
-      grid-template-columns: 8rem 1fr;
+      grid-template-columns: 10rem 1fr;
       column-gap: 0.75rem;
       align-items: start;
       text-align: left;
       padding: 0.15rem 0;
       margin: 0.5rem 0;
+      min-width: 0;
     }
 
     ul li span {
-      background-color: #afa28b;
+      background-color: #ffb6c1;
       color: #fff;
       font-weight: bold;
       padding: 0.1rem 0.5rem;
       border-radius: 0.25rem;
       text-align: center;
       box-sizing: border-box;
-      width: 80%;
+      width: 100%;
     }
 
     .btn-group {
@@ -487,8 +480,6 @@ const Footer = styled.footer`
   padding-bottom: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  backdrop-filter: blur(1px);
-  background-color: rgba(255, 255, 255, 0.1);
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
@@ -977,7 +968,6 @@ const Lsc = () => {
 
                 <StoryTitle>// 製品情報</StoryTitle>
                 <PromotionCard>
-                  {/* <div className="promo-image">[替换为: 赛博创业团 宣传图]</div> */}
                   <div className="promo-details">
                     <h4>{t.promoTitle}</h4>
                     <ul>
@@ -985,8 +975,8 @@ const Lsc = () => {
                       <li><span>ブランド</span>スターQソフト</li>
                       <li><span>ジャンル</span>青春創業ＡＤＶ</li>
                       <li><span>レーティング</span>全年齢対象</li>
-                      {/* <li><span>発売日</span>2025年09月26日(金)</li> */}
-                      {/* <li><span>価格</span>通常版：￥10,989(税込)・プレミアム版：￥24,200(税込)※両版ともにDLコード付き・ＤＬ版：￥8,470(税込)</li> */}
+                      <li><span>発売日</span>2025年09月26日(金)</li>
+                      <li><span>価格</span>通常版：￥10,989(税込)・プレミアム版：￥24,200(税込)※両版ともにDLコード付き・ＤＬ版：￥8,470(税込)</li>
                       <li><span>対応OS</span>Windows　10・11</li>
                       <li><span>CPU</span>Intel Core i3搭載機と同等以上推奨</li>
                       <li><span>対応OS</span>Windows　10・11</li>
@@ -995,20 +985,20 @@ const Lsc = () => {
                       <li><span>原画／SD／背景</span>眞海</li>
                       <li><span>キャラクターデザイン</span>眞海</li>
                       <li><span>音楽</span>Wedoso</li>
-                      {/* 
-                  <li><span>ＣＧ</span>中乃・トミフミ 他</li>
-                  <li><span>背景</span>Ｒｙｏｕｍａ・わいっしゅ・ろど・ニライカナイ</li>
-                  <li><span>ムービー</span>ろど 他</li>
-                  <li><span>ディレクター</span>ろど</li>
-                  <li><span>特別協力</span>bamboo(milktub/exOVERDRIVE)</li> */}
+
+                      <li><span>ＣＧ</span>中乃・トミフミ 他</li>
+                      <li><span>背景</span>Ｒｙｏｕｍａ・わいっしゅ・ろど・ニライカナイ</li>
+                      <li><span>ムービー</span>ろど 他</li>
+                      <li><span>ディレクター</span>ろど</li>
+                      <li><span>特別協力</span>bamboo(milktub/exOVERDRIVE)</li>
                     </ul>
-                    <div className="btn-group">
-                      <button>{t.btnWishlist}</button>
-                      <button>{t.btnPreorder}</button>
-                    </div>
                   </div>
                 </PromotionCard>
               </motion.div>
+              <div className="btn-group">
+                <button>{t.btnWishlist}</button>
+                <button>{t.btnPreorder}</button>
+              </div>
             </Section>
 
             <Footer>
