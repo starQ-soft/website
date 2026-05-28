@@ -5,7 +5,11 @@
       "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\).on\\('end',\\(\\)=>{try{console.log\\(JSON.stringify\\(JSON.parse\\(d\\).scripts,null,2\\)\\)}catch\\(e\\){console.log\\('no parent pkg'\\)}}\\)\")",
       "Bash(node -e \"console.log\\(JSON.stringify\\(require\\('./package.json'\\).scripts,null,2\\)\\)\")",
       "Bash(ls node_modules)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(node -e \"console.log\\(require\\('./starq_soft/node_modules/framer-motion/package.json'\\).version\\)\")",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/framer-motion/package.json'\\).version\\)\")",
+      "Bash(ls package.json starq_soft/package.json)",
+      "Bash(node -e \"try{console.log\\(JSON.stringify\\(require\\('./starq_soft/package.json'\\).scripts,null,2\\)\\)}catch\\(e\\){console.log\\('no starq_soft/package.json'\\)}\")"
     ]
   }
 }

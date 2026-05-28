@@ -11,6 +11,26 @@ import FallingStars from './components/FallingStars';
 import LangSelector from './LangSelector';
 import { useLanguage } from './LanguageContext';
 
+const MotionProductHeaderArea = motion.create(ProductHeaderArea);
+const MotionProductGrid = motion.create(ProductGrid);
+const MotionAboutBox = motion.create(AboutBox);
+const MotionSectionHeader = motion.create(SectionHeader);
+const MotionFormContainer = motion.create(FormContainer);
+
+// Two-step reveal: the section header animates in first, then the
+// remaining content follows via staggerChildren.
+const sectionReveal = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.5 },
+  },
+};
+
+const itemReveal = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+
 const App = () => {
   const { lang } = useLanguage();
 
@@ -97,20 +117,20 @@ const App = () => {
       <GlobalContainer>
         <Main>
           <ScrollableContainer>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.8 }}
+            <motion.section
+              variants={sectionReveal}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
             >
-              <section>
-                <ProductHeaderArea>
-                  <SectionHeader>
-                    {/* <Highlight>{t.news.titleHighlight}</Highlight>{t.news.titleRest} */}
-                    {n.subTitle}
-                  </SectionHeader>
-                </ProductHeaderArea>
+              <MotionProductHeaderArea variants={itemReveal}>
+                <SectionHeader>
+                  {/* <Highlight>{t.news.titleHighlight}</Highlight>{t.news.titleRest} */}
+                  {n.subTitle}
+                </SectionHeader>
+              </MotionProductHeaderArea>
 
+              <motion.div variants={itemReveal}>
                 {n.items.map((item, index) => (
                   <NewsRow key={index}>
                     <TypeBadge $bgColor={item.type !== 'UPDATE' ? '#d83c6b' : '#f2c45e'}>
@@ -124,27 +144,27 @@ const App = () => {
                     <NewsDate>{item.date}</NewsDate>
                   </NewsRow>
                 ))}
-              </section>
-            </motion.div>
+              </motion.div>
+            </motion.section>
           </ScrollableContainer>
 
           <section>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.8 }}
+              variants={sectionReveal}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
               style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
             >
-              <ProductHeaderArea>
+              <MotionProductHeaderArea variants={itemReveal}>
                 <SectionHeader>
                   {/* <Highlight>{t.product.titleHighlight}</Highlight>{t.product.titleRest} */}
                   {t.product.subTitle}
                 </SectionHeader>
                 {/* <SmallButton>{t.product.btn}</SmallButton> */}
-              </ProductHeaderArea>
+              </MotionProductHeaderArea>
 
-              <ProductGrid>
+              <MotionProductGrid variants={itemReveal}>
                 {t.product.banners.map((banner, index) => (
                   <ProductBannerLink href={banner.link} key={index}>
                     <ProductBanner key={index} $bgImage={banner.image} $upcoming={banner.upcoming} >
@@ -152,29 +172,29 @@ const App = () => {
                     </ProductBanner>
                   </ProductBannerLink>
                 ))}
-              </ProductGrid>
+              </MotionProductGrid>
             </motion.div>
           </section>
 
           <section>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.8 }}
+              variants={sectionReveal}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
             >
-              <AboutBox>
-                <SectionHeader>
-                  {t.about.aboutTitle}</SectionHeader>
-                <p>{t.about.aboutText}</p>
-              </AboutBox>
+              <MotionAboutBox variants={sectionReveal}>
+                <MotionSectionHeader variants={itemReveal}>
+                  {t.about.aboutTitle}</MotionSectionHeader>
+                <motion.p variants={itemReveal}>{t.about.aboutText}</motion.p>
+              </MotionAboutBox>
 
-              <AboutBox>
-                <SectionHeader>
-                  {t.contact.contactTitle} </SectionHeader>
-                <p>{t.contact.contactText}</p>
-              </AboutBox>
-              <FormContainer onSubmit={handleSubmit}>
+              <MotionAboutBox variants={sectionReveal}>
+                <MotionSectionHeader variants={itemReveal}>
+                  {t.contact.contactTitle} </MotionSectionHeader>
+                <motion.p variants={itemReveal}>{t.contact.contactText}</motion.p>
+              </MotionAboutBox>
+              <MotionFormContainer variants={itemReveal} onSubmit={handleSubmit}>
                 <Title>{t.contact.title}</Title>
                 <Subtitle>{t.contact.subtitle}</Subtitle>
 
@@ -222,7 +242,7 @@ const App = () => {
                   <SubmitButton type="submit">{t.contact.submit}</SubmitButton>
                 </div>
                 {status && <StatusMessage>{status}</StatusMessage>}
-              </FormContainer>
+              </MotionFormContainer>
             </motion.div>
           </section>
         </Main>
