@@ -442,6 +442,7 @@ const CharacterInfo = styled.div`
   width: 100%;
   box-sizing: border-box;
   margin-top: 5rem;
+  color: #111827;
 
   @media (max-width: 1024px) {
     padding: 0.5rem 0;

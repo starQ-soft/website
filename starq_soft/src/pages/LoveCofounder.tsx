@@ -79,7 +79,7 @@ const HeroContent = styled.div`
   padding: 6rem 1rem;
 `;
 
-const HeroTitle = styled(motion.div)`
+const HeroTitle = styled.div`
   line-height: 1.4;
   margin-bottom: 1.5rem;
   font-weight: 700;
@@ -94,9 +94,9 @@ const HeroTitle = styled(motion.div)`
 `;
 
 const GradientText = styled.span`
-  display: inline-block; /* 👈 添加这一行，让容器高度能包裹住大字体的子元素 */
+  display: inline-block;
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
-  background: linear-gradient(135deg, #e91e63 0%, #342b36 100%);
+  background: linear-gradient(0deg, #e186b4 0%, #353437 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -164,11 +164,15 @@ const Section = styled.section<{ $background?: string }>`
 // Animation variants
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 1.5, ease: "easeOut" },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.5, ease: "easeOut" }
+  },
 };
 
 const staggerContainer = {
+  initial: {},
   animate: {
     transition: {
       staggerChildren: 0.3,
@@ -176,11 +180,19 @@ const staggerContainer = {
   },
 };
 
+const wordItem = {
+  initial: { opacity: 0, y: 30 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" }
+  }
+};
+
 const scaleOnHover = {
   whileHover: { scale: 1.02 },
   whileTap: { scale: 0.95 },
 };
-
 
 export const LoveCofounder: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -189,6 +201,21 @@ export const LoveCofounder: React.FC = () => {
     // "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=1200&h=800&fit=crop",
     // "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop",
   ];
+
+  const wordVariant1 = {
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.2 } }
+  };
+
+  const wordVariant2 = {
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.4 } }
+  };
+
+  const wordVariant3 = {
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.6 } }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -199,7 +226,6 @@ export const LoveCofounder: React.FC = () => {
 
   return (
     <div>
-      {/* Hero Section */}
       <HeroSection>
         <HeroBackground>
           {heroImages.map((image, index) => (
@@ -224,30 +250,21 @@ export const LoveCofounder: React.FC = () => {
               <HeroTitle>
                 <p>
                   <GradientText>
-                    <motion.span
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-
-                    >
+                    {/* 词 1: 恋と */}
+                    <motion.span variants={wordItem} style={{ display: "inline-block" }}>
                       <b>恋</b>と
                     </motion.span>
-                    <motion.span
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-                    >
+
+                    {/* 词 2: 起業と */}
+                    <motion.span variants={wordItem} style={{ display: "inline-block" }}>
                       <b>起業</b>と
                     </motion.span>
                   </GradientText>
                 </p>
                 <p>
                   <GradientText>
-                    <motion.span
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-                    >
+                    {/* 词 3: コファウンダー */}
+                    <motion.span variants={wordItem} style={{ display: "inline-block" }}>
                       <b>コファウンダー</b>
                     </motion.span>
                   </GradientText>
@@ -258,7 +275,6 @@ export const LoveCofounder: React.FC = () => {
                 <p>一间合租公寓，一群性格各异的伙伴，</p>
                 <p>和一段热血、迷茫、令人心动的共创旅程。</p>
               </HeroDescription>
-
 
               <GameDescription>
                 Steam商店页面现已公开！

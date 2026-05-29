@@ -92,19 +92,21 @@ export const DropdownMenu = styled.div`
   margin-top: 1.5rem;
   background: white;
   border: 1px solid #e5e7eb;
-  border-radius: 0.25rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   width: 7rem;
   z-index: 50;
+  overflow: hidden;
 `;
 
 export const DropdownItem = styled.a`
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   font-size: 0.875rem;
   cursor: pointer;
+  color: #111827;
   
   &:hover {
+  color: #FF5C8A;
     background-color: #fdf2f8;
   }
 `;
@@ -549,12 +551,17 @@ export const Copyright = styled.div`
   text-align: center;
 `;
 
-export const LangButtonContent = styled.span`
+export const LangButtonContent = styled.span<{ $open?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  color: #333;
+  color: ${({ $open }) => ($open ? '#FF5C8A' : '#111827')};
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #FF5C8A;
+  }
 `;
 
 export const ProductBannerLink = styled.a`

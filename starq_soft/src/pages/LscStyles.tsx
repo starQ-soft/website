@@ -35,7 +35,7 @@ export const StoryContainer = styled.section`
   flex-direction: column;
   align-items: center;
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
-  color: #333;
+  color: #111827;
   line-height: 2;
   letter-spacing: 0.05em;
 `;
@@ -108,7 +108,7 @@ export const StoryDescription = styled.div`
   text-align: center;
   font-size: 1.5rem;
   line-height: 5rem;
-  color: #444;
+  color: #111827;
   font-weight: 500;
 
   p {
@@ -138,6 +138,7 @@ export const GameDescription = styled.p`
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 
   @media (max-width: 768px) {
     font-size: 1.5rem;

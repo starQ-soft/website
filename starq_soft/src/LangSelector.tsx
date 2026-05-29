@@ -1,7 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import translations from './translations.json';
 import { useLanguage, type LanguageCode } from './LanguageContext';
 import { DropdownContainer, DropdownButton, DropdownMenu, DropdownItem, LangButtonContent } from './styles';
+
+const MotionDropdownMenu = motion.create(DropdownMenu);
 
 const LANGUAGES: { code: LanguageCode; label: string }[] = [
   { code: 'ja-jp', label: '日本語' },
@@ -12,8 +15,23 @@ const LANGUAGES: { code: LanguageCode; label: string }[] = [
 export const LangSelector = () => {
   const { lang, setLang } = useLanguage();
   const [langOpen, setLangOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const t = translations[lang];
+
+  // Close the dropdown when clicking anywhere outside of it.
+  useEffect(() => {
+    if (!langOpen) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setLangOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [langOpen]);
 
   const handleLanguageChange = (code: LanguageCode) => {
     setLang(code);
@@ -21,9 +39,9 @@ export const LangSelector = () => {
   };
 
   return (
-    <DropdownContainer>
+    <DropdownContainer ref={containerRef}>
       <DropdownButton onClick={() => setLangOpen(!langOpen)}>
-        <LangButtonContent>
+        <LangButtonContent $open={langOpen}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -37,15 +55,22 @@ export const LangSelector = () => {
           {t.nav.language}
         </LangButtonContent>
       </DropdownButton>
-      {langOpen && (
-        <DropdownMenu>
-          {LANGUAGES.map(({ code, label }) => (
-            <DropdownItem key={code} onClick={() => handleLanguageChange(code)}>
-              {label}
-            </DropdownItem>
-          ))}
-        </DropdownMenu>
-      )}
+      <AnimatePresence>
+        {langOpen && (
+          <MotionDropdownMenu
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+          >
+            {LANGUAGES.map(({ code, label }) => (
+              <DropdownItem key={code} onClick={() => handleLanguageChange(code)}>
+                {label}
+              </DropdownItem>
+            ))}
+          </MotionDropdownMenu>
+        )}
+      </AnimatePresence>
     </DropdownContainer>
   );
 };

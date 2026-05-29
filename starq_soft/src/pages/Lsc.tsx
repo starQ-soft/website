@@ -9,6 +9,7 @@ import TransparentBanner from './TransparentBanner';
 import { LscGlobalStyle, FirstWrapper, SectionSubtitle, StoryTitle, SecondWrapper } from './LscStyles';
 import BackToTop from '../components/BackToTop';
 import { Logo } from '../styles';
+import { socialLinks } from '../components/footer/FooterConstants';
 import LangSelector from '../LangSelector';
 import { useLanguage } from '../LanguageContext';
 
@@ -113,7 +114,7 @@ const contents = {
     ],
     btnWishlist: 'ウィッシュリストに追加',
     btnPreorder: '予約注文',
-    footerInfo: 'Developer team 最新開発進捗確認'
+    footerInfo: 'All rights reserved.'
   }
 };
 
@@ -193,22 +194,6 @@ const PvContainer = styled.div`
 
   @media (max-width: 768px) {
     border-width: 2px;
-  }
-
-  button {
-    position: relative;
-    z-index: 10;
-    background-color: #dc2626;
-    color: white;
-    border-radius: 9999px;
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: none;
-    font-size: 1.5rem;
   }
 `;
 
@@ -373,7 +358,7 @@ const PromotionCard = styled.div`
     }
 
     ul li span {
-      background-color: #ffb6c1;
+      background-color: #dd6f94;
       color: #fff;
       font-weight: bold;
       padding: 0.1rem 0.5rem;
@@ -431,6 +416,7 @@ const Footer = styled.footer`
       flex-direction: column;
       align-items: center;
       cursor: pointer;
+      text-decoration: none;
 
       .icon {
         width: 3rem;
@@ -442,12 +428,19 @@ const Footer = styled.footer`
         justify-content: center;
         font-size: 1.5rem;
         margin-bottom: 0.25rem;
+        color: #111827;
+        transition: color 0.3s ease;
       }
+
+      &:hover .icon {
+        color: #dd6f94;
+      }
+
       span { font-size: 0.75rem; font-weight: bold; }
     }
   }
 
-  .copyright { text-align: center; font-size: 0.625rem; color: #6b7280; line-height: 1.25; }
+  .copyright { text-align: center; font-size: 0.725rem; color: #6b7280; line-height: 1.25; }
 `;
 
 const LangSwitcherContainer = styled.div`
@@ -714,7 +707,6 @@ const Lsc = () => {
       <TransparentBanner
         images={["/lsc-haruka.png", "/lsc-rin.png", "/lsc-natsumi.png", "/lsc-shizuka.png", "/lsc-nana.png",]}
       />
-      {/* <div style={{ height: '100vh', position: 'relative', zIndex: 1 }} /> */}
       <ContentWrapper>
         <LoveCofounder />
         <Section>
@@ -890,13 +882,21 @@ const Lsc = () => {
 
             <Footer>
               <div className="social-links">
-                <div className="social-item"><div className="icon" style={{ color: '#ff69b4' }}>📺</div></div>
-                <div className="social-item"><div className="icon" style={{ color: 'black' }}>𝕏</div></div>
-                <div className="social-item"><div className="icon" style={{ color: '#5865F2' }}>👾</div></div>
-                <div className="social-item"><div className="icon" style={{ color: '#3b82f6' }}>🐧</div></div>
+                {socialLinks.map((social, index) => (
+                  <a
+                    className="social-item"
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                  >
+                    <div className="icon">{social.icon}</div>
+                  </a>
+                ))}
               </div>
               <div className="copyright">
-                © 2026 StarQ Soft LLC. All rights reserved.<br />
+                © 2026 StarQ Soft LLC.<br />
                 {t.footerInfo}
               </div>
             </Footer>
