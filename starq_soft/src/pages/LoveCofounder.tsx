@@ -68,7 +68,6 @@ const HeroImage = styled(motion.div) <{ $backgroundImage: string }>`
 const HeroOverlay = styled.div`
   position: absolute;
   inset: 0;
-  // background: linear-gradient(135deg, rgba(233, 30, 99, 0.8) 0%, rgba(156, 39, 176, 0.6) 100%);
 `;
 
 const HeroContent = styled.div`
@@ -96,18 +95,19 @@ const HeroTitle = styled.div`
 const GradientText = styled.span`
   display: inline-block;
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
-  background: linear-gradient(0deg, #e186b4 0%, #353437 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #353437;
   font-size: 1.2em;
   line-height: 1.4;
-  padding-bottom: 0.1em; 
+  padding-bottom: 0.1em;
 
   b {
     font-weight: 800;
     font-size: 1.5em;
     line-height: 1;
+    background: linear-gradient(0deg, #fba8c3 0%,  #dd6f94 20%, #5a5860 60%, #33333b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 `;
 

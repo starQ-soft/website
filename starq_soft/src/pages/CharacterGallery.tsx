@@ -319,26 +319,12 @@ export const LoveCofounderCharacter: React.FC = () => {
                         playSample(src);
                       }}
                     >
-                      <div style={{
-                        display: "inline-grid",
-                        width: "30px",
-                        height: "30px",
-                        backgroundColor: "#e186b4",
-                        border: "none",
-                        borderRadius: "50%",
-                        placeItems: "center",
-                        cursor: "pointer",
-                        marginLeft: "8px",
-                        padding: 0
-                      }}>
-                        <img
+                      <VoiceButton>
+                        <VoiceIcon
                           src={playingSrc === src ? "voice-stop.svg" : "voice-play.svg"}
                           alt={playingSrc === src ? "stop" : "play"}
-                          style={{ width: "12px", height: "16px" }
-                          }
-
                         />
-                      </div>
+                      </VoiceButton>
                     </a>
                   ))}
               </div>
@@ -431,6 +417,7 @@ const CharacterDisplay = styled.div`
 const CharacterImage = styled.img`
   width: 100%;
   height: auto;
+  filter: drop-shadow(0 2px 2px rgba(91, 87, 89, 0.5));
 
   @media (max-width: 1024px) {
     max-width: 360px;
@@ -463,6 +450,29 @@ const EnglishName = styled.h4`
   font-size: 24px;
   color: #CC1075;
   margin: 5px 0;
+`;
+
+const VoiceButton = styled.div`
+  display: inline-grid;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #F89BB0 0%, #e07db2 99%, #a896af 100%);
+  border: none;
+  border-radius: 50%;
+  place-items: center;
+  cursor: pointer;
+  margin-left: 8px;
+  padding: 0;
+  transition: filter 0.2s ease;
+
+  &:hover {
+    filter: brightness(1.15);
+  }
+`;
+
+const VoiceIcon = styled.img`
+  width: 12px;
+  height: 16px;
 `;
 
 const Role = styled.div`
@@ -535,7 +545,7 @@ const LikesList = styled.div`
 `;
 
 const LikeItem = styled.span`
-  background: #e186b4;
+  background: linear-gradient(135deg, #ffadd1 0%, #e07db2 99%, #a896af 100%);
   color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
