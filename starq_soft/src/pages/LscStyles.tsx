@@ -48,6 +48,7 @@ export const StoryTitle = styled.h2`
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin: 5rem 0;
+  scroll-margin-top: 6rem;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
