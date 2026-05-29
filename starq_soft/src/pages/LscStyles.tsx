@@ -24,10 +24,10 @@ export const LscGlobalStyle = createGlobalStyle`
 `;
 
 export const StoryContainer = styled.section`
-  border: 2px solid #f5d2d2;
+  border: 2px solid rgb(248, 248, 248);
   padding: 2rem 1rem;
   background-color: #fff;
-  backdrop-filter: blur(1px);
+  backdrop-filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
   width: 60%;
   margin: 0 auto;
   opacity: 0.8;
@@ -117,8 +117,10 @@ export const StoryDescription = styled.div`
   }
 
   strong {
-    color: #9aaad2;
+    color: #9b9ad2;
     font-weight: 600;
+    padding: 0.25em 0.5em;
+    background: #f7f1ff;
   }
 
   span {
@@ -128,7 +130,7 @@ export const StoryDescription = styled.div`
 `;
 
 export const GameDescription = styled.p`
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 1.6;
   background: linear-gradient(135deg,  #ffd7e6 0%, #f99bb3 15%, #a3c1f3 100%);
   background-clip: text;
@@ -144,6 +146,17 @@ export const GameDescription = styled.p`
   @media (max-width: 768px) {
     font-size: 1.5rem;
   }
+`
+
+export const Note = styled.p`
+  font-size: 1rem;
+  line-height: 1.6;
+  background: linear-gradient(135deg,  #ffd7e6 0%, #f99bb3 15%, #a3c1f3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-align: center;
 `
 
 export const CharacterCarousel = styled.div`

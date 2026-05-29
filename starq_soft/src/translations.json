@@ -36,6 +36,10 @@
         }
       ]
     },
+    "faq": {
+      "faqTitle": "关于我们",
+      "faqText": "StarQ Soft是一家2026年在美国加州山景城创立具有全球视野的的独立游戏品牌，专注于打造具有深刻叙事和多维交互的游戏体验，致力于为玩家带来难忘的故事与人生体验。"
+    },
     "about": {
       "aboutTitle": "会社概要",
       "aboutText": "StarQ Softは、多様な二次元ギャルゲースタイルのビジュアルノベルを制作する独立系ゲームスタジオです。忘れられない物語とキャラクターに命を吹き込みます。"
@@ -105,9 +109,13 @@
         }
       ]
     },
+    "faq": {
+      "faqTitle": "关于我们",
+      "faqText": "StarQ Soft是一家2026年在美国加州山景城创立具有全球视野的的独立游戏品牌，专注于打造具有深刻叙事和多维交互的游戏体验，致力于为玩家带来难忘的故事与人生体验。"
+    },
     "about": {
       "aboutTitle": "About Us",
-      "aboutText": "We are an independent game studio dedicated to creating a diverse lineup of immersive anime galgames. Our goal is to bring unforgettable stories and characters to life across our titles."
+      "aboutText": "StarQ Soft is an independent game studio dedicated to creating immersive experiences in Visual Novels Games. Our goal is to bring unforgettable stories and characters to life across our titles."
     },
     "contact": {
       "contactTitle": "Contact Us",
@@ -173,6 +181,10 @@
           "link": "/upcoming"
         }
       ]
+    },
+    "faq": {
+      "faqTitle": "关于我们",
+      "faqText": "StarQ Soft是一家2026年在美国加州山景城创立具有全球视野的的独立游戏品牌，专注于打造具有深刻叙事和多维交互的游戏体验，致力于为玩家带来难忘的故事与人生体验。"
     },
     "about": {
       "aboutTitle": "关于我们",

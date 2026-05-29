@@ -4,7 +4,7 @@ import translations from './translations.json';
 import news from './news.json';
 import logoImage from './assets/StarQ_logo.png';
 import steamLogo from './assets/steam-logo.svg';
-import { GlobalStyle, Nav, Logo, NavLinks, NavActions, GlobalContainer, Hero, HeroSlides, HeroSlide, HeroDots, HeroDot, HeroContent, ButtonGroup, PrimaryButton, PreorderText, Main, SectionHeader, NewsRow, TypeBadge, NewsDate, ProductHeaderArea, ProductGrid, ProductBanner, ProductBannerLink, Footer, FooterContent, AboutBox, SteamIcon, CheckboxContainer, FormContainer, Input, Row, SubmitButton, Subtitle, Textarea, Title, SocialLinks, SocialLink, ScrollableContainer, FooterTop, Copyright, StatusMessage } from './styles';
+import { GlobalStyle, Nav, Logo, NavLinks, NavActions, GlobalContainer, Hero, HeroSlides, HeroSlide, HeroDots, HeroDot, HeroContent, ButtonGroup, PrimaryButton, PreorderText, Main, SectionHeader, Twinkle, NewsRow, TypeBadge, NewsDate, ProductHeaderArea, ProductGrid, ProductBanner, ProductBannerLink, Footer, FooterContent, AboutBox, SteamIcon, CheckboxContainer, FormContainer, Input, Row, SubmitButton, Subtitle, Textarea, Title, SocialLinks, SocialLink, ScrollableContainer, FooterTop, Copyright, StatusMessage } from './styles';
 import BackToTop from './components/BackToTop';
 import { socialLinks } from './components/footer/FooterConstants';
 import FallingStars from './components/FallingStars';
@@ -15,6 +15,7 @@ const MotionHeroSlide = motion.create(HeroSlide);
 const MotionProductHeaderArea = motion.create(ProductHeaderArea);
 const MotionProductGrid = motion.create(ProductGrid);
 const MotionAboutBox = motion.create(AboutBox);
+const MotionFaqBox = motion.create(AboutBox);
 const MotionSectionHeader = motion.create(SectionHeader);
 const MotionFormContainer = motion.create(FormContainer);
 
@@ -165,20 +166,20 @@ const App = () => {
               <MotionProductHeaderArea variants={itemReveal}>
                 <SectionHeader>
                   {/* <Highlight>{t.news.titleHighlight}</Highlight>{t.news.titleRest} */}
-                  {n.subTitle}
+                  {n.subTitle}<Twinkle />
                 </SectionHeader>
               </MotionProductHeaderArea>
 
               <motion.div variants={itemReveal}>
                 {n.items.map((item, index) => (
                   <NewsRow key={index}>
-                    <TypeBadge $bgColor={item.type !== 'UPDATE' ? '#d83c6b' : '#f2c45e'}>
+                    <TypeBadge $bgColor={item.type !== 'UPDATE' ? '#ed7799' : '#fcd16b'}>
                       {item.type}
                     </TypeBadge>
                     <span>
                       {item.link ? <a href={item.link} target="_blank" rel="noopener noreferrer">
-                        <strong>{item.text}</strong>
-                      </a> : <strong>{item.text}</strong>}
+                        {item.text}
+                      </a> : <>{item.text}</>}
                     </span>
                     <NewsDate>{item.date}</NewsDate>
                   </NewsRow>
@@ -198,7 +199,7 @@ const App = () => {
               <MotionProductHeaderArea variants={itemReveal}>
                 <SectionHeader>
                   {/* <Highlight>{t.product.titleHighlight}</Highlight>{t.product.titleRest} */}
-                  {t.product.subTitle}
+                  {t.product.subTitle}<Twinkle />
                 </SectionHeader>
                 {/* <SmallButton>{t.product.btn}</SmallButton> */}
               </MotionProductHeaderArea>
@@ -222,15 +223,30 @@ const App = () => {
               whileInView="visible"
               viewport={{ once: true }}
             >
+              <MotionFaqBox variants={sectionReveal}>
+                <MotionSectionHeader variants={itemReveal}>
+                  {t.faq.faqTitle}<Twinkle /></MotionSectionHeader>
+                <motion.p variants={itemReveal}>{t.faq.faqText}</motion.p>
+              </MotionFaqBox>
+            </motion.div>
+          </section>
+
+          <section>
+            <motion.div
+              variants={sectionReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               <MotionAboutBox variants={sectionReveal}>
                 <MotionSectionHeader variants={itemReveal}>
-                  {t.about.aboutTitle}</MotionSectionHeader>
+                  {t.about.aboutTitle}<Twinkle /></MotionSectionHeader>
                 <motion.p variants={itemReveal}>{t.about.aboutText}</motion.p>
               </MotionAboutBox>
 
               <MotionAboutBox variants={sectionReveal}>
                 <MotionSectionHeader variants={itemReveal}>
-                  {t.contact.contactTitle} </MotionSectionHeader>
+                  {t.contact.contactTitle} <Twinkle /></MotionSectionHeader>
                 <motion.p variants={itemReveal}>{t.contact.contactText}</motion.p>
               </MotionAboutBox>
               <MotionFormContainer variants={itemReveal} onSubmit={handleSubmit}>
@@ -295,6 +311,7 @@ const App = () => {
               <a href="#" key={index}>{link}</a>
             ))}
           </FooterLinks> */}
+          <p>Follow Us!</p>
           <SocialLinks>
             {socialLinks.map((social, index) => (
               <SocialLink key={index} href={social.href} target="_blank" aria-label={social.label}>

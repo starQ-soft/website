@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
+import { AnimatePresence, motion } from "framer-motion";
 import { CharacterCard, CharacterCarousel } from "./LscStyles";
 
 const avatars: any[] = ["me-1.png", "haijin.png", "tani.png", "hayashi.png", "nana.png", "natsumi.png", "rin.png", "takagi.png"];
@@ -64,7 +65,7 @@ const characters: any[] = [
     },
     role: "UI/UX设计师（实习生）",
     description:
-      "茨木大学视觉设计系大二在校生，非常害羞，莫名地容易脸红，内心情感丰富细腻。拥有极强的审美直觉和绘画天赋。平时话不多却观察力惊人，对色彩把控惊人，执着于美感，注重每一个细节。性格并不张扬却意外地有主见，有自己独特的理解和追求，喜欢把生活中的点滴美好都融入到创作中，在设计方面的天赋和潜力总是令人刮目相看。",
+      "茨木大学视觉设计系大二在校生，生性害羞，莫名地容易脸红。性格并不张扬，平时话不多，更喜欢用图像表达内心丰富细腻的情感。拥有过人的审美直觉和绘画天赋，观察力敏锐，对色彩把控力极强，执着于美感，注重每一个细节。擅长把生活中的点滴美好都融入到创作中，在设计方面的天赋和潜力总是令人刮目相看。",
     image: "tani.png",
     age: "20",
     height: "158cm",
@@ -142,7 +143,7 @@ const characters: any[] = [
     },
     role: "产品经理",
     description:
-      "拥有法国血统的混血美人，说话总是轻声细语让人如沐春风。作为一个产品经理，有着罕见的“理性与同理心并存”的特质，对产品有自己的理解和追求。言辞温和，逻辑清晰，总是能把混乱的想法变成可执行的步骤。注重用户体验，不想为了数据美观而妥协，愿意花大量时间进行市场调研，在当今这种商业背景下显得有点理想主义，希望打造用户真正需要的产品。",
+      "拥有四分之一法国血统的混血美人，举止优雅，言辞温和，说话总是轻声细语让人如沐春风。有着与一般产品经理不同的罕见气质，有自己独特的理解和追求，在当今这种商业背景下显得有点理想主义。非常注重用户体验，不想为了数据美观而妥协，愿意花大量时间进行市场调研，希望打造用户真正需要且喜爱的产品。",
     image: "natsumi.png",
     age: "25",
     height: "165cm",
@@ -183,7 +184,7 @@ const characters: any[] = [
     quotes: [
       "我投资的，不是你们现在的产品，而是你，和你的未来。",
       "别用梦想打动我，用数据和执行力说话。",
-      "只有足够强大，才能主宰自己的命运！"
+      "人只有足够强大，才能主宰自己的命运！"
     ]
   },
   {
@@ -289,11 +290,25 @@ export const LoveCofounderCharacter: React.FC = () => {
         </CharacterCarousel>
       </CharacterList>
       <CharacterDisplay>
-        <CharacterImage
-          src={characters[selectedCharacter].image}
-          alt={characters[selectedCharacter].name.english}
-        />
-        <CharacterInfo>
+        <AnimatePresence mode="wait">
+          <MotionCharacterImage
+            key={selectedCharacter}
+            src={characters[selectedCharacter].image}
+            alt={characters[selectedCharacter].name.english}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0.5 }}
+            transition={{ duration: 0.2 }}
+          />
+        </AnimatePresence>
+        <AnimatePresence mode="wait">
+          <MotionCharacterInfo
+            key={selectedCharacter}
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -5 }}
+            transition={{ duration: 0.2 }}
+          >
           <CharacterHeader>
             <div>
               <div>{characters[selectedCharacter].name.japanese.map((char, i) => (
@@ -361,7 +376,17 @@ export const LoveCofounderCharacter: React.FC = () => {
             </DetailItem>
           </Details>
           <QuoteMarkLeft>❝</QuoteMarkLeft>
-          <QuoteText>{characters[selectedCharacter].quotes[selectedVoiceIndex]}</QuoteText>
+          <AnimatePresence mode="wait">
+            <MotionQuoteText
+              key={`${selectedCharacter}-${selectedVoiceIndex}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {characters[selectedCharacter].quotes[selectedVoiceIndex]}
+            </MotionQuoteText>
+          </AnimatePresence>
           <QuoteMarkRight>❞</QuoteMarkRight>
           <Likes>
             <Label>Likes</Label>
@@ -371,7 +396,8 @@ export const LoveCofounderCharacter: React.FC = () => {
               ))}
             </LikesList>
           </Likes>
-        </CharacterInfo>
+          </MotionCharacterInfo>
+        </AnimatePresence>
       </CharacterDisplay>
     </GalleryContainer >
   );
@@ -424,6 +450,8 @@ const CharacterImage = styled.img`
   }
 `;
 
+const MotionCharacterImage = motion.create(CharacterImage);
+
 const CharacterInfo = styled.div`
   padding: 1rem;
   width: 100%;
@@ -435,6 +463,8 @@ const CharacterInfo = styled.div`
     padding: 0.5rem 0;
   }
 `;
+
+const MotionCharacterInfo = motion.create(CharacterInfo);
 
 const CharacterHeader = styled.div`
   margin-bottom: 30px;
@@ -512,26 +542,34 @@ const Value = styled.div`
 `;
 
 const QuoteText = styled.div`
-    color: #a896af;
-    font-family: serif;
+    background: linear-gradient(135deg,  #e0a1b8 0%, #eb6385 15%, #b7a3f3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
     font-size: 1.5rem;
     letter-spacing: .1em;
     position: relative;
     padding: 1rem 1.5em;
+    filter: drop-shadow(0 1px 1px rgba(183, 163, 243, 0.5));
 `;
 
+const MotionQuoteText = motion.create(QuoteText);
+
 const QuoteMarkLeft = styled.p`
-    color: #a896af;
+    color: #f99bb3;
     text-align: left;
     margin: 0;
     font-size: 2rem;
+    filter: drop-shadow(0 1px 1px rgba(183, 163, 243, 0.5));
 `;
 
 const QuoteMarkRight = styled.p`
-    color: #a896af;
+    color: #b7a3f3;
     text-align: right;
     margin: 0;
     font-size: 2rem;
+    filter: drop-shadow(0 1px 1px rgba(183, 163, 243, 0.5));
 `;
 
 const Likes = styled.div`

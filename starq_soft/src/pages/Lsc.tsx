@@ -6,7 +6,7 @@ import { LoveCofounder } from './LoveCofounder';
 import { motion, useInView } from 'framer-motion';
 import CherryBlossomBackground from './CherryBlossomBackground';
 import TransparentBanner from './TransparentBanner';
-import { LscGlobalStyle, FirstWrapper, SectionSubtitle, StoryTitle, SecondWrapper } from './LscStyles';
+import { LscGlobalStyle, FirstWrapper, SectionSubtitle, StoryTitle, SecondWrapper, GameDescription, Note } from './LscStyles';
 import BackToTop from '../components/BackToTop';
 import { Logo } from '../styles';
 import { socialLinks } from '../components/footer/FooterConstants';
@@ -66,7 +66,7 @@ const contents = {
       { date: '2026/03/29', text: 'AI 互动系统 调试中！' },
       { date: '2026/03/29', text: 'AI 特效表现 测试中！' }
     ],
-    promoTitle: '赛博创业团♥ ',
+    spec: '赛博创业团♥ ',
     promoFeatures: [
       '赛博商战化运作',
       'AI女友互动体验',
@@ -80,7 +80,7 @@ const contents = {
   'ja-jp': {
     langName: '日本語',
     navLanguage: '言語',
-    pvTitle: 'P V',
+    pvTitle: 'ムービー',
     introTitle: 'ゲーム紹介',
     introText: [
       'シェアハウスで暮らす、個性豊かな仲間たち。',
@@ -105,7 +105,8 @@ const contents = {
       { date: '2026/03/29', text: 'AI 連携システム 調整中！' },
       { date: '2026/03/29', text: 'AI エフェクト テスト中！' }
     ],
-    promoTitle: 'サイバースタートアップ',
+    spec: 'スペック',
+    staff: 'スタッフ',
     promoFeatures: [
       'サイバービジネス運営',
       'AI彼女とのふれあい',
@@ -155,13 +156,13 @@ const Ham = styled.div<{ $open?: boolean }>`
   }
 
   .top {
-    transform: ${({ $open }) => ($open ? 'translateY(9px) rotate(45deg)' : 'none')};
+    transform: ${({ $open }) => ($open ? 'translateY(7.5px) rotate(45deg)' : 'none')};
   }
   .middle {
     opacity: ${({ $open }) => ($open ? 0 : 1)};
   }
   .bottom {
-    transform: ${({ $open }) => ($open ? 'translateY(-9px) rotate(-45deg)' : 'none')};
+    transform: ${({ $open }) => ($open ? 'translateY(-7.5px) rotate(-45deg)' : 'none')};
   }
 `;
 
@@ -371,7 +372,7 @@ const PromotionCard = styled.div`
   flex-direction: column;
   gap: 1.5rem;
   align-items: center;
-  width: 80%;
+  width: 100%;
   box-sizing: border-box;
 
   @media (min-width: 768px) { flex-direction: row; }
@@ -387,11 +388,27 @@ const PromotionCard = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
+    gap: 2rem;
 
-    @media (min-width: 768px) { align-items: flex-start; }
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .promo-column {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      @media (min-width: 768px) { align-items: flex-start; }
+    }
 
     h4 { font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem; }
-    
+
     ul {
       font-size: 0.75rem;
       margin-bottom: 1rem;
@@ -400,13 +417,7 @@ const PromotionCard = styled.div`
       padding: 0;
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      column-gap: 1.5rem;
-
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        column-gap: 0;
-      }
+      grid-template-columns: 1fr;
     }
 
     ul li {
@@ -421,12 +432,11 @@ const PromotionCard = styled.div`
     }
 
     ul li span {
-      background-color: #dd6f94;
-      color: #fff;
+      color: #302b2b;
       font-weight: bold;
       padding: 0.1rem 0.5rem;
       border-radius: 0.25rem;
-      text-align: center;
+      text-align: left;
       box-sizing: border-box;
       width: 100%;
     }
@@ -452,8 +462,9 @@ const PromotionCard = styled.div`
 
 const Footer = styled.footer`
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
-  padding-top: 3rem;
-  padding-bottom: 1.5rem;
+  background-color: #eaeaea;
+  padding-top: 5rem;
+  padding-bottom: 2.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-top: 2rem;
@@ -549,6 +560,21 @@ const ScreenshotImage = styled.img`
   height: auto;
   display: block;
 `
+
+const MotionScreenshotsContainer = motion.create(ScreenshotsContainer);
+const MotionScreenshot = motion.create(Screenshot);
+
+// Hold the screenshots until the "// Gallery" title finishes typing
+// (~0.8s), then reveal them one after another.
+const galleryReveal = {
+  hidden: {},
+  visible: { transition: { delayChildren: 1, staggerChildren: 0.15 } },
+};
+
+const screenshotItem = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 const ModalOverlay = styled.div`
   position: fixed;
@@ -878,11 +904,11 @@ const Lsc = () => {
 
               <TypingStoryTitle id="pv" text={`// ${t.pvTitle}`} />
               <motion.div variants={itemReveal} style={stepStyle}>
-                <SectionSubtitle>OPムービー</SectionSubtitle>
+                <SectionSubtitle>主題ムービー</SectionSubtitle>
                 <PvContainer>
                   <iframe
                     src="https://www.youtube.com/embed/lg0mlF05LPs"
-                    title="OPムービー"
+                    title="主題ムービー"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
@@ -940,14 +966,23 @@ const Lsc = () => {
               <TypingStoryTitle id="gallery" text="// Gallery" />
               <motion.div variants={itemReveal} style={stepStyle}>
                 <SectionContent>
-
-                  <ScreenshotsContainer>
+                  <Note>※素材は全て開発中のものであり、予告なく変更される場合があります。</Note>
+                  <MotionScreenshotsContainer
+                    variants={galleryReveal}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
                     {screenshots.map((img, index) => (
-                      <Screenshot key={img.src} onClick={() => setSelectedIndex(index)}>
+                      <MotionScreenshot
+                        key={img.src}
+                        variants={screenshotItem}
+                        onClick={() => setSelectedIndex(index)}
+                      >
                         <ScreenshotImage src={img.src} alt={img.alt} />
-                      </Screenshot>
+                      </MotionScreenshot>
                     ))}
-                  </ScreenshotsContainer>
+                  </MotionScreenshotsContainer>
                 </SectionContent>
               </motion.div>
             </motion.div>
@@ -985,30 +1020,40 @@ const Lsc = () => {
                 <motion.div variants={itemReveal} style={stepStyle}>
                   <PromotionCard>
                     <div className="promo-details">
-                      <h4>{t.promoTitle}</h4>
-                      <ul>
-                        <li><span>タイトル</span>恋と起業とコファウンダー</li>
-                        <li><span>ブランド</span>スターQソフト</li>
-                        <li><span>ジャンル</span>青春創業ＡＤＶ</li>
-                        <li><span>レーティング</span>全年齢対象</li>
-                        <li><span>発売日</span>2027年09月26日(金)</li>
-                        <li><span>価格</span>通常版：￥10,989(税込)・プレミアム版：￥24,200(税込)※両版ともにDLコード付き・ＤＬ版：￥8,470(税込)</li>
-                        <li><span>対応OS</span>Windows　10・11</li>
-                        <li><span>CPU</span>Intel Core i3搭載機と同等以上推奨</li>
-                        <li><span>対応OS</span>Windows　10・11</li>
-                        <li><span>MEMORY</span>	1GB／2GB以上推奨</li>
-                        <li><span>HDD</span>	6GB以上</li>
-                        <li><span>原画／SD／背景</span>眞海</li>
-                        <li><span>キャラクターデザイン</span>眞海</li>
-                        <li><span>音楽</span>Wedoso</li>
-
-                        <li><span>ＣＧ</span>中乃・トミフミ 他</li>
-                        <li><span>ムービー</span>ろど 他</li>
-                        <li><span>ディレクター</span>ろど</li>
-                        <li><span>特別協力</span>bamboo(milktub/exOVERDRIVE)</li>
-                      </ul>
+                      <div className="promo-column">
+                        <h4>{t.spec}</h4>
+                        <ul>
+                          <li><span>タイトル</span>恋と起業とコファウンダー</li>
+                          {/* <li><span>ブランド</span>スターQソフト</li> */}
+                          <li><span>ジャンル</span>青春起業ＡＤＶ</li>
+                          <li><span>レーティング</span>全年齢対象</li>
+                          <li><span>発売日</span>(未定)</li>
+                          <li><span>価格</span>(未定)</li>
+                          <li><span>対応OS</span>Windows® 10／11</li>
+                          <li><span>CPU</span>Intel® Core™ i3第二世代以上推奨</li>
+                          <li><span>DISPLAY</span>3840×2160pixel／FullColor以上</li>
+                          <li><span>MEMORY</span>2GByte必須／4GByte以上推奨</li>
+                          <li><span>HDD</span>	6GB以上</li>
+                        </ul>
+                      </div>
+                      <div className="promo-column">
+                        <h4>{t.staff}</h4>
+                        <ul>
+                          <li><span>企画／プロデューサー</span>星可</li>
+                          <li><span>パブリッシャー</span>Pairaki Games</li>
+                          <li><span>原画／SD／背景</span>眞海</li>
+                          <li><span>キャラクターデザイン</span>眞海</li>
+                          <li><span>主題歌</span>「Startup!★Start!!」by Wedoso</li>
+                          <li><span>音楽</span>Wedoso</li>
+                          <li><span>ＣＧ</span>中乃・トミフミ 他</li>
+                          <li><span>ムービー</span>ろど 他</li>
+                          <li><span>ディレクター</span>ろど</li>
+                          <li><span>特別協力</span>bamboo(milktub/exOVERDRIVE)</li>
+                        </ul>
+                      </div>
                     </div>
                   </PromotionCard>
+                  <Note>※動作環境は予定です。発売までに変更になる可能性があります。</Note>
                 </motion.div>
               </motion.div>
               <div className="btn-group">

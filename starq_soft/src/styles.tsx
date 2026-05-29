@@ -18,6 +18,9 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const GlobalContainer = styled.div`
+  font-family: 'Fredoka', 'Varela Round', 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+  letter-spacing: 0.03em;
+  color: #5f4d52;
   background-color: #ffffff;
   @media (min-width: 768px) {
     width: 80vw;
@@ -262,13 +265,26 @@ export const Main = styled.main`
 
 export const SectionHeader = styled.h2`
   font-size: 2.25rem;
-  font-weight: 900;
+  font-weight: 600;
   margin-bottom: 1.5rem;
   padding-bottom: 0.25rem;
-  color: #e45580;
-  // border-bottom: 2px #ec799a solid;
+  color: #fa4b91;
+  // border-bottom: 2px #ec799a dotted;
   align-items: baseline;
   margin: 1rem auto;
+`;
+
+// Decorative sparkle rendered from public/twinkle.svg. Uses a CSS mask so
+// the glyph picks up the surrounding text color via currentColor.
+export const Twinkle = styled.span`
+  display: inline-block;
+  width: 1em;
+  height: 0.75em;
+  margin-left: 0.5em;
+  vertical-align: middle;
+  background-color: currentColor;
+  -webkit-mask: url(/twinkle.svg) no-repeat center / contain;
+  mask: url(/twinkle.svg) no-repeat center / contain;
 `;
 
 export const NewsRow = styled.div`
@@ -368,15 +384,22 @@ export const ProductBanner = styled.div<ProductBannerProps>`
   }
 
   &:hover {
-    box-shadow: ${({ $upcoming }) => $upcoming ? 'none' : '0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)'};
+    box-shadow: ${({ $upcoming }) => $upcoming ? 'none' : '0 10px 15px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)'};
     transform: ${({ $upcoming }) => $upcoming ? 'none' : 'translateY(-4px)'};
+    border: ${({ $upcoming }) => $upcoming ? '2px solid #e5e7eb' : ' 2px solid #f3bed1'};
   }
 `;
 
 
 export const Footer = styled.footer`
   width: 100vw;
-  background:  linear-gradient(180deg, #ff668f 0%, #e97292 50%, #f993b0 100%);
+  background: linear-gradient(180deg, #ffa8ba 0%, #f68da3 50%, #ef7790 100%);
+  // background-color: #ffa8ba; 
+  // background-image: linear-gradient(
+  //   to bottom, 
+  //   rgba(255, 234, 234, 0.15) 1px, 
+  //   transparent 1px
+  // );
 `;
 
 export const FooterTop = styled.footer`
@@ -399,6 +422,7 @@ export const FooterContent = styled.div`
   padding: 5rem 0 2rem 0;
   margin-top: auto;
   opacity: 0.9;
+  color: #fff;
 
   @media (max-width: 640px) {
     padding: 40px 15px 15px;
@@ -426,7 +450,7 @@ export const FormContainer = styled.form`
   max-width: 50vw;
   margin: 0 auto;
   padding: 3rem 5rem;
-  background-color: rgba(240, 240, 240, 0.85);
+  background-color: rgba(252, 252, 252, 0.85);
   border: 1px solid #eee;
   backdrop-filter: blur(4px);
   border-radius: 8px;
@@ -506,7 +530,7 @@ export const SubmitButton = styled.button`
   cursor: pointer;
   margin: 1rem auto;
   &:hover {
-    background-color: #ff76bb;
+    background-color: #ff7099;
   }
 `;
 
@@ -531,12 +555,12 @@ export const SocialLink = styled.a`
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgb(252, 175, 202);
+  background: rgba(255, 255, 255, 0.2);
 
   &:hover {
     transform: translateY(-3px);
     color: #fff;
-    background: linear-gradient(275deg, rgb(230, 103, 150) 0%, #eb386b 50%, #f24677 100%);
+    background: rgba(255, 255, 255, 0.4);
   }
 
   &:focus {
@@ -556,7 +580,7 @@ export const LangButtonContent = styled.span<{ $open?: boolean }>`
   align-items: center;
   justify-content: center;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 0.75px;
   gap: 6px;
   color: ${({ $open }) => ($open ? '#FF5C8A' : '#111827')};
   transition: color 0.2s ease;
