@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import steamLogo from "../assets/steam-logo.svg";
@@ -162,7 +162,7 @@ const Section = styled.section<{ $background?: string }>`
 `;
 
 // Animation variants
-const fadeInUp = {
+const fadeInUp: Variants = {
   initial: { opacity: 0, y: 60 },
   animate: {
     opacity: 1,
@@ -171,7 +171,7 @@ const fadeInUp = {
   },
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   initial: {},
   animate: {
     transition: {
@@ -180,7 +180,7 @@ const staggerContainer = {
   },
 };
 
-const wordItem = {
+const wordItem: Variants = {
   initial: { opacity: 0, y: 30 },
   animate: {
     opacity: 1,
@@ -193,6 +193,10 @@ const scaleOnHover = {
   whileHover: { scale: 1.02 },
   whileTap: { scale: 0.95 },
 };
+
+const MotionStoryTitle = motion.create(StoryTitle);
+const MotionStorySubtitle = motion.create(StorySubtitle);
+const MotionStoryDescription = motion.create(StoryDescription);
 
 export const LoveCofounder: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -339,28 +343,29 @@ export const LoveCofounder: React.FC = () => {
       <Section>
         <StoryContainer>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.8 }}
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
             viewport={{ once: true }}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            <StoryTitle>// STORY</StoryTitle>
+            <MotionStoryTitle variants={fadeInUp}>// STORY</MotionStoryTitle>
 
-            <StorySubtitle>
+            <MotionStorySubtitle variants={fadeInUp}>
               共同开启的冒险!<br />
-            </StorySubtitle>
+            </MotionStorySubtitle>
 
-            <StoryDescription>
-              <span>「我们一起创业吧！」</span>
+            <MotionStoryDescription variants={staggerContainer}>
+              <motion.div variants={fadeInUp}>
+                <span>「我们一起创业吧！」</span>
+              </motion.div>
+              <motion.p variants={fadeInUp}>大学毕业后，求职无果的你，被室友一顿忽悠，<br />莫名其妙地踏上了一段从未设想过的道路……</motion.p>
+              <motion.p variants={fadeInUp}><strong>零经验、零资源、零薪资——</strong></motion.p>
+              <motion.p variants={fadeInUp}>唯一拥有的，是一个比你还不靠谱的合伙人，<br />以及一款连名字都没取好的<span>「AI女友计划」</span>。</motion.p>
+              <motion.p variants={fadeInUp}>这是一次不知能否成功的冒险，在人生的空白期里，<br />尝试去<span>「创造自己的答案」</span>。</motion.p>
               <br />
-              <p>大学毕业后，求职无果的你，被室友一顿忽悠，<br />莫名其妙地踏上了一段从未设想过的道路……</p>
-              <p><strong>零经验、零资源、零薪资——</strong></p>
-              <p>唯一拥有的，是一个比你还不靠谱的合伙人，<br />以及一款连名字都没取好的<span>「AI女友计划」</span>。</p>
-              <p>这是一次不知能否成功的冒险，在人生的空白期里，<br />尝试去<span>「创造自己的答案」</span>。</p>
               <br />
-              <br />
-            </StoryDescription>
+            </MotionStoryDescription>
           </motion.div>
         </StoryContainer>
       </Section>

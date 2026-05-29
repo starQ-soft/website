@@ -555,6 +555,8 @@ export const LangButtonContent = styled.span<{ $open?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 400;
+  letter-spacing: 2px;
   gap: 6px;
   color: ${({ $open }) => ($open ? '#FF5C8A' : '#111827')};
   transition: color 0.2s ease;

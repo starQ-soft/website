@@ -147,8 +147,8 @@ const Ham = styled.div<{ $open?: boolean }>`
 
   span {
     display: block;
-    width: 25px;
-    height: 2px;
+    width: 22px;
+    height: 1.5px;
     border-radius: 1.5px;
     background-color: ${({ $open }) => ($open ? '#CC1075' : '#2d2d2d')};
     transition: transform .3s ease, opacity .3s ease;
@@ -172,14 +172,16 @@ const SideNav = styled.nav<{ $open?: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 1.5rem;
-  width: 100%;
+  padding-left: 3.5vw;
+  width: 22%;
   height: 100%;
   background-color: #fff;
   transition: transform .5s cubic-bezier(.23, 1, .32, 1);
   transform: ${({ $open }) => ($open ? 'translateX(0)' : 'translateX(100%)')};
   z-index: 90;
+  filter: drop-shadow(-2px 0 4px rgba(0, 0, 0, 0.1));
 
   a {
     font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
