@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import logoImage from '../assets/StarQ_logo.png';
 import styled, { keyframes } from 'styled-components';
 import { LoveCofounderCharacter } from './CharacterGallery';
 import { LoveCofounder } from './LoveCofounder';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import CherryBlossomBackground from './CherryBlossomBackground';
 import TransparentBanner from './TransparentBanner';
 import { LscGlobalStyle, FirstWrapper, SectionSubtitle, StoryTitle, SecondWrapper } from './LscStyles';
@@ -680,6 +680,46 @@ const itemReveal = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
+const blink = keyframes`
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+`;
+
+const Cursor = styled.span`
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 0.08em;
+  background-color: #dd6f94;
+  vertical-align: text-bottom;
+  animation: ${blink} 0.8s step-end infinite;
+`;
+
+// Typewriter: reveal the title one character at a time once it scrolls into
+// view, with a caret that follows the last typed character and disappears
+// when typing finishes.
+const TypingStoryTitle = ({ id, text }: { id?: string; text: string }) => {
+  const ref = useRef<HTMLHeadingElement>(null);
+  const inView = useInView(ref, { once: true });
+  const [count, setCount] = useState(0);
+  const done = count >= text.length;
+
+  useEffect(() => {
+    if (!inView || done) return;
+    const timer = setTimeout(() => setCount((c) => c + 1), 80);
+    return () => clearTimeout(timer);
+  }, [inView, done, count]);
+
+  return (
+    <MotionStoryTitle id={id} ref={ref}>
+      <span style={{ display: 'inline-block' }}>
+        <span style={{ whiteSpace: 'pre' }}>{text.slice(0, count)}</span>
+        {!done && <Cursor />}
+      </span>
+    </MotionStoryTitle>
+  );
+};
+
 const stepStyle = {
   display: 'flex',
   flexDirection: 'column',
@@ -813,7 +853,7 @@ const Lsc = () => {
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
 
-            <MotionStoryTitle id="char" variants={itemReveal}>// {t.charTitle}</MotionStoryTitle>
+            <TypingStoryTitle id="char" text={`// ${'charTitle' in t ? t.charTitle : ''}`} />
             <motion.div variants={itemReveal} style={stepStyle}>
               <LoveCofounderCharacter />
             </motion.div>
@@ -834,7 +874,7 @@ const Lsc = () => {
               style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
             >
 
-              <MotionStoryTitle id="pv" variants={itemReveal}>// {t.pvTitle}</MotionStoryTitle>
+              <TypingStoryTitle id="pv" text={`// ${t.pvTitle}`} />
               <motion.div variants={itemReveal} style={stepStyle}>
                 <SectionSubtitle>OPムービー</SectionSubtitle>
                 <PvContainer>
@@ -895,7 +935,7 @@ const Lsc = () => {
             >
 
 
-              <MotionStoryTitle id="gallery" variants={itemReveal}>// Gallery</MotionStoryTitle>
+              <TypingStoryTitle id="gallery" text="// Gallery" />
               <motion.div variants={itemReveal} style={stepStyle}>
                 <SectionContent>
 
@@ -924,7 +964,7 @@ const Lsc = () => {
                 viewport={{ once: true }}
                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
               >
-                <MotionStoryTitle variants={itemReveal}>// {t.progressTitle}</MotionStoryTitle>
+                <TypingStoryTitle id="progress" text={`// ${t.progressTitle}`} />
                 <motion.div variants={itemReveal} style={stepStyle}>
                   <ProgressBoard>
                     {t.progressNotes.map((note, index) => {
@@ -939,7 +979,7 @@ const Lsc = () => {
                   </ProgressBoard>
                 </motion.div>
 
-                <MotionStoryTitle variants={itemReveal}>// 製品情報</MotionStoryTitle>
+                <TypingStoryTitle id="product" text="// 製品情報" />
                 <motion.div variants={itemReveal} style={stepStyle}>
                   <PromotionCard>
                     <div className="promo-details">
