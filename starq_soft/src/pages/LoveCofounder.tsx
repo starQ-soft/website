@@ -95,7 +95,7 @@ const HeroTitle = styled.div`
 const GradientText = styled.span`
   display: inline-block;
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
-  color: #353437;
+  color: #33333b;
   font-size: 1.2em;
   line-height: 1.4;
   padding-bottom: 0.1em;
@@ -104,7 +104,7 @@ const GradientText = styled.span`
     font-weight: 800;
     font-size: 1.5em;
     line-height: 1;
-    background: linear-gradient(0deg, #fba8c3 0%,  #dd6f94 20%, #5a5860 60%, #33333b 100%);
+    background: linear-gradient(180deg, #fba8c3 0%,  #dd6f94 20%, #5a5860 50%, #33333b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -254,22 +254,19 @@ export const LoveCofounder: React.FC = () => {
               <HeroTitle>
                 <p>
                   <GradientText>
-                    {/* 词 1: 恋と */}
                     <motion.span variants={wordItem} style={{ display: "inline-block" }}>
-                      <b>恋</b>と
+                      <b style={{ fontSize: "2em" }}>恋</b>と
                     </motion.span>
 
-                    {/* 词 2: 起業と */}
                     <motion.span variants={wordItem} style={{ display: "inline-block" }}>
-                      <b>起業</b>と
+                      <b style={{ fontSize: "2em" }}>起業</b>と
                     </motion.span>
                   </GradientText>
                 </p>
                 <p>
                   <GradientText>
-                    {/* 词 3: コファウンダー */}
                     <motion.span variants={wordItem} style={{ display: "inline-block" }}>
-                      <b>コファウンダー</b>
+                      <b style={{ fontSize: "1.25em" }}>コファウンダー</b>
                     </motion.span>
                   </GradientText>
                 </p>

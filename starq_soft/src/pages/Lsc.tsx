@@ -463,6 +463,13 @@ const PromotionCard = styled.div`
 const Footer = styled.footer`
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
   background-color: #eaeaea;
+  // background-image: repeating-linear-gradient(
+  //   to right,
+  //   #f3f3f3 0px,
+  //   #f3f3f3 30px,
+  //   #eaeaea 30px,
+  //   #eaeaea 60px
+  // );
   padding-top: 5rem;
   padding-bottom: 2.5rem;
   padding-left: 1rem;
@@ -1041,14 +1048,14 @@ const Lsc = () => {
                         <ul>
                           <li><span>企画／プロデューサー</span>星可</li>
                           <li><span>パブリッシャー</span>Pairaki Games</li>
-                          <li><span>原画／SD／背景</span>眞海</li>
-                          <li><span>キャラクターデザイン</span>眞海</li>
+                          <li><span>キャラクターデザイン</span>星可</li>
+                          <li><span>原画ＣＧ／SD／背景</span>眞海</li>
                           <li><span>主題歌</span>「Startup!★Start!!」by Wedoso</li>
                           <li><span>音楽</span>Wedoso</li>
                           <li><span>ＣＧ</span>中乃・トミフミ 他</li>
-                          <li><span>ムービー</span>ろど 他</li>
+                          <li><span>ムービー</span>眞海</li>
                           <li><span>ディレクター</span>ろど</li>
-                          <li><span>特別協力</span>bamboo(milktub/exOVERDRIVE)</li>
+                          <li><span>特別協力</span>アキナ・ランドール</li>
                         </ul>
                       </div>
                     </div>

@@ -132,6 +132,7 @@ export const StoryDescription = styled.div`
 export const GameDescription = styled.p`
   font-size: 2.5rem;
   line-height: 1.6;
+  letter-spacing: 0.05em;
   background: linear-gradient(135deg,  #ffd7e6 0%, #f99bb3 15%, #a3c1f3 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -141,7 +142,7 @@ export const GameDescription = styled.p`
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  filter: saturate(1.5);
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
@@ -267,5 +268,12 @@ export const SecondWrapper = styled.p`
     z-index: -1;
     clip-path: polygon(0 0, 100% 5vw, 100% 100%, 0 100%);
     background-color: #f7f7f7;
+  //   background-image: repeating-linear-gradient(
+  //   to right,
+  //   #f7f7f7 0px,
+  //   #f7f7f7 30px,
+  //   #f3f3f3 30px,
+  //   #f3f3f3 60px
+  // );
     opacity: 1;
 `;

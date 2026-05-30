@@ -392,14 +392,27 @@ export const ProductBanner = styled.div<ProductBannerProps>`
 
 
 export const Footer = styled.footer`
+  position: relative;
   width: 100vw;
   background: linear-gradient(180deg, #ffa8ba 0%, #f68da3 50%, #ef7790 100%);
-  // background-color: #ffa8ba; 
-  // background-image: linear-gradient(
-  //   to bottom, 
-  //   rgba(255, 234, 234, 0.15) 1px, 
-  //   transparent 1px
-  // );
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(/star_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
 `;
 
 export const FooterTop = styled.footer`
