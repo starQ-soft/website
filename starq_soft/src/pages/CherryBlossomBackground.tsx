@@ -8,7 +8,7 @@ interface PetalConfig {
   $duration: string;
   $delay: string;
   $size: string;
-  $color: string;
+  $image: string;
   $drift: string;
   $rotation: string;
   $timing: string;
@@ -16,10 +16,21 @@ interface PetalConfig {
   $blur: string;
 }
 
-const COLORS = {
-  PINK: '#ffd7e6',
-  BLUE: '#d7eaff',
-};
+const PETAL_IMAGES = [
+  "public/petal_pink_0.png",
+  "public/petal_pink_1.png",
+  "public/petal_pink_2.png",
+  "public/petal_pink_4.png",
+  "public/petal_pink_5.png",
+  "public/petal_pink_6.png",
+  "public/petal_blue_0.png",
+  "public/petal_blue_1.png",
+  "public/petal_blue_2.png",
+  "public/petal_blue_3.png",
+  "public/petal_blue_4.png",
+  "public/petal_blue_5.png",
+  "public/petal_blue_6.png",
+];
 
 const fallAndRotate = (drift: string) => keyframes`
   0% {
@@ -58,13 +69,12 @@ const Container = styled.div`
   background: transparent;
 `;
 
-const SakuraPetal = styled.div<PetalConfig>`
+const SakuraPetal = styled.img<PetalConfig>`
   position: absolute;
   left: ${props => props.$left};
   width: ${props => props.$size};
   height: ${props => props.$size};
-  background: ${props => props.$color};
-  border-radius: 15px 0px;
+  object-fit: contain;
   opacity: 0.7;
   filter: blur(${props => props.$blur});
   transform: rotate(${props => props.$rotation});
@@ -73,18 +83,6 @@ const SakuraPetal = styled.div<PetalConfig>`
     ${sway} ${props => props.$swayDuration} ease-in-out infinite;
 
   animation-delay: ${props => props.$delay};
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    border-radius: inherit;
-    transform: rotate(15deg);
-    top: -1px;
-    left: -1px;
-  }
 `;
 
 
@@ -114,8 +112,8 @@ const CherryBlossomBackground: React.FC<{ count?: number }> = ({ count = 65 }) =
         $left: `${Math.random() * 100}%`,
         $duration: `${(25 + Math.random() * 12) * speedMultiplier}s`, // 8s-20s 速度差
         $delay: `${Math.random() * -20}s`, // 负延迟让背景瞬间填满
-        $size: `${(10 + Math.random() * 10) * sizeMultiplier}px`, // 10px-20px 之间
-        $color: Math.random() > 0.4 ? COLORS.PINK : COLORS.BLUE,
+        $size: `${(20 + Math.random() * 10) * sizeMultiplier}px`,
+        $image: PETAL_IMAGES[Math.floor(Math.random() * PETAL_IMAGES.length)],
         $drift: `${(Math.random() - 0.5) * 350}px`, // 水平漂移量
         $rotation: `${Math.random() * 360}deg`, // 初始旋转
         $timing: timings[Math.floor(Math.random() * timings.length)],
@@ -128,7 +126,7 @@ const CherryBlossomBackground: React.FC<{ count?: number }> = ({ count = 65 }) =
   return (
     <Container>
       {petals.map((p) => (
-        <SakuraPetal key={p.id} {...p} />
+        <SakuraPetal key={p.id} src={p.$image} {...p} />
       ))}
     </Container>
   );
