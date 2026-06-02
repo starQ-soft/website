@@ -176,9 +176,16 @@ const SideNav = styled.nav<{ $open?: boolean }>`
   align-items: flex-start;
   gap: 1.5rem;
   padding-left: 3.5vw;
-  width: 22%;
+  width: 20%;
   height: 100%;
   background-color: #fff;
+    background-image: repeating-linear-gradient(
+    to right,
+    #faf6f8 0px,
+    #faf6f8 30px,
+    #fff 30px,
+    #fff 60px
+  );
   transition: transform .5s cubic-bezier(.23, 1, .32, 1);
   transform: ${({ $open }) => ($open ? 'translateX(0)' : 'translateX(100%)')};
   z-index: 90;

@@ -114,7 +114,7 @@ const CherryBlossomBackground: React.FC<{ count?: number }> = ({ count = 65 }) =
         $delay: `${Math.random() * -20}s`, // 负延迟让背景瞬间填满
         $size: `${(20 + Math.random() * 10) * sizeMultiplier}px`,
         $image: PETAL_IMAGES[Math.floor(Math.random() * PETAL_IMAGES.length)],
-        $drift: `${(Math.random() - 0.5) * 350}px`, // 水平漂移量
+        $drift: `${-(120 + Math.random() * 280)}px`, // 统一向左漂移，模拟从右上往左下吹的风
         $rotation: `${Math.random() * 360}deg`, // 初始旋转
         $timing: timings[Math.floor(Math.random() * timings.length)],
         $swayDuration: `${5 + Math.random() * 4}s`, // 摇摆频率
