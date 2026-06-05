@@ -10,6 +10,7 @@ const LANGUAGES: { code: LanguageCode; label: string }[] = [
   { code: 'ja-jp', label: '日本語' },
   { code: 'en-us', label: 'English' },
   { code: 'zh-cn', label: '简体中文' },
+  { code: 'zh-tw', label: '繁體中文' },
 ];
 
 export const LangSelector = () => {

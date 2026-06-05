@@ -13,7 +13,8 @@
       "Bash(npx eslint *)",
       "Bash(git rm *)",
       "PowerShell(npx tsc --noEmit -p D:\\\\github\\\\starq_web\\\\tsconfig.json 2>&1 | Select-Object -First 30)",
-      "PowerShell(npx tsc --noEmit -p D:\\\\github\\\\starq_web\\\\starq_soft\\\\tsconfig.app.json 2>&1 | Select-Object -First 30)"
+      "PowerShell(npx tsc --noEmit -p D:\\\\github\\\\starq_web\\\\starq_soft\\\\tsconfig.app.json 2>&1 | Select-Object -First 30)",
+      "PowerShell(npx tsc -p tsconfig.app.json --noEmit)"
     ]
   }
 }

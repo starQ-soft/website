@@ -1,9 +1,28 @@
 import { motion, type Variants } from "framer-motion";
 import styled from "styled-components";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import steamLogo from "../assets/steam-logo.svg";
 import { SteamIcon } from "../styles";
 import { StoryContainer, StoryTitle, StorySubtitle, StoryDescription, GameDescription } from "./LscStyles";
+import { useLanguage } from "../LanguageContext";
+import { lscContent, type StorySegment } from "./lscContent";
+
+// Render an inline story run, turning "\n" into <br/> and applying emphasis.
+const renderStoryText = (text: string) =>
+  text.split("\n").map((line, i, arr) => (
+    <Fragment key={i}>
+      {line}
+      {i < arr.length - 1 && <br />}
+    </Fragment>
+  ));
+
+const renderStorySegments = (segments: StorySegment[]) =>
+  segments.map((segment, i) => {
+    const content = renderStoryText(segment.t);
+    if (segment.em === "span") return <span key={i}>{content}</span>;
+    if (segment.em === "strong") return <strong key={i}>{content}</strong>;
+    return <Fragment key={i}>{content}</Fragment>;
+  });
 
 // Styled Components
 const Container = styled.div`
@@ -201,6 +220,8 @@ const MotionStorySubtitle = motion.create(StorySubtitle);
 const MotionStoryDescription = motion.create(StoryDescription);
 
 export const LoveCofounder: React.FC = () => {
+  const { lang } = useLanguage();
+  const t = lscContent[lang] ?? lscContent['ja-jp'];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const heroImages = [
     // "lsc-nana.png",
@@ -254,33 +275,27 @@ export const LoveCofounder: React.FC = () => {
               animate="animate"
             >
               <HeroTitle>
-                <p>
-                  <GradientText>
-                    <motion.span variants={wordItem} style={{ display: "inline-block" }}>
-                      <b style={{ fontSize: "2em" }}>恋</b>と
-                    </motion.span>
-
-                    <motion.span variants={wordItem} style={{ display: "inline-block" }}>
-                      <b style={{ fontSize: "2em" }}>起業</b>と
-                    </motion.span>
-                  </GradientText>
-                </p>
-                <p>
-                  <GradientText>
-                    <motion.span variants={wordItem} style={{ display: "inline-block" }}>
-                      <b style={{ fontSize: "1.25em" }}>コファウンダー</b>
-                    </motion.span>
-                  </GradientText>
-                </p>
+                {t.hero.title.map((line, lineIndex) => (
+                  <p key={lineIndex}>
+                    <GradientText>
+                      {line.map((part, partIndex) => (
+                        <motion.span key={partIndex} variants={wordItem} style={{ display: "inline-block" }}>
+                          <b style={{ fontSize: part.size ?? "2em" }}>{part.big}</b>{part.small}
+                        </motion.span>
+                      ))}
+                    </GradientText>
+                  </p>
+                ))}
               </HeroTitle>
 
               <HeroDescription variants={fadeInUp}>
-                <p>一间合租公寓，一群性格各异的伙伴，</p>
-                <p>和一段热血、迷茫、令人心动的共创旅程。</p>
+                {t.hero.description.map((line, index) => (
+                  <p key={index}>{line}</p>
+                ))}
               </HeroDescription>
 
               <GameDescription>
-                Steam商店页面现已公开！
+                {t.hero.gameDescription}
               </GameDescription>
 
               <HeroActions variants={fadeInUp}>
@@ -288,7 +303,7 @@ export const LoveCofounder: React.FC = () => {
                   <Button>
                     {/* <Play size={20} /> */}
                     <SteamIcon src={steamLogo} />
-                    Add to Wishlist
+                    {t.hero.wishlist}
                   </Button>
                 </motion.div>
                 {/* <motion.div {...scaleOnHover}>
@@ -348,20 +363,18 @@ export const LoveCofounder: React.FC = () => {
             viewport={{ once: true }}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            <MotionStoryTitle variants={fadeInUp}>// STORY</MotionStoryTitle>
+            <MotionStoryTitle variants={fadeInUp}>{t.story.title}</MotionStoryTitle>
 
             <MotionStorySubtitle variants={fadeInUp}>
-              共同开启的冒险!<br />
+              {t.story.subtitle}<br />
             </MotionStorySubtitle>
 
             <MotionStoryDescription variants={staggerContainer}>
-              <motion.div variants={fadeInUp}>
-                <span>「我们一起创业吧！」</span>
-              </motion.div>
-              <motion.p variants={fadeInUp}>大学毕业后，求职无果的你，被室友一顿忽悠，<br />莫名其妙地踏上了一段从未设想过的道路……</motion.p>
-              <motion.p variants={fadeInUp}><strong>零经验、零资源、零薪资——</strong></motion.p>
-              <motion.p variants={fadeInUp}>唯一拥有的，是一个比你还不靠谱的合伙人，<br />以及一款连名字都没取好的<span>「AI女友计划」</span>。</motion.p>
-              <motion.p variants={fadeInUp}>这是一次不知能否成功的冒险，在人生的空白期里，<br />尝试去<span>「创造自己的答案」</span>。</motion.p>
+              {t.story.paragraphs.map((paragraph, index) => (
+                <motion.p key={index} variants={fadeInUp}>
+                  {renderStorySegments(paragraph.segments)}
+                </motion.p>
+              ))}
               <br />
               <br />
             </MotionStoryDescription>

@@ -12,6 +12,7 @@ import { Logo } from '../styles';
 import { socialLinks } from '../components/footer/FooterConstants';
 import LangSelector from '../LangSelector';
 import { useLanguage } from '../LanguageContext';
+import { lscContent } from './lscContent';
 
 const pv_data = [
   {
@@ -45,80 +46,6 @@ const pv_data = [
     title: "shizuka",
   },
 ];
-
-const contents = {
-  'zh-cn': {
-    langName: '简体中文',
-    navLanguage: '语言',
-    pvTitle: 'P V',
-    introTitle: '游戏简介',
-    introText: [
-      '一间合租公寓，一群性格各异的伙伴。',
-      '一场关于AI初创公司与令人心动的共创旅程。',
-      '在虚拟与现实的交织中，你将如何抉择……',
-      '一段充满恋爱与梦想的理想性硬派流程！'
-    ],
-    progressTitle: '开发进展',
-    progressNotes: [
-      { date: '2026/01/20', text: 'Script 开发完成！' },
-      { date: '2026/02/28', text: 'UI 替换包 成功入库！' },
-      { date: '2026/03/27', text: 'AI 交互系统 测试中！' },
-      { date: '2026/03/29', text: 'AI 互动系统 调试中！' },
-      { date: '2026/03/29', text: 'AI 特效表现 测试中！' }
-    ],
-    spec: '赛博创业团♥ ',
-    promoFeatures: [
-      '赛博商战化运作',
-      'AI女友互动体验',
-      '硬核创业系统',
-      '沉浸式剧情体验'
-    ],
-    btnWishlist: '加入愿望单',
-    btnPreorder: '立即预约',
-    footerInfo: 'Developer team 最新开发进展确认'
-  },
-  'ja-jp': {
-    langName: '日本語',
-    navLanguage: '言語',
-    pvTitle: 'ムービー',
-    introTitle: 'ゲーム紹介',
-    introText: [
-      'シェアハウスで暮らす、個性豊かな仲間たち。',
-      'AIスタートアップと心ときめく共創の旅。',
-      '仮想と現実が交差する中、あなたはどんな選択をするのか……',
-      '恋と夢が詰まった理想的でハードなストーリー！'
-    ],
-    charTitle: '登場キャラクター',
-    characters: [
-      { name: '石原', title: 'Main Heroine', quote: '「……それで、あなたは？」' },
-      { name: 'デザイナー', title: 'Designer', quote: '「これ、徹夜で作ったんだから！」' },
-      { name: 'マネージャー', title: 'Operations Manager', quote: '「……明日までに、これを片付けて。」' },
-      { name: '投資家', title: 'Investor', quote: '「この程度の資金で、何ができるって？」' },
-      { name: 'YOU', title: 'Protagonist', quote: '「……発起人として。」' }
-    ],
-    progressTitle: '最新の開発進捗',
-    progressNotes: [
-      { date: '2026/01/20', text: '公式サイトを公開しました。' },
-      { date: '2026/02/28', text: 'OPムービーを公開しました。' },
-      { date: '2026/03/27', text: 'Steamストアページを公開しました。' },
-      { date: '2026/03/27', text: 'Steamストアページを公開しました。' },
-      { date: '2026/03/29', text: 'AI 連携システム 調整中！' },
-      { date: '2026/03/29', text: 'AI エフェクト テスト中！' }
-    ],
-    spec: 'スペック',
-    staff: 'スタッフ',
-    promoFeatures: [
-      'サイバービジネス運営',
-      'AI彼女とのふれあい',
-      'ハードコア起業システム',
-      '没入型ストーリー体験'
-    ],
-    btnWishlist: 'ウィッシュリストに追加',
-    btnPreorder: '予約注文',
-    footerInfo: 'All rights reserved.'
-  }
-};
-
 
 export const LscNav = styled.nav`
   display: flex;
@@ -775,15 +702,15 @@ const Lsc = () => {
   const [selectedPvIndex, setSelectedPvIndex] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const t = contents[lang as keyof typeof contents] ?? contents['ja-jp'];
+  const t = lscContent[lang] ?? lscContent['ja-jp'];
   const selectedPv = pv_data[selectedPvIndex];
 
   const navSections = [
-    { id: 'char', label: `// ${t.charTitle ?? 'Character'}` },
-    { id: 'pv', label: `// ${t.pvTitle}` },
-    { id: 'gallery', label: '// Gallery' },
-    { id: 'progress', label: `// ${t.progressTitle}` },
-    { id: 'product', label: '// 製品情報' },
+    { id: 'char', label: `// ${t.nav.char}` },
+    { id: 'pv', label: `// ${t.nav.pv}` },
+    { id: 'gallery', label: `// ${t.nav.gallery}` },
+    { id: 'progress', label: `// ${t.nav.progress}` },
+    { id: 'product', label: `// ${t.nav.product}` },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -895,7 +822,7 @@ const Lsc = () => {
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
 
-            <TypingStoryTitle id="char" text={`// ${'charTitle' in t ? t.charTitle : ''}`} />
+            <TypingStoryTitle id="char" text={`// ${t.nav.char}`} />
             <motion.div variants={itemReveal} style={stepStyle}>
               <LoveCofounderCharacter />
             </motion.div>
@@ -916,13 +843,13 @@ const Lsc = () => {
               style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
             >
 
-              <TypingStoryTitle id="pv" text={`// ${t.pvTitle}`} />
+              <TypingStoryTitle id="pv" text={`// ${t.nav.pv}`} />
               <motion.div variants={itemReveal} style={stepStyle}>
-                <SectionSubtitle>主題ムービー</SectionSubtitle>
+                <SectionSubtitle>{t.pv.themeMovie}</SectionSubtitle>
                 <PvContainer>
                   <iframe
                     src="https://www.youtube.com/embed/lg0mlF05LPs"
-                    title="主題ムービー"
+                    title={t.pv.themeMovie}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
@@ -931,7 +858,7 @@ const Lsc = () => {
                   />
                 </PvContainer>
                 <br />
-                <SectionSubtitle>キャラ紹介ムービー</SectionSubtitle>
+                <SectionSubtitle>{t.pv.charMovie}</SectionSubtitle>
                 <PvContainer>
                   <iframe
                     key={selectedPv.url}
@@ -977,10 +904,10 @@ const Lsc = () => {
             >
 
 
-              <TypingStoryTitle id="gallery" text="// Gallery" />
+              <TypingStoryTitle id="gallery" text={`// ${t.nav.gallery}`} />
               <motion.div variants={itemReveal} style={stepStyle}>
                 <SectionContent>
-                  <Note>※素材は全て開発中のものであり、予告なく変更される場合があります。</Note>
+                  <Note>{t.galleryNote}</Note>
                   <MotionScreenshotsContainer
                     variants={galleryReveal}
                     initial="hidden"
@@ -1015,7 +942,7 @@ const Lsc = () => {
                 viewport={{ once: true }}
                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
               >
-                <TypingStoryTitle id="progress" text={`// ${t.progressTitle}`} />
+                <TypingStoryTitle id="progress" text={`// ${t.nav.progress}`} />
                 <motion.div variants={itemReveal} style={stepStyle}>
                   <ProgressBoard>
                     {t.progressNotes.map((note, index) => {
@@ -1030,49 +957,34 @@ const Lsc = () => {
                   </ProgressBoard>
                 </motion.div>
 
-                <TypingStoryTitle id="product" text="// 製品情報" />
+                <TypingStoryTitle id="product" text={`// ${t.nav.product}`} />
                 <motion.div variants={itemReveal} style={stepStyle}>
                   <PromotionCard>
                     <div className="promo-details">
                       <div className="promo-column">
-                        <h4>{t.spec}</h4>
+                        <h4>{t.spec.title}</h4>
                         <ul>
-                          <li><span>タイトル</span>恋と起業とコファウンダー</li>
-                          {/* <li><span>ブランド</span>スターQソフト</li> */}
-                          <li><span>ジャンル</span>青春起業ＡＤＶ</li>
-                          <li><span>レーティング</span>全年齢対象</li>
-                          <li><span>発売日</span>(未定)</li>
-                          <li><span>価格</span>(未定)</li>
-                          <li><span>対応OS</span>Windows® 10／11</li>
-                          <li><span>CPU</span>Intel® Core™ i3第二世代以上推奨</li>
-                          <li><span>DISPLAY</span>3840×2160pixel／FullColor以上</li>
-                          <li><span>MEMORY</span>2GByte必須／4GByte以上推奨</li>
-                          <li><span>HDD</span>	6GB以上</li>
+                          {t.spec.items.map((item, index) => (
+                            <li key={index}><span>{item.label}</span>{item.value}</li>
+                          ))}
                         </ul>
                       </div>
                       <div className="promo-column">
-                        <h4>{t.staff}</h4>
+                        <h4>{t.staff.title}</h4>
                         <ul>
-                          <li><span>企画／プロデューサー</span>星可</li>
-                          <li><span>パブリッシャー</span>Pairaki Games</li>
-                          <li><span>キャラクターデザイン</span>星可</li>
-                          <li><span>原画ＣＧ／SD／背景</span>眞海</li>
-                          <li><span>主題歌</span>「Startup!★Start!!」by Wedoso</li>
-                          <li><span>音楽</span>Wedoso</li>
-                          <li><span>ＣＧ</span>中乃・トミフミ 他</li>
-                          <li><span>ムービー</span>眞海</li>
-                          <li><span>动效</span>幽浮小花</li>
-                          <li><span>特別協力</span>アキナ・ランドール</li>
+                          {t.staff.items.map((item, index) => (
+                            <li key={index}><span>{item.label}</span>{item.value}</li>
+                          ))}
                         </ul>
                       </div>
                     </div>
                   </PromotionCard>
-                  <Note>※動作環境は予定です。発売までに変更になる可能性があります。</Note>
+                  <Note>{t.product.note}</Note>
                 </motion.div>
               </motion.div>
               <div className="btn-group">
-                <button>{t.btnWishlist}</button>
-                <button>{t.btnPreorder}</button>
+                <button>{t.product.btnWishlist}</button>
+                <button>{t.product.btnPreorder}</button>
               </div>
             </Section>
 

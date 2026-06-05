@@ -217,5 +217,78 @@
       ],
       "copyright": "© 2026 StarQ Soft LLC. 版权所有 侵权必究。"
     }
+  },
+  "zh-tw": {
+    "nav": {
+      "products": "作品一覽",
+      "shop": "線上商店",
+      "support": "支援",
+      "blog": "官方部落格",
+      "events": "活動資訊",
+      "language": "語言"
+    },
+    "hero": {
+      "dateLabel": "舉辦日",
+      "dateValue": "2026年7月12日(週日)",
+      "venueLabel": "會場",
+      "venueValue": "Stellar Ball (品川)",
+      "btnPrimary": "加入願望清單",
+      "preorder": "Steam商店現已公開！"
+    },
+    "product": {
+      "titleHighlight": "P",
+      "titleRest": "roduct",
+      "subTitle": "作品一覽",
+      "btn": "查看產品頁面",
+      "banners": [
+        {
+          "name": "戀愛、創業、合夥人",
+          "image": "/public/lsc.png",
+          "upcoming": false,
+          "link": "/love-startup-cofounder"
+        },
+        {
+          "name": "敬請期待...",
+          "image": "/public/game2.png",
+          "upcoming": true,
+          "link": "/upcoming"
+        }
+      ]
+    },
+    "faq": {
+      "faqTitle": "關於我們",
+      "faqText": "StarQ Soft是一家2026年在美國加州山景城創立、具有全球視野的獨立遊戲品牌，專注於打造具有深刻敘事和多維互動的遊戲體驗，致力於為玩家帶來難忘的故事與人生體驗。"
+    },
+    "about": {
+      "aboutTitle": "關於我們",
+      "aboutText": "StarQ Soft是一家2026年在美國加州山景城創立、具有全球視野的獨立遊戲品牌，專注於打造具有深刻敘事和多維互動的遊戲體驗，致力於為玩家帶來難忘的故事與人生體驗。"
+    },
+    "contact": {
+      "contactTitle": "聯絡我們",
+      "contactText": "歡迎各類合作與交流機會！無論是業務合作、媒體採訪或內容推廣，我們都期待與志同道合的夥伴建立聯繫。也歡迎隨時向我們發送您的意見和建議，請透過以下方式與我們溝通，我們將盡快回覆。",
+      "title": "給我們留言",
+      "subtitle": "請填寫下面的表單與我們取得聯繫。",
+      "name": "名字",
+      "email": "信箱地址",
+      "message": "留言內容",
+      "agreePrefix": "我已閱讀並同意",
+      "terms": "服務條款",
+      "and": "和",
+      "privacy": "隱私政策",
+      "submit": "提交",
+      "agreeError": "您必須同意服務條款和隱私政策。",
+      "submitting": "正在提交...",
+      "success": "訊息發送成功！",
+      "fail": "發送失敗，請稍後重試。",
+      "error": "提交時發生錯誤，請稍後重試。"
+    },
+    "footer": {
+      "links": [
+        "公司簡介",
+        "隱私政策",
+        "聯絡我們"
+      ],
+      "copyright": "© 2026 StarQ Soft LLC. 版權所有 侵權必究。"
+    }
   }
 }

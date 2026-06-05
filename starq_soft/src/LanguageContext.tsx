@@ -1,12 +1,12 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 
-export type LanguageCode = 'ja-jp' | 'en-us' | 'zh-cn';
+export type LanguageCode = 'ja-jp' | 'en-us' | 'zh-cn' | 'zh-tw';
 
 const STORAGE_KEY = 'starq-lang';
 const DEFAULT_LANG: LanguageCode = 'ja-jp';
 
 const isLanguageCode = (value: string | null): value is LanguageCode =>
-  value === 'ja-jp' || value === 'en-us' || value === 'zh-cn';
+  value === 'ja-jp' || value === 'en-us' || value === 'zh-cn' || value === 'zh-tw';
 
 interface LanguageContextValue {
   lang: LanguageCode;
