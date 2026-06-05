@@ -289,6 +289,8 @@ export const LoveCofounderCharacter: React.FC = () => {
         </CharacterCarousel>
       </CharacterList>
       <CharacterDisplay>
+        {/* <DecoTopLeft src="deco_l.png" alt="" aria-hidden="true" />
+        <DecoBottomRight src="deco_r.png" alt="" aria-hidden="true" /> */}
         <AnimatePresence mode="wait">
           <MotionCharacterImage
             key={selectedCharacter}
@@ -427,11 +429,14 @@ const CharacterList = styled.div`
 `;
 
 const CharacterDisplay = styled.div`
+  position: relative;
   display: grid;
   grid-template-columns: 400px 1fr;
   gap: 40px;
   animation: ${fadeIn} 0.5s ease-out;
-
+  padding-bottom: 2rem;
+  // background: rgba(255, 255, 255, 0.5);
+  // border: 2px solid rgba(210, 45, 135, 0.2);
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -439,7 +444,31 @@ const CharacterDisplay = styled.div`
   }
 `;
 
+const DecoTopLeft = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+`;
+
+const DecoBottomRight = styled.img`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+`;
+
 const CharacterImage = styled.img`
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: auto;
   filter: drop-shadow(0 2px 2px rgba(91, 87, 89, 0.5));

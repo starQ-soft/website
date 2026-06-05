@@ -118,6 +118,8 @@ const HeroDescription = styled(motion.div)`
   margin: 5rem auto;
   max-width: 600px;
 
+  text-shadow: 1px 0px 5px #ffffff, 0px -1px 5px #ffffff, -1px 0px 5px #ffffff, 0px 1px 5px #ffffff, 1px 0px 5px #ffffff, 0px -1px 5px #ffffff, -1px 0px 5px #ffffff, 0px 1px 5px #ffffff, 1px 0px 0px #ffffff, 0px -1px 0px #ffffff, -1px 0px 0px #ffffff, 1px 0px 0px #ffffff, 1px 0px 0px #ffffff, 0px -1px 0px #ffffff, -1px 0px 0px #ffffff, 0px 1px 0px #ffffff, 1px 0px 0px #ffffff, 0px -1px 0px #ffffff, -1px 0px 0px #ffffff, 0px 1px 0px #ffffff;
+
   p {
     margin-top: 1.5rem;
   }

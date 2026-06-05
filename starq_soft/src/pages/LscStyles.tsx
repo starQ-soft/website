@@ -109,9 +109,9 @@ export const StoryDescription = styled.div`
   text-align: center;
   font-size: 1.5rem;
   line-height: 5rem;
-  color: #111827;
+  color: #1a1315;
   font-weight: 500;
-
+  
   p {
     margin-bottom: 1.5em;
   }
@@ -126,6 +126,7 @@ export const StoryDescription = styled.div`
   span {
     color: #CC1075;
     font-size: 2.5rem;
+    text-shadow: 1px 0px 5px #fff1f4, 0px -1px 5px #fff1f4, -1px 0px 5px #fff1f4, 0px 1px 5px #fff1f4, 1px 0px 5px #fff1f4, 0px -1px 5px #fff1f4, -1px 0px 5px #fff1f4, 0px 1px 5px #fff1f4, 1px 0px 0px #fff1f4, 0px -1px 0px #fff1f4, -1px 0px 0px #fff1f4, 1px 0px 0px #fff1f4, 1px 0px 0px #fff1f4, 0px -1px 0px #fff1f4, -1px 0px 0px #fff1f4, 0px 1px 0px #fff1f4, 1px 0px 0px #fff1f4, 0px -1px 0px #fff1f4, -1px 0px 0px #fff1f4, 0px 1px 0px #fff1f4;
   }
 `;
 
@@ -182,7 +183,7 @@ export const CharacterCarousel = styled.div`
 
   .char-list {
     display: flex;
-    gap: 1.25rem;
+    gap: 1.75rem;
     overflow-x: auto;
     padding-bottom: 1rem;
     scrollbar-width: none;

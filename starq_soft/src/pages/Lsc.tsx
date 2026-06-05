@@ -1061,7 +1061,7 @@ const Lsc = () => {
                           <li><span>音楽</span>Wedoso</li>
                           <li><span>ＣＧ</span>中乃・トミフミ 他</li>
                           <li><span>ムービー</span>眞海</li>
-                          <li><span>ディレクター</span>ろど</li>
+                          <li><span>动效</span>幽浮小花</li>
                           <li><span>特別協力</span>アキナ・ランドール</li>
                         </ul>
                       </div>
