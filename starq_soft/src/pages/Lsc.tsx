@@ -179,7 +179,7 @@ const Section = styled.section`
 
 const PvContainer = styled.div`
   width: 100%;
-  max-width: 48rem;
+  max-width: 80rem;
   aspect-ratio: 16 / 9;
   background-color: black;
   overflow: hidden;
@@ -809,7 +809,7 @@ const Lsc = () => {
 
       <CherryBlossomBackground petalCount={80} />
       <TransparentBanner
-        images={["/lsc-haruka.png", "/lsc-rin.png", "/lsc-natsumi.png", "/lsc-shizuka.png", "/lsc-nana.png",]}
+        images={["/lsc-haruka.png", "/lsc-rin.png", "/lsc-natsumi.png", "/shizuka.gif", "/nana.gif",]}
       />
       <ContentWrapper>
         <LoveCofounder />
@@ -848,7 +848,7 @@ const Lsc = () => {
                 <SectionSubtitle>{t.pv.themeMovie}</SectionSubtitle>
                 <PvContainer>
                   <iframe
-                    src="https://www.youtube.com/embed/lg0mlF05LPs"
+                    src="https://www.youtube.com/embed/65X4QUW5ibc"
                     title={t.pv.themeMovie}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

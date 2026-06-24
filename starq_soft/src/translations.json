@@ -4,7 +4,7 @@
       "products": "製品一覧",
       "shop": "オンラインショップ",
       "support": "サポート",
-      "blog": "スタッフブログ",
+      "blog": "公式ブログ",
       "events": "イベント情報",
       "language": "言語"
     },
@@ -14,7 +14,8 @@
       "venueLabel": "会場",
       "venueValue": "Stellar Ball (品川)",
       "btnPrimary": "ウィッシュリストに追加",
-      "preorder": "Steamストアページ公開中！"
+      "preorder": "『恋と起業とコファウンダー』Steamストアページ公開中！",
+      "goToBanner": "バナーへ移動"
     },
     "product": {
       "titleHighlight": "P",
@@ -29,7 +30,7 @@
           "link": "/love-startup-cofounder"
         },
         {
-          "name": "监修中...",
+          "name": "近日公開...",
           "image": "/public/game2.png",
           "upcoming": true,
           "link": "/upcoming"
@@ -37,12 +38,12 @@
       ]
     },
     "faq": {
-      "faqTitle": "关于我们",
-      "faqText": "StarQ Soft是一家2026年在美国加州山景城创立具有全球视野的的独立游戏品牌，专注于打造具有深刻叙事和多维交互的游戏体验，致力于为玩家带来难忘的故事与人生体验。"
+      "faqTitle": "私たちについて",
+      "faqText": "StarQ Softは、2026年に米国カリフォルニア州マウンテンビューで設立された、グローバルな視野を持つインディーゲームブランドです。深い物語性と多次元的なインタラクションを備えたゲーム体験の創造に注力し、プレイヤーに忘れられない物語と人生体験をお届けすることを目指しています。"
     },
     "about": {
-      "aboutTitle": "会社概要",
-      "aboutText": "StarQ Softは、多様な二次元ギャルゲースタイルのビジュアルノベルを制作する独立系ゲームスタジオです。忘れられない物語とキャラクターに命を吹き込みます。"
+      "aboutTitle": "著作権について",
+      "aboutText": "当社製品を題材とした派生作品・二次創作物については、「個人」または「同人サークル等の趣味の範疇の団体」が非営利で制作・頒布する場合、表現を行う媒体を問わず一切制限を設けておりません。ただし、頒布物には必ず当社の著作権表示を記載してください。許諾なく派生作品を販売することは禁止します。"
     },
     "contact": {
       "contactTitle": "お問い合わせ",
@@ -64,6 +65,7 @@
       "error": "送信中にエラーが発生しました。もう一度お試しください。"
     },
     "footer": {
+      "followUs": "フォローする！",
       "links": [
         "会社概要",
         "プライバシーポリシー",
@@ -77,7 +79,7 @@
       "products": "Products",
       "shop": "Online Shop",
       "support": "Support",
-      "blog": "Staff Blog",
+      "blog": "Official Blog",
       "events": "Events",
       "language": "Language"
     },
@@ -87,12 +89,13 @@
       "venueLabel": "Venue",
       "venueValue": "Stellar Ball (Shinagawa)",
       "btnPrimary": "Add to Wishlist",
-      "preorder": "Steam Store is Now Open!"
+      "preorder": "The Steam store for \"Love, Startup & Co-founder\" is now open!",
+      "goToBanner": "Go to banner"
     },
     "product": {
       "titleHighlight": "P",
       "titleRest": "roduct",
-      "subTitle": "Latest Game Info",
+      "subTitle": "Our Works",
       "btn": "View Product Page",
       "banners": [
         {
@@ -110,12 +113,12 @@
       ]
     },
     "faq": {
-      "faqTitle": "关于我们",
-      "faqText": "StarQ Soft是一家2026年在美国加州山景城创立具有全球视野的的独立游戏品牌，专注于打造具有深刻叙事和多维交互的游戏体验，致力于为玩家带来难忘的故事与人生体验。"
+      "faqTitle": "About Us",
+      "faqText": "StarQ Soft is an independent game brand with a global vision, founded in 2026 in Mountain View, California. We focus on crafting gaming experiences with profound storytelling and multidimensional interaction, dedicated to bringing players unforgettable stories and life experiences."
     },
     "about": {
-      "aboutTitle": "About Us",
-      "aboutText": "StarQ Soft is an independent game studio dedicated to creating immersive experiences in Visual Novels Games. Our goal is to bring unforgettable stories and characters to life across our titles."
+      "aboutTitle": "Copyright",
+      "aboutText": "For derivative works and fan creations based on any of our products, we place no restrictions on the medium of expression, as long as they are created and distributed non-commercially by \"individuals\" or \"hobbyist groups such as doujin circles.\" However, please be sure to include our copyright notice in any distributed materials. Selling any derivative work without authorization is prohibited."
     },
     "contact": {
       "contactTitle": "Contact Us",
@@ -137,6 +140,7 @@
       "error": "Error submitting form. Please try again."
     },
     "footer": {
+      "followUs": "Follow Us!",
       "links": [
         "Company Profile",
         "Privacy Policy",
@@ -160,7 +164,8 @@
       "venueLabel": "会场",
       "venueValue": "Stellar Ball (品川)",
       "btnPrimary": "加入愿望单",
-      "preorder": "Steam商店现已公开！"
+      "preorder": "《恋爱、创业、合伙人》Steam商店现已公开！",
+      "goToBanner": "跳转到横幅"
     },
     "product": {
       "titleHighlight": "P",
@@ -187,8 +192,8 @@
       "faqText": "StarQ Soft是一家2026年在美国加州山景城创立具有全球视野的的独立游戏品牌，专注于打造具有深刻叙事和多维交互的游戏体验，致力于为玩家带来难忘的故事与人生体验。"
     },
     "about": {
-      "aboutTitle": "关于我们",
-      "aboutText": "StarQ Soft是一家2026年在美国加州山景城创立具有全球视野的的独立游戏品牌，专注于打造具有深刻叙事和多维交互的游戏体验，致力于为玩家带来难忘的故事与人生体验。"
+      "aboutTitle": "著作权相关",
+      "aboutText": "本司所有产品的衍生作品及二次创作，只要是由“个人”或“同人社团等兴趣团体”非商业创作和传播，对表达媒介没有任何限制，但请务必在分发材料中包含本司的版权声明信息。禁止在未经授权的情况下自行销售任何衍生作品。"
     },
     "contact": {
       "contactTitle": "联系我们",
@@ -210,6 +215,7 @@
       "error": "提交时发生错误，请稍后重试。"
     },
     "footer": {
+      "followUs": "关注我们！",
       "links": [
         "公司简介",
         "隐私政策",
@@ -233,7 +239,8 @@
       "venueLabel": "會場",
       "venueValue": "Stellar Ball (品川)",
       "btnPrimary": "加入願望清單",
-      "preorder": "Steam商店現已公開！"
+      "preorder": "《戀愛、創業、合夥人》Steam商店現已公開！",
+      "goToBanner": "跳轉到橫幅"
     },
     "product": {
       "titleHighlight": "P",
@@ -260,8 +267,8 @@
       "faqText": "StarQ Soft是一家2026年在美國加州山景城創立、具有全球視野的獨立遊戲品牌，專注於打造具有深刻敘事和多維互動的遊戲體驗，致力於為玩家帶來難忘的故事與人生體驗。"
     },
     "about": {
-      "aboutTitle": "關於我們",
-      "aboutText": "StarQ Soft是一家2026年在美國加州山景城創立、具有全球視野的獨立遊戲品牌，專注於打造具有深刻敘事和多維互動的遊戲體驗，致力於為玩家帶來難忘的故事與人生體驗。"
+      "aboutTitle": "著作權相關",
+      "aboutText": "本司所有產品的衍生作品及二次創作，只要是由「個人」或「同人社團等興趣團體」非商業創作和傳播，對表達媒介沒有任何限制，但請務必在分發材料中包含本司的版權聲明資訊。禁止在未經授權的情況下自行銷售任何衍生作品。"
     },
     "contact": {
       "contactTitle": "聯絡我們",
@@ -283,12 +290,313 @@
       "error": "提交時發生錯誤，請稍後重試。"
     },
     "footer": {
+      "followUs": "關注我們！",
       "links": [
         "公司簡介",
         "隱私政策",
         "聯絡我們"
       ],
       "copyright": "© 2026 StarQ Soft LLC. 版權所有 侵權必究。"
+    }
+  },
+  "ko-kr": {
+    "nav": {
+      "products": "작품 목록",
+      "shop": "온라인 스토어",
+      "support": "지원",
+      "blog": "공식 블로그",
+      "events": "이벤트 정보",
+      "language": "언어"
+    },
+    "hero": {
+      "dateLabel": "개최일",
+      "dateValue": "2026년 7월 12일(일)",
+      "venueLabel": "행사장",
+      "venueValue": "Stellar Ball (시나가와)",
+      "btnPrimary": "위시리스트에 추가",
+      "preorder": "《사랑, 창업, 그리고 코파운더》 Steam 스토어 페이지가 공개되었습니다!",
+      "goToBanner": "배너로 이동"
+    },
+    "product": {
+      "titleHighlight": "P",
+      "titleRest": "roduct",
+      "subTitle": "작품 목록",
+      "btn": "제품 페이지 보기",
+      "banners": [
+        {
+          "name": "사랑, 창업, 그리고 코파운더",
+          "image": "/public/lsc.png",
+          "upcoming": false,
+          "link": "/love-startup-cofounder"
+        },
+        {
+          "name": "출시 예정...",
+          "image": "/public/game2.png",
+          "upcoming": true,
+          "link": "/upcoming"
+        }
+      ]
+    },
+    "faq": {
+      "faqTitle": "회사 소개",
+      "faqText": "StarQ Soft는 2026년 미국 캘리포니아주 마운틴뷰에서 설립된 글로벌 비전을 지닌 인디 게임 브랜드로, 깊이 있는 서사와 다차원적 상호작용을 갖춘 게임 경험을 만드는 데 주력하며, 플레이어에게 잊지 못할 이야기와 인생 경험을 선사하고자 합니다."
+    },
+    "about": {
+      "aboutTitle": "저작권 안내",
+      "aboutText": "당사의 모든 제품을 기반으로 한 파생 작품 및 2차 창작물은 「개인」 또는 「동인 서클 등 취미 단체」가 비상업적으로 제작·배포하는 한 표현 매체에 어떠한 제한도 두지 않습니다. 다만 배포물에는 반드시 당사의 저작권 표시를 기재해 주십시오. 허가 없이 파생 작품을 판매하는 것은 금지합니다."
+    },
+    "contact": {
+      "contactTitle": "문의하기",
+      "contactText": "모든 형태의 협업과 교류 기회를 환영합니다! 비즈니스 제휴, 미디어 인터뷰, 콘텐츠 홍보 등 뜻을 같이하는 파트너와 함께하기를 기대합니다. 여러분의 의견과 제안도 언제든 보내 주세요. 아래 방법으로 연락 주시면 최대한 빠르게 답변드리겠습니다.",
+      "title": "메시지 남기기",
+      "subtitle": "아래 양식을 작성하여 저희에게 연락해 주세요.",
+      "name": "이름",
+      "email": "이메일 주소",
+      "message": "메시지 내용",
+      "agreePrefix": "저는 다음에 동의합니다:",
+      "terms": "서비스 약관",
+      "and": "및",
+      "privacy": "개인정보 처리방침",
+      "submit": "제출",
+      "agreeError": "서비스 약관과 개인정보 처리방침에 동의해야 합니다.",
+      "submitting": "제출 중...",
+      "success": "메시지가 성공적으로 전송되었습니다!",
+      "fail": "전송에 실패했습니다. 다시 시도해 주세요.",
+      "error": "제출 중 오류가 발생했습니다. 다시 시도해 주세요."
+    },
+    "footer": {
+      "followUs": "팔로우하기!",
+      "links": [
+        "회사 소개",
+        "개인정보 처리방침",
+        "문의하기"
+      ],
+      "copyright": "© 2026 StarQ Soft LLC. All rights reserved."
+    }
+  },
+  "es-es": {
+    "nav": {
+      "products": "Productos",
+      "shop": "Tienda en línea",
+      "support": "Soporte",
+      "blog": "Blog oficial",
+      "events": "Eventos",
+      "language": "Idioma"
+    },
+    "hero": {
+      "dateLabel": "Fecha",
+      "dateValue": "Domingo, 12 de julio de 2026",
+      "venueLabel": "Lugar",
+      "venueValue": "Stellar Ball (Shinagawa)",
+      "btnPrimary": "Añadir a la lista de deseos",
+      "preorder": "¡La página de la tienda Steam de «Love, Startup & Co-founder» ya está disponible!",
+      "goToBanner": "Ir al banner"
+    },
+    "product": {
+      "titleHighlight": "P",
+      "titleRest": "roduct",
+      "subTitle": "Nuestras obras",
+      "btn": "Ver página del producto",
+      "banners": [
+        {
+          "name": "Love, Startup & Co-founder",
+          "image": "/public/lsc.png",
+          "upcoming": false,
+          "link": "/love-startup-cofounder"
+        },
+        {
+          "name": "Próximamente...",
+          "image": "/public/game2.png",
+          "upcoming": true,
+          "link": "/upcoming"
+        }
+      ]
+    },
+    "faq": {
+      "faqTitle": "Sobre nosotros",
+      "faqText": "StarQ Soft es una marca de videojuegos independiente con visión global, fundada en 2026 en Mountain View, California. Nos centramos en crear experiencias de juego con una narrativa profunda e interacción multidimensional, con el objetivo de ofrecer a los jugadores historias y experiencias de vida inolvidables."
+    },
+    "about": {
+      "aboutTitle": "Derechos de autor",
+      "aboutText": "Para las obras derivadas y creaciones de fans basadas en cualquiera de nuestros productos, no imponemos ninguna restricción sobre el medio de expresión, siempre que sean creadas y distribuidas sin fines comerciales por «particulares» o «grupos aficionados como círculos dōjin». No obstante, asegúrese de incluir nuestro aviso de derechos de autor en todo material distribuido. Queda prohibida la venta de cualquier obra derivada sin autorización."
+    },
+    "contact": {
+      "contactTitle": "Contáctanos",
+      "contactText": "¡Damos la bienvenida a todo tipo de oportunidades de colaboración e intercambio! Ya se trate de alianzas comerciales, entrevistas con medios o promoción de contenidos, esperamos conectar con socios afines. También puedes enviarnos tus comentarios y sugerencias en cualquier momento. Contáctanos a través de los siguientes medios y te responderemos lo antes posible.",
+      "title": "Envíanos un mensaje",
+      "subtitle": "Por favor, rellena el siguiente formulario para ponerte en contacto con nosotros.",
+      "name": "Tu nombre",
+      "email": "Dirección de correo electrónico",
+      "message": "Mensaje",
+      "agreePrefix": "He leído y acepto",
+      "terms": "los Términos de servicio",
+      "and": "y",
+      "privacy": "la Política de privacidad",
+      "submit": "Enviar",
+      "agreeError": "Debes aceptar los Términos de servicio y la Política de privacidad.",
+      "submitting": "Enviando...",
+      "success": "¡Mensaje enviado correctamente!",
+      "fail": "No se pudo enviar el mensaje. Inténtalo de nuevo.",
+      "error": "Error al enviar el formulario. Inténtalo de nuevo."
+    },
+    "footer": {
+      "followUs": "¡Síguenos!",
+      "links": [
+        "Perfil de la empresa",
+        "Política de privacidad",
+        "Contacto"
+      ],
+      "copyright": "© 2026 StarQ Soft LLC. All rights reserved."
+    }
+  },
+  "ru-ru": {
+    "nav": {
+      "products": "Продукты",
+      "shop": "Интернет-магазин",
+      "support": "Поддержка",
+      "blog": "Официальный блог",
+      "events": "События",
+      "language": "Язык"
+    },
+    "hero": {
+      "dateLabel": "Дата",
+      "dateValue": "12 июля 2026 г. (вс)",
+      "venueLabel": "Место",
+      "venueValue": "Stellar Ball (Синагава)",
+      "btnPrimary": "Добавить в список желаемого",
+      "preorder": "Страница «Love, Startup & Co-founder» в магазине Steam уже открыта!",
+      "goToBanner": "Перейти к баннеру"
+    },
+    "product": {
+      "titleHighlight": "P",
+      "titleRest": "roduct",
+      "subTitle": "Наши работы",
+      "btn": "Открыть страницу продукта",
+      "banners": [
+        {
+          "name": "Love, Startup & Co-founder",
+          "image": "/public/lsc.png",
+          "upcoming": false,
+          "link": "/love-startup-cofounder"
+        },
+        {
+          "name": "Скоро...",
+          "image": "/public/game2.png",
+          "upcoming": true,
+          "link": "/upcoming"
+        }
+      ]
+    },
+    "faq": {
+      "faqTitle": "О нас",
+      "faqText": "StarQ Soft — независимый игровой бренд с глобальным видением, основанный в 2026 году в Маунтин-Вью, Калифорния. Мы сосредоточены на создании игрового опыта с глубоким повествованием и многомерным взаимодействием, стремясь подарить игрокам незабываемые истории и жизненные впечатления."
+    },
+    "about": {
+      "aboutTitle": "Авторские права",
+      "aboutText": "В отношении производных произведений и фанатского творчества на основе любой из нашей продукции мы не накладываем никаких ограничений на форму выражения при условии, что они создаются и распространяются на некоммерческой основе «частными лицами» или «любительскими объединениями, такими как додзин-кружки». Однако обязательно указывайте наше уведомление об авторских правах в распространяемых материалах. Продажа любых производных произведений без разрешения запрещена."
+    },
+    "contact": {
+      "contactTitle": "Свяжитесь с нами",
+      "contactText": "Мы приветствуем любые возможности сотрудничества и общения! Будь то деловое партнёрство, интервью для СМИ или продвижение контента — мы рады наладить связь с единомышленниками. Также вы всегда можете присылать нам свои отзывы и предложения. Свяжитесь с нами одним из указанных ниже способов, и мы ответим как можно скорее.",
+      "title": "Напишите нам",
+      "subtitle": "Пожалуйста, заполните форму ниже, чтобы связаться с нами.",
+      "name": "Ваше имя",
+      "email": "Адрес электронной почты",
+      "message": "Сообщение",
+      "agreePrefix": "Я прочитал(а) и согласен(на) с",
+      "terms": "Условиями использования",
+      "and": "и",
+      "privacy": "Политикой конфиденциальности",
+      "submit": "Отправить",
+      "agreeError": "Вы должны согласиться с Условиями использования и Политикой конфиденциальности.",
+      "submitting": "Отправка...",
+      "success": "Сообщение успешно отправлено!",
+      "fail": "Не удалось отправить сообщение. Попробуйте ещё раз.",
+      "error": "Ошибка при отправке формы. Попробуйте ещё раз."
+    },
+    "footer": {
+      "followUs": "Подписывайтесь!",
+      "links": [
+        "О компании",
+        "Политика конфиденциальности",
+        "Контакты"
+      ],
+      "copyright": "© 2026 StarQ Soft LLC. All rights reserved."
+    }
+  },
+  "vi-vn": {
+    "nav": {
+      "products": "Sản phẩm",
+      "shop": "Cửa hàng trực tuyến",
+      "support": "Hỗ trợ",
+      "blog": "Blog chính thức",
+      "events": "Sự kiện",
+      "language": "Ngôn ngữ"
+    },
+    "hero": {
+      "dateLabel": "Ngày tổ chức",
+      "dateValue": "Chủ Nhật, 12 tháng 7, 2026",
+      "venueLabel": "Địa điểm",
+      "venueValue": "Stellar Ball (Shinagawa)",
+      "btnPrimary": "Thêm vào danh sách mong muốn",
+      "preorder": "Trang cửa hàng Steam của «Love, Startup & Co-founder» đã ra mắt!",
+      "goToBanner": "Chuyển đến banner"
+    },
+    "product": {
+      "titleHighlight": "P",
+      "titleRest": "roduct",
+      "subTitle": "Tác phẩm của chúng tôi",
+      "btn": "Xem trang sản phẩm",
+      "banners": [
+        {
+          "name": "Love, Startup & Co-founder",
+          "image": "/public/lsc.png",
+          "upcoming": false,
+          "link": "/love-startup-cofounder"
+        },
+        {
+          "name": "Sắp ra mắt...",
+          "image": "/public/game2.png",
+          "upcoming": true,
+          "link": "/upcoming"
+        }
+      ]
+    },
+    "faq": {
+      "faqTitle": "Về chúng tôi",
+      "faqText": "StarQ Soft là một thương hiệu game độc lập với tầm nhìn toàn cầu, được thành lập năm 2026 tại Mountain View, California. Chúng tôi tập trung tạo ra những trải nghiệm game với lối kể chuyện sâu sắc và tương tác đa chiều, hướng đến việc mang lại cho người chơi những câu chuyện và trải nghiệm cuộc sống khó quên."
+    },
+    "about": {
+      "aboutTitle": "Bản quyền",
+      "aboutText": "Đối với các tác phẩm phái sinh và sáng tạo của người hâm mộ dựa trên bất kỳ sản phẩm nào của chúng tôi, chúng tôi không đặt ra bất kỳ hạn chế nào về phương tiện thể hiện, miễn là chúng được tạo ra và phân phối phi thương mại bởi «cá nhân» hoặc «các nhóm sở thích như câu lạc bộ doujin». Tuy nhiên, vui lòng đảm bảo ghi kèm thông báo bản quyền của chúng tôi trong mọi tài liệu phân phối. Nghiêm cấm việc tự ý bán bất kỳ tác phẩm phái sinh nào khi chưa được phép."
+    },
+    "contact": {
+      "contactTitle": "Liên hệ với chúng tôi",
+      "contactText": "Chúng tôi hoan nghênh mọi cơ hội hợp tác và giao lưu! Dù là hợp tác kinh doanh, phỏng vấn truyền thông hay quảng bá nội dung, chúng tôi luôn mong muốn kết nối với những đối tác cùng chí hướng. Bạn cũng có thể gửi ý kiến và đề xuất cho chúng tôi bất cứ lúc nào. Vui lòng liên hệ qua các phương thức dưới đây, chúng tôi sẽ phản hồi sớm nhất có thể.",
+      "title": "Gửi tin nhắn cho chúng tôi",
+      "subtitle": "Vui lòng điền vào biểu mẫu bên dưới để liên hệ với chúng tôi.",
+      "name": "Tên của bạn",
+      "email": "Địa chỉ email",
+      "message": "Nội dung tin nhắn",
+      "agreePrefix": "Tôi đã đọc và đồng ý với",
+      "terms": "Điều khoản dịch vụ",
+      "and": "và",
+      "privacy": "Chính sách bảo mật",
+      "submit": "Gửi",
+      "agreeError": "Bạn phải đồng ý với Điều khoản dịch vụ và Chính sách bảo mật.",
+      "submitting": "Đang gửi...",
+      "success": "Đã gửi tin nhắn thành công!",
+      "fail": "Gửi tin nhắn thất bại. Vui lòng thử lại.",
+      "error": "Lỗi khi gửi biểu mẫu. Vui lòng thử lại."
+    },
+    "footer": {
+      "followUs": "Theo dõi chúng tôi!",
+      "links": [
+        "Hồ sơ công ty",
+        "Chính sách bảo mật",
+        "Liên hệ"
+      ],
+      "copyright": "© 2026 StarQ Soft LLC. All rights reserved."
     }
   }
 }

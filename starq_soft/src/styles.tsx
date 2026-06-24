@@ -192,22 +192,23 @@ export const ButtonGroup = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  width: 25rem;
+  width: 50%;
   margin-top: 1.5rem;
 `;
 
 export const PrimaryButton = styled.button`
   background: linear-gradient(275deg, #e97aa3 0%, #e97292 50%, #f24677 100%);
+  width: fit-content;
   color: white;
   font-weight: bold;
-  padding: 0.75rem 1rem;
+  padding: 1rem 2rem;
+  min-width: 300px;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s;
-  width: 80%;
-  margin: 0 auto;
+  margin: 1rem auto;
 
   &:hover {
     filter: brightness(1.2);
@@ -471,13 +472,11 @@ export const FormContainer = styled.form`
 `;
 
 export const Title = styled.h2`
-  font-size: 24px;
   font-weight: 700;
   margin-bottom: 8px;
 `;
 
 export const Subtitle = styled.p`
-  font-size: 14px;
   color: #555;
   margin-bottom: 24px;
 `;
@@ -493,8 +492,6 @@ export const Input = styled.input`
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 14px;
-
   &:focus {
     outline: none;
     border-color: #FF5C8A;
@@ -506,7 +503,6 @@ export const Textarea = styled.textarea`
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 14px;
   resize: vertical;
 
   &:focus {

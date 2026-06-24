@@ -94,7 +94,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     nav: {
       char: `登場キャラクター`,
       pv: `ムービー`,
-      gallery: `Gallery`,
+      gallery: `ギャラリー`,
       progress: `最新の開発進捗`,
       product: `製品情報`,
     },
@@ -529,7 +529,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     nav: {
       char: `登场角色`,
       pv: `影片`,
-      gallery: `Gallery`,
+      gallery: `画廊`,
       progress: `最新开发进度`,
       product: `产品信息`,
     },
@@ -746,7 +746,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     nav: {
       char: `登場角色`,
       pv: `影片`,
-      gallery: `Gallery`,
+      gallery: `畫廊`,
       progress: `最新開發進度`,
       product: `產品資訊`,
     },

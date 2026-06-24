@@ -38,7 +38,9 @@ const App = () => {
   const t = translations[lang as keyof typeof translations];
   const n = news[lang as keyof typeof news];
 
-  const banners = ['public/banner1.png', 'public/banner2.png', 'public/banner3.png'];
+  const banners = ['public/banner1.png', 
+    // 'public/banner2.png', 'public/banner3.png'
+  ];
 
   // direction drives whether slides enter from the right (1) or left (-1).
   const [[bannerIndex, direction], setBanner] = useState([0, 1]);
@@ -69,7 +71,7 @@ const App = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Submitting...");
+    setStatus(t.contact.submitting);
 
     try {
       const res = await fetch("/api/contact", {
@@ -79,7 +81,7 @@ const App = () => {
       });
 
       if (res.ok) {
-        setStatus("Message sent successfully!");
+        setStatus(t.contact.success);
         setFormData({
           name: "",
           email: "",
@@ -88,11 +90,11 @@ const App = () => {
           message: "",
         });
       } else {
-        setStatus("Failed to send message. Please try again.");
+        setStatus(t.contact.fail);
       }
     } catch (err) {
       console.error(err);
-      setStatus("Error submitting form. Please try again.");
+      setStatus(t.contact.error);
     }
   };
 
@@ -129,16 +131,18 @@ const App = () => {
                 transition={{ duration: 0.8, ease: 'easeInOut' }}
               />
             </AnimatePresence>
-            <HeroDots>
-              {banners.map((_, index) => (
-                <HeroDot
-                  key={index}
-                  $active={index === bannerIndex}
-                  onClick={() => goToBanner(index)}
-                  aria-label={`Go to banner ${index + 1}`}
-                />
-              ))}
-            </HeroDots>
+            {banners.length > 1 && (
+              <HeroDots>
+                {banners.map((_, index) => (
+                  <HeroDot
+                    key={index}
+                    $active={index === bannerIndex}
+                    onClick={() => goToBanner(index)}
+                    aria-label={`${t.hero.goToBanner} ${index + 1}`}
+                  />
+                ))}
+              </HeroDots>
+            )}
           </HeroSlides>
           <HeroContent>
             {/* <EventInfoRow>
@@ -173,7 +177,7 @@ const App = () => {
               <motion.div variants={itemReveal}>
                 {n.items.map((item, index) => (
                   <NewsRow key={index}>
-                    <TypeBadge $bgColor={item.type !== 'UPDATE' ? '#ed7799' : '#fcd16b'}>
+                    <TypeBadge $bgColor={item.type !== 'EVENT' ? '#ed7799' : '#fcd16b'}>
                       {item.type}
                     </TypeBadge>
                     <span>
@@ -246,7 +250,8 @@ const App = () => {
 
               <MotionAboutBox variants={sectionReveal}>
                 <MotionSectionHeader variants={itemReveal}>
-                  {t.contact.contactTitle} <Twinkle /></MotionSectionHeader>
+                  {t.contact.contactTitle} <Twinkle />
+                </MotionSectionHeader>
                 <motion.p variants={itemReveal}>{t.contact.contactText}</motion.p>
               </MotionAboutBox>
               <MotionFormContainer variants={itemReveal} onSubmit={handleSubmit}>
@@ -311,7 +316,7 @@ const App = () => {
               <a href="#" key={index}>{link}</a>
             ))}
           </FooterLinks> */}
-          <p>Follow Us!</p>
+          <p>{t.footer.followUs}</p>
           <SocialLinks>
             {socialLinks.map((social, index) => (
               <SocialLink key={index} href={social.href} target="_blank" aria-label={social.label}>

@@ -6,30 +6,36 @@
     "items": [
       {
         "type": "NEWS",
-        "text": "『恋と起業とコファウンダー』のSteamストアページを公開しました。",
-        "date": "2026.03.09",
+        "text": "『恋と起業とコファウンダー』Steamストアページを公開しました！",
+        "date": "2026.07.09",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "7月25～26日 上海ビジュアルノベルONLY即売会への出展が決定！！",
+        "date": "2026.06.20",
         "link": ""
       },
       {
         "type": "NEWS",
         "text": "StarQ Soft公式サイトを公開しました。",
-        "date": "2026.03.09",
-        "link": ""
-      },
-      {
-        "type": "UPDATE",
-        "text": "『恋と起業とコファウンダー』登場キャラクター設定確定！",
-        "date": "2025.06.20",
+        "date": "2026.06.28",
         "link": ""
       },
       {
         "type": "NEWS",
-        "text": "StarQ Softの公式X（旧Twitter）アカウントを開設しました。",
-        "date": "2026.03.07",
+        "text": "StarQ Soft公式X（Twitter）アカウントを正式公開しました。",
+        "date": "2026.03.10",
         "link": "https://x.com/StarQ_Soft"
       },
       {
-        "type": "UPDATE",
+        "type": "NEWS",
+        "text": "『恋と起業とコファウンダー』登場キャラクター設定確定！",
+        "date": "2025.07.20",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
         "text": "デビュー作『恋と起業とコファウンダー』制作決定！",
         "date": "2025.06.18",
         "link": ""
@@ -43,30 +49,36 @@
     "items": [
       {
         "type": "NEWS",
-        "text": "Steam store page for \"Love, Startup & Co-founder\" is now live.",
-        "date": "2026.03.09",
+        "text": "The Steam store page for \"Love, Startup & Co-founder\" is now live!",
+        "date": "2026.07.09",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "Exhibiting at the Shanghai Visual Novel ONLY event on July 25–26 confirmed!!",
+        "date": "2026.06.20",
         "link": ""
       },
       {
         "type": "NEWS",
         "text": "StarQ Soft official website is now live.",
-        "date": "2026.03.09",
-        "link": ""
-      },
-      {
-        "type": "UPDATE",
-        "text": "Character designs for \"Love, Startup & Co-founder\" finalized!",
-        "date": "2025.06.20",
+        "date": "2026.06.28",
         "link": ""
       },
       {
         "type": "NEWS",
         "text": "StarQ Soft official X (Twitter) account is now open.",
-        "date": "2026.03.07",
+        "date": "2026.03.10",
         "link": "https://x.com/StarQ_Soft"
       },
       {
-        "type": "UPDATE",
+        "type": "NEWS",
+        "text": "Character designs for \"Love, Startup & Co-founder\" finalized!",
+        "date": "2025.07.20",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
         "text": "Debut title \"Love, Startup & Co-founder\" production confirmed!",
         "date": "2025.06.18",
         "link": ""
@@ -81,19 +93,19 @@
       {
         "type": "NEWS",
         "text": "《恋爱、创业、合伙人》Steam商店页面现已公开！",
-        "date": "2026.03.09",
+        "date": "2026.07.09",
         "link": ""
       },
       {
         "type": "NEWS",
-        "text": "StarQ Soft 官方网站现已公开。",
-        "date": "2026.03.09",
+        "text": "7月25~26日上海视觉小说only展参展决定！！",
+        "date": "2026.06.20",
         "link": ""
       },
       {
-        "type": "UPDATE",
-        "text": "《恋爱、创业、合伙人》登场角色设定正式公开！",
-        "date": "2025.06.20",
+        "type": "NEWS",
+        "text": "StarQ Soft官方网站现已公开。",
+        "date": "2026.06.28",
         "link": ""
       },
       {
@@ -104,13 +116,228 @@
       },
       {
         "type": "NEWS",
-        "text": "StarQ Soft LLC正式于美国加州成立！",
-        "date": "2026.03.09",
+        "text": "《恋爱、创业、合伙人》登场角色设定决定！",
+        "date": "2025.07.20",
         "link": ""
       },
       {
-        "type": "UPDATE",
-        "text": "首部新作《恋爱、创业、合伙人》制作决定！",
+        "type": "NEWS",
+        "text": "首部出道作《恋爱、创业、合伙人》制作决定！",
+        "date": "2025.06.18",
+        "link": ""
+      }
+    ]
+  },
+  "zh-tw": {
+    "titleHighlight": "N",
+    "titleRest": "EWS RELEASE",
+    "subTitle": "最新通知",
+    "items": [
+      {
+        "type": "NEWS",
+        "text": "《戀愛、創業、合夥人》Steam商店頁面現已公開！",
+        "date": "2026.07.09",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "7月25~26日上海視覺小說ONLY展參展決定！！",
+        "date": "2026.06.20",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "StarQ Soft官方網站現已公開。",
+        "date": "2026.06.28",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "StarQ Soft官方X (Twitter) 帳號正式公開。",
+        "date": "2026.03.10",
+        "link": "https://x.com/StarQ_Soft"
+      },
+      {
+        "type": "NEWS",
+        "text": "《戀愛、創業、合夥人》登場角色設定決定！",
+        "date": "2025.07.20",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "首部出道作《戀愛、創業、合夥人》製作決定！",
+        "date": "2025.06.18",
+        "link": ""
+      }
+    ]
+  },
+  "ko-kr": {
+    "titleHighlight": "N",
+    "titleRest": "EWS RELEASE",
+    "subTitle": "최신 소식",
+    "items": [
+      {
+        "type": "NEWS",
+        "text": "《사랑, 창업, 그리고 코파운더》 Steam 스토어 페이지가 공개되었습니다!",
+        "date": "2026.07.09",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "7월 25~26일 상하이 비주얼 노벨 ONLY 행사 참가 결정!!",
+        "date": "2026.06.20",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "StarQ Soft 공식 웹사이트가 공개되었습니다.",
+        "date": "2026.06.28",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "StarQ Soft 공식 X (Twitter) 계정이 정식 공개되었습니다.",
+        "date": "2026.03.10",
+        "link": "https://x.com/StarQ_Soft"
+      },
+      {
+        "type": "NEWS",
+        "text": "《사랑, 창업, 그리고 코파운더》 등장 캐릭터 설정 확정!",
+        "date": "2025.07.20",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "데뷔작 《사랑, 창업, 그리고 코파운더》 제작 결정!",
+        "date": "2025.06.18",
+        "link": ""
+      }
+    ]
+  },
+  "es-es": {
+    "titleHighlight": "N",
+    "titleRest": "EWS RELEASE",
+    "subTitle": "Novedades",
+    "items": [
+      {
+        "type": "NEWS",
+        "text": "¡La página de la tienda Steam de «Love, Startup & Co-founder» ya está disponible!",
+        "date": "2026.07.09",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "¡Participación confirmada en el evento ONLY de novelas visuales de Shanghái del 25 al 26 de julio!",
+        "date": "2026.06.20",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "El sitio web oficial de StarQ Soft ya está disponible.",
+        "date": "2026.06.28",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "La cuenta oficial de X (Twitter) de StarQ Soft ya está abierta.",
+        "date": "2026.03.10",
+        "link": "https://x.com/StarQ_Soft"
+      },
+      {
+        "type": "NEWS",
+        "text": "¡Diseños de personajes de «Love, Startup & Co-founder» finalizados!",
+        "date": "2025.07.20",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "¡Producción confirmada del título debut «Love, Startup & Co-founder»!",
+        "date": "2025.06.18",
+        "link": ""
+      }
+    ]
+  },
+  "ru-ru": {
+    "titleHighlight": "N",
+    "titleRest": "EWS RELEASE",
+    "subTitle": "Новости",
+    "items": [
+      {
+        "type": "NEWS",
+        "text": "Страница «Love, Startup & Co-founder» в магазине Steam уже открыта!",
+        "date": "2026.07.09",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "Подтверждено участие в шанхайском мероприятии ONLY по визуальным новеллам 25–26 июля!",
+        "date": "2026.06.20",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "Официальный сайт StarQ Soft уже открыт.",
+        "date": "2026.06.28",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "Официальный аккаунт StarQ Soft в X (Twitter) открыт.",
+        "date": "2026.03.10",
+        "link": "https://x.com/StarQ_Soft"
+      },
+      {
+        "type": "NEWS",
+        "text": "Дизайн персонажей «Love, Startup & Co-founder» утверждён!",
+        "date": "2025.07.20",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "Производство дебютного тайтла «Love, Startup & Co-founder» подтверждено!",
+        "date": "2025.06.18",
+        "link": ""
+      }
+    ]
+  },
+  "vi-vn": {
+    "titleHighlight": "N",
+    "titleRest": "EWS RELEASE",
+    "subTitle": "Tin tức mới nhất",
+    "items": [
+      {
+        "type": "NEWS",
+        "text": "Trang cửa hàng Steam của «Love, Startup & Co-founder» đã ra mắt!",
+        "date": "2026.07.09",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "Xác nhận tham gia sự kiện ONLY tiểu thuyết hình ảnh tại Thượng Hải ngày 25~26 tháng 7!",
+        "date": "2026.06.20",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "Trang web chính thức của StarQ Soft đã ra mắt.",
+        "date": "2026.06.28",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "Tài khoản X (Twitter) chính thức của StarQ Soft đã chính thức ra mắt.",
+        "date": "2026.03.10",
+        "link": "https://x.com/StarQ_Soft"
+      },
+      {
+        "type": "NEWS",
+        "text": "Thiết lập nhân vật của «Love, Startup & Co-founder» đã được xác định!",
+        "date": "2025.07.20",
+        "link": ""
+      },
+      {
+        "type": "NEWS",
+        "text": "Xác nhận sản xuất tác phẩm ra mắt đầu tay «Love, Startup & Co-founder»!",
         "date": "2025.06.18",
         "link": ""
       }

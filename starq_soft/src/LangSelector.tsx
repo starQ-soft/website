@@ -11,6 +11,10 @@ const LANGUAGES: { code: LanguageCode; label: string }[] = [
   { code: 'en-us', label: 'English' },
   { code: 'zh-cn', label: '简体中文' },
   { code: 'zh-tw', label: '繁體中文' },
+  { code: 'ko-kr', label: '한국어' },
+  { code: 'es-es', label: 'Español' },
+  { code: 'ru-ru', label: 'Русский' },
+  { code: 'vi-vn', label: 'Tiếng Việt' },
 ];
 
 export const LangSelector = () => {
