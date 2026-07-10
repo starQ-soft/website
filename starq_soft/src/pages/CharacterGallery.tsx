@@ -6,7 +6,7 @@ import { CharacterCard, CharacterCarousel } from "./LscStyles";
 import { useLanguage } from "../LanguageContext";
 import { lscContent } from "./lscContent";
 
-const avatars: any[] = ["me-1.png", "haijin.png", "tani.png", "hayashi.png", "nana.png", "natsumi.png", "rin.png", "takagi.png"];
+const avatars: string[] = ["me-1.png", "haijin.png", "tani.png", "hayashi.png", "nana.png", "natsumi.png", "rin.png", "takagi.png"];
 
 // Structural (non-localized) character data. All translatable copy — role,
 // description, likes, quotes, zodiac, blood type and birthday — lives in
@@ -156,7 +156,7 @@ export const LoveCofounderCharacter: React.FC = () => {
         <CharacterCarousel>
           {/* <button className="nav-btn">«</button> */}
           <div className="char-list">
-            {characters.map((char, index) => (
+            {characters.map((char: any, index: number) => (
               <CharacterCard key={index}
                 $isSelected={selectedCharacter === index}
                 onClick={() => {
@@ -197,7 +197,7 @@ export const LoveCofounderCharacter: React.FC = () => {
           >
           <CharacterHeader>
             <div>
-              <div>{characters[selectedCharacter].name.japanese.map((char, i) => (
+              <div>{characters[selectedCharacter].name.japanese.map((char: string, i: number) => (
                 <ruby key={i} style={{ marginRight: "2px" }}>
                   <JapaneseName>{char}</JapaneseName>
                   <rt>{characters[selectedCharacter].name.read[i] || ""}</rt>&nbsp;
@@ -277,7 +277,7 @@ export const LoveCofounderCharacter: React.FC = () => {
           <Likes>
             <Label>{labels.likes}</Label>
             <LikesList>
-              {info.likes.map((like) => (
+              {info.likes.map((like: string) => (
                 <LikeItem key={like}>{like}</LikeItem>
               ))}
             </LikesList>
@@ -329,28 +329,6 @@ const CharacterDisplay = styled.div`
   }
 `;
 
-const DecoTopLeft = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 8%;
-  height: auto;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.6;
-`;
-
-const DecoBottomRight = styled.img`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 8%;
-  height: auto;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.6;
-`;
-
 const CharacterImage = styled.img`
   position: relative;
   z-index: 1;
@@ -360,6 +338,10 @@ const CharacterImage = styled.img`
 
   @media (max-width: 1024px) {
     max-width: 360px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 82vw;
   }
 `;
 
@@ -374,6 +356,7 @@ const CharacterInfo = styled.div`
 
   @media (max-width: 1024px) {
     padding: 0.5rem 0;
+    margin-top: 0;
   }
 `;
 
@@ -385,12 +368,12 @@ const CharacterHeader = styled.div`
 
 const JapaneseName = styled.h3`
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 32px;
+  font-size: clamp(1.4rem, 4vw, 2rem);
   margin: 0;
 `;
 
 const EnglishName = styled.h4`
-  font-size: 24px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
   color: #CC1075;
   margin: 5px 0;
 `;
@@ -419,16 +402,21 @@ const VoiceIcon = styled.img`
 `;
 
 const Role = styled.div`
-  font-size: 1.25rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.25rem);
   color: #CC1075;
   margin-top: 10px;
 `;
 
 const Description = styled.p`
-  font-size: 1.25rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.25rem);
   line-height: 1.5;
   margin-bottom: 30px;
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
+
+  @media (max-width: 768px) {
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
 `;
 
 const Details = styled.div`
@@ -439,19 +427,20 @@ const Details = styled.div`
 
   @media (max-width: 480px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
   }
 `;
 
 const DetailItem = styled.div``;
 
 const Label = styled.div`
-  font-size: 1rem;;
+  font-size: clamp(0.7rem, 2vw, 1rem);
   color: #CC1075;
   text-transform: uppercase;
 `;
 
 const Value = styled.div`
-  font-size: 1.25rem;
+  font-size: clamp(0.82rem, 2.4vw, 1.25rem);
 `;
 
 const QuoteText = styled.div`
@@ -460,11 +449,17 @@ const QuoteText = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     letter-spacing: .1em;
     position: relative;
     padding: 1rem 1.5em;
     filter: drop-shadow(0 1px 1px rgba(183, 163, 243, 0.5));
+
+    @media (max-width: 768px) {
+      padding: 0.75rem 0.5rem;
+      letter-spacing: 0.04em;
+      line-height: 1.45;
+    }
 `;
 
 const MotionQuoteText = motion.create(QuoteText);
@@ -500,5 +495,5 @@ const LikeItem = styled.span`
   color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
-  font-size: 1.25rem;;
+  font-size: clamp(0.8rem, 2.4vw, 1.25rem);
 `;

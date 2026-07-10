@@ -6,46 +6,13 @@ import { LoveCofounder } from './LoveCofounder';
 import { motion, useInView } from 'framer-motion';
 import CherryBlossomBackground from './CherryBlossomBackground';
 import TransparentBanner from './TransparentBanner';
-import { LscGlobalStyle, FirstWrapper, SectionSubtitle, StoryTitle, SecondWrapper, GameDescription, Note } from './LscStyles';
+import { LscGlobalStyle, FirstWrapper, SectionSubtitle, StoryTitle, SecondWrapper, Note } from './LscStyles';
 import BackToTop from '../components/BackToTop';
 import { Logo } from '../styles';
 import { socialLinks } from '../components/footer/FooterConstants';
 import LangSelector from '../LangSelector';
 import { useLanguage } from '../LanguageContext';
 import { lscContent } from './lscContent';
-
-const pv_data = [
-  {
-    thumbnail: "pv_haruka.png",
-    url: "https://www.youtube.com/watch?v=2QZj23vzcsY",
-    title: "haruka",
-  },
-  {
-    thumbnail: "pv_shizuka.png",
-    url: "https://www.youtube.com/watch?v=9xKjmQ3jpHY",
-    title: "shizuka",
-  },
-  {
-    thumbnail: "pv_nana.png",
-    url: "https://www.youtube.com/watch?v=TYZ7KtprkDc&t=45s",
-    title: "nana",
-  },
-  {
-    thumbnail: "pv_natsumi.png",
-    url: "https://www.youtube.com/watch?v=rhEGAtehJbo&t=4s",
-    title: "natsumi",
-  },
-  {
-    thumbnail: "pv_rin.png",
-    url: "https://www.youtube.com/watch?v=W_wDK8K1LY0",
-    title: "rin",
-  },
-  {
-    thumbnail: "pv_shizuka.png",
-    url: "https://www.youtube.com/watch?v=Vh2y25FXlDQ",
-    title: "shizuka",
-  },
-];
 
 export const LscNav = styled.nav`
   display: flex;
@@ -101,9 +68,9 @@ const SideNav = styled.nav<{ $open?: boolean }>`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 1.5rem;
-  padding-left: 3.5vw;
-  width: 20%;
+  gap: 1.25rem;
+  padding: 3rem clamp(1.25rem, 3.5vw, 3rem);
+  width: clamp(16rem, 24vw, 24rem);
   height: 100%;
   background-color: #fff;
     background-image: repeating-linear-gradient(
@@ -120,7 +87,7 @@ const SideNav = styled.nav<{ $open?: boolean }>`
 
   a {
     font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
-    font-size: 1.75rem;
+    font-size: clamp(1.05rem, 2vw, 1.75rem);
     font-weight: 700;
     color: #CC1075;
     text-decoration: none;
@@ -130,6 +97,12 @@ const SideNav = styled.nav<{ $open?: boolean }>`
     &:hover {
       opacity: .6;
     }
+  }
+
+  @media (max-width: 768px) {
+    width: min(82vw, 22rem);
+    gap: 1rem;
+    padding-top: 4.5rem;
   }
 `;
 
@@ -178,8 +151,8 @@ const Section = styled.section`
 
 
 const PvContainer = styled.div`
-  min-width: 60rem;
-  max-width: 80rem;
+  width: min(100%, 80rem);
+  min-width: 0;
   aspect-ratio: 16 / 9;
   background-color: black;
   overflow: hidden;
@@ -192,68 +165,7 @@ const PvContainer = styled.div`
 
   @media (max-width: 768px) {
     border-width: 2px;
-  }
-`;
-
-const IntroBox = styled.div`
-  background-color: rgba(255, 228, 228, 0.6);
-  border: 4px solid white;
-  padding: 5rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 60%;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  margin: 2rem 0;
-
-  @media (min-width: 768px) { flex-direction: row; }
-
-  @media (max-width: 768px) {
-    padding: 1rem;
-    border-width: 2px;
-  }
-
-  .content {
-    flex: 1;
-    h3 {
-      font-size: 1.25rem;
-      font-weight: bold;
-      margin-bottom: 0.75rem;
-      border-bottom: 2px solid #ffb6c1;
-      padding-bottom: 0.5rem;
-      display: inline-block;
-    }
-    p { font-size: 0.875rem; line-height: 1.625; }
-  }
-
-  .image-placeholder {
-    width: 22rem;
-    max-width: 100%;
-    height: 12rem;
-    background-color: white;
-    border: 2px solid #ffb6c1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    color: #9ca3af;
-    overflow: hidden;
-    cursor: pointer;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    @media (max-width: 768px) {
-      width: 100%;
-      height: 8rem;
-    }
+    margin: 1rem 0;
   }
 `;
 
@@ -267,19 +179,20 @@ const ProgressBoard = styled.div`
   gap: 1rem;
   margin-bottom: 2rem;
   border: 4px solid #d2a679;
-  width: 80%;
+  width: min(100%, 64rem);
   box-sizing: border-box;
 
   @media (max-width: 768px) {
     padding: 0.75rem;
     border-width: 2px;
     gap: 0.5rem;
+    margin-bottom: 1.25rem;
   }
 `;
 
-const StickyNote = styled.div`
+const StickyNote = styled.div<{ $rotation: string }>`
   background-color: #fffacd;
-  width: 8rem;
+  width: clamp(7rem, 18vw, 8.5rem);
   padding: 0.75rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transform: rotate(${(props) => props.$rotation}deg);
@@ -297,7 +210,14 @@ const StickyNote = styled.div`
     padding-bottom: 0.25rem;
     margin-bottom: 0.25rem;
   }
-  .text { font-size: 0.875rem; font-weight: 600; color: #8b4513; }
+  .text { font-size: 0.875rem; font-weight: 600; color: #8b4513; line-height: 1.35; }
+
+  @media (max-width: 480px) {
+    transform: none;
+
+    .date { font-size: 0.68rem; }
+    .text { font-size: 0.78rem; }
+  }
 `;
 
 const PromotionCard = styled.div`
@@ -314,6 +234,7 @@ const PromotionCard = styled.div`
   @media (max-width: 768px) {
     border-width: 2px;
     gap: 1rem;
+    padding: 0.5rem 0;
   }
 
   .promo-details {
@@ -341,7 +262,12 @@ const PromotionCard = styled.div`
       @media (min-width: 768px) { align-items: flex-start; }
     }
 
-    h4 { font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem; }
+    h4 {
+      font-size: clamp(1.05rem, 3vw, 1.5rem);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
 
     ul {
       font-size: 0.75rem;
@@ -375,21 +301,64 @@ const PromotionCard = styled.div`
       width: 100%;
     }
 
-    .btn-group {
-      display: flex;
-      gap: 0.75rem;
-      width: 100%;
-      
-      button {
-        flex: 1;
-        background-color: #ffb6c1;
-        color: white;
-        font-weight: bold;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        border: 2px solid white;
-        cursor: pointer;
+    @media (max-width: 640px) {
+      gap: 1.25rem;
+
+      ul {
+        font-size: 0.7rem;
+        line-height: 1.55;
       }
+
+      ul li {
+        grid-template-columns: minmax(5.5rem, 40%) 1fr;
+        column-gap: 0.4rem;
+        margin: 0.35rem 0;
+      }
+
+      ul li span {
+        padding: 0.05rem 0.25rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      ul li {
+        grid-template-columns: 1fr;
+        row-gap: 0.1rem;
+      }
+    }
+
+  }
+`;
+
+const ProductActions = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  width: min(100%, 32rem);
+  margin: 1rem auto 0;
+  padding: 0 0.75rem;
+
+  button {
+    flex: 1;
+    min-width: 0;
+    background-color: #ffb6c1;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid white;
+    cursor: pointer;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 0.5rem;
+
+    button {
+      width: 100%;
+      font-size: 0.85rem;
+      padding: 0.55rem 0.75rem;
     }
   }
 `;
@@ -461,6 +430,10 @@ const Footer = styled.footer`
 const LangSwitcherContainer = styled.div`
   z-index: 50;
   width: 7rem;
+
+  @media (max-width: 480px) {
+    width: 6rem;
+  }
 `;
 
 const NavRight = styled.div`
@@ -469,6 +442,7 @@ const NavRight = styled.div`
 `;
 
 const SectionContent = styled.div`
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 `
@@ -483,6 +457,8 @@ const ScreenshotsContainer = styled.div`
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
   }
 `
 
@@ -491,7 +467,8 @@ const Screenshot = styled.div`
   box-shadow: 0 5px 5px rgba(119, 105, 110, 0.3);
   transition: transform 0.3s ease;
   cursor: pointer;
-  min-width: 500px;
+  width: 100%;
+  min-width: 0;
 
   &:hover {
     transform: scale(1.02);
@@ -621,18 +598,6 @@ const screenshots = [
   { src: 'cg_thumbnail_6.png', alt: 'LSC-Magic Spell' },
 ];
 
-const getYoutubeEmbedUrl = (url: string) => {
-  try {
-    const u = new URL(url);
-    const videoId = u.searchParams.get('v') ?? '';
-    const t = u.searchParams.get('t');
-    const startSeconds = t ? parseInt(t.replace(/\D/g, ''), 10) : 0;
-    return `https://www.youtube.com/embed/${videoId}${startSeconds ? `?start=${startSeconds}` : ''}`;
-  } catch {
-    return url;
-  }
-};
-
 const MotionStoryTitle = motion.create(StoryTitle);
 
 // Two-step reveal: the StoryTitle animates in first, then the
@@ -699,11 +664,9 @@ const stepStyle = {
 const Lsc = () => {
   const { lang } = useLanguage();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [selectedPvIndex, setSelectedPvIndex] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const t = lscContent[lang] ?? lscContent['zh-cn']!;
-  const selectedPv = pv_data[selectedPvIndex];
 
   const navSections = [
     { id: 'char', label: `// ${t.nav.char}` },
@@ -807,7 +770,7 @@ const Lsc = () => {
         </SideNav>
       </LscNav>
 
-      <CherryBlossomBackground petalCount={80} />
+      <CherryBlossomBackground count={80} />
       <TransparentBanner
         images={["haruka.gif", "/rin.gif", "/lsc-natsumi.png", "/shizuka.gif", "/nana.gif",]}
       />
@@ -857,39 +820,6 @@ const Lsc = () => {
                     style={{ width: '100%', height: '100%', border: 0 }}
                   />
                 </PvContainer>
-                {/* <br />
-                <SectionSubtitle>{t.pv.charMovie}</SectionSubtitle>
-                <PvContainer>
-                  <iframe
-                    key={selectedPv.url}
-                    src={getYoutubeEmbedUrl(selectedPv.url)}
-                    title={selectedPv.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    style={{ width: '100%', height: '100%', border: 0 }}
-                  />
-                </PvContainer>
-                <IntroBox>
-                  {pv_data.map((pv, index) => (
-                    <div
-                      key={index}
-                      onClick={() => setSelectedPvIndex(index)}
-                      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}
-                    >
-                      <div
-                        className="image-placeholder"
-                        style={{
-                          outline: index === selectedPvIndex ? '3px solid #ff69b4' : 'none',
-                        }}
-                      >
-                        <img src={pv.thumbnail} alt={pv.title} />
-                      </div>
-                      <span style={{ fontSize: '0.875rem', fontWeight: 600, color: '#5c3a21' }}>{pv.title}</span>
-                    </div>
-                  ))}
-                </IntroBox> */}
               </motion.div>
             </motion.div>
           </Section>
@@ -982,10 +912,10 @@ const Lsc = () => {
                   <Note>{t.product.note}</Note>
                 </motion.div>
               </motion.div>
-              <div className="btn-group">
+              <ProductActions>
                 <button>{t.product.btnWishlist}</button>
                 <button>{t.product.btnPreorder}</button>
-              </div>
+              </ProductActions>
             </Section>
 
             <Footer>
