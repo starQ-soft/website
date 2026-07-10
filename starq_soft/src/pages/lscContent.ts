@@ -60,7 +60,7 @@ export interface LscContent {
   spec: { title: string; items: LabeledItem[] };
   staff: { title: string; items: LabeledItem[] };
   product: {
-    btnWishlist: string;
+    btnDemo: string;
     btnPreorder: string;
     note: string;
   };
@@ -139,7 +139,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       ],
     },
     product: {
-      btnWishlist: `ウィッシュリストに追加`,
+      btnDemo: `ウィッシュリストに追加`,
       btnPreorder: `予約注文`,
       note: `※動作環境は予定です。発売までに変更になる可能性があります。`,
     },
@@ -355,7 +355,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       ],
     },
     product: {
-      btnWishlist: `Add to Wishlist`,
+      btnDemo: `Add to Wishlist`,
       btnPreorder: `Pre-order`,
       note: `* System requirements are tentative and subject to change before release.`,
     },
@@ -571,7 +571,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       ],
     },
     product: {
-      btnWishlist: `加入愿望单`,
+      btnDemo: `加入愿望单`,
       btnPreorder: `预购`,
       note: `※运行环境为暂定内容，正式发售前可能会有变更。`,
     },
@@ -785,7 +785,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       ],
     },
     product: {
-      btnWishlist: `加入願望清單`,
+      btnDemo: `加入願望清單`,
       btnPreorder: `預購`,
       note: `※運行環境為暫定內容，正式發售前可能會有變更。`,
     },
@@ -1067,7 +1067,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       ]
     },
     "product": {
-      "btnWishlist": "찜 목록에 추가",
+      "btnDemo": "찜 목록에 추가",
       "btnPreorder": "예약 구매",
       "note": "※시스템 요구 사항은 잠정 내용이며 정식 출시 전 변경될 수 있습니다."
     },
@@ -1427,7 +1427,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       ]
     },
     "product": {
-      "btnWishlist": "Añadir a la lista de deseados",
+      "btnDemo": "Añadir a la lista de deseados",
       "btnPreorder": "Reservar",
       "note": "※Los requisitos del sistema son provisionales y pueden cambiar antes del lanzamiento."
     },
@@ -1787,7 +1787,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       ]
     },
     "product": {
-      "btnWishlist": "Добавить в желаемое",
+      "btnDemo": "Добавить в желаемое",
       "btnPreorder": "Предзаказ",
       "note": "※Системные требования предварительные и могут измениться до выхода игры."
     },
@@ -2147,7 +2147,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       ]
     },
     "product": {
-      "btnWishlist": "Thêm vào danh sách mong muốn",
+      "btnDemo": "Thêm vào danh sách mong muốn",
       "btnPreorder": "Đặt trước",
       "note": "※Cấu hình vận hành hiện chỉ là dự kiến và có thể thay đổi trước khi phát hành chính thức."
     },
@@ -2507,7 +2507,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       ]
     },
     "product": {
-      "btnWishlist": "Ajouter à la liste de souhaits",
+      "btnDemo": "Ajouter à la liste de souhaits",
       "btnPreorder": "Précommander",
       "note": "※La configuration requise est provisoire et peut être modifiée avant la sortie."
     },
@@ -2867,7 +2867,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       ]
     },
     "product": {
-      "btnWishlist": "Aggiungi alla lista dei desideri",
+      "btnDemo": "Aggiungi alla lista dei desideri",
       "btnPreorder": "Preordina",
       "note": "※I requisiti di sistema sono provvisori e possono cambiare prima dell’uscita."
     },
@@ -3227,7 +3227,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       ]
     },
     "product": {
-      "btnWishlist": "Zur Wunschliste hinzufügen",
+      "btnDemo": "Zur Wunschliste hinzufügen",
       "btnPreorder": "Vorbestellen",
       "note": "※Die Systemanforderungen sind vorläufig und können sich bis zur Veröffentlichung ändern."
     },
@@ -3587,7 +3587,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       ]
     },
     "product": {
-      "btnWishlist": "เพิ่มในรายการสิ่งที่อยากได้",
+      "btnDemo": "เพิ่มในรายการสิ่งที่อยากได้",
       "btnPreorder": "สั่งซื้อล่วงหน้า",
       "note": "※ข้อกำหนดระบบเป็นข้อมูลชั่วคราวและอาจเปลี่ยนแปลงก่อนวางจำหน่ายจริง"
     },
@@ -3947,7 +3947,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       ]
     },
     "product": {
-      "btnWishlist": "Tambah ke Senarai Hajat",
+      "btnDemo": "Tambah ke Senarai Hajat",
       "btnPreorder": "Prapesan",
       "note": "※Keperluan sistem adalah sementara dan mungkin berubah sebelum pelancaran rasmi."
     },

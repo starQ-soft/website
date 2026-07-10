@@ -118,7 +118,7 @@ const LscContainer = styled.div`
 
 const contentAppear = keyframes`
   from { opacity: 0; }
-  to   { opacity: 1; }
+  to { opacity: 1; }
 `;
 
 const ContentWrapper = styled.div`
@@ -129,10 +129,15 @@ const ContentWrapper = styled.div`
   position: relative;
   z-index: 10;
   opacity: 0;
-  animation: ${contentAppear} 1.2s ease-out 4.5s forwards;
+  animation: ${contentAppear} 0.6s ease-out 4.4s forwards;
   width: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    opacity: 1;
+    animation: none;
+  }
 `;
 
 const Section = styled.section`
@@ -491,7 +496,7 @@ const MotionScreenshot = motion.create(Screenshot);
 
 const galleryReveal = {
   hidden: {},
-  visible: { transition: { delayChildren: 1, staggerChildren: 0.15 } },
+  visible: { transition: { staggerChildren: 0.15 } },
 };
 
 const screenshotItem = {
@@ -619,6 +624,11 @@ const itemReveal = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
+const revealViewport = {
+  once: true,
+  margin: '0px 0px 150px 0px',
+} as const;
+
 const blink = keyframes`
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -639,7 +649,7 @@ const Cursor = styled.span`
 // when typing finishes.
 const TypingStoryTitle = ({ id, text }: { id?: string; text: string }) => {
   const ref = useRef<HTMLHeadingElement>(null);
-  const inView = useInView(ref, { once: true });
+  const inView = useInView(ref, revealViewport);
   const [count, setCount] = useState(0);
   const done = count >= text.length;
 
@@ -787,7 +797,7 @@ const Lsc = () => {
             variants={sectionReveal}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={revealViewport}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
 
@@ -808,7 +818,7 @@ const Lsc = () => {
               variants={sectionReveal}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={revealViewport}
               style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}
             >
 
@@ -835,7 +845,7 @@ const Lsc = () => {
               variants={sectionReveal}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={revealViewport}
               style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
             >
 
@@ -846,9 +856,6 @@ const Lsc = () => {
                   <Note>{t.galleryNote}</Note>
                   <MotionScreenshotsContainer
                     variants={galleryReveal}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
                   >
                     {screenshots.map((img, index) => (
                       <MotionScreenshot
@@ -875,7 +882,7 @@ const Lsc = () => {
                 variants={sectionReveal}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                viewport={revealViewport}
                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
               >
                 <TypingStoryTitle id="progress" text={`// ${t.nav.progress}`} />
@@ -918,10 +925,10 @@ const Lsc = () => {
                   <Note>{t.product.note}</Note>
                 </motion.div>
               </motion.div>
-              <ProductActions>
-                <button>{t.product.btnWishlist}</button>
+              {/* <ProductActions>
+                <button>{t.product.btnDemo}</button>
                 <button>{t.product.btnPreorder}</button>
-              </ProductActions>
+              </ProductActions> */}
             </Section>
 
             <Footer>

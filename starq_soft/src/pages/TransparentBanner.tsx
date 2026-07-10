@@ -17,7 +17,6 @@ const BannerContainer = styled.section`
   align-items: center;
   justify-content: center;
   background: transparent;
-//   overflow: hidden;
   z-index: 0;
 `;
 

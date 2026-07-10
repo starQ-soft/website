@@ -83,6 +83,14 @@ const SakuraPetal = styled.img<PetalConfig>`
     ${sway} ${props => props.$swayDuration} ease-in-out infinite;
 
   animation-delay: ${props => props.$delay};
+
+  @media (max-width: 768px) {
+    filter: none;
+
+    &:nth-child(n + 31) {
+      display: none;
+    }
+  }
 `;
 
 
