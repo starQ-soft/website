@@ -20,7 +20,7 @@ const characters: any[] = [
     weight: "68kg",
     BWH: "92/74/93(cm)",
     voiceActor: "N/A",
-    sampleVoices: [""],
+    sampleVoices: ["","",""],
   },
   {
     name: { japanese: ["灰", "神"], read: ["はい", "じん"], english: "Hai jin" },
@@ -98,6 +98,7 @@ export const LoveCofounderCharacter: React.FC = () => {
   const { lang } = useLanguage();
   const t = lscContent[lang] ?? lscContent['zh-cn']!;
   const labels = t.charLabels;
+  const isChinese = lang === 'zh-cn' || lang === 'zh-tw';
   const [selectedCharacter, setSelectedCharacter] = useState(0);
 
   const currentAudioRef = useRef<HTMLAudioElement | null>(null);
@@ -199,31 +200,40 @@ export const LoveCofounderCharacter: React.FC = () => {
             <div>
               <div>{characters[selectedCharacter].name.japanese.map((char: string, i: number) => (
                 <ruby key={i} style={{ marginRight: "2px" }}>
-                  <JapaneseName>{char}</JapaneseName>
-                  <rt>{characters[selectedCharacter].name.read[i] || ""}</rt>&nbsp;
+                  {['ja-jp', 'zh-cn', 'zh-tw'].includes(lang) && <JapaneseName>{char}</JapaneseName>}
+                  {lang === "ja-jp" && (
+                    <rt>{characters[selectedCharacter].name.read[i] || ""}</rt>
+                  )}&nbsp;
                 </ruby>
               ))}
+              {!['ja-jp', 'zh-cn', 'zh-tw'].includes(lang) && (
                 <EnglishName>
                   {characters[selectedCharacter].name.english}
                 </EnglishName>
+              )}
               </div>
-              <div>{labels.cv}: {characters[selectedCharacter].voiceActor}
+              <div>
+                {['zh-cn', 'zh-tw'].includes(lang) && <>{labels.cv}: {characters[selectedCharacter].voiceActor}</>}
                 {characters[selectedCharacter].sampleVoices
-                  .filter((src: string) => !!src)
+                  // .filter((src: string) => !!src)
                   .map((src: string, i: number) => (
                     <a
                       key={i}
                       href={src}
                       onClick={(e) => {
                         e.preventDefault();
-                        setSelectedVoiceIndex(characters[selectedCharacter].sampleVoices.indexOf(src));
-                        playSample(src);
+                        setSelectedVoiceIndex(i);
+                        if (isChinese && selectedCharacter !== 0) {
+                          playSample(src);
+                        }
                       }}
                     >
                       <VoiceButton>
                         <VoiceIcon
-                          src={playingSrc === src ? "voice-stop.svg" : "voice-play.svg"}
-                          alt={playingSrc === src ? "stop" : "play"}
+                          src={isChinese && selectedCharacter > 0
+                            ? (playingSrc === src ? "voice-stop.svg" : "voice-play.svg")
+                            : "dialog_bubble.png"}
+                          alt={isChinese && selectedCharacter > 0 ? (playingSrc === src ? "stop" : "play") : "dialog"}
                         />
                       </VoiceButton>
                     </a>
@@ -370,12 +380,14 @@ const JapaneseName = styled.h3`
   font-family: "Noto Sans JP", sans-serif;
   font-size: clamp(1.4rem, 4vw, 2rem);
   margin: 0;
+  margin-bottom: 1rem;
 `;
 
-const EnglishName = styled.h4`
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  color: #CC1075;
-  margin: 5px 0;
+const EnglishName = styled.h3`
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  margin: 0;
+  margin-bottom: 1rem;
 `;
 
 const VoiceButton = styled.div`
