@@ -8,7 +8,12 @@ export type LanguageCode =
   | 'ko-kr'
   | 'es-es'
   | 'ru-ru'
-  | 'vi-vn';
+  | 'vi-vn'
+  | 'fr-fr'
+  | 'it-it'
+  | 'de-de'
+  | 'th-th'
+  | 'ms-my';
 
 const STORAGE_KEY = 'starq-lang';
 const DEFAULT_LANG: LanguageCode = 'ja-jp';
@@ -22,6 +27,11 @@ const LANGUAGE_CODES: LanguageCode[] = [
   'es-es',
   'ru-ru',
   'vi-vn',
+  'fr-fr',
+  'it-it',
+  'de-de',
+  'th-th',
+  'ms-my',
 ];
 
 const isLanguageCode = (value: string | null): value is LanguageCode =>

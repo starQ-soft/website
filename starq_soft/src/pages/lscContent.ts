@@ -89,7 +89,7 @@ export interface LscContent {
   characters: CharacterText[];
 }
 
-export const lscContent: Record<LanguageCode, LscContent> = {
+export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
   'ja-jp': {
     nav: {
       char: `登場キャラクター`,
@@ -104,12 +104,9 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     },
     galleryNote: `※素材は全て開発中のものであり、予告なく変更される場合があります。`,
     progressNotes: [
-      { date: '2026/01/20', text: `公式サイトを公開しました。` },
-      { date: '2026/02/28', text: `OPムービーを公開しました。` },
-      { date: '2026/03/27', text: `Steamストアページを公開しました。` },
-      { date: '2026/03/27', text: `Steamストアページを公開しました。` },
-      { date: '2026/03/29', text: `AI 連携システム 調整中！` },
-      { date: '2026/03/29', text: `AI エフェクト テスト中！` },
+      { date: '2026/07/11', text: `公式サイトを正式公開しました。` },
+      { date: '2026/07/12', text: `初公開PVを公開しました。` },
+      { date: '2026/07/13', text: `Steamストアページを公開しました。` },
     ],
     spec: {
       title: `スペック`,
@@ -129,16 +126,16 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     staff: {
       title: `スタッフ`,
       items: [
-        { label: `企画／プロデューサー`, value: `星可` },
+        { label: `企画／制作`, value: `StarQ Soft` },
         { label: `パブリッシャー`, value: `Pairaki Games` },
-        { label: `キャラクターデザイン`, value: `星可` },
+        { label: `シナリオ／キャラクターデザイン`, value: `星可` },
         { label: `原画ＣＧ／SD／背景`, value: `眞海` },
         { label: `主題歌`, value: `「Startup!★Start!!」by Wedoso` },
         { label: `音楽`, value: `Wedoso` },
-        { label: `ＣＧ`, value: `中乃・トミフミ 他` },
-        { label: `ムービー`, value: `眞海` },
+        { label: `ムービー`, value: `星可` },
         { label: `動効`, value: `幽浮小花` },
-        { label: `特別協力`, value: `アキナ・ランドール` },
+        { label: `協力`, value: `終焉 ほか` },
+        { label: `特別協力`, value: `小笠原` },
       ],
     },
     product: {
@@ -164,9 +161,9 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     },
     story: {
       title: `// STORY`,
-      subtitle: `共に始まる冒険！`,
+      subtitle: `「一緒に起業しよう！」`,
       paragraphs: [
-        { segments: [{ t: `「一緒に起業しよう！」`, em: 'span' }] },
+        { segments: [{ t: `共に始まる冒険！`, em: 'span' }] },
         {
           segments: [
             {
@@ -216,7 +213,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: ``,
       },
       {
-        role: `大学新卒（求職中）`,
+        role: `大学新卒（引きこもり）`,
         description: `主人公のルームメイトであり、長年の遊び仲間。茨木大学経営学科を卒業したが、ビジネスの常識はまるでない。ボサボサの銀灰色の髪と、いつも寝足りなさそうな目つきが特徴。かつては絵に描いたような御曹司だったが、その後実家は没落した。生まれつき自由奔放で、何事も気分次第。チャラついて見えるが、意外と裏ワザに詳しく、口を開けば名言の連発。口先の達人で、夢物語を語らせれば右に出る者なし。`,
         likes: [`ポーカー`, `ビリヤード`, `ゲーム`],
         quotes: [
@@ -242,7 +239,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: `3月9日`,
       },
       {
-        role: `フロントエンドエンジニア`,
+        role: `ジュニアフロントエンドエンジニア`,
         description: `横で結んだ緩く巻いたサイドポニーが特徴の、目立たない女の子。いつも細いフレームの眼鏡をかけている。物静かで内向的、口数は少なく、軽い人見知りもあるようだ。二流大学の出身であることに引け目を感じ、たいていの社交の場では居心地が悪い。仕事には極めて真面目で、文句一つ言わず黙々とこなす。細かい作業は丁寧だが、やや杓子定規なところも。コミュニケーションは苦手で、ひたすらコードを書くほうが性に合い、人より機械と向き合うほうが気楽だと思っている。`,
         likes: [`手帳をつける`, `書店めぐり`, `ドラマ鑑賞`],
         quotes: [
@@ -255,7 +252,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: `9月17日`,
       },
       {
-        role: `マーケティング企画`,
+        role: `マーケティングプランナー`,
         description: `明るくて少々毒舌な人気配信者。16歳でSNS発信を始め、のちに有名MCNにスカウトされた。「バズの法則」への嗅覚が鋭く、これまで数々のバズり短編動画を自ら生み出してきた。弁が立ち頭の回転も速く、人間心理を見抜くのが得意で、IPブランディングに長ける。現在は大人気SNSで「ナナ女王様」アカウントを運営し、自立した女性像を打ち出して数千万のフォロワーを獲得。お金への執着が強く、何かと「追加料金ね」が口癖。`,
         likes: [`ショッピング`, `バラエティ番組`, `食べ歩き`],
         quotes: [
@@ -294,7 +291,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: `1月9日`,
       },
       {
-        role: `花形スタートアップCEO`,
+        role: `ユニコーン企業の創業者兼CEO`,
         description: `AIスタートアップ「SYNTH♥」の創業者兼CEO。フォーブス「30 Under 30」に選ばれた俊英で、スタンフォード大学でコンピュータサイエンスとMBAの二つの学位、さらに人工知能のPhDを取得。驚異的な実行力とビジネス洞察力を併せ持つ。幼い頃からプログラミングに親しみ、学生時代にはインディー開発者として各地のオープンソース系ギークコミュニティで活躍し、大きな影響力を築いた。三度の連続起業をいずれも成功させ、かつては著名テック企業CloseAIに在籍し、大規模マルチモーダル学習プロジェクトにも携わった。`,
         likes: [`読書`, `財務分析`, `株式市場の研究`],
         quotes: [
@@ -323,12 +320,9 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     },
     galleryNote: `* All assets shown are in development and subject to change without notice.`,
     progressNotes: [
-      { date: '2026/01/20', text: `Launched the official website.` },
-      { date: '2026/02/28', text: `Released the OP movie.` },
-      { date: '2026/03/27', text: `Opened the Steam store page.` },
-      { date: '2026/03/27', text: `Opened the Steam store page.` },
-      { date: '2026/03/29', text: `Tuning the AI integration system!` },
-      { date: '2026/03/29', text: `Testing AI effects!` },
+      { date: '2026/07/11', text: `The official website is now live.` },
+      { date: '2026/07/12', text: `The first promotional video has been released.` },
+      { date: '2026/07/13', text: `The Steam store page is now live.` },
     ],
     spec: {
       title: `Spec`,
@@ -348,16 +342,16 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     staff: {
       title: `Staff`,
       items: [
-        { label: `Planning / Producer`, value: `星可` },
+        { label: `Planning / Production`, value: `StarQ Soft` },
         { label: `Publisher`, value: `Pairaki Games` },
-        { label: `Character Design`, value: `星可` },
-        { label: `Key Art CG / SD / Backgrounds`, value: `眞海` },
+        { label: `Scenario / Character Design`, value: `星可` },
+        { label: `Art CG / SD / Backgrounds`, value: `眞海` },
         { label: `Theme Song`, value: `"Startup!★Start!!" by Wedoso` },
         { label: `Music`, value: `Wedoso` },
-        { label: `CG`, value: `中乃・トミフミ et al.` },
-        { label: `Movie`, value: `眞海` },
+        { label: `Movie`, value: `星可` },
         { label: `Motion Effects`, value: `幽浮小花` },
-        { label: `Special Thanks`, value: `アキナ・ランドール` },
+        { label: `Additional Support`, value: `終焉 et al.` },
+        { label: `Special Thanks`, value: `小笠原` },
       ],
     },
     product: {
@@ -381,20 +375,20 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     },
     story: {
       title: `// STORY`,
-      subtitle: `An Adventure Begin Together!`,
+      subtitle: `"Let's start a company!"`,
       paragraphs: [
-        { segments: [{ t: `"Let's start a company!"`, em: 'span' }] },
+        { segments: [{ t: `An Adventure We Begin Together!`, em: 'span' }] },
         {
           segments: [
             {
-              t: `Fresh out of college with your job hunt going nowhere, your roommate talks you into it,\nand you stumble onto a path you'd never imagined...`,
+              t: `After graduating from college with no success in your job search, your roommate talks you into it,\nand you stumble onto a path you'd never imagined...`,
             },
           ],
         },
-        { segments: [{ t: `No experience, no resources, no salary——`, em: 'strong' }] },
+        { segments: [{ t: `No experience, no resources, no pay——`, em: 'strong' }] },
         {
           segments: [
-            { t: `All you have is a co-founder even less reliable than you,\nand an ` },
+            { t: `All you have is a group of co-founders even less reliable than you,\nand an ` },
             { t: `"AI Girlfriend Project"`, em: 'span' },
             { t: ` that doesn't even have a proper name yet.` },
           ],
@@ -420,7 +414,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     characters: [
       {
         role: `Fresh university graduate (job hunting now)`,
-        description: `The protagonist of this story. A computer science graduate of Ibaraki University, he was an excellent student known to everyone as the "Cum Laude". After graduation, however, as a result of the downturn economy, the brutal competition left him stucked in his rented room, sending out résumés online every day in search of a way forward. Earnest and steady, he stays calm under pressure—rational, dependable, and carrying a strong sense of responsibility toward everyone and everything around him.`,
+        description: `The protagonist of this story. A computer science graduate of Ibaraki University, he was an excellent student known to everyone as a model student. After graduation, however, amid an economic downturn and intensifying competition, repeated setbacks in the job market left him stuck in his rented room, sending out résumés online every day in search of a way forward. Earnest and steady, he stays calm under pressure. A rational, dependable person who is always carrying a strong sense of responsibility toward everyone and everything around him.`,
         likes: [`Programming`, `Photography`, `Model building`],
         quotes: [
           `I've got no clue where to start, but if I break the problem down piece by piece, there's always a solution.`,
@@ -432,8 +426,8 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: ``,
       },
       {
-        role: `Fresh university graduate (job hunting now)`,
-        description: `The protagonist's roommate and longtime buddy. A business management graduate of Ibaraki University who somehow has no business sense at all. He has a messy mop of silver-gray hair and perpetually half-asleep eyes. Once a textbook-perfect rich kid, his family later fell on hard times. Laid-back by nature, he acts purely on whim. Slacker though he seems, he's surprisingly well-versed in all sorts of shortcuts and schemes—open his mouth and the slick one-liners pour out. A silver-tongued talker, and a downright genius at selling pipe dreams.`,
+        role: `Fresh university graduate (shut-in)`,
+        description: `The protagonist's roommate and childhood buddy. As a fresh graduate of Ibaraki University with business management degree, however, he has no business sense at all. Always has a messy mop of silver-gray hair and perpetually half-asleep eyes. He was once a textbook-perfect rich kid, but his family later fell on hard times. Laid-back by nature, he acts purely on whim. Slacker though he seems, he's surprisingly well-versed in all sorts of shortcuts and schemes sometimes. He is a silver-tongued story-teller, and a downright genius at selling pipe dreams.`,
         likes: [`Poker`, `Billiards`, `Video games`],
         quotes: [
           `Bro, think BIG! You gotta open up your horizons! What does the investment world care about these days? Products? Wrong! It's emotional value!`,
@@ -445,8 +439,8 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: `December 4`,
       },
       {
-        role: `UI/UX Designer (intern)`,
-        description: `A second-year visual design student at Ibaraki University—shy by nature and prone to blushing for no reason. Far from flashy, she rarely says much, preferring to express her rich, delicate inner feelings through images. Gifted with an exceptional eye for aesthetics and a talent for drawing, she is sharply observant, masterful with color, devoted to beauty, and attentive to every detail. She has a knack for weaving the little joys of everyday life into her work, and her talent and potential in design never fail to impress.`,
+        role: `UI/UX Designer (Intern)`,
+        description: `A second-year visual design student at Ibaraki University. Somehow shy by nature and prone to blushing for no reason. She rarely says much, preferring to express her delicate inner feelings through arts. Gifted with an exceptional eye for aesthetics and a talent for drawing, she is sharply observant, masterful with color, devoted to beauty, and attentive to every detail. She is good at capturing the little joys of everyday life into her work, and her talent and potential in design never fail to impress people.`,
         likes: [`Visiting art exhibits`, `Crafting`, `Outdoor sketching`],
         quotes: [
           `I, um... I think... something's a little off here... Could I please fix it?`,
@@ -458,8 +452,8 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: `March 9`,
       },
       {
-        role: `Front-end Engineer`,
-        description: `An unassuming girl with a slightly wavy side ponytail, always wearing thin-rimmed glasses. Quiet and introverted, she doesn't talk much and seems to have mild social anxiety. Having graduated from a second-tier university, she lacks confidence and feels awkward in most social settings. She is extremely conscientious about her work—uncomplaining and meticulous, though somewhat by-the-book. Not great at communication, she's used to quietly burying herself in code, finding it far more comfortable to deal with machines than people.`,
+        role: `Junior Front-end Engineer`,
+        description: `A quiet girl with a slightly wavy side ponytail, always wearing thin-rimmed glasses. As an introvert, she doesn't talk much and seems to have mild social anxiety. Graduated from a second-tier university, she lacks confidence and feels awkward in most social settings. She is extremely conscientious about her work and used to quietly burying herself in code. Not very good at communication, she often finds it far more comfortable to deal with machines than people.`,
         likes: [`Journaling`, `Browsing bookstores`, `Binge-watching dramas`],
         quotes: [
           `Um... I've finished everything you asked for earlier... Is there anything else I can help with?`,
@@ -472,7 +466,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
       },
       {
         role: `Marketing Planner`,
-        description: `A lively, sharp-tongued influencer and livestreamer. She started creating content at 16 and was later scouted by a famous MCN agency. With a keen nose for what goes viral, she's personally churned out plenty of smash-hit short videos. Quick-witted and razor-sharp with words, she understands human nature inside out and excels at personal branding. She currently runs the "Queen Nana" account on a wildly popular social platform, cultivating an independent-woman persona and amassing tens of millions of followers. She has a fierce hunger for money, forever dropping the line "that's an extra cost."`,
+        description: `A lively, sharp-tongued influencer and livestreamer. She started creating content at the age of 16 and was later scouted by a famous MCN agency. With a keen nose for what goes viral, she's personally churned out plenty of smash-hit short videos. Quick-witted and razor-sharp with words, she understands human nature inside out and excels at personal branding. She currently runs the "Queen Nana" account on a wildly popular social platform, cultivating an independent-woman persona and has millions of followers. She has a fierce hunger for money, forever dropping the line "that's an extra cost".`,
         likes: [`Shopping`, `Variety shows`, `Foodie hopping`],
         quotes: [
           `Heh heh! Listen to me! These are the secrets to going viral—guaranteed to send you straight to the moon!`,
@@ -485,7 +479,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
       },
       {
         role: `Product Manager`,
-        description: `A mixed-heritage beauty who is one-quarter French—graceful in manner and gentle in speech, her soft voice puts everyone at ease. Unlike typical product managers, Natsumi carries a rare air, with her own distinctive understanding and ideals that come across as a touch idealistic in today's business climate. Deeply committed to user experience, she refuses to compromise just to make the numbers look good, and willingly spends ample time on market research, hoping to build products that users genuinely need and love.`,
+        description: `A multiracial beauty who is one-quarter French. Graceful in manner and gentle in speech, her soft voice puts everyone at ease. Unlike typical product managers, Natsumi carries a rare air, with her own distinctive understanding and ideals that come across as a touch idealistic in today's business climate. Deeply committed to user experience, she refuses to compromise just to make the numbers look good, and willingly spends ample time on market research, hoping to build products that users genuinely need and love.`,
         likes: [`Flower arranging`, `Ballet`, `Concerts`],
         quotes: [
           `I just want to make something gentle and worthwhile.`,
@@ -498,7 +492,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
       },
       {
         role: `Angel Investor`,
-        description: `Founder of the Woman Combination (WC) investment fund. Revered in venture-capital circles as the "Angel of Investment," nearly every project she backs delivers outsized returns, with a hit rate as high as 90%. Always clad in a purple velvet suit and a figure-hugging pencil skirt, the moment her heels touch the floor her presence fills the room. Shrewd and capable with a piercing gaze, she has a keen, original read on market trends and an uncannily precise eye for investment—famous for demolishing founders with razor-sharp questions.`,
+        description: `Founder of the Woman Combination (WC) investment fund. Revered in venture-capital circles as the "Angel of Investment", nearly every project she backs delivers outsized returns, with a hit rate as high as 90%. Always clad in a purple velvet suit and a pencil skirt, her presence fills the room at the moment her heels touch the floor. She has a keen, original read on market trends and an uncannily precise eye for investment—famous for demolishing founders with sharp questions.`,
         likes: [`Skiing`, `Wine tasting`, `Antique collecting`],
         quotes: [
           `I'm not investing in your current product—I'm investing in you, and in your future.`,
@@ -510,8 +504,8 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: `January 9`,
       },
       {
-        role: `Star Startup CEO`,
-        description: `Founder and CEO of the AI startup "SYNTH♥," a Forbes 30 Under 30 honoree with dual degrees in Computer Science and an MBA from Spamfold, plus a PhD in artificial intelligence. He boasts astonishing execution and business insight. Coding since childhood, he was active as an indie developer across major open-source geek communities back in his school days, building considerable influence. He has launched three successful startups in a row and once worked at the renowned tech company CloseAI, taking part in large-scale multimodal training projects.`,
+        role: `Founder and CEO of a Unicorn Startup`,
+        description: `Founder and CEO of the AI startup SYNTH♥, a Forbes 30 Under 30 honoree with dual degrees in Computer Science and an MBA from Spamfold, plus a PhD in artificial intelligence. He boasts astonishing execution and business insight. Coding since childhood, he was active as an indie developer across major open-source geek communities back in his school days, building considerable influence. He has launched three successful startups in a row and once worked at the renowned tech company CloseAI, taking part in large-scale multimodal training projects.`,
         likes: [`Reading`, `Analyzing financial reports`, `Studying the stock market`],
         quotes: [
           `Human emotion is, at its core, a kind of pattern chaos—but patterns can be modeled.`,
@@ -528,9 +522,9 @@ export const lscContent: Record<LanguageCode, LscContent> = {
   'zh-cn': {
     nav: {
       char: `登场角色`,
-      pv: `影片`,
+      pv: `PV影片`,
       gallery: `画廊`,
-      progress: `最新开发进度`,
+      progress: `最新进展`,
       product: `产品信息`,
     },
     pv: {
@@ -539,12 +533,12 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     },
     galleryNote: `※所有素材均为开发中内容，可能在不另行通知的情况下发生变更。`,
     progressNotes: [
-      { date: '2026/01/20', text: `官方网站正式上线。` },
-      { date: '2026/02/28', text: `OP影片公开。` },
-      { date: '2026/03/27', text: `Steam商店页面已上线。` },
-      { date: '2026/03/27', text: `Steam商店页面已上线。` },
-      { date: '2026/03/29', text: `AI联动系统调试中！` },
-      { date: '2026/03/29', text: `AI特效测试中！` },
+      { date: '2026/07/11', text: `官方网站正式上线。` },
+      { date: '2026/07/12', text: `首曝PV影片公开。` },
+      { date: '2026/07/13', text: `Steam商店页面已上线。` },
+      // { date: '2026/07/15', text: `Steam商店页面已上线。` },
+      // { date: '2026/03/29', text: `AI联动系统调试中！` },
+      // { date: '2026/03/29', text: `AI特效测试中！` },
     ],
     spec: {
       title: `规格`,
@@ -564,16 +558,16 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     staff: {
       title: `制作人员`,
       items: [
-        { label: `企划／制作人`, value: `星可` },
+        { label: `企划／制作`, value: `StarQ Soft` },
         { label: `发行`, value: `Pairaki Games` },
-        { label: `角色设计`, value: `星可` },
+        { label: `剧本／角色设计`, value: `星可` },
         { label: `原画CG／SD／背景`, value: `眞海` },
         { label: `主题曲`, value: `「Startup!★Start!!」by Wedoso` },
         { label: `音乐`, value: `Wedoso` },
-        { label: `CG`, value: `中乃・トミフミ 等` },
-        { label: `影片`, value: `眞海` },
+        { label: `影片`, value: `星可` },
         { label: `动效`, value: `幽浮小花` },
-        { label: `特别鸣谢`, value: `アキナ・ランドール` },
+        { label: `协力`, value: `终焉 等` },
+        { label: `特别鸣谢`, value: `小笠原` },
       ],
     },
     product: {
@@ -597,9 +591,9 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     },
     story: {
       title: `// STORY`,
-      subtitle: `共同开启的冒险！`,
+      subtitle: `「我们一起创业吧！」`,
       paragraphs: [
-        { segments: [{ t: `「我们一起创业吧！」`, em: 'span' }] },
+        { segments: [{ t: `共同开启的冒险！`, em: 'span' }] },
         {
           segments: [
             {
@@ -610,7 +604,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         { segments: [{ t: `零经验、零资源、零薪资——`, em: 'strong' }] },
         {
           segments: [
-            { t: `唯一拥有的，是一个比你还不靠谱的合伙人，\n以及一款连名字都没取好的` },
+            { t: `唯一拥有的，是一群比你还不靠谱的合伙人，\n以及一款连名字都没取好的` },
             { t: `「AI女友计划」`, em: 'span' },
             { t: `。` },
           ],
@@ -636,7 +630,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     },
     characters: [
       {
-        role: `大学应届毕业生（待业中）`,
+        role: `大学应届毕业生（求职中）`,
         description: `本作主人公。茨木大学计算机系本科毕业，学生时代成绩优异，是众人眼中的「优等生」。毕业后却在经济下行和内卷加剧等多重打击下，求职路上接连碰壁，只能成为一名「社畜候补」，暂时宅在出租屋中每天在网上投递简历寻找未来的出路。为人认真踏实，遇事冷静，理性可靠，对周围的人和事都拥有着强烈的责任感。`,
         likes: [`编程`, `摄影`, `模型组装`],
         quotes: [
@@ -649,7 +643,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: ``,
       },
       {
-        role: `大学应届毕业生（待业中）`,
+        role: `大学应届毕业生（家里蹲）`,
         description: `与男主的合租室友兼多年玩伴。茨木大学工商管理系本科毕业，却没什么商业常识。拥有一头乱糟糟的银白色灰发和总是睡不醒的眼神。曾经是个教科书级的富二代，后来家道中落。天性散漫，做事全凭一时兴起。虽然有点吊儿郎当，却意外了解不少旁门左道，一开口就是金句频出，擅长嘴皮子功夫，堪称画饼届鬼才。`,
         likes: [`玩德扑`, `打台球`, `电子游戏`],
         quotes: [
@@ -663,7 +657,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
       },
       {
         role: `UI/UX设计师（实习生）`,
-        description: `茨木大学视觉设计系大二在校生，生性害羞，莫名地容易脸红。性格并不张扬，平时话不多，更喜欢用图像表达内心丰富细腻的情感。拥有过人的审美直觉和绘画天赋，观察力敏锐，对色彩把控力极强，执着于美感，注重每一个细节。擅长把生活中的点滴美好都融入到创作中，在设计方面的天赋和潜力总是令人刮目相看。`,
+        description: `茨木大学视觉设计系大二在校生，生性害羞，莫名地容易脸红。性格并不张扬，平时话不多，更喜欢用艺术表达内心丰富细腻的情感。拥有过人的审美直觉和绘画天赋，观察力敏锐，对色彩把控力极强，执着于美感，注重每一个细节。擅长把生活中的点滴美好都融入到创作中，在设计方面的天赋和潜力总是令人刮目相看。`,
         likes: [`逛画展`, `做手工`, `户外写生`],
         quotes: [
           `我、我觉得……这里有点怪的……可以让我修改一下吗？`,
@@ -675,8 +669,8 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: `3月9日`,
       },
       {
-        role: `前端工程师`,
-        description: `侧面扎着微卷单马尾的不起眼女生，总是戴着一副细框眼镜。安静内向，不爱说话，似乎有点轻微社恐，因毕业于二流大学而不太自信，对大多数社交场合感到局促。对待工作极其认真，任劳任怨，做事细心但有些墨守成规。不太擅长沟通，习惯埋头默默写代码，认为还是跟机器打交道更轻松自在。`,
+        role: `初级前端工程师`,
+        description: `侧面扎着微卷单马尾的不起眼女生，总是戴着一副细框眼镜。安静内向，不爱说话，似乎有点轻微社恐，毕业于二流大学而不太自信，对大多数社交场合感到局促。对待工作极其认真，任劳任怨，做事细心但有些墨守成规。不太擅长沟通，习惯埋头默默写代码，认为还是跟机器打交道更轻松自在。`,
         likes: [`记手账`, `逛书店`, `追电视剧`],
         quotes: [
           `那个……之前交代的事情都做好了……还有什么需要帮忙的吗？`,
@@ -702,7 +696,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
       },
       {
         role: `产品经理`,
-        description: `拥有四分之一法国血统的混血美人，举止优雅，言辞温和，说话总是轻声细语让人如沐春风。有着与一般产品经理不同的罕见气质，有自己独特的理解和追求，在当今这种商业背景下显得有点理想主义。非常注重用户体验，不想为了数据美观而妥协，愿意花大量时间进行市场调研，希望打造用户真正需要且喜爱的产品。`,
+        description: `拥有四分之一法国血统的混血美人，举止优雅，言辞温和，说话总是轻声细语让人如沐春风。有着与众不同的罕见气质，对事物有自己独特的理解和追求，在当今这种商业背景下显得有点理想主义。非常注重用户体验，不想为了数据美观而妥协，愿意花大量时间进行市场调研，希望打造用户真正需要且喜爱的产品。`,
         likes: [`插花`, `芭蕾舞`, `听音乐会`],
         quotes: [
           `我只是想做一些温柔而有价值的东西。`,
@@ -727,7 +721,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: `1月9日`,
       },
       {
-        role: `明星创业公司CEO`,
+        role: `独角兽创业公司创始人兼CEO`,
         description: `AI创业公司「SYNTH♥」创始人兼CEO，狐布斯30 under 30精英，思班佛大学计算机科学和MBA双学位以及人工智能PhD，拥有惊人的执行力和商业洞见。从小接触编程，中学时代便以独立开发者的身份活跃在各大开源极客社区并积累了大量影响力，连续三次创业都颇有成绩，曾在知名科技公司CloseAI工作，参与过大型多模态训练项目。`,
         likes: [`阅读`, `财报分析`, `股市研究`],
         quotes: [
@@ -756,12 +750,9 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     },
     galleryNote: `※所有素材均為開發中內容，可能在不另行通知的情況下發生變更。`,
     progressNotes: [
-      { date: '2026/01/20', text: `官方網站正式上線。` },
-      { date: '2026/02/28', text: `OP影片公開。` },
-      { date: '2026/03/27', text: `Steam商店頁面已上線。` },
-      { date: '2026/03/27', text: `Steam商店頁面已上線。` },
-      { date: '2026/03/29', text: `AI聯動系統調試中！` },
-      { date: '2026/03/29', text: `AI特效測試中！` },
+      { date: '2026/07/11', text: `官方網站正式上線。` },
+      { date: '2026/07/12', text: `首支PV影片公開。` },
+      { date: '2026/07/13', text: `Steam商店頁面已上線。` },
     ],
     spec: {
       title: `規格`,
@@ -781,16 +772,16 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     staff: {
       title: `製作人員`,
       items: [
-        { label: `企劃／製作人`, value: `星可` },
+        { label: `企劃／製作`, value: `StarQ Soft` },
         { label: `發行`, value: `Pairaki Games` },
-        { label: `角色設計`, value: `星可` },
+        { label: `劇本／角色設計`, value: `星可` },
         { label: `原畫CG／SD／背景`, value: `眞海` },
         { label: `主題曲`, value: `「Startup!★Start!!」by Wedoso` },
         { label: `音樂`, value: `Wedoso` },
-        { label: `CG`, value: `中乃・トミフミ 等` },
-        { label: `影片`, value: `眞海` },
+        { label: `影片`, value: `星可` },
         { label: `動效`, value: `幽浮小花` },
-        { label: `特別鳴謝`, value: `アキナ・ランドール` },
+        { label: `協力`, value: `終焉 等` },
+        { label: `特別鳴謝`, value: `小笠原` },
       ],
     },
     product: {
@@ -814,9 +805,9 @@ export const lscContent: Record<LanguageCode, LscContent> = {
     },
     story: {
       title: `// STORY`,
-      subtitle: `共同開啟的冒險！`,
+      subtitle: `「我們一起創業吧！」`,
       paragraphs: [
-        { segments: [{ t: `「我們一起創業吧！」`, em: 'span' }] },
+        { segments: [{ t: `共同開啟的冒險！`, em: 'span' }] },
         {
           segments: [
             {
@@ -827,7 +818,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         { segments: [{ t: `零經驗、零資源、零薪資——`, em: 'strong' }] },
         {
           segments: [
-            { t: `唯一擁有的，是一個比你還不靠譜的合夥人，\n以及一款連名字都沒取好的` },
+            { t: `唯一擁有的，是一群比你還不靠譜的合夥人，\n以及一款連名字都沒取好的` },
             { t: `「AI女友計畫」`, em: 'span' },
             { t: `。` },
           ],
@@ -866,7 +857,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: ``,
       },
       {
-        role: `大學應屆畢業生（待業中）`,
+        role: `大學應屆畢業生（家裡蹲）`,
         description: `與男主的合租室友兼多年玩伴。茨木大學工商管理系本科畢業，卻沒什麼商業常識。擁有一頭亂糟糟的銀白色灰髮和總是睡不醒的眼神。曾經是個教科書級的富二代，後來家道中落。天性散漫，做事全憑一時興起。雖然有點吊兒郎當，卻意外了解不少旁門左道，一開口就是金句頻出，擅長嘴皮子功夫，堪稱畫餅界鬼才。`,
         likes: [`玩德州撲克`, `打撞球`, `電子遊戲`],
         quotes: [
@@ -892,7 +883,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: `3月9日`,
       },
       {
-        role: `前端工程師`,
+        role: `初級前端工程師`,
         description: `側面紮著微捲單馬尾的不起眼女生，總是戴著一副細框眼鏡。安靜內向，不愛說話，似乎有點輕微社恐，因畢業於二流大學而不太自信，對大多數社交場合感到侷促。對待工作極其認真，任勞任怨，做事細心但有些墨守成規。不太擅長溝通，習慣埋頭默默寫程式，認為還是跟機器打交道更輕鬆自在。`,
         likes: [`記手帳`, `逛書店`, `追電視劇`],
         quotes: [
@@ -944,7 +935,7 @@ export const lscContent: Record<LanguageCode, LscContent> = {
         birthday: `1月9日`,
       },
       {
-        role: `明星創業公司CEO`,
+        role: `獨角獸新創公司創辦人兼CEO`,
         description: `AI創業公司「SYNTH♥」創始人兼CEO，狐布斯30 under 30精英，思班佛大學電腦科學和MBA雙學位以及人工智慧PhD，擁有驚人的執行力和商業洞見。從小接觸程式設計，中學時代便以獨立開發者的身份活躍在各大開源極客社區並累積了大量影響力，連續三次創業都頗有成績，曾在知名科技公司CloseAI工作，參與過大型多模態訓練專案。`,
         likes: [`閱讀`, `財報分析`, `股市研究`],
         quotes: [

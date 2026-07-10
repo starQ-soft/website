@@ -178,7 +178,7 @@ const Section = styled.section`
 
 
 const PvContainer = styled.div`
-  width: 100%;
+  min-width: 60rem;
   max-width: 80rem;
   aspect-ratio: 16 / 9;
   background-color: black;
@@ -460,13 +460,12 @@ const Footer = styled.footer`
 
 const LangSwitcherContainer = styled.div`
   z-index: 50;
-  width: 8rem;
+  width: 7rem;
 `;
 
 const NavRight = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
 `;
 
 const SectionContent = styled.div`
@@ -476,8 +475,10 @@ const SectionContent = styled.div`
 
 const ScreenshotsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  justify-content: center;
+  gap: 1.5rem;
   margin-top: 3rem;
   
   @media (max-width: 768px) {
@@ -490,6 +491,7 @@ const Screenshot = styled.div`
   box-shadow: 0 5px 5px rgba(119, 105, 110, 0.3);
   transition: transform 0.3s ease;
   cursor: pointer;
+  min-width: 500px;
 
   &:hover {
     transform: scale(1.02);
@@ -505,8 +507,6 @@ const ScreenshotImage = styled.img`
 const MotionScreenshotsContainer = motion.create(ScreenshotsContainer);
 const MotionScreenshot = motion.create(Screenshot);
 
-// Hold the screenshots until the "// Gallery" title finishes typing
-// (~0.8s), then reveal them one after another.
 const galleryReveal = {
   hidden: {},
   visible: { transition: { delayChildren: 1, staggerChildren: 0.15 } },
@@ -613,9 +613,9 @@ const ModalOverlay = styled.div`
 `;
 
 const screenshots = [
-  { src: 'cg_thumbnail_1.png', alt: 'LSC-Forest Scene' },
-  { src: 'cg_thumbnail_2.png', alt: 'LSC-Battle Scene' },
-  { src: 'cg_thumbnail_3.png', alt: 'LSC-Castle' },
+  // { src: 'cg_thumbnail_1.png', alt: 'LSC-Forest Scene' },
+  // { src: 'cg_thumbnail_2.png', alt: 'LSC-Battle Scene' },
+  // { src: 'cg_thumbnail_3.png', alt: 'LSC-Castle' },
   { src: 'cg_thumbnail_4.png', alt: 'LSC-Dragon' },
   { src: 'cg_thumbnail_5.png', alt: 'LSC-Village' },
   { src: 'cg_thumbnail_6.png', alt: 'LSC-Magic Spell' },
@@ -702,7 +702,7 @@ const Lsc = () => {
   const [selectedPvIndex, setSelectedPvIndex] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const t = lscContent[lang] ?? lscContent['ja-jp'];
+  const t = lscContent[lang] ?? lscContent['zh-cn']!;
   const selectedPv = pv_data[selectedPvIndex];
 
   const navSections = [
@@ -809,7 +809,7 @@ const Lsc = () => {
 
       <CherryBlossomBackground petalCount={80} />
       <TransparentBanner
-        images={["/lsc-haruka.png", "/lsc-rin.png", "/lsc-natsumi.png", "/shizuka.gif", "/nana.gif",]}
+        images={["haruka.gif", "/rin.gif", "/lsc-natsumi.png", "/shizuka.gif", "/nana.gif",]}
       />
       <ContentWrapper>
         <LoveCofounder />
@@ -857,7 +857,7 @@ const Lsc = () => {
                     style={{ width: '100%', height: '100%', border: 0 }}
                   />
                 </PvContainer>
-                <br />
+                {/* <br />
                 <SectionSubtitle>{t.pv.charMovie}</SectionSubtitle>
                 <PvContainer>
                   <iframe
@@ -889,7 +889,7 @@ const Lsc = () => {
                       <span style={{ fontSize: '0.875rem', fontWeight: 600, color: '#5c3a21' }}>{pv.title}</span>
                     </div>
                   ))}
-                </IntroBox>
+                </IntroBox> */}
               </motion.div>
             </motion.div>
           </Section>

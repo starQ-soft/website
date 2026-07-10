@@ -96,7 +96,7 @@ export const DropdownMenu = styled.div`
   background: white;
   border: 1px solid #e5e7eb;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  width: 7rem;
+  width: 7.7rem;
   z-index: 50;
   overflow: hidden;
 `;
@@ -220,7 +220,7 @@ export const ScrollableContainer = styled.section`
   max-height: 500px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 1rem 3rem;
+  padding: 0 3rem;
   border: 1px solid #eee;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.85);
@@ -461,6 +461,7 @@ export const AboutBox = styled.div`
 `;
 
 export const FormContainer = styled.form`
+  width: 100%;
   max-width: 50vw;
   margin: 0 auto;
   padding: 3rem 5rem;
@@ -469,6 +470,15 @@ export const FormContainer = styled.form`
   backdrop-filter: blur(4px);
   border-radius: 8px;
   font-family: sans-serif;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  @media (max-width: 420px) {
+    padding: 1.5rem 0.75rem;
+  }
 `;
 
 export const Title = styled.h2`
@@ -485,10 +495,16 @@ export const Row = styled.div`
   display: flex;
   gap: 16px;
   margin-bottom: 16px;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
 `;
 
 export const Input = styled.input`
   flex: 1;
+  min-width: 0;
+  width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -515,11 +531,16 @@ export const CheckboxContainer = styled.label`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 4px;
   font-size: 12px;
   margin: 1rem 0;
+  text-align: center;
+  line-height: 1.5;
 
   input {
     margin-right: 8px;
+    flex: 0 0 auto;
   }
 
   a {
@@ -540,6 +561,10 @@ export const SubmitButton = styled.button`
   margin: 1rem auto;
   &:hover {
     background-color: #ff7099;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
   }
 `;
 

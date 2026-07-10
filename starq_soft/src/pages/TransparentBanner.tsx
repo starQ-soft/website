@@ -17,19 +17,25 @@ const BannerContainer = styled.section`
   align-items: center;
   justify-content: center;
   background: transparent;
-  overflow: hidden;
+//   overflow: hidden;
   z-index: 0;
 `;
 
-const LayeredImage = styled.img<{ $delay: number }>`
+const getLayerSize = ($isHaruka: boolean, $isNana: boolean) => {
+  if ($isHaruka) return '85%';
+  if ($isNana) return '90%';
+  return '100%';
+};
+
+const LayeredImage = styled.img<{ $delay: number; $isHaruka: boolean; $isNana: boolean }>`
   position: absolute;
-  bottom: 0;
-  left: 50%;
+  left: ${({ $isHaruka }) => ($isHaruka ? '38%' : '50%')};
+  top: ${({ $isNana, $isHaruka }) => ($isNana ? '-2%' : $isHaruka ? '8%' : '0%')};
   transform: translateX(-50%);
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 1;
+  width: ${({ $isHaruka, $isNana }) => getLayerSize($isHaruka, $isNana)};
+  height: ${({ $isHaruka, $isNana }) => getLayerSize($isHaruka, $isNana).replace('%', 'vh')};
+  object-fit: ${({ $isHaruka, $isNana }) => ($isHaruka || $isNana ? 'contain' : 'cover')};
+  z-index: ${({ $isNana }) => ($isNana ? '-1' : '1')};
   pointer-events: none;
   opacity: 0;
   animation: ${riseIn} 2s ease-out forwards;
@@ -51,6 +57,8 @@ const TransparentBanner: React.FC<TransparentBannerProps> = ({
                     src={src}
                     alt={`Banner layer ${i + 1}`}
                     $delay={i * 0.6}
+                    $isHaruka={src.endsWith('haruka.gif')}
+                    $isNana={src.endsWith('nana.gif')}
                 />
             ))}
         </BannerContainer>

@@ -13,7 +13,7 @@ const avatars: any[] = ["me-1.png", "haijin.png", "tani.png", "hayashi.png", "na
 // lscContent.ts and is merged in by index at render time.
 const characters: any[] = [
   {
-    name: { japanese: ["石", "夜"], read: ["いし", "よ"], english: "Ishi Yo" },
+    name: { japanese: ["石", "夜"], read: ["いし", "よる"], english: "Yoru Ishi" },
     image: "me-1.png",
     age: "24",
     height: "178cm",
@@ -33,7 +33,7 @@ const characters: any[] = [
     sampleVoices: ["CV/haijin-1.m4a", "CV/haijin-2.m4a", "CV/haijin-3.m4a"],
   },
   {
-    name: { japanese: ["谷", "遥"], read: ["たに", "はるか"], english: "Tani Haruka" },
+    name: { japanese: ["谷", "遥"], read: ["たに", "はるか"], english: "Haruka Tani" },
     image: "tani.png",
     age: "20",
     height: "158cm",
@@ -43,7 +43,7 @@ const characters: any[] = [
     sampleVoices: ["CV/tani-1.mp3", "CV/tani-2.mp3", "CV/tani-3.mp3"],
   },
   {
-    name: { japanese: ["林", "静"], read: ["はやし", "しずか"], english: "Hayashi Shizuka" },
+    name: { japanese: ["林", "静花"], read: ["はやし", "しずか"], english: "Shizuka Hayashi" },
     image: "hayashi.png",
     age: "24",
     height: "162cm",
@@ -53,7 +53,7 @@ const characters: any[] = [
     sampleVoices: ["CV/hayashi-1.mp3", "CV/hayashi-2.mp3", "CV/hayashi-3.mp3"],
   },
   {
-    name: { japanese: ["原", "奈奈"], read: ["はら", "なな"], english: "Hara Nana" },
+    name: { japanese: ["原", "奈奈"], read: ["はら", "なな"], english: "Nana Hara" },
     image: "nana.png",
     age: "21",
     height: "160cm",
@@ -63,7 +63,7 @@ const characters: any[] = [
     sampleVoices: ["CV/nana-1.mp3", "CV/nana-2.mp3", "CV/nana-3.mp3"],
   },
   {
-    name: { japanese: ["夏", "未"], read: ["なつ", "み"], english: "Natsu Mi" },
+    name: { japanese: ["夏未", "ブラン"], read: ["なつみ", "ぶらん"], english: "Natsumi　Blanc" },
     image: "natsumi.png",
     age: "25",
     height: "165cm",
@@ -73,7 +73,7 @@ const characters: any[] = [
     sampleVoices: ["CV/natsumi-1.m4a", "CV/natsumi-2.m4a", "CV/natsumi-3.m4a"],
   },
   {
-    name: { japanese: ["森", "鈴"], read: ["もり", "りん"], english: "Mori Rin" },
+    name: { japanese: ["森", "鈴"], read: ["もり", "りん"], english: "Rin Mori" },
     image: "rin.png",
     age: "30",
     height: "173cm",
@@ -83,7 +83,7 @@ const characters: any[] = [
     sampleVoices: ["CV/rin-1.mp3", "CV/rin-2.mp3", "CV/rin-3.mp3"],
   },
   {
-    name: { japanese: ["高", "樹"], read: ["たか", "ぎ"], english: "Taka gi" },
+    name: { japanese: ["高樹", "凌"], read: ["たかぎ", "りょう"], english: "Ryou Takagi" },
     image: "takagi.png",
     age: "28",
     height: "181cm",
@@ -96,7 +96,7 @@ const characters: any[] = [
 
 export const LoveCofounderCharacter: React.FC = () => {
   const { lang } = useLanguage();
-  const t = lscContent[lang] ?? lscContent['ja-jp'];
+  const t = lscContent[lang] ?? lscContent['zh-cn']!;
   const labels = t.charLabels;
   const [selectedCharacter, setSelectedCharacter] = useState(0);
 

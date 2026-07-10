@@ -39,18 +39,18 @@
     },
     "faq": {
       "faqTitle": "私たちについて",
-      "faqText": "StarQ Softは、2026年に米国カリフォルニア州マウンテンビューで設立された、グローバルな視野を持つインディーゲームブランドです。深い物語性と多次元的なインタラクションを備えたゲーム体験の創造に注力し、プレイヤーに忘れられない物語と人生体験をお届けすることを目指しています。"
+      "faqText": "StarQ Softは、2026年に設立された、グローバルな視野を持つインディーゲームブランドです。深い物語性と多面的なインタラクションを兼ね備えたゲーム体験の創造に注力し、プレイヤーに忘れられない物語と人生体験を届けることを目指しています。"
     },
     "about": {
       "aboutTitle": "著作権について",
-      "aboutText": "当社製品を題材とした派生作品・二次創作物については、「個人」または「同人サークル等の趣味の範疇の団体」が非営利で制作・頒布する場合、表現を行う媒体を問わず一切制限を設けておりません。ただし、頒布物には必ず当社の著作権表示を記載してください。許諾なく派生作品を販売することは禁止します。"
+      "aboutText": "当社製品を題材とした派生作品・二次創作については、「個人」または「同人サークルなどの趣味団体」が非営利目的で制作・公開または頒布する場合、表現媒体を問わず制限を設けません。ただし、公開・頒布する素材には必ず当社の著作権表示を明記してください。許可なく派生作品を販売することは禁止します。"
     },
     "contact": {
       "contactTitle": "お問い合わせ",
-      "contactText": "あらゆる種類の協力や交流の機会を歓迎します。ビジネスパートナーシップ、メディアインタビューやコンテンツプロモーションなど、志を同じくするパートナーとのつながりを楽しみにしています。ご感想ご要望などお気軽にお送りください。以下の方法でお気軽にお問い合わせください。できるだけ早くご返信いたします。",
+      "contactText": "当社は、さまざまな協力や交流の機会を歓迎しています。ビジネス提携、メディア取材、コンテンツプロモーションなどを通じて、志を同じくする皆様とつながれることを楽しみにしています。ご意見やご要望も随時お寄せください。以下の方法でお問い合わせいただければ、できるだけ早くご返信します。",
       "title": "メッセージを送る",
       "subtitle": "以下のフォームにご記入のうえ、お問い合わせください。",
-      "name": "名前",
+      "name": "お名前",
       "email": "メールアドレス",
       "message": "メッセージ",
       "agreePrefix": "私は",
@@ -65,7 +65,7 @@
       "error": "送信中にエラーが発生しました。もう一度お試しください。"
     },
     "footer": {
-      "followUs": "フォローする！",
+      "followUs": "より多くの関連情報を入手するため、公式コミュニティをぜひフォローしてください！",
       "links": [
         "会社概要",
         "プライバシーポリシー",
@@ -95,7 +95,7 @@
     "product": {
       "titleHighlight": "P",
       "titleRest": "roduct",
-      "subTitle": "Our Works",
+      "subTitle": "Our Games",
       "btn": "View Product Page",
       "banners": [
         {
@@ -114,21 +114,21 @@
     },
     "faq": {
       "faqTitle": "About Us",
-      "faqText": "StarQ Soft is an independent game brand with a global vision, founded in 2026 in Mountain View, California. We focus on crafting gaming experiences with profound storytelling and multidimensional interaction, dedicated to bringing players unforgettable stories and life experiences."
+      "faqText": "Founded in 2026, StarQ Soft is an independent game brand with a global vision. We focus on creating game experiences that combine profound storytelling with multidimensional interaction, with the goal of bringing players unforgettable stories and life experiences."
     },
     "about": {
       "aboutTitle": "Copyright",
-      "aboutText": "For derivative works and fan creations based on any of our products, we place no restrictions on the medium of expression, as long as they are created and distributed non-commercially by \"individuals\" or \"hobbyist groups such as doujin circles.\" However, please be sure to include our copyright notice in any distributed materials. Selling any derivative work without authorization is prohibited."
+      "aboutText": "We place no restrictions on the medium used for derivative works or fan creations based on our products, provided they are created and shared for non-commercial purposes by individuals or hobby groups such as doujin circles. However, all published or distributed materials must include our copyright notice. The sale of any derivative work without prior authorization is prohibited."
     },
     "contact": {
       "contactTitle": "Contact Us",
-      "contactText": "We welcome all kinds of collaboration and communication opportunities. Whether it's business partnerships, media interviews or content promotion, we look forward to connecting with like-minded partners. We welcome your feedback or requests as well! Please reach out to us through the following methods, and we will respond as soon as possible.",
+      "contactText": "We welcome all kinds of opportunities for collaboration and communication. Whether you are interested in a business partnership, media interview, or content promotion, we look forward to connecting with like-minded partners. Feedback and suggestions are also welcome at any time. Please contact us using the methods below, and we will respond as soon as possible.",
       "title": "Send Us a Message",
       "subtitle": "Please fill in the form below to get in touch with us.",
-      "name": "Your name",
+      "name": "Name",
       "email": "Email address",
       "message": "Message",
-      "agreePrefix": "I've read and agree with",
+      "agreePrefix": "I have read and agree to the",
       "terms": "Terms of Service",
       "and": "and",
       "privacy": "Privacy Policy",
@@ -140,7 +140,7 @@
       "error": "Error submitting form. Please try again."
     },
     "footer": {
-      "followUs": "Follow Us!",
+      "followUs": "Follow our official communities for more information and updates!",
       "links": [
         "Company Profile",
         "Privacy Policy",
@@ -189,18 +189,18 @@
     },
     "faq": {
       "faqTitle": "关于我们",
-      "faqText": "StarQ Soft是一家2026年在美国加州山景城创立具有全球视野的的独立游戏品牌，专注于打造具有深刻叙事和多维交互的游戏体验，致力于为玩家带来难忘的故事与人生体验。"
+      "faqText": "StarQ Soft是一家创立于2026年、具有全球视野的独立游戏品牌。我们专注于打造兼具深刻叙事与多维交互的游戏体验，致力于为玩家带来难忘的故事与人生体验。"
     },
     "about": {
-      "aboutTitle": "著作权相关",
-      "aboutText": "本司所有产品的衍生作品及二次创作，只要是由“个人”或“同人社团等兴趣团体”非商业创作和传播，对表达媒介没有任何限制，但请务必在分发材料中包含本司的版权声明信息。禁止在未经授权的情况下自行销售任何衍生作品。"
+      "aboutTitle": "关于著作权",
+      "aboutText": "对于以本公司产品为题材的衍生作品及二次创作，只要由“个人”或“同人社团等兴趣团体”以非商业目的创作和传播，我们不对表达媒介作任何限制。但请务必在发布或分发的材料中标注本公司的版权信息。未经授权，禁止销售任何衍生作品。"
     },
     "contact": {
       "contactTitle": "联系我们",
-      "contactText": "欢迎各类合作与交流机会！无论是业务合作、媒体采访或内容推广，我们都期待与志同道合的伙伴建立联系。也欢迎随时向我们发送您的意见和建议，请通过以下方式与我们沟通，我们将尽快回复。",
+      "contactText": "我们欢迎各类合作与交流机会。无论是商务合作、媒体采访还是内容推广，都期待与志同道合的伙伴建立联系。也欢迎随时向我们提出意见和建议。请通过以下方式联系我们，我们将尽快回复。",
       "title": "给我们留言",
       "subtitle": "请填写下面的表单与我们取得联系。",
-      "name": "名字",
+      "name": "姓名",
       "email": "邮箱地址",
       "message": "留言内容",
       "agreePrefix": "我已阅读并同意",
@@ -215,13 +215,13 @@
       "error": "提交时发生错误，请稍后重试。"
     },
     "footer": {
-      "followUs": "关注我们！",
+      "followUs": "请关注我们的官方社区以获取更多相关情报！",
       "links": [
         "公司简介",
         "隐私政策",
         "联系我们"
       ],
-      "copyright": "© 2026 StarQ Soft LLC. 版权所有 侵权必究。"
+      "copyright": "© 2026 StarQ Soft LLC. 版权所有。"
     }
   },
   "zh-tw": {
@@ -264,18 +264,18 @@
     },
     "faq": {
       "faqTitle": "關於我們",
-      "faqText": "StarQ Soft是一家2026年在美國加州山景城創立、具有全球視野的獨立遊戲品牌，專注於打造具有深刻敘事和多維互動的遊戲體驗，致力於為玩家帶來難忘的故事與人生體驗。"
+      "faqText": "StarQ Soft 是一家創立於2026年、具有全球視野的獨立遊戲品牌。我們專注於打造兼具深刻敘事與多維互動的遊戲體驗，致力於為玩家帶來難忘的故事與人生體驗。"
     },
     "about": {
-      "aboutTitle": "著作權相關",
-      "aboutText": "本司所有產品的衍生作品及二次創作，只要是由「個人」或「同人社團等興趣團體」非商業創作和傳播，對表達媒介沒有任何限制，但請務必在分發材料中包含本司的版權聲明資訊。禁止在未經授權的情況下自行銷售任何衍生作品。"
+      "aboutTitle": "關於著作權",
+      "aboutText": "對於以本公司產品為題材的衍生作品及二次創作，只要由「個人」或「同人社團等興趣團體」以非商業目的創作與傳播，我們不對表達媒介作任何限制。但請務必在發布或分發的材料中標註本公司的版權資訊。未經授權，禁止銷售任何衍生作品。"
     },
     "contact": {
       "contactTitle": "聯絡我們",
-      "contactText": "歡迎各類合作與交流機會！無論是業務合作、媒體採訪或內容推廣，我們都期待與志同道合的夥伴建立聯繫。也歡迎隨時向我們發送您的意見和建議，請透過以下方式與我們溝通，我們將盡快回覆。",
+      "contactText": "我們歡迎各類合作與交流機會。無論是商務合作、媒體採訪還是內容推廣，都期待與志同道合的夥伴建立聯繫。也歡迎隨時向我們提出意見與建議。請透過以下方式聯絡我們，我們將盡快回覆。",
       "title": "給我們留言",
       "subtitle": "請填寫下面的表單與我們取得聯繫。",
-      "name": "名字",
+      "name": "姓名",
       "email": "信箱地址",
       "message": "留言內容",
       "agreePrefix": "我已閱讀並同意",
@@ -290,13 +290,13 @@
       "error": "提交時發生錯誤，請稍後重試。"
     },
     "footer": {
-      "followUs": "關注我們！",
+      "followUs": "請關注我們的官方社群以獲取更多相關資訊！",
       "links": [
         "公司簡介",
         "隱私政策",
         "聯絡我們"
       ],
-      "copyright": "© 2026 StarQ Soft LLC. 版權所有 侵權必究。"
+      "copyright": "© 2026 StarQ Soft LLC. 版權所有。"
     }
   },
   "ko-kr": {
@@ -339,21 +339,21 @@
     },
     "faq": {
       "faqTitle": "회사 소개",
-      "faqText": "StarQ Soft는 2026년 미국 캘리포니아주 마운틴뷰에서 설립된 글로벌 비전을 지닌 인디 게임 브랜드로, 깊이 있는 서사와 다차원적 상호작용을 갖춘 게임 경험을 만드는 데 주력하며, 플레이어에게 잊지 못할 이야기와 인생 경험을 선사하고자 합니다."
+      "faqText": "StarQ Soft는 2026년에 설립된 글로벌 비전의 인디 게임 브랜드입니다. 깊이 있는 서사와 다차원적 상호작용을 결합한 게임 경험을 만드는 데 집중하며, 플레이어에게 잊지 못할 이야기와 삶의 경험을 선사하는 것을 목표로 합니다."
     },
     "about": {
       "aboutTitle": "저작권 안내",
-      "aboutText": "당사의 모든 제품을 기반으로 한 파생 작품 및 2차 창작물은 「개인」 또는 「동인 서클 등 취미 단체」가 비상업적으로 제작·배포하는 한 표현 매체에 어떠한 제한도 두지 않습니다. 다만 배포물에는 반드시 당사의 저작권 표시를 기재해 주십시오. 허가 없이 파생 작품을 판매하는 것은 금지합니다."
+      "aboutText": "당사 제품을 소재로 한 파생 작품 및 2차 창작물은 개인 또는 동인 서클과 같은 취미 단체가 비상업적 목적으로 제작하고 공개하거나 배포하는 경우 표현 매체에 제한을 두지 않습니다. 단, 공개 또는 배포하는 자료에는 반드시 당사의 저작권 표시를 명시해 주십시오. 사전 허가 없이 파생 작품을 판매하는 행위는 금지됩니다."
     },
     "contact": {
       "contactTitle": "문의하기",
-      "contactText": "모든 형태의 협업과 교류 기회를 환영합니다! 비즈니스 제휴, 미디어 인터뷰, 콘텐츠 홍보 등 뜻을 같이하는 파트너와 함께하기를 기대합니다. 여러분의 의견과 제안도 언제든 보내 주세요. 아래 방법으로 연락 주시면 최대한 빠르게 답변드리겠습니다.",
+      "contactText": "저희는 다양한 협업과 교류의 기회를 환영합니다. 비즈니스 제휴, 미디어 인터뷰, 콘텐츠 홍보 등 어떤 형태든 뜻을 함께하는 파트너와 연결되기를 기대합니다. 의견과 제안도 언제든 보내 주세요. 아래 방법으로 연락해 주시면 가능한 한 빠르게 답변드리겠습니다.",
       "title": "메시지 남기기",
       "subtitle": "아래 양식을 작성하여 저희에게 연락해 주세요.",
       "name": "이름",
       "email": "이메일 주소",
       "message": "메시지 내용",
-      "agreePrefix": "저는 다음에 동의합니다:",
+      "agreePrefix": "다음을 읽고 동의합니다:",
       "terms": "서비스 약관",
       "and": "및",
       "privacy": "개인정보 처리방침",
@@ -365,7 +365,7 @@
       "error": "제출 중 오류가 발생했습니다. 다시 시도해 주세요."
     },
     "footer": {
-      "followUs": "팔로우하기!",
+      "followUs": "더 많은 관련 정보를 확인하려면 공식 커뮤니티를 팔로우해 주세요!",
       "links": [
         "회사 소개",
         "개인정보 처리방침",
@@ -414,15 +414,15 @@
     },
     "faq": {
       "faqTitle": "Sobre nosotros",
-      "faqText": "StarQ Soft es una marca de videojuegos independiente con visión global, fundada en 2026 en Mountain View, California. Nos centramos en crear experiencias de juego con una narrativa profunda e interacción multidimensional, con el objetivo de ofrecer a los jugadores historias y experiencias de vida inolvidables."
+      "faqText": "Fundada en 2026, StarQ Soft es una marca independiente de videojuegos con visión global. Nos centramos en crear experiencias que combinen una narrativa profunda con una interacción multidimensional, con el objetivo de ofrecer a los jugadores historias y experiencias vitales inolvidables."
     },
     "about": {
       "aboutTitle": "Derechos de autor",
-      "aboutText": "Para las obras derivadas y creaciones de fans basadas en cualquiera de nuestros productos, no imponemos ninguna restricción sobre el medio de expresión, siempre que sean creadas y distribuidas sin fines comerciales por «particulares» o «grupos aficionados como círculos dōjin». No obstante, asegúrese de incluir nuestro aviso de derechos de autor en todo material distribuido. Queda prohibida la venta de cualquier obra derivada sin autorización."
+      "aboutText": "No imponemos restricciones sobre el medio utilizado para obras derivadas o creaciones de fans basadas en nuestros productos, siempre que sean creadas y difundidas con fines no comerciales por particulares o grupos aficionados, como círculos dōjin. Sin embargo, todo material publicado o distribuido debe incluir nuestro aviso de derechos de autor. Queda prohibida la venta de cualquier obra derivada sin autorización previa."
     },
     "contact": {
       "contactTitle": "Contáctanos",
-      "contactText": "¡Damos la bienvenida a todo tipo de oportunidades de colaboración e intercambio! Ya se trate de alianzas comerciales, entrevistas con medios o promoción de contenidos, esperamos conectar con socios afines. También puedes enviarnos tus comentarios y sugerencias en cualquier momento. Contáctanos a través de los siguientes medios y te responderemos lo antes posible.",
+      "contactText": "Damos la bienvenida a todo tipo de oportunidades de colaboración e intercambio. Ya se trate de cooperación comercial, entrevistas con medios o promoción de contenidos, esperamos conectar con socios que compartan nuestra visión. También agradecemos tus comentarios y sugerencias en cualquier momento. Ponte en contacto con nosotros mediante los métodos indicados a continuación y responderemos lo antes posible.",
       "title": "Envíanos un mensaje",
       "subtitle": "Por favor, rellena el siguiente formulario para ponerte en contacto con nosotros.",
       "name": "Tu nombre",
@@ -440,13 +440,13 @@
       "error": "Error al enviar el formulario. Inténtalo de nuevo."
     },
     "footer": {
-      "followUs": "¡Síguenos!",
+      "followUs": "¡Sigue nuestras comunidades oficiales para obtener más información y novedades!",
       "links": [
         "Perfil de la empresa",
         "Política de privacidad",
         "Contacto"
       ],
-      "copyright": "© 2026 StarQ Soft LLC. All rights reserved."
+      "copyright": "© 2026 StarQ Soft LLC. Todos los derechos reservados."
     }
   },
   "ru-ru": {
@@ -489,15 +489,15 @@
     },
     "faq": {
       "faqTitle": "О нас",
-      "faqText": "StarQ Soft — независимый игровой бренд с глобальным видением, основанный в 2026 году в Маунтин-Вью, Калифорния. Мы сосредоточены на создании игрового опыта с глубоким повествованием и многомерным взаимодействием, стремясь подарить игрокам незабываемые истории и жизненные впечатления."
+      "faqText": "StarQ Soft — независимый игровой бренд с глобальным видением, основанный в 2026 году. Мы создаём игровые впечатления, сочетающие глубокое повествование и многомерное взаимодействие, чтобы дарить игрокам незабываемые истории и жизненный опыт."
     },
     "about": {
       "aboutTitle": "Авторские права",
-      "aboutText": "В отношении производных произведений и фанатского творчества на основе любой из нашей продукции мы не накладываем никаких ограничений на форму выражения при условии, что они создаются и распространяются на некоммерческой основе «частными лицами» или «любительскими объединениями, такими как додзин-кружки». Однако обязательно указывайте наше уведомление об авторских правах в распространяемых материалах. Продажа любых производных произведений без разрешения запрещена."
+      "aboutText": "Мы не ограничиваем выбор формы и средства выражения для производных работ и фанатского творчества по мотивам нашей продукции, если они создаются и распространяются в некоммерческих целях частными лицами или любительскими объединениями, например додзин-кружками. При этом во всех публикуемых или распространяемых материалах необходимо указывать наше уведомление об авторских правах. Продажа любых производных работ без предварительного разрешения запрещена."
     },
     "contact": {
       "contactTitle": "Свяжитесь с нами",
-      "contactText": "Мы приветствуем любые возможности сотрудничества и общения! Будь то деловое партнёрство, интервью для СМИ или продвижение контента — мы рады наладить связь с единомышленниками. Также вы всегда можете присылать нам свои отзывы и предложения. Свяжитесь с нами одним из указанных ниже способов, и мы ответим как можно скорее.",
+      "contactText": "Мы приветствуем любые возможности для сотрудничества и общения. Будь то деловое партнёрство, интервью для СМИ или продвижение контента, мы будем рады связаться с единомышленниками. Вы также можете в любое время присылать нам отзывы и предложения. Свяжитесь с нами одним из указанных ниже способов, и мы ответим как можно скорее.",
       "title": "Напишите нам",
       "subtitle": "Пожалуйста, заполните форму ниже, чтобы связаться с нами.",
       "name": "Ваше имя",
@@ -515,13 +515,13 @@
       "error": "Ошибка при отправке формы. Попробуйте ещё раз."
     },
     "footer": {
-      "followUs": "Подписывайтесь!",
+      "followUs": "Подписывайтесь на наши официальные сообщества, чтобы получать больше актуальной информации!",
       "links": [
         "О компании",
         "Политика конфиденциальности",
         "Контакты"
       ],
-      "copyright": "© 2026 StarQ Soft LLC. All rights reserved."
+      "copyright": "© 2026 StarQ Soft LLC. Все права защищены."
     }
   },
   "vi-vn": {
@@ -564,15 +564,15 @@
     },
     "faq": {
       "faqTitle": "Về chúng tôi",
-      "faqText": "StarQ Soft là một thương hiệu game độc lập với tầm nhìn toàn cầu, được thành lập năm 2026 tại Mountain View, California. Chúng tôi tập trung tạo ra những trải nghiệm game với lối kể chuyện sâu sắc và tương tác đa chiều, hướng đến việc mang lại cho người chơi những câu chuyện và trải nghiệm cuộc sống khó quên."
+      "faqText": "Được thành lập vào năm 2026, StarQ Soft là một thương hiệu game độc lập mang tầm nhìn toàn cầu. Chúng tôi tập trung tạo ra những trải nghiệm kết hợp giữa cốt truyện sâu sắc và tương tác đa chiều, với mục tiêu mang đến cho người chơi những câu chuyện và trải nghiệm cuộc sống khó quên."
     },
     "about": {
       "aboutTitle": "Bản quyền",
-      "aboutText": "Đối với các tác phẩm phái sinh và sáng tạo của người hâm mộ dựa trên bất kỳ sản phẩm nào của chúng tôi, chúng tôi không đặt ra bất kỳ hạn chế nào về phương tiện thể hiện, miễn là chúng được tạo ra và phân phối phi thương mại bởi «cá nhân» hoặc «các nhóm sở thích như câu lạc bộ doujin». Tuy nhiên, vui lòng đảm bảo ghi kèm thông báo bản quyền của chúng tôi trong mọi tài liệu phân phối. Nghiêm cấm việc tự ý bán bất kỳ tác phẩm phái sinh nào khi chưa được phép."
+      "aboutText": "Chúng tôi không giới hạn phương tiện thể hiện đối với các tác phẩm phái sinh hoặc sáng tạo của người hâm mộ dựa trên sản phẩm của mình, miễn là chúng được cá nhân hoặc các nhóm sở thích như câu lạc bộ doujin sáng tạo và chia sẻ vì mục đích phi thương mại. Tuy nhiên, mọi tài liệu được công bố hoặc phân phối phải ghi kèm thông báo bản quyền của chúng tôi. Nghiêm cấm bán bất kỳ tác phẩm phái sinh nào khi chưa được cho phép trước."
     },
     "contact": {
       "contactTitle": "Liên hệ với chúng tôi",
-      "contactText": "Chúng tôi hoan nghênh mọi cơ hội hợp tác và giao lưu! Dù là hợp tác kinh doanh, phỏng vấn truyền thông hay quảng bá nội dung, chúng tôi luôn mong muốn kết nối với những đối tác cùng chí hướng. Bạn cũng có thể gửi ý kiến và đề xuất cho chúng tôi bất cứ lúc nào. Vui lòng liên hệ qua các phương thức dưới đây, chúng tôi sẽ phản hồi sớm nhất có thể.",
+      "contactText": "Chúng tôi hoan nghênh mọi cơ hội hợp tác và giao lưu. Dù là hợp tác kinh doanh, phỏng vấn truyền thông hay quảng bá nội dung, chúng tôi đều mong muốn kết nối với những đối tác cùng chí hướng. Ý kiến và đề xuất của bạn cũng luôn được chào đón. Vui lòng liên hệ với chúng tôi qua các phương thức dưới đây; chúng tôi sẽ phản hồi sớm nhất có thể.",
       "title": "Gửi tin nhắn cho chúng tôi",
       "subtitle": "Vui lòng điền vào biểu mẫu bên dưới để liên hệ với chúng tôi.",
       "name": "Tên của bạn",
@@ -590,13 +590,388 @@
       "error": "Lỗi khi gửi biểu mẫu. Vui lòng thử lại."
     },
     "footer": {
-      "followUs": "Theo dõi chúng tôi!",
+      "followUs": "Hãy theo dõi các cộng đồng chính thức của chúng tôi để biết thêm thông tin liên quan!",
       "links": [
         "Hồ sơ công ty",
         "Chính sách bảo mật",
         "Liên hệ"
       ],
-      "copyright": "© 2026 StarQ Soft LLC. All rights reserved."
+      "copyright": "© 2026 StarQ Soft LLC. Đã đăng ký bản quyền."
+    }
+  },
+  "fr-fr": {
+    "nav": {
+      "products": "Catalogue des œuvres",
+      "shop": "Boutique en ligne",
+      "support": "Assistance",
+      "blog": "Blog officiel",
+      "events": "Événements",
+      "language": "Langue"
+    },
+    "hero": {
+      "dateLabel": "Date",
+      "dateValue": "Dimanche 12 juillet 2026",
+      "venueLabel": "Lieu",
+      "venueValue": "Stellar Ball (Shinagawa)",
+      "btnPrimary": "Ajouter à la liste de souhaits",
+      "preorder": "La page Steam de « Love, Startup & Co-founder » est maintenant disponible !",
+      "goToBanner": "Aller à la bannière"
+    },
+    "product": {
+      "titleHighlight": "P",
+      "titleRest": "roduct",
+      "subTitle": "Catalogue des œuvres",
+      "btn": "Voir la page produit",
+      "banners": [
+        {
+          "name": "Love, Startup & Co-founder",
+          "image": "/public/lsc.png",
+          "upcoming": false,
+          "link": "/love-startup-cofounder"
+        },
+        {
+          "name": "À venir...",
+          "image": "/public/game2.png",
+          "upcoming": true,
+          "link": "/upcoming"
+        }
+      ]
+    },
+    "faq": {
+      "faqTitle": "À propos de nous",
+      "faqText": "Fondée en 2026, StarQ Soft est une marque indépendante de jeux vidéo animée par une vision internationale. Nous créons des expériences qui associent une narration profonde à des interactions multidimensionnelles, afin d’offrir aux joueurs des histoires et des expériences de vie inoubliables."
+    },
+    "about": {
+      "aboutTitle": "Droits d’auteur",
+      "aboutText": "Nous n’imposons aucune restriction quant au support utilisé pour les œuvres dérivées ou les créations de fans inspirées de nos produits, à condition qu’elles soient créées et diffusées à des fins non commerciales par des particuliers ou des groupes amateurs, tels que des cercles dōjin. Toutefois, tout contenu publié ou distribué doit comporter notre mention de droits d’auteur. La vente de toute œuvre dérivée sans autorisation préalable est interdite."
+    },
+    "contact": {
+      "contactTitle": "Nous contacter",
+      "contactText": "Nous accueillons toutes les formes de collaboration et d’échange. Qu’il s’agisse d’un partenariat commercial, d’une interview média ou de la promotion de contenu, nous serons heureux d’entrer en contact avec des partenaires partageant notre vision. Vos avis et suggestions sont également les bienvenus à tout moment. Contactez-nous par l’un des moyens ci-dessous ; nous vous répondrons dès que possible.",
+      "title": "Laissez-nous un message",
+      "subtitle": "Veuillez remplir le formulaire ci-dessous pour nous contacter.",
+      "name": "Nom",
+      "email": "Adresse e-mail",
+      "message": "Message",
+      "agreePrefix": "J’ai lu et j’accepte",
+      "terms": "les Conditions d’utilisation",
+      "and": "et",
+      "privacy": "la Politique de confidentialité",
+      "submit": "Envoyer",
+      "agreeError": "Vous devez accepter les Conditions d’utilisation et la Politique de confidentialité.",
+      "submitting": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "fail": "Échec de l’envoi. Veuillez réessayer plus tard.",
+      "error": "Une erreur est survenue lors de l’envoi. Veuillez réessayer plus tard."
+    },
+    "footer": {
+      "followUs": "Suivez nos communautés officielles pour obtenir davantage d’informations et d’actualités !",
+      "links": [
+        "Présentation de l’entreprise",
+        "Politique de confidentialité",
+        "Nous contacter"
+      ],
+      "copyright": "© 2026 StarQ Soft LLC. Tous droits réservés."
+    }
+  },
+  "it-it": {
+    "nav": {
+      "products": "Elenco opere",
+      "shop": "Negozio online",
+      "support": "Supporto",
+      "blog": "Blog ufficiale",
+      "events": "Eventi",
+      "language": "Lingua"
+    },
+    "hero": {
+      "dateLabel": "Data",
+      "dateValue": "Domenica 12 luglio 2026",
+      "venueLabel": "Sede",
+      "venueValue": "Stellar Ball (Shinagawa)",
+      "btnPrimary": "Aggiungi alla lista dei desideri",
+      "preorder": "La pagina Steam di « Love, Startup & Co-founder » è ora disponibile!",
+      "goToBanner": "Vai al banner"
+    },
+    "product": {
+      "titleHighlight": "P",
+      "titleRest": "roduct",
+      "subTitle": "Elenco opere",
+      "btn": "Vedi pagina prodotto",
+      "banners": [
+        {
+          "name": "Love, Startup & Co-founder",
+          "image": "/public/lsc.png",
+          "upcoming": false,
+          "link": "/love-startup-cofounder"
+        },
+        {
+          "name": "Prossimamente...",
+          "image": "/public/game2.png",
+          "upcoming": true,
+          "link": "/upcoming"
+        }
+      ]
+    },
+    "faq": {
+      "faqTitle": "Chi siamo",
+      "faqText": "Fondata nel 2026, StarQ Soft è un marchio indipendente di videogiochi con una visione globale. Ci dedichiamo alla creazione di esperienze che uniscono una narrazione profonda a interazioni multidimensionali, con l’obiettivo di offrire ai giocatori storie ed esperienze di vita indimenticabili."
+    },
+    "about": {
+      "aboutTitle": "Diritti d’autore",
+      "aboutText": "Non imponiamo restrizioni sul mezzo espressivo utilizzato per opere derivate o creazioni dei fan basate sui nostri prodotti, purché siano realizzate e diffuse a fini non commerciali da singoli individui o gruppi amatoriali, come i circoli dōjin. Tuttavia, ogni materiale pubblicato o distribuito deve includere la nostra nota sul copyright. È vietata la vendita di qualsiasi opera derivata senza previa autorizzazione."
+    },
+    "contact": {
+      "contactTitle": "Contattaci",
+      "contactText": "Accogliamo ogni opportunità di collaborazione e confronto. Che si tratti di partnership commerciali, interviste con i media o promozione di contenuti, siamo lieti di entrare in contatto con partner che condividono la nostra visione. Commenti e suggerimenti sono sempre benvenuti. Contattateci tramite uno dei metodi indicati di seguito e risponderemo il prima possibile.",
+      "title": "Lasciaci un messaggio",
+      "subtitle": "Compila il modulo qui sotto per metterti in contatto con noi.",
+      "name": "Nome",
+      "email": "Indirizzo e-mail",
+      "message": "Messaggio",
+      "agreePrefix": "Ho letto e accetto",
+      "terms": "i Termini di servizio",
+      "and": "e",
+      "privacy": "l’Informativa sulla privacy",
+      "submit": "Invia",
+      "agreeError": "Devi accettare i Termini di servizio e l’Informativa sulla privacy.",
+      "submitting": "Invio in corso...",
+      "success": "Messaggio inviato con successo!",
+      "fail": "Invio non riuscito. Riprova più tardi.",
+      "error": "Si è verificato un errore durante l’invio. Riprova più tardi."
+    },
+    "footer": {
+      "followUs": "Segui le nostre community ufficiali per ricevere maggiori informazioni e aggiornamenti!",
+      "links": [
+        "Profilo aziendale",
+        "Informativa sulla privacy",
+        "Contattaci"
+      ],
+      "copyright": "© 2026 StarQ Soft LLC. Tutti i diritti riservati."
+    }
+  },
+  "de-de": {
+    "nav": {
+      "products": "Werke",
+      "shop": "Online-Shop",
+      "support": "Support",
+      "blog": "Offizieller Blog",
+      "events": "Events",
+      "language": "Sprache"
+    },
+    "hero": {
+      "dateLabel": "Datum",
+      "dateValue": "Sonntag, 12. Juli 2026",
+      "venueLabel": "Veranstaltungsort",
+      "venueValue": "Stellar Ball (Shinagawa)",
+      "btnPrimary": "Zur Wunschliste hinzufügen",
+      "preorder": "Die Steam-Shopseite von „Love, Startup & Co-founder“ ist jetzt verfügbar!",
+      "goToBanner": "Zum Banner"
+    },
+    "product": {
+      "titleHighlight": "P",
+      "titleRest": "roduct",
+      "subTitle": "Werke",
+      "btn": "Produktseite ansehen",
+      "banners": [
+        {
+          "name": "Love, Startup & Co-founder",
+          "image": "/public/lsc.png",
+          "upcoming": false,
+          "link": "/love-startup-cofounder"
+        },
+        {
+          "name": "Demnächst...",
+          "image": "/public/game2.png",
+          "upcoming": true,
+          "link": "/upcoming"
+        }
+      ]
+    },
+    "faq": {
+      "faqTitle": "Über uns",
+      "faqText": "StarQ Soft ist eine 2026 gegründete unabhängige Spielemarke mit globaler Ausrichtung. Wir entwickeln Spielerlebnisse, die tiefgründiges Storytelling mit multidimensionaler Interaktion verbinden, um Spielerinnen und Spielern unvergessliche Geschichten und Lebenserfahrungen zu bieten."
+    },
+    "about": {
+      "aboutTitle": "Urheberrecht",
+      "aboutText": "Für abgeleitete Werke und Fan-Kreationen auf Grundlage unserer Produkte machen wir keine Vorgaben zum verwendeten Ausdrucksmedium, sofern sie von Einzelpersonen oder Hobbygruppen wie Dōjin-Zirkeln zu nicht kommerziellen Zwecken erstellt und verbreitet werden. Alle veröffentlichten oder verteilten Materialien müssen jedoch unseren Urheberrechtshinweis enthalten. Der Verkauf abgeleiteter Werke ohne vorherige Genehmigung ist untersagt."
+    },
+    "contact": {
+      "contactTitle": "Kontakt",
+      "contactText": "Wir begrüßen jede Form der Zusammenarbeit und des Austauschs. Ob Geschäftspartnerschaft, Medieninterview oder Content-Promotion – wir freuen uns darauf, mit gleichgesinnten Partnern in Kontakt zu treten. Auch Feedback und Vorschläge sind jederzeit willkommen. Kontaktieren Sie uns über einen der unten aufgeführten Wege; wir antworten so schnell wie möglich.",
+      "title": "Schreiben Sie uns",
+      "subtitle": "Bitte füllen Sie das folgende Formular aus, um uns zu kontaktieren.",
+      "name": "Name",
+      "email": "E-Mail-Adresse",
+      "message": "Nachricht",
+      "agreePrefix": "Ich habe gelesen und stimme zu:",
+      "terms": "Nutzungsbedingungen",
+      "and": "und",
+      "privacy": "Datenschutzrichtlinie",
+      "submit": "Absenden",
+      "agreeError": "Sie müssen den Nutzungsbedingungen und der Datenschutzrichtlinie zustimmen.",
+      "submitting": "Wird gesendet...",
+      "success": "Nachricht erfolgreich gesendet!",
+      "fail": "Senden fehlgeschlagen. Bitte versuchen Sie es später erneut.",
+      "error": "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
+    },
+    "footer": {
+      "followUs": "Folgen Sie unseren offiziellen Communitys, um weitere Informationen und Neuigkeiten zu erhalten!",
+      "links": [
+        "Unternehmensprofil",
+        "Datenschutzrichtlinie",
+        "Kontakt"
+      ],
+      "copyright": "© 2026 StarQ Soft LLC. Alle Rechte vorbehalten."
+    }
+  },
+  "th-th": {
+    "nav": {
+      "products": "ผลงานทั้งหมด",
+      "shop": "ร้านค้าออนไลน์",
+      "support": "ฝ่ายสนับสนุน",
+      "blog": "บล็อกทางการ",
+      "events": "ข้อมูลกิจกรรม",
+      "language": "ภาษา"
+    },
+    "hero": {
+      "dateLabel": "วันที่จัดงาน",
+      "dateValue": "วันอาทิตย์ที่ 12 กรกฎาคม 2026",
+      "venueLabel": "สถานที่",
+      "venueValue": "Stellar Ball (Shinagawa)",
+      "btnPrimary": "เพิ่มลงในรายการที่อยากได้",
+      "preorder": "หน้า Steam ของ “Love, Startup & Co-founder” เปิดให้เข้าชมแล้ว!",
+      "goToBanner": "ไปยังแบนเนอร์"
+    },
+    "product": {
+      "titleHighlight": "P",
+      "titleRest": "roduct",
+      "subTitle": "ผลงานทั้งหมด",
+      "btn": "ดูหน้าผลิตภัณฑ์",
+      "banners": [
+        {
+          "name": "Love, Startup & Co-founder",
+          "image": "/public/lsc.png",
+          "upcoming": false,
+          "link": "/love-startup-cofounder"
+        },
+        {
+          "name": "โปรดติดตาม...",
+          "image": "/public/game2.png",
+          "upcoming": true,
+          "link": "/upcoming"
+        }
+      ]
+    },
+    "faq": {
+      "faqTitle": "เกี่ยวกับเรา",
+      "faqText": "StarQ Soft เป็นแบรนด์เกมอินดี้ที่ก่อตั้งขึ้นในปี 2026 และมีวิสัยทัศน์ระดับโลก เรามุ่งสร้างประสบการณ์เกมที่ผสานการเล่าเรื่องอันลึกซึ้งเข้ากับปฏิสัมพันธ์หลายมิติ เพื่อมอบเรื่องราวและประสบการณ์ชีวิตที่น่าจดจำแก่ผู้เล่น"
+    },
+    "about": {
+      "aboutTitle": "เกี่ยวกับลิขสิทธิ์",
+      "aboutText": "เราไม่จำกัดสื่อที่ใช้สำหรับผลงานดัดแปลงหรือผลงานแฟนเมดที่อ้างอิงจากผลิตภัณฑ์ของเรา ตราบใดที่สร้างและเผยแพร่เพื่อวัตถุประสงค์ที่ไม่ใช่เชิงพาณิชย์โดยบุคคลทั่วไปหรือกลุ่มงานอดิเรก เช่น กลุ่มโดจิน อย่างไรก็ตาม เนื้อหาที่เผยแพร่หรือแจกจ่ายทั้งหมดต้องระบุประกาศลิขสิทธิ์ของเรา ห้ามจำหน่ายผลงานดัดแปลงใด ๆ โดยไม่ได้รับอนุญาตล่วงหน้า"
+    },
+    "contact": {
+      "contactTitle": "ติดต่อเรา",
+      "contactText": "เรายินดีต้อนรับทุกโอกาสในการร่วมมือและแลกเปลี่ยน ไม่ว่าจะเป็นความร่วมมือทางธุรกิจ การสัมภาษณ์สื่อ หรือการโปรโมตคอนเทนต์ เราหวังว่าจะได้เชื่อมต่อกับพันธมิตรที่มีแนวคิดเดียวกัน เรายินดีรับฟังความคิดเห็นและข้อเสนอแนะของคุณได้ทุกเมื่อ โปรดติดต่อเราผ่านช่องทางด้านล่าง แล้วเราจะตอบกลับโดยเร็วที่สุด",
+      "title": "ฝากข้อความถึงเรา",
+      "subtitle": "กรุณากรอกแบบฟอร์มด้านล่างเพื่อติดต่อเรา",
+      "name": "ชื่อ",
+      "email": "อีเมล",
+      "message": "ข้อความ",
+      "agreePrefix": "ฉันได้อ่านและยอมรับ",
+      "terms": "ข้อกำหนดการใช้บริการ",
+      "and": "และ",
+      "privacy": "นโยบายความเป็นส่วนตัว",
+      "submit": "ส่ง",
+      "agreeError": "คุณต้องยอมรับข้อกำหนดการใช้บริการและนโยบายความเป็นส่วนตัว",
+      "submitting": "กำลังส่ง...",
+      "success": "ส่งข้อความสำเร็จ!",
+      "fail": "ส่งไม่สำเร็จ โปรดลองอีกครั้งในภายหลัง",
+      "error": "เกิดข้อผิดพลาดขณะส่ง โปรดลองอีกครั้งในภายหลัง"
+    },
+    "footer": {
+      "followUs": "โปรดติดตามชุมชนทางการของเราเพื่อรับข้อมูลและข่าวสารเพิ่มเติม!",
+      "links": [
+        "ข้อมูลบริษัท",
+        "นโยบายความเป็นส่วนตัว",
+        "ติดต่อเรา"
+      ],
+      "copyright": "© 2026 StarQ Soft LLC. สงวนลิขสิทธิ์"
+    }
+  },
+  "ms-my": {
+    "nav": {
+      "products": "Senarai karya",
+      "shop": "Kedai dalam talian",
+      "support": "Sokongan",
+      "blog": "Blog rasmi",
+      "events": "Maklumat acara",
+      "language": "Bahasa"
+    },
+    "hero": {
+      "dateLabel": "Tarikh",
+      "dateValue": "Ahad, 12 Julai 2026",
+      "venueLabel": "Tempat",
+      "venueValue": "Stellar Ball (Shinagawa)",
+      "btnPrimary": "Tambah ke senarai hajat",
+      "preorder": "Halaman Steam untuk “Love, Startup & Co-founder” kini telah dibuka!",
+      "goToBanner": "Pergi ke sepanduk"
+    },
+    "product": {
+      "titleHighlight": "P",
+      "titleRest": "roduct",
+      "subTitle": "Senarai karya",
+      "btn": "Lihat halaman produk",
+      "banners": [
+        {
+          "name": "Love, Startup & Co-founder",
+          "image": "/public/lsc.png",
+          "upcoming": false,
+          "link": "/love-startup-cofounder"
+        },
+        {
+          "name": "Akan datang...",
+          "image": "/public/game2.png",
+          "upcoming": true,
+          "link": "/upcoming"
+        }
+      ]
+    },
+    "faq": {
+      "faqTitle": "Tentang kami",
+      "faqText": "Ditubuhkan pada tahun 2026, StarQ Soft ialah jenama permainan indie yang berwawasan global. Kami menumpukan pada penciptaan pengalaman permainan yang menggabungkan penceritaan mendalam dengan interaksi pelbagai dimensi, dengan matlamat untuk membawa kisah dan pengalaman hidup yang tidak dapat dilupakan kepada para pemain."
+    },
+    "about": {
+      "aboutTitle": "Berkaitan hak cipta",
+      "aboutText": "Kami tidak mengenakan sekatan terhadap medium yang digunakan untuk karya terbitan atau ciptaan peminat berdasarkan produk kami, selagi karya tersebut dicipta dan dikongsi bagi tujuan bukan komersial oleh individu atau kumpulan hobi seperti kelab dōjin. Walau bagaimanapun, semua bahan yang diterbitkan atau diedarkan hendaklah menyertakan notis hak cipta kami. Penjualan sebarang karya terbitan tanpa kebenaran terlebih dahulu adalah dilarang."
+    },
+    "contact": {
+      "contactTitle": "Hubungi kami",
+      "contactText": "Kami mengalu-alukan segala bentuk peluang kerjasama dan pertukaran. Sama ada kerjasama perniagaan, temu bual media atau promosi kandungan, kami berharap dapat berhubung dengan rakan kongsi yang sehaluan. Maklum balas dan cadangan anda juga sentiasa dialu-alukan. Sila hubungi kami melalui kaedah di bawah dan kami akan membalas secepat mungkin.",
+      "title": "Tinggalkan mesej kepada kami",
+      "subtitle": "Sila isi borang di bawah untuk menghubungi kami.",
+      "name": "Nama",
+      "email": "Alamat e-mel",
+      "message": "Mesej",
+      "agreePrefix": "Saya telah membaca dan bersetuju dengan",
+      "terms": "Terma Perkhidmatan",
+      "and": "dan",
+      "privacy": "Dasar Privasi",
+      "submit": "Hantar",
+      "agreeError": "Anda mesti bersetuju dengan Terma Perkhidmatan dan Dasar Privasi.",
+      "submitting": "Sedang menghantar...",
+      "success": "Mesej berjaya dihantar!",
+      "fail": "Gagal menghantar. Sila cuba lagi kemudian.",
+      "error": "Ralat berlaku semasa penghantaran. Sila cuba lagi kemudian."
+    },
+    "footer": {
+      "followUs": "Sila ikuti komuniti rasmi kami untuk mendapatkan lebih banyak maklumat dan perkembangan terkini!",
+      "links": [
+        "Profil syarikat",
+        "Dasar Privasi",
+        "Hubungi kami"
+      ],
+      "copyright": "© 2026 StarQ Soft LLC. Hak cipta terpelihara."
     }
   }
 }

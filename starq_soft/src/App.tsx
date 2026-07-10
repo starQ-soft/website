@@ -36,9 +36,9 @@ const itemReveal = {
 const App = () => {
   const { lang } = useLanguage();
   const t = translations[lang as keyof typeof translations];
-  const n = news[lang as keyof typeof news];
+  const n = news[lang as keyof typeof news] ?? news['ja-jp'];
 
-  const banners = ['public/banner1.png', 
+  const banners = ['public/banner1.png',
     // 'public/banner2.png', 'public/banner3.png'
   ];
 
@@ -105,13 +105,13 @@ const App = () => {
       <Nav>
         <Logo src={logoImage} alt="StarQ Logo" />
 
-        <NavLinks>
+        {/* <NavLinks>
           <a href="#">{t.nav.products}</a>
           <a href="#">{t.nav.shop}</a>
           <a href="#">{t.nav.support}</a>
           <a href="#">{t.nav.blog}</a>
           <a href="#">{t.nav.events}</a>
-        </NavLinks>
+        </NavLinks> */}
 
         <NavActions>
           <LangSelector />
@@ -160,6 +160,12 @@ const App = () => {
 
       <GlobalContainer>
         <Main>
+          <MotionProductHeaderArea variants={itemReveal}>
+            <SectionHeader>
+              {/* <Highlight>{t.news.titleHighlight}</Highlight>{t.news.titleRest} */}
+              {n.subTitle}<Twinkle />
+            </SectionHeader>
+          </MotionProductHeaderArea>
           <ScrollableContainer>
             <motion.section
               variants={sectionReveal}
@@ -167,13 +173,6 @@ const App = () => {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <MotionProductHeaderArea variants={itemReveal}>
-                <SectionHeader>
-                  {/* <Highlight>{t.news.titleHighlight}</Highlight>{t.news.titleRest} */}
-                  {n.subTitle}<Twinkle />
-                </SectionHeader>
-              </MotionProductHeaderArea>
-
               <motion.div variants={itemReveal}>
                 {n.items.map((item, index) => (
                   <NewsRow key={index}>
@@ -254,6 +253,7 @@ const App = () => {
                 </MotionSectionHeader>
                 <motion.p variants={itemReveal}>{t.contact.contactText}</motion.p>
               </MotionAboutBox>
+
               <MotionFormContainer variants={itemReveal} onSubmit={handleSubmit}>
                 <Title>{t.contact.title}</Title>
                 <Subtitle>{t.contact.subtitle}</Subtitle>

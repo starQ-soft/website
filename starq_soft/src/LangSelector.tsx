@@ -15,6 +15,11 @@ const LANGUAGES: { code: LanguageCode; label: string }[] = [
   { code: 'es-es', label: 'Español' },
   { code: 'ru-ru', label: 'Русский' },
   { code: 'vi-vn', label: 'Tiếng Việt' },
+  { code: 'fr-fr', label: 'Français' },
+  { code: 'it-it', label: 'Italiano' },
+  { code: 'de-de', label: 'Deutsch' },
+  { code: 'th-th', label: 'ไทย' },
+  { code: 'ms-my', label: 'Bahasa Melayu' },
 ];
 
 export const LangSelector = () => {

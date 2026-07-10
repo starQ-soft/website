@@ -43,7 +43,7 @@ export const StoryContainer = styled.section`
 export const StoryTitle = styled.h2`
   font-size: 3rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #dd6f94 0%, #F89BB0 50%, #A7C5FF 100%);
+  background: linear-gradient(135deg, #222222 0%, #8d6680 80%, #CC1075 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -126,15 +126,23 @@ export const StoryDescription = styled.div`
   span {
     color: #CC1075;
     font-size: 2.5rem;
-    text-shadow: 1px 0px 5px #fff1f4, 0px -1px 5px #fff1f4, -1px 0px 5px #fff1f4, 0px 1px 5px #fff1f4, 1px 0px 5px #fff1f4, 0px -1px 5px #fff1f4, -1px 0px 5px #fff1f4, 0px 1px 5px #fff1f4, 1px 0px 0px #fff1f4, 0px -1px 0px #fff1f4, -1px 0px 0px #fff1f4, 1px 0px 0px #fff1f4, 1px 0px 0px #fff1f4, 0px -1px 0px #fff1f4, -1px 0px 0px #fff1f4, 0px 1px 0px #fff1f4, 1px 0px 0px #fff1f4, 0px -1px 0px #fff1f4, -1px 0px 0px #fff1f4, 0px 1px 0px #fff1f4;
   }
 `;
 
 export const GameDescription = styled.p`
   font-size: 2.5rem;
   line-height: 1.6;
-  letter-spacing: 0.05em;
-  background: linear-gradient(135deg,  #ffd7e6 0%, #f99bb3 15%, #a3c1f3 100%);
+  letter-spacing: 0.25em;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  text-shadow: 
+    0 0 2px #ffffff, 
+    0 0 10px #0a1b29, 
+    0 0 8px #007cb1, 
+    0 0 5px #033e5a, 
+    0 0 3px #001e2c;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -144,6 +152,7 @@ export const GameDescription = styled.p`
   margin-left: auto;
   margin-right: auto;
   filter: saturate(1.5);
+  drop-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 
   @media (max-width: 768px) {
     font-size: 1.5rem;

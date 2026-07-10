@@ -48,7 +48,7 @@ const Button = styled(motion.button)`
   border: none;
   outline: none;
   border-radius: 50px;
-  background: linear-gradient(135deg,  #ffd7e6 0%, #f99bb3 15%, #a3c1f3 100%);
+  background: linear-gradient(135deg,  #0a1823 0%, #033e5a 15%, #007cb1 100%);
   color: white;
 
   &:hover,
@@ -221,7 +221,7 @@ const MotionStoryDescription = motion.create(StoryDescription);
 
 export const LoveCofounder: React.FC = () => {
   const { lang } = useLanguage();
-  const t = lscContent[lang] ?? lscContent['ja-jp'];
+  const t = lscContent[lang] ?? lscContent['zh-cn']!;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const heroImages = [
     // "lsc-nana.png",
