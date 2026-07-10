@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type ChangeEvent, type FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import translations from './translations.json';
 import news from './news.json';
 import logoImage from './assets/StarQ_logo.png';
 import steamLogo from './assets/steam-logo.svg';
-import { GlobalStyle, Nav, Logo, NavLinks, NavActions, GlobalContainer, Hero, HeroSlides, HeroSlide, HeroDots, HeroDot, HeroContent, ButtonGroup, PrimaryButton, PreorderText, Main, SectionHeader, Twinkle, NewsRow, TypeBadge, NewsDate, ProductHeaderArea, ProductGrid, ProductBanner, ProductBannerLink, Footer, FooterContent, AboutBox, SteamIcon, CheckboxContainer, FormContainer, Input, Row, SubmitButton, Subtitle, Textarea, Title, SocialLinks, SocialLink, ScrollableContainer, FooterTop, Copyright, StatusMessage } from './styles';
+import { GlobalStyle, Nav, Logo, NavActions, GlobalContainer, Hero, HeroSlides, HeroSlide, HeroDots, HeroDot, HeroContent, ButtonGroup, PrimaryButton, PreorderText, Main, SectionHeader, Twinkle, NewsRow, TypeBadge, NewsDate, ProductHeaderArea, ProductGrid, ProductBanner, ProductBannerLink, Footer, FooterContent, AboutBox, SteamIcon, CheckboxContainer, FormContainer, Input, Row, SubmitButton, Subtitle, Textarea, Title, SocialLinks, SocialLink, ScrollableContainer, FooterTop, Copyright, StatusMessage } from './styles';
 import BackToTop from './components/BackToTop';
 import { socialLinks } from './components/footer/FooterConstants';
 import FallingStars from './components/FallingStars';
@@ -31,6 +31,12 @@ const sectionReveal = {
 const itemReveal = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+
+const heroSlideVariants = {
+  enter: (direction: number) => ({ x: `${direction * 100}%` }),
+  center: { x: 0 },
+  exit: (direction: number) => ({ x: `${direction * -100}%` }),
 };
 
 const App = () => {
@@ -61,15 +67,19 @@ const App = () => {
     name: "",
     email: "",
     message: "",
+    agree: false,
   });
   const [status, setStatus] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const nextValue = e.target instanceof HTMLInputElement && e.target.type === 'checkbox'
+      ? e.target.checked
+      : value;
+    setFormData((prev) => ({ ...prev, [name]: nextValue }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus(t.contact.submitting);
 
@@ -85,9 +95,8 @@ const App = () => {
         setFormData({
           name: "",
           email: "",
-          company: "",
-          collaborationType: "",
           message: "",
+          agree: false,
         });
       } else {
         setStatus(t.contact.fail);
@@ -125,9 +134,10 @@ const App = () => {
                 key={bannerIndex}
                 custom={direction}
                 $bgImage={banners[bannerIndex]}
-                initial={(dir: number) => ({ x: `${dir * 100}%` })}
-                animate={{ x: 0 }}
-                exit={(dir: number) => ({ x: `${dir * -100}%` })}
+                variants={heroSlideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
                 transition={{ duration: 0.8, ease: 'easeInOut' }}
               />
             </AnimatePresence>
@@ -261,7 +271,7 @@ const App = () => {
                 <Row>
                   <Input
                     type="text"
-                    name="Name"
+                    name="name"
                     placeholder={t.contact.name}
                     value={formData.name}
                     onChange={handleChange}

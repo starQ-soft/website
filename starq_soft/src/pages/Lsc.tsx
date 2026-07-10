@@ -340,39 +340,6 @@ const PromotionCard = styled.div`
   }
 `;
 
-const ProductActions = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  width: min(100%, 32rem);
-  margin: 1rem auto 0;
-  padding: 0 0.75rem;
-
-  button {
-    flex: 1;
-    min-width: 0;
-    background-color: #ffb6c1;
-    color: white;
-    font-weight: bold;
-    font-size: 0.95rem;
-    padding: 0.65rem 1rem;
-    border-radius: 0.5rem;
-    border: 2px solid white;
-    cursor: pointer;
-  }
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-    gap: 0.5rem;
-
-    button {
-      width: 100%;
-      font-size: 0.85rem;
-      padding: 0.55rem 0.75rem;
-    }
-  }
-`;
-
 const Footer = styled.footer`
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
   background-color: #eaeaea;

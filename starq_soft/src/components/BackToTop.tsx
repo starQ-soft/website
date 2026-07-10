@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-const TopButton = styled.button`
+type TopButtonProps = {
+  $isVisible: boolean;
+  $isHovered: boolean;
+};
+
+const TopButton = styled.button<TopButtonProps>`
   position: fixed;
   bottom: 2rem;
   width: 10rem;
