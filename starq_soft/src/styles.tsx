@@ -197,10 +197,7 @@ export const ButtonGroup = styled.div`
 `;
 
 export const PrimaryButton = styled.button`
-  background: linear-gradient(275deg, #e97aa3 0%, #e97292 50%, #f24677 100%);
   width: fit-content;
-  color: white;
-  font-weight: bold;
   padding: 1rem 2rem;
   min-width: 300px;
   border: none;
@@ -209,6 +206,20 @@ export const PrimaryButton = styled.button`
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s;
   margin: 1rem auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg,  #0a1823 0%, #033e5a 15%, #007cb1 100%);
+  color: white;
 
   &:hover {
     filter: brightness(1.2);
@@ -220,7 +231,7 @@ export const ScrollableContainer = styled.section`
   max-height: 500px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 0 3rem;
+  padding: 2rem 3rem;
   border: 1px solid #eee;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.85);
@@ -238,7 +249,6 @@ export const ScrollableContainer = styled.section`
     position: sticky;
     top: 0;
     z-index: 10;
-    padding-bottom: 10px;
   }
 `;
 
@@ -250,9 +260,21 @@ export const SteamIcon = styled.img`
 `;
 
 export const PreorderText = styled.div`
-  font-size: 1.75rem;
+  font-size: 3rem;
   text-align: center;
   font-weight: 500;
+  text-shadow: 
+    0 0 2px #ffffff, 
+    0 0 10px #0a1b29, 
+    0 0 8px #007cb1, 
+    0 0 5px #033e5a, 
+    0 0 3px #001e2c;
+
+  @media (max-width: 768px) {
+    font-size: clamp(1.75rem, 5vw, 1.5rem);
+    letter-spacing: 0.08em;
+    padding: 0 0.75rem;
+  }
 `;
 
 export const Main = styled.main`
@@ -262,6 +284,12 @@ export const Main = styled.main`
   flex-direction: column;
   gap: 5rem;
   margin-top: 5rem;
+
+  @media (max-width: 640px) {
+    padding: 2rem 2vw;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
 `;
 
 export const SectionHeader = styled.h2`
@@ -359,10 +387,14 @@ export const ProductBanner = styled.div<ProductBannerProps>`
   justify-content: center;
 
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
   overflow: hidden;
+
+  @media (max-width: 640px) {
+    font-size: 1.5rem;
+  }
 
   color: ${({ $bgImage }) => $bgImage ? '#ffffff' : '#9ca3af'};
   text-shadow: ${({ $bgImage }) => $bgImage ? '0 2px 8px rgba(0,0,0,0.8)' : 'none'};
@@ -447,9 +479,7 @@ export const AboutBox = styled.div`
   padding: 2rem;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 2rem;
   width: 80%;
-  margin: 5rem auto;
 
   p {
     font-size: 0.875rem;
@@ -574,7 +604,11 @@ export const SocialLinks = styled.div`
   justify-content: center;
 
   @media (max-width: 640px) {
+    flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
   }
 `;
 

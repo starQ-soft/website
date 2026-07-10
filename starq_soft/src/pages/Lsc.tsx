@@ -778,6 +778,7 @@ const Lsc = () => {
       <CherryBlossomBackground count={80} />
       <TransparentBanner
         images={["haruka.gif", "/rin.gif", "/lsc-natsumi.png", "/shizuka.gif", "/nana.gif",]}
+        mobileImage="/lsc_mobile.png"
       />
       <ContentWrapper>
         <LoveCofounder />

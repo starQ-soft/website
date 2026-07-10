@@ -38,7 +38,7 @@ const App = () => {
   const t = translations[lang as keyof typeof translations];
   const n = news[lang as keyof typeof news] ?? news['ja-jp'];
 
-  const banners = ['public/banner1.png',
+  const banners = ['public/banner4.png',
     // 'public/banner2.png', 'public/banner3.png'
   ];
 

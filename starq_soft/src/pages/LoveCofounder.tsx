@@ -59,7 +59,7 @@ const Button = styled(motion.button)`
     border: none;
     transform: translateY(-1px);
     filter: saturate(1.5);
-    drop-shadow: 0 1rem 2rem rgba(255, 172, 191, 0.6);
+    drop-shadow: 0 1rem 2rem rgba(64, 68, 119, 0.6);
   }
 `;
 

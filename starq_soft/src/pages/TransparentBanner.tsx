@@ -40,17 +40,36 @@ const LayeredImage = styled.img<{ $delay: number; $isHaruka: boolean; $isNana: b
   opacity: 0;
   animation: ${riseIn} 2s ease-out forwards;
   animation-delay: ${({ $delay }) => $delay}s;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const MobileBackground = styled.img`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
 `;
 
 interface TransparentBannerProps {
     images: string[];
+    mobileImage?: string;
 }
 
 const TransparentBanner: React.FC<TransparentBannerProps> = ({
-    images
+    images,
+    mobileImage
 }) => {
     return (
         <BannerContainer>
+            {mobileImage && <MobileBackground src={mobileImage} alt="" />}
             {images.map((src, i) => (
                 <LayeredImage
                     key={src}
