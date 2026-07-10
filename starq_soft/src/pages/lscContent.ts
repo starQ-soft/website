@@ -95,7 +95,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       char: `登場キャラクター`,
       pv: `ムービー`,
       gallery: `ギャラリー`,
-      progress: `最新の開発進捗`,
+      progress: `最新の進展`,
       product: `製品情報`,
     },
     pv: {
@@ -311,7 +311,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       char: `Characters`,
       pv: `Movies`,
       gallery: `Gallery`,
-      progress: `Latest Updates`,
+      progress: `Latest Progress`,
       product: `Product Info`,
     },
     pv: {
@@ -741,7 +741,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       char: `登場角色`,
       pv: `影片`,
       gallery: `畫廊`,
-      progress: `最新開發進度`,
+      progress: `最新進展`,
       product: `產品資訊`,
     },
     pv: {
