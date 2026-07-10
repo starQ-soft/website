@@ -97,37 +97,11 @@ const HeroContent = styled.div`
   padding: 6rem 1rem;
 `;
 
-const HeroTitle = styled.div`
-  line-height: 1.4;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-
-  p {
-    margin: 1rem 0;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 4.5rem;
-  }
-`;
-
-const GradientText = styled.span`
-  display: inline-block;
-  font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
-  color: #33333b;
-  font-size: 1.2em;
-  line-height: 1.4;
-  padding-bottom: 0.1em;
-
-  b {
-    font-weight: 800;
-    font-size: 1.5em;
-    line-height: 1;
-    background: linear-gradient(180deg, #fba8c3 0%,  #dd6f94 20%, #5a5860 50%, #33333b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+const HeroLogo = styled(motion.img)`
+  display: block;
+  width: min(90vw, 760px);
+  height: auto;
+  margin: 0 auto 1.5rem;
 `;
 
 const HeroDescription = styled(motion.div)`
@@ -201,15 +175,6 @@ const staggerContainer: Variants = {
   },
 };
 
-const wordItem: Variants = {
-  initial: { opacity: 0, y: 30 },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: "easeOut" }
-  }
-};
-
 const scaleOnHover = {
   whileHover: { scale: 1.02 },
   whileTap: { scale: 0.95 },
@@ -219,32 +184,36 @@ const MotionStoryTitle = motion.create(StoryTitle);
 const MotionStorySubtitle = motion.create(StorySubtitle);
 const MotionStoryDescription = motion.create(StoryDescription);
 
+const HERO_LOGO_CODES: Record<string, string> = {
+  "ja-jp": "jp",
+  "en-us": "en",
+  "zh-cn": "zh",
+  "zh-tw": "zh",
+  "ko-kr": "kn",
+  "es-es": "es",
+  "ru-ru": "ru",
+  "vi-vn": "vi",
+  "fr-fr": "fr",
+  "it-it": "it",
+  "de-de": "de",
+  "th-th": "th",
+  "ms-my": "ms",
+};
+
 export const LoveCofounder: React.FC = () => {
   const { lang } = useLanguage();
   const t = lscContent[lang] ?? lscContent['zh-cn']!;
+  const heroLogoCode = HERO_LOGO_CODES[lang] ?? "en";
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const heroImages = [
+  const heroImages: string[] = [
     // "lsc-nana.png",
     // "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=1200&h=800&fit=crop",
     // "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop",
   ];
 
-  const wordVariant1 = {
-    initial: { opacity: 0, y: 30 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.2 } }
-  };
-
-  const wordVariant2 = {
-    initial: { opacity: 0, y: 30 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.4 } }
-  };
-
-  const wordVariant3 = {
-    initial: { opacity: 0, y: 30 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.6 } }
-  };
-
   useEffect(() => {
+    if (heroImages.length === 0) return;
+
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
     }, 5000);
@@ -274,19 +243,11 @@ export const LoveCofounder: React.FC = () => {
               initial="initial"
               animate="animate"
             >
-              <HeroTitle>
-                {t.hero.title.map((line, lineIndex) => (
-                  <p key={lineIndex}>
-                    <GradientText>
-                      {line.map((part, partIndex) => (
-                        <motion.span key={partIndex} variants={wordItem} style={{ display: "inline-block" }}>
-                          <b style={{ fontSize: part.size ?? "2em" }}>{part.big}</b>{part.small}
-                        </motion.span>
-                      ))}
-                    </GradientText>
-                  </p>
-                ))}
-              </HeroTitle>
+              <HeroLogo
+                src={`/Library_Logo_${heroLogoCode}_glow.png`}
+                alt={t.story.title}
+                variants={fadeInUp}
+              />
 
               <HeroDescription variants={fadeInUp}>
                 {t.hero.description.map((line, index) => (
