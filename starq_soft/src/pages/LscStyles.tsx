@@ -2,7 +2,7 @@ import styled, { createGlobalStyle } from "styled-components";
 
 export const LscGlobalStyle = createGlobalStyle`
   *, *::before, *::after {
-    box-sizing: border-box; /* 确保 padding 不会撑大容器 */
+    box-sizing: border-box;
   }
 
   body, html {
@@ -10,7 +10,7 @@ export const LscGlobalStyle = createGlobalStyle`
     padding: 0;
     width: 100%;
     min-height: 100%;
-    overflow-x: hidden; /* 防止移动端左右晃动 */
+    overflow-x: hidden;
   }
 
   body {
@@ -124,13 +124,13 @@ export const StorySubtitle = styled.div`
 
 export const StoryDescription = styled.div`
   text-align: center;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(0.85rem, 0.85vw, 1rem);
   line-height: 2.4;
   color: #1a1315;
   font-weight: 500;
   
   p {
-    margin-bottom: 1.5em;
+    margin: 1.5em;
   }
 
   strong {
@@ -142,7 +142,7 @@ export const StoryDescription = styled.div`
 
   span {
     color: #CC1075;
-    font-size: clamp(1.35rem, 3.5vw, 2.5rem);
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
   }
 
   @media (max-width: 768px) {
@@ -151,7 +151,7 @@ export const StoryDescription = styled.div`
     text-align: left;
 
     p {
-      margin-bottom: 1.15em;
+      margin: 1.5em;
     }
   }
 `;

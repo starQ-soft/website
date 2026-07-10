@@ -99,14 +99,14 @@ const HeroContent = styled.div`
 
 const HeroLogo = styled(motion.img)`
   display: block;
-  width: min(90vw, 760px);
+  width: min(20vw, 600px);
   height: auto;
   margin: 0 auto 1.5rem;
 `;
 
 const HeroDescription = styled(motion.div)`
   font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: hsl(215.4 16.3% 46.9%);
   margin: 5rem auto;
   max-width: 600px;
@@ -188,7 +188,7 @@ const HERO_LOGO_CODES: Record<string, string> = {
   "ja-jp": "jp",
   "en-us": "en",
   "zh-cn": "zh",
-  "zh-tw": "zh",
+  "zh-tw": "tw",
   "ko-kr": "kn",
   "es-es": "es",
   "ru-ru": "ru",

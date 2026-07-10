@@ -151,7 +151,7 @@ const Section = styled.section`
 
 
 const PvContainer = styled.div`
-  width: min(100%, 80rem);
+  width: min(60%, 80rem);
   min-width: 0;
   aspect-ratio: 16 / 9;
   background-color: black;
@@ -164,8 +164,13 @@ const PvContainer = styled.div`
   margin: 2rem 0;
 
   @media (max-width: 768px) {
+    width: 90%;
     border-width: 2px;
     margin: 1rem 0;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 80%;
   }
 `;
 
@@ -803,7 +808,7 @@ const Lsc = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}
             >
 
               <TypingStoryTitle id="pv" text={`// ${t.nav.pv}`} />

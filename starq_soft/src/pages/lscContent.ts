@@ -160,7 +160,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       wishlist: `ウィッシュリストに追加`,
     },
     story: {
-      title: `// STORY`,
+      title: `// ストーリー`,
       subtitle: `「一緒に起業しよう！」`,
       paragraphs: [
         { segments: [{ t: `共に始まる冒険！`, em: 'span' }] },
@@ -590,7 +590,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       wishlist: `加入愿望单`,
     },
     story: {
-      title: `// STORY`,
+      title: `// 剧情简介`,
       subtitle: `「我们一起创业吧！」`,
       paragraphs: [
         { segments: [{ t: `共同开启的冒险！`, em: 'span' }] },
@@ -1104,7 +1104,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       "wishlist": "찜 목록에 추가"
     },
     "story": {
-      "title": "// STORY",
+      "title": "// 줄거리",
       "subtitle": "「우리, 함께 창업하자!」",
       "paragraphs": [
         {
