@@ -198,7 +198,8 @@ export const LoveCofounderCharacter: React.FC = () => {
           >
           <CharacterHeader>
             <div>
-              <div>{characters[selectedCharacter].name.japanese.map((char: string, i: number) => (
+              <CharacterNameLine $isJapanese={lang === 'ja-jp'}>
+              {characters[selectedCharacter].name.japanese.map((char: string, i: number) => (
                 <ruby key={i} style={{ marginBottom: "0.5rem" }}>
                   {['ja-jp', 'zh-cn', 'zh-tw'].includes(lang) && <JapaneseName>{char}</JapaneseName>}
                   {lang === "ja-jp" && (
@@ -211,7 +212,7 @@ export const LoveCofounderCharacter: React.FC = () => {
                   {characters[selectedCharacter].name.english}
                 </EnglishName>
               )}
-              </div>
+              </CharacterNameLine>
               <div>
                 {['zh-cn', 'zh-tw'].includes(lang) && <>{labels.cv}: {characters[selectedCharacter].voiceActor}</>}
                 {characters[selectedCharacter].sampleVoices
@@ -381,18 +382,37 @@ const CharacterHeader = styled.div`
   margin-bottom: 30px;
 `;
 
-const JapaneseName = styled.h3`
-  font-family: "Noto Sans JP", sans-serif;
+const CharacterNameLine = styled.div<{ $isJapanese: boolean }>`
+  font-family: ${({ $isJapanese }) => $isJapanese
+    ? '"Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", "MS PMincho", serif'
+    : 'inherit'};
   font-size: clamp(1.4rem, 4vw, 2rem);
-  margin: 0;
+  font-weight: 600;
+  line-height: 1.5;
   margin-bottom: 1rem;
+
+  ruby,
+  rt {
+    font-family: inherit;
+  }
+
+  rt {
+    font-size: 0.45em;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.06em;
+  }
+`;
+
+const JapaneseName = styled.span`
+  font: inherit;
+  margin: 0;
 `;
 
 const EnglishName = styled.h3`
   font-family: "Noto Sans JP", sans-serif;
   font-size: clamp(1.4rem, 4vw, 2rem);
   margin: 0;
-  margin-bottom: 1rem;
 `;
 
 const VoiceButton = styled.div`

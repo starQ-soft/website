@@ -1,15 +1,28 @@
 "use client"
-import React from "react"
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import React, { useLayoutEffect } from "react"
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom'
 import App from "./App"
 import Lsc from "./pages/Lsc"
 import { LanguageProvider } from "./LanguageContext"
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation()
+
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+  }, [pathname])
+
+  return null
+}
 
 const AppRouter: React.FC = () => {
   return (
     <LanguageProvider>
       <React.StrictMode>
         <HashRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<App />} />
             <Route path="/love-startup-cofounder" element={<Lsc />} />
