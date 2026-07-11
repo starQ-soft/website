@@ -18,6 +18,8 @@ const BannerContainer = styled.section`
   justify-content: center;
   background: transparent;
   z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
 `;
 
 const getLayerSize = ($isHaruka: boolean, $isNana: boolean) => {
@@ -50,10 +52,14 @@ const MobileBackground = styled.img`
 
   @media (max-width: 768px) {
     display: block;
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;
     object-fit: cover;
     pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
   }
 `;
 
@@ -68,7 +74,7 @@ const TransparentBanner: React.FC<TransparentBannerProps> = ({
 }) => {
     return (
         <BannerContainer>
-            {mobileImage && <MobileBackground src={mobileImage} alt="" />}
+            {mobileImage && <MobileBackground src={mobileImage} alt="" draggable={false} />}
             {images.map((src, i) => (
                 <LayeredImage
                     key={src}

@@ -15,7 +15,7 @@ import { useLanguage } from '../LanguageContext';
 import { lscContent } from './lscContent';
 import { Link } from 'react-router-dom';
 
-export const LscNav = styled.nav`
+export const LscNav = styled.nav<{ $showBackground: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,6 +25,18 @@ export const LscNav = styled.nav`
   z-index: 100;
   width: 100%;
   box-sizing: border-box;
+  background: ${({ $showBackground }) =>
+    $showBackground ? 'rgba(255, 255, 255, 0.58)' : 'transparent'};
+  border-bottom: 1px solid ${({ $showBackground }) =>
+    $showBackground ? 'rgba(255, 255, 255, 0.45)' : 'transparent'};
+  box-shadow: ${({ $showBackground }) =>
+    $showBackground ? '0 4px 18px rgba(70, 45, 60, 0.08)' : 'none'};
+  backdrop-filter: ${({ $showBackground }) =>
+    $showBackground ? 'blur(5px) saturate(140%)' : 'none'};
+  -webkit-backdrop-filter: ${({ $showBackground }) =>
+    $showBackground ? 'blur(5px) saturate(140%)' : 'none'};
+  transition: background-color 0.35s ease, border-color 0.35s ease,
+    box-shadow 0.35s ease, backdrop-filter 0.35s ease;
 
   @media (max-width: 768px) {
     padding: 0.5rem 0.75rem;
@@ -648,6 +660,7 @@ const Lsc = () => {
   const { lang } = useLanguage();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showNavBackground, setShowNavBackground] = useState(false);
 
   const t = lscContent[lang] ?? lscContent['zh-cn']!;
 
@@ -672,6 +685,23 @@ const Lsc = () => {
   const showNext = () => {
     setSelectedIndex((i) => (i === null ? i : (i + 1) % screenshots.length));
   };
+
+  useEffect(() => {
+    const updateNavBackground = () => {
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const threshold = Math.max(scrollableHeight * 0.05, 1);
+      setShowNavBackground(window.scrollY >= threshold);
+    };
+
+    updateNavBackground();
+    window.addEventListener('scroll', updateNavBackground, { passive: true });
+    window.addEventListener('resize', updateNavBackground);
+
+    return () => {
+      window.removeEventListener('scroll', updateNavBackground);
+      window.removeEventListener('resize', updateNavBackground);
+    };
+  }, []);
 
   useEffect(() => {
     // Mobile uses a static banner, so it does not need an intro scroll lock.
@@ -729,7 +759,7 @@ const Lsc = () => {
   return (
     <LscContainer>
       <LscGlobalStyle />
-      <LscNav>
+      <LscNav $showBackground={showNavBackground}>
         <Link to="/">
           <Logo src={logoImage} alt="StarQ Logo" />
         </Link>
