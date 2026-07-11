@@ -59,13 +59,17 @@ const sway = keyframes`
 
 const Container = styled.div`
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   z-index: -1;
   pointer-events: none;
+  touch-action: none;
+  user-select: none;
+  overscroll-behavior: none;
+  contain: strict;
   background: #fff;
 `;
 
@@ -75,6 +79,9 @@ const SakuraPetal = styled.img<PetalConfig>`
   width: ${props => props.$size};
   height: ${props => props.$size};
   object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
   opacity: 0.7;
   filter: blur(${props => props.$blur});
   transform: rotate(${props => props.$rotation});
@@ -134,7 +141,7 @@ const CherryBlossomBackground: React.FC<{ count?: number }> = ({ count = 65 }) =
   return (
     <Container>
       {petals.map((p) => (
-        <SakuraPetal key={p.id} src={p.$image} {...p} />
+        <SakuraPetal key={p.id} src={p.$image} {...p} draggable={false} />
       ))}
     </Container>
   );

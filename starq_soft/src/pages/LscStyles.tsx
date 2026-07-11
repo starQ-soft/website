@@ -252,7 +252,7 @@ export const CharacterCarousel = styled.div`
 `;
 
 export const CharacterCard = styled.div<{ $isSelected?: boolean }>`
-  min-width: 120px;
+  width: 120px;
   flex: 0 0 auto;
   border: 2px solid ${(props) => (props.$isSelected ? "#ff0088" : "#aaa")};
   display: flex;

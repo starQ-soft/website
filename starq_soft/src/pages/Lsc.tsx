@@ -119,7 +119,6 @@ const SideNav = styled.nav<{ $open?: boolean }>`
   }
 `;
 
-
 const LscContainer = styled.div`
   min-height: 100vh;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
@@ -253,6 +252,7 @@ const PromotionCard = styled.div`
   align-items: center;
   width: 100%;
   box-sizing: border-box;
+  color: #404652;
 
   @media (min-width: 768px) { flex-direction: row; }
 
