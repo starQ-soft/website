@@ -8,7 +8,7 @@ import { LanguageProvider } from "./LanguageContext"
 const AppRouter: React.FC = () => {
   return (
     <LanguageProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/love-startup-cofounder" element={<Lsc />} />
