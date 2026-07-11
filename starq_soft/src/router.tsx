@@ -1,6 +1,6 @@
 "use client"
 import React, { useLayoutEffect } from "react"
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import App from "./App"
 import Lsc from "./pages/Lsc"
 import NotFound from "./pages/NotFound"
@@ -22,7 +22,7 @@ const AppRouter: React.FC = () => {
   return (
     <LanguageProvider>
       <React.StrictMode>
-        <HashRouter>
+        <BrowserRouter>
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<App />} />
@@ -30,7 +30,7 @@ const AppRouter: React.FC = () => {
             <Route path="/lsc" element={<Lsc />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </HashRouter>
+        </BrowserRouter>
       </React.StrictMode>
     </LanguageProvider>
   )

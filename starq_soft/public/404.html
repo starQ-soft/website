@@ -3,17 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0;url=https://starqsoft.com/#/anything" />
     <meta name="robots" content="noindex" />
     <title>Redirecting…</title>
     <script>
-      window.location.replace('https://starqsoft.com/#/anything');
+      // Preserve the requested BrowserRouter URL while returning through the
+      // site root, which static hosts can always serve.
+      var path = window.location.pathname.slice(1);
+      var query = window.location.search
+        ? '&' + window.location.search.slice(1).replace(/&/g, '~and~')
+        : '';
+      window.location.replace(
+        window.location.origin + '/?/' + path.replace(/&/g, '~and~') + query + window.location.hash
+      );
     </script>
   </head>
   <body>
     <p>
       Redirecting…
-      <a href="https://starqsoft.com/#/anything">Continue to StarQ Soft</a>
+      <a href="https://starqsoft.com/">Continue to StarQ Soft</a>
     </p>
   </body>
 </html>
