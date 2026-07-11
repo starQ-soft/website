@@ -570,9 +570,9 @@ const screenshots = [
   // { src: 'cg_thumbnail_1.png', alt: 'LSC-Forest Scene' },
   // { src: 'cg_thumbnail_2.png', alt: 'LSC-Battle Scene' },
   // { src: 'cg_thumbnail_3.png', alt: 'LSC-Castle' },
-  { src: 'cg_thumbnail_4.png', alt: 'LSC-Dragon' },
-  { src: 'cg_thumbnail_5.png', alt: 'LSC-Village' },
-  { src: 'cg_thumbnail_6.png', alt: 'LSC-Magic Spell' },
+  { src: `${import.meta.env.BASE_URL}cg_thumbnail_4.png`, alt: 'LSC-Dragon' },
+  { src: `${import.meta.env.BASE_URL}cg_thumbnail_5.png`, alt: 'LSC-Village' },
+  { src: `${import.meta.env.BASE_URL}cg_thumbnail_6.png`, alt: 'LSC-Magic Spell' },
 ];
 
 const MotionStoryTitle = motion.create(StoryTitle);
@@ -754,8 +754,14 @@ const Lsc = () => {
 
       <CherryBlossomBackground count={80} />
       <TransparentBanner
-        images={["haruka.gif", "/rin.gif", "/lsc-natsumi.png", "/shizuka.gif", "/nana.gif",]}
-        mobileImage="/lsc_mobile.png"
+        images={[
+          `${import.meta.env.BASE_URL}haruka.gif`,
+          `${import.meta.env.BASE_URL}rin.gif`,
+          `${import.meta.env.BASE_URL}lsc-natsumi.png`,
+          `${import.meta.env.BASE_URL}shizuka.gif`,
+          `${import.meta.env.BASE_URL}nana.gif`,
+        ]}
+        mobileImage={`${import.meta.env.BASE_URL}lsc_mobile.png`}
       />
       <ContentWrapper>
         <LoveCofounder />

@@ -61,7 +61,7 @@ const BackToTop = ({ variant = 'main' }: BackToTopProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const baseSrc =
-    variant === 'lsc' ? 'public/topbutton' : 'public/main_top_button';
+    variant === 'lsc' ? 'topbutton' : 'main_top_button';
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -93,8 +93,8 @@ const BackToTop = ({ variant = 'main' }: BackToTopProps) => {
       onMouseLeave={() => setIsHovered(false)}
       aria-label="back to top"
     >
-      <img className="base" src={`${baseSrc}.png`} alt="back to top" />
-      <img className="hover" src={`${baseSrc}_hover.png`} alt="" aria-hidden="true" />
+      <img className="base" src={`${import.meta.env.BASE_URL}${baseSrc}.png`} alt="back to top" />
+      <img className="hover" src={`${import.meta.env.BASE_URL}${baseSrc}_hover.png`} alt="" aria-hidden="true" />
     </TopButton>
   );
 };

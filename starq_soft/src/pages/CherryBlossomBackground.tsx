@@ -17,19 +17,19 @@ interface PetalConfig {
 }
 
 const PETAL_IMAGES = [
-  "public/petal_pink_0.png",
-  "public/petal_pink_1.png",
-  "public/petal_pink_2.png",
-  "public/petal_pink_4.png",
-  "public/petal_pink_5.png",
-  "public/petal_pink_6.png",
-  "public/petal_blue_0.png",
-  "public/petal_blue_1.png",
-  "public/petal_blue_2.png",
-  "public/petal_blue_3.png",
-  "public/petal_blue_4.png",
-  "public/petal_blue_5.png",
-  "public/petal_blue_6.png",
+  `${import.meta.env.BASE_URL}petal_pink_0.png`,
+  `${import.meta.env.BASE_URL}petal_pink_1.png`,
+  `${import.meta.env.BASE_URL}petal_pink_2.png`,
+  `${import.meta.env.BASE_URL}petal_pink_4.png`,
+  `${import.meta.env.BASE_URL}petal_pink_5.png`,
+  `${import.meta.env.BASE_URL}petal_pink_6.png`,
+  `${import.meta.env.BASE_URL}petal_blue_0.png`,
+  `${import.meta.env.BASE_URL}petal_blue_1.png`,
+  `${import.meta.env.BASE_URL}petal_blue_2.png`,
+  `${import.meta.env.BASE_URL}petal_blue_3.png`,
+  `${import.meta.env.BASE_URL}petal_blue_4.png`,
+  `${import.meta.env.BASE_URL}petal_blue_5.png`,
+  `${import.meta.env.BASE_URL}petal_blue_6.png`,
 ];
 
 const fallAndRotate = (drift: string) => keyframes`

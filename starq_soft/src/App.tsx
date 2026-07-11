@@ -44,8 +44,8 @@ const App = () => {
   const t = translations[lang as keyof typeof translations];
   const n = news[lang as keyof typeof news] ?? news['ja-jp'];
 
-  const banners = ['public/banner4.png',
-    // 'public/banner2.png', 'public/banner3.png'
+  const banners = [`${import.meta.env.BASE_URL}banner4.png`,
+    // `${import.meta.env.BASE_URL}banner2.png`, `${import.meta.env.BASE_URL}banner3.png`
   ];
 
   // direction drives whether slides enter from the right (1) or left (-1).
@@ -220,7 +220,11 @@ const App = () => {
               <MotionProductGrid variants={itemReveal}>
                 {t.product.banners.map((banner, index) => (
                   <ProductBannerLink href={banner.link} key={index}>
-                    <ProductBanner key={index} $bgImage={banner.image} $upcoming={banner.upcoming} >
+                    <ProductBanner
+                      key={index}
+                      $bgImage={`${import.meta.env.BASE_URL}${banner.image.replace(/^\/?(?:public\/)?/, '')}`}
+                      $upcoming={banner.upcoming}
+                    >
                       {banner.name}
                     </ProductBanner>
                   </ProductBannerLink>

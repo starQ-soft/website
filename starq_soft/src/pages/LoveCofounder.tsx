@@ -244,7 +244,7 @@ export const LoveCofounder: React.FC = () => {
               animate="animate"
             >
               <HeroLogo
-                src={`/Library_Logo_${heroLogoCode}_glow.png`}
+                src={`${import.meta.env.BASE_URL}Library_Logo_${heroLogoCode}_glow.png`}
                 alt={t.story.title}
                 variants={fadeInUp}
               />

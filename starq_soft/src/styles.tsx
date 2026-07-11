@@ -312,8 +312,8 @@ export const Twinkle = styled.span`
   margin-left: 0.5em;
   vertical-align: middle;
   background-color: currentColor;
-  -webkit-mask: url(/twinkle.svg) no-repeat center / contain;
-  mask: url(/twinkle.svg) no-repeat center / contain;
+  -webkit-mask: url(${import.meta.env.BASE_URL}twinkle.svg) no-repeat center / contain;
+  mask: url(${import.meta.env.BASE_URL}twinkle.svg) no-repeat center / contain;
 `;
 
 export const NewsRow = styled.div`
@@ -433,7 +433,7 @@ export const Footer = styled.footer`
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(/star_bg.png);
+    background-image: url(${import.meta.env.BASE_URL}star_bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

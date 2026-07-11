@@ -165,7 +165,7 @@ export const LoveCofounderCharacter: React.FC = () => {
                   setSelectedCharacter(index);
                 }}>
                 <div className="avatar">
-                  <img src={avatars[index].replace(/\.png$/, "-avatar.png")} alt={char.name.english} />
+                  <img src={`${import.meta.env.BASE_URL}${avatars[index].replace(/\.png$/, "-avatar.png")}`} alt={char.name.english} />
                 </div>
                 {/* <div>{char.name.japanese}</div> */}
               </CharacterCard>
@@ -180,7 +180,7 @@ export const LoveCofounderCharacter: React.FC = () => {
         <AnimatePresence mode="wait">
           <MotionCharacterImage
             key={selectedCharacter}
-            src={characters[selectedCharacter].image}
+            src={`${import.meta.env.BASE_URL}${characters[selectedCharacter].image}`}
             alt={characters[selectedCharacter].name.english}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -230,9 +230,9 @@ export const LoveCofounderCharacter: React.FC = () => {
                     >
                       <VoiceButton>
                         <VoiceIcon
-                          src={isChinese && selectedCharacter > 0
+                          src={`${import.meta.env.BASE_URL}${isChinese && selectedCharacter > 0
                             ? (playingSrc === src ? "voice-stop.svg" : "voice-play.svg")
-                            : "dialog_bubble.png"}
+                            : "dialog_bubble.png"}`}
                           alt={isChinese && selectedCharacter > 0 ? (playingSrc === src ? "stop" : "play") : "dialog"}
                         />
                       </VoiceButton>
