@@ -43,10 +43,24 @@ const App = () => {
   const { lang } = useLanguage();
   const t = translations[lang as keyof typeof translations];
   const n = news[lang as keyof typeof news] ?? news['ja-jp'];
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
+  );
 
-  const banners = [`${import.meta.env.BASE_URL}banner4.png`,
+  const banners = [isMobile
+    ? `${import.meta.env.BASE_URL}banner4_mobile.png`
+    : `${import.meta.env.BASE_URL}banner4.png`,
     // `${import.meta.env.BASE_URL}banner2.png`, `${import.meta.env.BASE_URL}banner3.png`
   ];
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const updateBanner = (event: MediaQueryListEvent) => setIsMobile(event.matches);
+
+    setIsMobile(mediaQuery.matches);
+    mediaQuery.addEventListener('change', updateBanner);
+    return () => mediaQuery.removeEventListener('change', updateBanner);
+  }, []);
 
   // direction drives whether slides enter from the right (1) or left (-1).
   const [[bannerIndex, direction], setBanner] = useState([0, 1]);

@@ -350,8 +350,13 @@ const CharacterImage = styled.img`
     max-width: 360px;
   }
 
+  @media (max-width: 768px) {
+    width: 80%;
+    max-width: 288px;
+  }
+
   @media (max-width: 480px) {
-    max-width: 82vw;
+    max-width: 65.6vw;
   }
 `;
 

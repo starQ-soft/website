@@ -264,9 +264,13 @@ export const CharacterCard = styled.div<{ $isSelected?: boolean }>`
   cursor: pointer;
 
   @media (max-width: 480px) {
-    min-width: 0;
     width: calc((100% - 1.5rem) / 3);
     .avatar { height: 5rem; }
+    width: 60px;
+  }
+
+  @media (max-width: 760px) {
+    width: 80px;
   }
 
   :hover {

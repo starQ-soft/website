@@ -70,6 +70,7 @@ const Container = styled.div`
   user-select: none;
   overscroll-behavior: none;
   contain: strict;
+  background: #fff;
 `;
 
 const SakuraPetal = styled.img<PetalConfig>`
