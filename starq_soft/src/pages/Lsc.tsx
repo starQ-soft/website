@@ -82,6 +82,7 @@ const Ham = styled.div<{ $open?: boolean }>`
 const SideNav = styled.nav<{ $open?: boolean }>`
   position: fixed;
   top: 0;
+  bottom: 0;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -89,8 +90,16 @@ const SideNav = styled.nav<{ $open?: boolean }>`
   align-items: flex-start;
   gap: 1.25rem;
   padding: 3rem clamp(1.25rem, 3.5vw, 3rem);
-  width: clamp(16rem, 24vw, 24rem);
-  height: 100%;
+  width: clamp(25rem, 35vw, 35rem);
+  @media (max-width: 768px) {
+    width: 100vw;
+  }
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   background-color: #fff;
     background-image: repeating-linear-gradient(
     to right,
@@ -776,21 +785,27 @@ const Lsc = () => {
           <LangSwitcherContainer>
             <LangSelector />
           </LangSwitcherContainer>
-          <Ham $open={menuOpen} onClick={() => setMenuOpen((open) => !open)} aria-label="Toggle navigation">
+          <Ham
+            $open={menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-label="Toggle navigation"
+            aria-expanded={menuOpen}
+          >
             <span className="top" />
             <span className="middle" />
             <span className="bottom" />
           </Ham>
         </NavRight>
 
-        <SideNav $open={menuOpen}>
-          {navSections.map(({ id, label }) => (
-            <a key={id} href={`#${id}`} onClick={(e) => handleNavClick(e, id)}>
-              {label}
-            </a>
-          ))}
-        </SideNav>
       </LscNav>
+
+      <SideNav $open={menuOpen} aria-hidden={!menuOpen}>
+        {navSections.map(({ id, label }) => (
+          <a key={id} href={`#${id}`} onClick={(e) => handleNavClick(e, id)}>
+            {label}
+          </a>
+        ))}
+      </SideNav>
 
       <CherryBlossomBackground count={80} />
       <TransparentBanner
