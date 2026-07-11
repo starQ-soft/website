@@ -10,6 +10,7 @@ import { socialLinks } from './components/footer/FooterConstants';
 import FallingStars from './components/FallingStars';
 import LangSelector from './LangSelector';
 import { useLanguage } from './LanguageContext';
+import { Link } from 'react-router-dom';
 
 const MotionHeroSlide = motion.create(HeroSlide);
 const MotionProductHeaderArea = motion.create(ProductHeaderArea);
@@ -233,7 +234,7 @@ const App = () => {
 
               <MotionProductGrid variants={itemReveal}>
                 {t.product.banners.map((banner, index) => (
-                  <ProductBannerLink href={`${import.meta.env.BASE_URL}${banner.link}`} key={index}>
+                  <ProductBannerLink as={Link} to={banner.link} key={index}>
                     <ProductBanner
                       key={index}
                       $bgImage={`${import.meta.env.BASE_URL}${banner.image.replace(/^\/?(?:public\/)?/, '')}`}
