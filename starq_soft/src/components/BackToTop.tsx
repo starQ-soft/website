@@ -8,7 +8,8 @@ type TopButtonProps = {
 
 const TopButton = styled.button<TopButtonProps>`
   position: fixed;
-  bottom: 2rem;
+  bottom: 0;
+  bottom: env(safe-area-inset-bottom, 0px);
   width: 10rem;
   height: 10rem;
   right: 5vw;
@@ -43,7 +44,6 @@ const TopButton = styled.button<TopButtonProps>`
   @media (max-width: 768px) {
     width: 5rem;
     height: 5rem;
-    bottom: 1rem;
     right: 1rem;
   }
 

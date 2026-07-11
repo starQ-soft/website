@@ -120,6 +120,10 @@ const HeroDescription = styled(motion.div)`
   p {
     margin-top: 1.5rem;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1rem; 
+  }
 `;
 
 const HeroActions = styled(motion.div)`

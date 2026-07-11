@@ -120,13 +120,14 @@ const SideNav = styled.nav<{ $open?: boolean }>`
 `;
 
 const LscContainer = styled.div`
-  min-height: 100vh;
+  height: 100vh;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  position: relative;
+  position: absolute;
   overflow-x: hidden;
   overflow-x: clip;
   width: 100%;
   box-sizing: border-box;
+  background-color: #fff;
 `;
 
 const contentAppear = keyframes`

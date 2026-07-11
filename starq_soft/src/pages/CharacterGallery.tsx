@@ -199,7 +199,7 @@ export const LoveCofounderCharacter: React.FC = () => {
           <CharacterHeader>
             <div>
               <div>{characters[selectedCharacter].name.japanese.map((char: string, i: number) => (
-                <ruby key={i} style={{ marginRight: "2px" }}>
+                <ruby key={i} style={{ marginBottom: "0.5rem" }}>
                   {['ja-jp', 'zh-cn', 'zh-tw'].includes(lang) && <JapaneseName>{char}</JapaneseName>}
                   {lang === "ja-jp" && (
                     <rt>{characters[selectedCharacter].name.read[i] || ""}</rt>
