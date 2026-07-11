@@ -461,7 +461,7 @@ const QuoteText = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(0.85rem, 2vw, 1.25rem);
     letter-spacing: .1em;
     position: relative;
     padding: 1rem 1.5em;

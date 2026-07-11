@@ -66,7 +66,7 @@ const Container = styled.div`
   overflow: hidden;
   z-index: -1;
   pointer-events: none;
-  background: transparent;
+  background: #fff;
 `;
 
 const SakuraPetal = styled.img<PetalConfig>`

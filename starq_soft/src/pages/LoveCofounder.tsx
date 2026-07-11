@@ -102,6 +102,10 @@ const HeroLogo = styled(motion.img)`
   width: min(20vw, 600px);
   height: auto;
   margin: 0 auto 1.5rem;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const HeroDescription = styled(motion.div)`
