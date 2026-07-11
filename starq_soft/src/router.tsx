@@ -15,7 +15,7 @@ const AppRouter: React.FC = () => {
             <Route path="/love-startup-cofounder" element={<Lsc />} />
           </Routes>
         </HashRouter>
-      </React.StrictMode>,
+      </React.StrictMode>
     </LanguageProvider>
   )
 }

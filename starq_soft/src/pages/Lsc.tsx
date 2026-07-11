@@ -13,6 +13,7 @@ import { socialLinks } from '../components/footer/FooterConstants';
 import LangSelector from '../LangSelector';
 import { useLanguage } from '../LanguageContext';
 import { lscContent } from './lscContent';
+import { Link } from 'react-router-dom';
 
 export const LscNav = styled.nav`
   display: flex;
@@ -729,9 +730,9 @@ const Lsc = () => {
     <LscContainer>
       <LscGlobalStyle />
       <LscNav>
-        <a href="/">
+        <Link to="/">
           <Logo src={logoImage} alt="StarQ Logo" />
-        </a>
+        </Link>
         <NavRight>
           <LangSwitcherContainer>
             <LangSelector />
