@@ -123,6 +123,10 @@ export const NavActions = styled.div`
   align-items: center;
   gap: 1rem;
   width: 10rem;
+
+  @media (max-width: 768px) {
+    width: 5rem;
+  }
 `;
 
 export const Hero = styled.header<{ $bgImage?: string }>`

@@ -22,9 +22,15 @@ export const LscNav = styled.nav<{ $showBackground: boolean }>`
   padding: 1rem;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
   z-index: 100;
   width: 100%;
+  max-width: 100vw;
   box-sizing: border-box;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   background: ${({ $showBackground }) =>
     $showBackground ? 'rgba(255, 255, 255, 0.58)' : 'transparent'};
   border-bottom: 1px solid ${({ $showBackground }) =>
