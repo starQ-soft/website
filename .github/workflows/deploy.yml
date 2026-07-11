@@ -19,6 +19,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    defaults:
+      run:
+        working-directory: ./starq_soft
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,6 +36,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: ./starq_soft/package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -39,9 +48,9 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload built website
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: ./dist
+          path: ./starq_soft/dist
 
       - name: Deploy to GitHub Pages
         id: deployment
