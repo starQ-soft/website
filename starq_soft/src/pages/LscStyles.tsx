@@ -11,6 +11,8 @@ export const LscGlobalStyle = createGlobalStyle`
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
@@ -28,6 +30,7 @@ export const StoryContainer = styled.section`
   padding: 2rem 1rem;
   background-color: #fff;
   backdrop-filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+  -webkit-backdrop-filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
   width: min(92%, 960px);
   margin: 0 auto;
   opacity: 0.8;

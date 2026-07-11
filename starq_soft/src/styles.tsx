@@ -4,6 +4,10 @@ export const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
   }
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
   body {
     margin: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -236,6 +240,9 @@ export const ScrollableContainer = styled.section`
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -498,6 +505,7 @@ export const FormContainer = styled.form`
   background-color: rgba(252, 252, 252, 0.85);
   border: 1px solid #eee;
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border-radius: 8px;
   font-family: sans-serif;
 

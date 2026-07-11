@@ -124,6 +124,7 @@ const LscContainer = styled.div`
   min-height: 100vh;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
   position: relative;
+  overflow-x: hidden;
   overflow-x: clip;
   width: 100%;
   box-sizing: border-box;
@@ -138,6 +139,7 @@ const ContentWrapper = styled.div`
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
   margin: 0 auto;
   position: relative;
   z-index: 10;

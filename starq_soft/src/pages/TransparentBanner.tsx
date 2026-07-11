@@ -55,6 +55,7 @@ const MobileBackground = styled.img`
     position: fixed;
     inset: 0;
     width: 100vw;
+    height: 100vh;
     height: 100dvh;
     object-fit: cover;
     pointer-events: none;
