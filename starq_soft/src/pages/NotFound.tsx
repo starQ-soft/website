@@ -55,6 +55,7 @@ const Content = styled.div`
     width: 90%;
     grid-template-columns: 1fr;
     text-align: center;
+    margin: 5rem auto;
   }
 `;
 
@@ -88,13 +89,17 @@ const Message = styled.section`
     font-size: clamp(1rem, 2vw, 1.25rem);
     line-height: 1.8;
   }
+
+  @media (max-width: 768px) {
+    text-align: left;
+  }
 `;
 
 const HomeLink = styled(Link)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 3rem;
+  min-height: 2rem;
   padding: 0.75rem 2rem;
   border: 2px solid #cc1075;
   border-radius: 999px;
@@ -109,6 +114,11 @@ const HomeLink = styled(Link)`
     background: #fff;
     color: #cc1075;
     transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    min-height: 1.5rem;
+    padding: 0.5rem 1.5rem;
   }
 `;
 
