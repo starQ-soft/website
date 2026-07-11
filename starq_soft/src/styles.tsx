@@ -194,6 +194,10 @@ export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.5rem;
+  }
 `;
 
 export const ButtonGroup = styled.div`
@@ -202,6 +206,11 @@ export const ButtonGroup = styled.div`
   gap: 0.75rem;
   width: 50%;
   margin-top: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    width: 60%;
+  }
 `;
 
 export const PrimaryButton = styled.button`
@@ -282,7 +291,7 @@ export const PreorderText = styled.div`
     0 0 3px #001e2c;
 
   @media (max-width: 768px) {
-    font-size: clamp(1.75rem, 5vw, 1.5rem);
+    font-size: clamp(1.5rem, 2vw, 2rem);
     letter-spacing: 0.08em;
     padding: 0 0.75rem;
   }
