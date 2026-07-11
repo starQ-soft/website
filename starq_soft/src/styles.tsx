@@ -594,9 +594,102 @@ export const CheckboxContainer = styled.label`
     flex: 0 0 auto;
   }
 
-  a {
+  button {
+    padding: 0;
+    border: 0;
+    background: none;
     color: #FF5C8A;
     text-decoration: underline;
+    font: inherit;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid #FF5C8A;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  }
+`;
+
+export const LegalModalBackdrop = styled.div`
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 4vw, 3rem);
+  background: rgba(26, 16, 22, 0.62);
+  backdrop-filter: blur(6px);
+`;
+
+export const LegalModalDialog = styled.div`
+  width: min(720px, 100%);
+  max-height: min(82vh, 760px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(255, 92, 138, 0.2);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 24px 80px rgba(40, 15, 25, 0.3);
+
+  @media (max-width: 640px) {
+    width: 100%;
+    max-height: calc(100dvh - 1.5rem);
+    border-radius: 14px;
+  }
+`;
+
+export const LegalModalHeader = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f2e8ec;
+
+  h2 {
+    margin: 0;
+    color: #d93470;
+    font-size: clamp(1.25rem, 4vw, 1.7rem);
+  }
+
+  @media (max-width: 640px) {
+    padding: 1rem;
+  }
+`;
+
+export const LegalModalClose = styled.button`
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: #735f66;
+  background: #fff1f5;
+  cursor: pointer;
+
+  &:hover { background: #ffe1e9; }
+  &:focus-visible { outline: 3px solid rgba(255, 92, 138, 0.35); }
+`;
+
+export const LegalModalBody = styled.div`
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1.5rem;
+  color: #51434a;
+
+  section + section { margin-top: 1.5rem; }
+  h3 { margin: 0 0 0.5rem; font-size: 1rem; color: #382d32; }
+  p { margin: 0; font-size: 0.925rem; line-height: 1.75; }
+  small { display: block; margin-top: 2rem; color: #88777e; }
+
+  @media (max-width: 640px) {
+    padding: 1rem;
+    p { font-size: 0.875rem; }
   }
 `;
 
@@ -609,6 +702,11 @@ export const SubmitButton = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+  }
   margin: 1rem auto;
   &:hover {
     background-color: #ff7099;

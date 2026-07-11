@@ -1,4 +1,4 @@
-import { useState, useEffect, type ChangeEvent, type FormEvent } from 'react';
+import { useState, useEffect, type ChangeEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import translations from './translations.json';
 import news from './news.json';
@@ -11,6 +11,8 @@ import FallingStars from './components/FallingStars';
 import LangSelector from './LangSelector';
 import { useLanguage } from './LanguageContext';
 import { Link } from 'react-router-dom';
+import { useForm, ValidationError } from '@formspree/react';
+import LegalModal from './components/LegalModal';
 
 const MotionHeroSlide = motion.create(HeroSlide);
 const MotionProductHeaderArea = motion.create(ProductHeaderArea);
@@ -84,7 +86,8 @@ const App = () => {
     message: "",
     agree: false,
   });
-  const [status, setStatus] = useState("");
+  const [formState, handleFormspreeSubmit] = useForm('mvzjejje');
+  const [legalModal, setLegalModal] = useState<'terms' | 'privacy' | null>(null);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -94,33 +97,10 @@ const App = () => {
     setFormData((prev) => ({ ...prev, [name]: nextValue }));
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setStatus(t.contact.submitting);
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (res.ok) {
-        setStatus(t.contact.success);
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-          agree: false,
-        });
-      } else {
-        setStatus(t.contact.fail);
-      }
-    } catch (err) {
-      console.error(err);
-      setStatus(t.contact.error);
-    }
-  };
+  useEffect(() => {
+    if (!formState.succeeded) return;
+    setFormData({ name: "", email: "", message: "", agree: false });
+  }, [formState.succeeded]);
 
   return (
     <>
@@ -283,7 +263,7 @@ const App = () => {
                 <motion.p variants={itemReveal}>{t.contact.contactText}</motion.p>
               </MotionAboutBox>
 
-              <MotionFormContainer variants={itemReveal} onSubmit={handleSubmit}>
+              <MotionFormContainer variants={itemReveal} onSubmit={handleFormspreeSubmit}>
                 <Title>{t.contact.title}</Title>
                 <Subtitle>{t.contact.subtitle}</Subtitle>
 
@@ -306,6 +286,10 @@ const App = () => {
                     required
                   />
                 </Row>
+                <ValidationError
+                  field="email"
+                  errors={formState.errors}
+                />
 
                 <Textarea
                   name="message"
@@ -315,6 +299,10 @@ const App = () => {
                   onChange={handleChange}
                   required
                 />
+                <ValidationError
+                  field="message"
+                  errors={formState.errors}
+                />
 
                 <CheckboxContainer>
                   <input
@@ -322,15 +310,21 @@ const App = () => {
                     name="agree"
                     checked={formData.agree}
                     onChange={handleChange}
+                    required
                   />
-                  {t.contact.agreePrefix} <a href="/terms">{t.contact.terms}</a> {t.contact.and}{" "}
-                  <a href="/privacy">{t.contact.privacy}</a>.
+                  {t.contact.agreePrefix}{' '}
+                  <button type="button" onClick={() => setLegalModal('terms')}>{t.contact.terms}</button>{' '}
+                  {t.contact.and}{' '}
+                  <button type="button" onClick={() => setLegalModal('privacy')}>{t.contact.privacy}</button>.
                 </CheckboxContainer>
 
                 <div style={{ textAlign: "center" }}>
-                  <SubmitButton type="submit">{t.contact.submit}</SubmitButton>
+                  <SubmitButton type="submit" disabled={formState.submitting}>
+                    {formState.submitting ? t.contact.submitting : t.contact.submit}
+                  </SubmitButton>
                 </div>
-                {status && <StatusMessage>{status}</StatusMessage>}
+                {formState.succeeded && <StatusMessage>{t.contact.success}</StatusMessage>}
+                {formState.errors && <StatusMessage>{t.contact.fail}</StatusMessage>}
               </MotionFormContainer>
             </motion.div>
           </section>
@@ -359,6 +353,14 @@ const App = () => {
         </FooterContent>
       </Footer>
       <BackToTop />
+      {legalModal && (
+        <LegalModal
+          documentType={legalModal}
+          language={lang}
+          title={legalModal === 'terms' ? t.contact.terms : t.contact.privacy}
+          onClose={() => setLegalModal(null)}
+        />
+      )}
     </>
   );
 };
