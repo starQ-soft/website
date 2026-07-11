@@ -219,7 +219,7 @@ const App = () => {
 
               <MotionProductGrid variants={itemReveal}>
                 {t.product.banners.map((banner, index) => (
-                  <ProductBannerLink href={banner.link} key={index}>
+                  <ProductBannerLink href={`${import.meta.env.BASE_URL}${banner.link}`} key={index}>
                     <ProductBanner
                       key={index}
                       $bgImage={`${import.meta.env.BASE_URL}${banner.image.replace(/^\/?(?:public\/)?/, '')}`}
