@@ -42,14 +42,14 @@ const TopButton = styled.button<TopButtonProps>`
   }
 
   @media (max-width: 768px) {
-    width: 5rem;
-    height: 5rem;
+    width: 11rem;
+    height: 11rem;
     right: 1rem;
   }
 
   @media (max-width: 480px) {
-    width: 4rem;
-    height: 4rem;
+    width: 12rem;
+    height: 12rem;
   }
 `;
 

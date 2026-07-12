@@ -91,9 +91,6 @@ const SideNav = styled.nav<{ $open?: boolean }>`
   gap: 1.25rem;
   padding: 3rem clamp(1.25rem, 3.5vw, 3rem);
   width: clamp(25rem, 35vw, 35rem);
-  @media (max-width: 768px) {
-    width: 100vw;
-  }
   height: 100vh;
   height: 100dvh;
   min-height: 100vh;
@@ -128,9 +125,42 @@ const SideNav = styled.nav<{ $open?: boolean }>`
   }
 
   @media (max-width: 768px) {
-    width: min(82vw, 22rem);
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    width: min(28rem, calc(100vw - 2rem));
+    height: 50vh;
+    min-height: 0;
     gap: 1rem;
-    padding-top: 4.5rem;
+    padding: 2.5rem 2rem;
+    border-radius: 1.25rem;
+    translate: -50% -50%;
+    transform: ${({ $open }) => ($open ? 'scale(1)' : 'scale(.96)')};
+    opacity: ${({ $open }) => ($open ? 1 : 0)};
+    visibility: ${({ $open }) => ($open ? 'visible' : 'hidden')};
+    transition: transform .3s cubic-bezier(.23, 1, .32, 1), opacity .2s ease,
+      visibility .2s ease;
+    filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.16));
+  }
+`;
+
+const MobileMenuBackdrop = styled.button<{ $open?: boolean }>`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    backdrop-filter: blur(2px);
+    opacity: ${({ $open }) => ($open ? 1 : 0)};
+    visibility: ${({ $open }) => ($open ? 'visible' : 'hidden')};
+    transition: opacity .2s ease, visibility .2s ease;
+    z-index: 89;
   }
 `;
 
@@ -722,6 +752,23 @@ const Lsc = () => {
   }, []);
 
   useEffect(() => {
+    if (!menuOpen || !window.matchMedia('(max-width: 768px)').matches) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMenuOpen(false);
+    };
+
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', closeOnEscape);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
     // Mobile uses a static banner, so it does not need an intro scroll lock.
     if (window.matchMedia('(max-width: 768px)').matches) return;
 
@@ -783,7 +830,7 @@ const Lsc = () => {
         </Link>
         <NavRight>
           <LangSwitcherContainer>
-            <LangSelector />
+            <LangSelector mobileMarginTop="50vh" />
           </LangSwitcherContainer>
           <Ham
             $open={menuOpen}
@@ -799,6 +846,12 @@ const Lsc = () => {
 
       </LscNav>
 
+      <MobileMenuBackdrop
+        $open={menuOpen}
+        onClick={() => setMenuOpen(false)}
+        aria-label="Close navigation"
+        tabIndex={menuOpen ? 0 : -1}
+      />
       <SideNav $open={menuOpen} aria-hidden={!menuOpen}>
         {navSections.map(({ id, label }) => (
           <a key={id} href={`#${id}`} onClick={(e) => handleNavClick(e, id)}>

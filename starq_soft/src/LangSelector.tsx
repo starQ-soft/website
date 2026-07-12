@@ -2,7 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import translations from './translations.json';
 import { useLanguage, type LanguageCode } from './LanguageContext';
-import { DropdownContainer, DropdownButton, DropdownMenu, DropdownItem, LangButtonContent } from './styles';
+import {
+  DropdownContainer,
+  DropdownButton,
+  DropdownMenu,
+  DropdownItem,
+  LangButtonContent,
+  LanguageModalBackdrop
+} from './styles';
 
 const MotionDropdownMenu = motion.create(DropdownMenu);
 
@@ -22,7 +29,11 @@ const LANGUAGES: { code: LanguageCode; label: string }[] = [
   { code: 'ms-my', label: 'Bahasa Melayu' },
 ];
 
-export const LangSelector = () => {
+interface LangSelectorProps {
+  mobileMarginTop?: string;
+}
+
+export const LangSelector = ({ mobileMarginTop = '0' }: LangSelectorProps) => {
   const { lang, setLang } = useLanguage();
   const [langOpen, setLangOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -43,6 +54,24 @@ export const LangSelector = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [langOpen]);
 
+  useEffect(() => {
+    if (!langOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setLangOpen(false);
+    };
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    const previousOverflow = document.body.style.overflow;
+
+    if (isMobile) document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [langOpen]);
+
   const handleLanguageChange = (code: LanguageCode) => {
     setLang(code);
     setLangOpen(false);
@@ -50,7 +79,11 @@ export const LangSelector = () => {
 
   return (
     <DropdownContainer ref={containerRef}>
-      <DropdownButton onClick={() => setLangOpen(!langOpen)}>
+      <DropdownButton
+        onClick={() => setLangOpen(!langOpen)}
+        aria-haspopup="dialog"
+        aria-expanded={langOpen}
+      >
         <LangButtonContent $open={langOpen}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -67,18 +100,29 @@ export const LangSelector = () => {
       </DropdownButton>
       <AnimatePresence>
         {langOpen && (
-          <MotionDropdownMenu
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25, ease: 'easeInOut' }}
-          >
-            {LANGUAGES.map(({ code, label }) => (
-              <DropdownItem key={code} onClick={() => handleLanguageChange(code)}>
-                {label}
-              </DropdownItem>
-            ))}
-          </MotionDropdownMenu>
+          <>
+            <LanguageModalBackdrop onClick={() => setLangOpen(false)} aria-hidden="true" />
+            <MotionDropdownMenu
+              $mobileMarginTop={mobileMarginTop}
+              role="dialog"
+              aria-modal="true"
+              aria-label={t.nav.language}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 24 }}
+              transition={{ duration: 0.25, ease: 'easeInOut' }}
+            >
+              {LANGUAGES.map(({ code, label }) => (
+                <DropdownItem
+                  key={code}
+                  onClick={() => handleLanguageChange(code)}
+                  aria-current={lang === code ? 'true' : undefined}
+                >
+                  {label}
+                </DropdownItem>
+              ))}
+            </MotionDropdownMenu>
+          </>
         )}
       </AnimatePresence>
     </DropdownContainer>

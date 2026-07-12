@@ -54,6 +54,10 @@ export const Logo = styled.img`
   &:hover {
     opacity: 0.8;
   }
+
+  @media (max-width: 768px) {
+    height: 30px;
+  }
 `;
 
 export const NavLinks = styled.div`
@@ -92,7 +96,7 @@ export const DropdownButton = styled.button`
   }
 `;
 
-export const DropdownMenu = styled.div`
+export const DropdownMenu = styled.div<{ $mobileMarginTop?: string }>`
   position: absolute;
   top: 100%;
   left: 0;
@@ -103,6 +107,33 @@ export const DropdownMenu = styled.div`
   width: 7.7rem;
   z-index: 50;
   overflow: hidden;
+
+  @media (max-width: 767px) {
+    position: fixed;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    width: min(28rem, calc(100vw - 2rem));
+    height: 50vh;
+    margin-top: ${({ $mobileMarginTop }) => $mobileMarginTop ?? '0'};
+    padding: 1.75rem 0 0.75rem;
+    border: 0;
+    border-radius: 1.25rem;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+    translate: -50% -50%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    z-index: 101;
+  }
+`;
+
+export const LanguageModalBackdrop = styled.div`
+  display: none;
+
+  @media (max-width: 767px) {
+    z-index: 100;
+  }
 `;
 
 export const DropdownItem = styled.a`
@@ -115,6 +146,17 @@ export const DropdownItem = styled.a`
   &:hover {
   color: #FF5C8A;
     background-color: #fdf2f8;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+
+    &[aria-current='true'] {
+      color: #FF5C8A;
+      background-color: #fdf2f8;
+      font-weight: bold;
+    }
   }
 `;
 
@@ -609,6 +651,7 @@ export const CheckboxContainer = styled.label`
       border-radius: 2px;
     }
   }
+
 `;
 
 export const LegalModalBackdrop = styled.div`
@@ -774,6 +817,10 @@ export const LangButtonContent = styled.span<{ $open?: boolean }>`
 
   &:hover {
     color: #FF5C8A;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;  
   }
 `;
 
