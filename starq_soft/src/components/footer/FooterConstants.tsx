@@ -75,9 +75,9 @@ export const socialLinks = [
   { href: 'https://discord.gg/WYMNgQgm', label: 'Discord', icon: <DiscordIcon /> },
   { href: 'https://www.youtube.com/@StarQSoft', label: 'YouTube', icon: <YouTubeIcon /> },
   { href: 'https://www.twitch.tv/starq_soft', label: 'Twitch', icon: <TwitchIcon /> },
-  { href: 'https://facebook.com', label: 'Facebook', icon: <FacebookIcon /> },
+  // { href: 'https://facebook.com', label: 'Facebook', icon: <FacebookIcon /> },
   { href: 'https://www.instagram.com/starq_soft/', label: 'Instagram', icon: <InstagramIcon /> },
   { href: 'https://www.reddit.com/user/StarQ_Soft/', label: 'Reddit', icon: <RedditIcon /> },
-  { href: 'https://bilibili.com', label: 'Bilibili', icon: <BilibiliIcon /> },
+  { href: 'https://space.bilibili.com/3706953542929197', label: 'Bilibili', icon: <BilibiliIcon /> },
   { href: 'https://weibo.com/starqsoft', label: 'Weibo', icon: <WeiboIcon /> }
 ];

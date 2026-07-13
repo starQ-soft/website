@@ -25,7 +25,7 @@ const BannerContainer = styled.section`
 const getLayerSize = ($isHaruka: boolean, $isNana: boolean, $isNatsumi: boolean) => {
   if ($isHaruka) return '85%';
   if ($isNana) return '90%';
-  if ($isNatsumi) return '35%';
+  if ($isNatsumi) return '125%';
   return '100%';
 };
 
@@ -36,12 +36,13 @@ const LayeredImage = styled.img<{
   $isNatsumi: boolean;
 }>`
   position: absolute;
-  left: ${({ $isHaruka }) => ($isHaruka ? '38%' : '50%')};
-  top: ${({ $isNana, $isHaruka, $isNatsumi }) => ($isNana ? '-2%' : $isHaruka ? '8%' : $isNatsumi ? '78%' : '0%')};
+  left: ${({ $isHaruka, $isNatsumi }) => ($isHaruka ? '38%' :  $isNatsumi ? '42%' : '50%')};
+  top: ${({ $isNana, $isHaruka, $isNatsumi }) => ($isNana ? '-2%' : $isHaruka ? '8%' : $isNatsumi ? '28%' : '0%')};
   transform: translateX(-50%);
   width: ${({ $isHaruka, $isNana, $isNatsumi }) => getLayerSize($isHaruka, $isNana, $isNatsumi)};
   height: ${({ $isHaruka, $isNana, $isNatsumi }) => getLayerSize($isHaruka, $isNana, $isNatsumi).replace('%', 'vh')};
-  object-fit: ${({ $isHaruka, $isNana }) => ($isHaruka || $isNana ? 'contain' : 'cover')};
+  object-fit: ${({ $isHaruka, $isNana, $isNatsumi }) =>
+    ($isHaruka || $isNana || $isNatsumi ? 'contain' : 'cover')};
   z-index: ${({ $isNana }) => ($isNana ? '-1' : '1')};
   pointer-events: none;
   opacity: 0;
