@@ -22,19 +22,25 @@ const BannerContainer = styled.section`
   pointer-events: none;
 `;
 
-const getLayerSize = ($isHaruka: boolean, $isNana: boolean) => {
+const getLayerSize = ($isHaruka: boolean, $isNana: boolean, $isNatsumi: boolean) => {
   if ($isHaruka) return '85%';
   if ($isNana) return '90%';
+  if ($isNatsumi) return '35%';
   return '100%';
 };
 
-const LayeredImage = styled.img<{ $delay: number; $isHaruka: boolean; $isNana: boolean }>`
+const LayeredImage = styled.img<{
+  $delay: number;
+  $isHaruka: boolean;
+  $isNana: boolean;
+  $isNatsumi: boolean;
+}>`
   position: absolute;
   left: ${({ $isHaruka }) => ($isHaruka ? '38%' : '50%')};
-  top: ${({ $isNana, $isHaruka }) => ($isNana ? '-2%' : $isHaruka ? '8%' : '0%')};
+  top: ${({ $isNana, $isHaruka, $isNatsumi }) => ($isNana ? '-2%' : $isHaruka ? '8%' : $isNatsumi ? '78%' : '0%')};
   transform: translateX(-50%);
-  width: ${({ $isHaruka, $isNana }) => getLayerSize($isHaruka, $isNana)};
-  height: ${({ $isHaruka, $isNana }) => getLayerSize($isHaruka, $isNana).replace('%', 'vh')};
+  width: ${({ $isHaruka, $isNana, $isNatsumi }) => getLayerSize($isHaruka, $isNana, $isNatsumi)};
+  height: ${({ $isHaruka, $isNana, $isNatsumi }) => getLayerSize($isHaruka, $isNana, $isNatsumi).replace('%', 'vh')};
   object-fit: ${({ $isHaruka, $isNana }) => ($isHaruka || $isNana ? 'contain' : 'cover')};
   z-index: ${({ $isNana }) => ($isNana ? '-1' : '1')};
   pointer-events: none;
@@ -84,6 +90,7 @@ const TransparentBanner: React.FC<TransparentBannerProps> = ({
                     $delay={i * 0.6}
                     $isHaruka={src.endsWith('haruka.gif')}
                     $isNana={src.endsWith('nana.gif')}
+                    $isNatsumi={src.endsWith('natsumi.gif')}
                 />
             ))}
         </BannerContainer>

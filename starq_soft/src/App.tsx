@@ -157,7 +157,13 @@ const App = () => {
 
             <ButtonGroup>
               <PreorderText>{t.hero.preorder}</PreorderText>
-              <PrimaryButton><SteamIcon src={steamLogo} />{t.hero.btnPrimary}</PrimaryButton>
+              <PrimaryButton
+                href="https://store.steampowered.com/app/4909210/_/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SteamIcon src={steamLogo} />{t.hero.btnPrimary}
+              </PrimaryButton>
             </ButtonGroup>
           </HeroContent>
         </Hero>

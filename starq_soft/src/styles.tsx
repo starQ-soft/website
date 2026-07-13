@@ -255,7 +255,7 @@ export const ButtonGroup = styled.div`
   }
 `;
 
-export const PrimaryButton = styled.button`
+export const PrimaryButton = styled.a`
   width: fit-content;
   padding: 1rem 2rem;
   min-width: 300px;
@@ -279,6 +279,7 @@ export const PrimaryButton = styled.button`
   border-radius: 50px;
   background: linear-gradient(135deg,  #0a1823 0%, #033e5a 15%, #007cb1 100%);
   color: white;
+  text-decoration: none;
 
   &:hover {
     filter: brightness(1.2);

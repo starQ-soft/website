@@ -35,7 +35,7 @@ const Container = styled.div`
   }
 `;
 
-const Button = styled(motion.button)`
+const Button = styled(motion.a)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -50,6 +50,7 @@ const Button = styled(motion.button)`
   border-radius: 50px;
   background: linear-gradient(135deg,  #0a1823 0%, #033e5a 15%, #007cb1 100%);
   color: white;
+  text-decoration: none;
 
   &:hover,
   &:focus,
@@ -269,7 +270,11 @@ export const LoveCofounder: React.FC = () => {
 
               <HeroActions variants={fadeInUp}>
                 <motion.div {...scaleOnHover}>
-                  <Button>
+                  <Button
+                    href="https://store.steampowered.com/app/4909210/_/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {/* <Play size={20} /> */}
                     <SteamIcon src={steamLogo} />
                     {t.hero.wishlist}

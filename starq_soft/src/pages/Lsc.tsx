@@ -865,7 +865,7 @@ const Lsc = () => {
         images={[
           `${import.meta.env.BASE_URL}haruka.gif`,
           `${import.meta.env.BASE_URL}rin.gif`,
-          `${import.meta.env.BASE_URL}lsc-natsumi.png`,
+          `${import.meta.env.BASE_URL}natsumi.gif`,
           `${import.meta.env.BASE_URL}shizuka.gif`,
           `${import.meta.env.BASE_URL}nana.gif`,
         ]}
