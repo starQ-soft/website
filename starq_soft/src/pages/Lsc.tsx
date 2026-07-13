@@ -172,7 +172,6 @@ const LscContainer = styled.div`
   overflow-x: clip;
   width: 100%;
   box-sizing: border-box;
-  background-color: #fff;
 `;
 
 const contentAppear = keyframes`
