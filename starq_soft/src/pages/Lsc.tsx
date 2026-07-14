@@ -893,7 +893,7 @@ const Lsc = () => {
           <br />
           <br />
           <br />
-          <Section>
+          {/* <Section>
             <motion.div
               variants={sectionReveal}
               initial="hidden"
@@ -918,7 +918,7 @@ const Lsc = () => {
                 </PvContainer>
               </motion.div>
             </motion.div>
-          </Section>
+          </Section> */}
 
           <Section>
             <motion.div
