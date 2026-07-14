@@ -292,7 +292,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         role: `ユニコーン企業の創業者兼CEO`,
-        description: `AIスタートアップ「SYNTH♥」の創業者兼CEO。フォーブス「30 Under 30」に選ばれた俊英で、スパムフォード大学でコンピュータサイエンスとMBAの二つの学位、さらに人工知能のPhDを取得。驚異的な実行力とビジネス洞察力を併せ持つ。幼い頃からプログラミングに親しみ、学生時代にはインディー開発者として各地のオープンソース系ギークコミュニティで活躍し、大きな影響力を築いた。三度の連続起業をいずれも成功させ、かつては著名テック企業CloseAIに在籍し、大規模マルチモーダル学習プロジェクトにも携わった。`,
+        description: `AIスタートアップ「SYNTH♥」の創業者兼CEO。フォックスブス「30 Under 30」に選ばれた俊英で、スパムフォード大学でコンピュータサイエンスとMBAの二つの学位、さらに人工知能のPhDを取得。驚異的な実行力とビジネス洞察力を併せ持つ。幼い頃からプログラミングに親しみ、学生時代にはインディー開発者として各地のオープンソース系ギークコミュニティで活躍し、大きな影響力を築いた。三度の連続起業をいずれも成功させ、かつては著名テック企業CloseAIに在籍し、大規模マルチモーダル学習プロジェクトにも携わった。`,
         likes: [`読書`, `財務分析`, `株式市場の研究`],
         quotes: [
           `人間の感情とは本質的にパターンのカオスだ。だが、パターンはモデル化できる。`,
@@ -505,7 +505,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         role: `Founder and CEO of a Unicorn Startup`,
-        description: `Founder and CEO of the AI startup SYNTH♥, a Forbes 30 Under 30 honoree with dual degrees in Computer Science and an MBA from Spamfold, plus a PhD in artificial intelligence. He boasts astonishing execution and business insight. Coding since childhood, he was active as an indie developer across major open-source geek communities back in his school days, building considerable influence. He has launched three successful startups in a row and once worked at the renowned tech company CloseAI, taking part in large-scale multimodal training projects.`,
+        description: `Founder and CEO of the AI startup SYNTH♥, a Foxbes 30 Under 30 honoree with dual degrees in Computer Science and an MBA from Spamfold, plus a PhD in artificial intelligence. He boasts astonishing execution and business insight. Coding since childhood, he was active as an indie developer across major open-source geek communities back in his school days, building considerable influence. He has launched three successful startups in a row and once worked at the renowned tech company CloseAI, taking part in large-scale multimodal training projects.`,
         likes: [`Reading`, `Analyzing financial reports`, `Studying the stock market`],
         quotes: [
           `Human emotion is, at its core, a kind of pattern chaos—but patterns can be modeled.`,
@@ -1292,7 +1292,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         "role": "유니콘 스타트업 창립자 겸 CEO",
-        "description": "AI 스타트업 「SYNTH♥」의 창립자 겸 CEO. 「Forbes 30 Under 30」에 선정된 인재로, 스탠퍼드대학교 컴퓨터과학과 MBA 복수 학위 및 인공지능 PhD를 보유했다. 놀라운 실행력과 비즈니스 통찰을 겸비했다. 어릴 때부터 프로그래밍을 접했고 중학생 시절부터 인디 개발자로 여러 오픈 소스 긱 커뮤니티에서 활동하며 큰 영향력을 쌓았다. 세 번의 연속 창업에서 모두 성과를 냈고, 유명 기술 기업 CloseAI에서 대규모 멀티모달 학습 프로젝트에 참여한 경력도 있다.",
+        "description": "AI 스타트업 「SYNTH♥」의 창립자 겸 CEO. 「Foxbes 30 Under 30」에 선정된 인재로, 스탠퍼드대학교 컴퓨터과학과 MBA 복수 학위 및 인공지능 PhD를 보유했다. 놀라운 실행력과 비즈니스 통찰을 겸비했다. 어릴 때부터 프로그래밍을 접했고 중학생 시절부터 인디 개발자로 여러 오픈 소스 긱 커뮤니티에서 활동하며 큰 영향력을 쌓았다. 세 번의 연속 창업에서 모두 성과를 냈고, 유명 기술 기업 CloseAI에서 대규모 멀티모달 학습 프로젝트에 참여한 경력도 있다.",
         "likes": [
           "독서",
           "재무제표 분석",
@@ -1652,7 +1652,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         "role": "Fundador y CEO de una startup unicornio",
-        "description": "Fundador y CEO de la startup de IA «SYNTH♥». Elegido para Forbes 30 Under 30, posee una doble titulación en Informática y un MBA por la Universidad de Stanford, además de un doctorado en Inteligencia Artificial. Combina una capacidad de ejecución asombrosa con una gran visión empresarial. Programa desde niño y ya en secundaria participaba como desarrollador independiente en importantes comunidades geek de código abierto, acumulando una enorme influencia. Ha logrado buenos resultados en tres startups consecutivas y trabajó en la conocida empresa tecnológica CloseAI, donde participó en grandes proyectos de entrenamiento multimodal.",
+        "description": "Fundador y CEO de la startup de IA «SYNTH♥». Elegido para Foxbes 30 Under 30, posee una doble titulación en Informática y un MBA por la Universidad de Spamford, además de un doctorado en Inteligencia Artificial. Combina una capacidad de ejecución asombrosa con una gran visión empresarial. Programa desde niño y ya en secundaria participaba como desarrollador independiente en importantes comunidades geek de código abierto, acumulando una enorme influencia. Ha logrado buenos resultados en tres startups consecutivas y trabajó en la conocida empresa tecnológica CloseAI, donde participó en grandes proyectos de entrenamiento multimodal.",
         "likes": [
           "Lectura",
           "Análisis financiero",
@@ -2012,7 +2012,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         "role": "Основатель и CEO стартапа-единорога",
-        "description": "Основатель и CEO ИИ-стартапа «SYNTH♥». Вошёл в рейтинг Forbes 30 Under 30, получил два диплома — по информатике и MBA — в Стэнфордском университете, а также PhD по искусственному интеллекту. Обладает удивительной исполнительностью и деловой проницательностью. Программирует с детства и уже в средней школе участвовал как независимый разработчик в крупных сообществах открытого ПО, где приобрёл значительное влияние. Три его последовательных стартапа добились заметных результатов. Ранее он работал в известной технологической компании CloseAI и участвовал в крупных проектах мультимодального обучения.",
+        "description": "Основатель и CEO ИИ-стартапа «SYNTH♥». Вошёл в рейтинг Foxbes 30 Under 30, получил два диплома — по информатике и MBA — в Стэнфордском университете, а также PhD по искусственному интеллекту. Обладает удивительной исполнительностью и деловой проницательностью. Программирует с детства и уже в средней школе участвовал как независимый разработчик в крупных сообществах открытого ПО, где приобрёл значительное влияние. Три его последовательных стартапа добились заметных результатов. Ранее он работал в известной технологической компании CloseAI и участвовал в крупных проектах мультимодального обучения.",
         "likes": [
           "Чтение",
           "Анализ финансовой отчётности",
@@ -2372,7 +2372,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         "role": "Nhà sáng lập kiêm CEO startup kỳ lân",
-        "description": "Nhà sáng lập kiêm CEO của startup AI “SYNTH♥”. Là gương mặt Forbes 30 Under 30, anh có bằng kép Khoa học Máy tính và MBA của Đại học Stanford, cùng bằng tiến sĩ Trí tuệ Nhân tạo. Anh sở hữu năng lực thực thi đáng kinh ngạc và tầm nhìn kinh doanh sâu sắc. Tiếp xúc với lập trình từ nhỏ, ngay từ thời trung học anh đã hoạt động với tư cách nhà phát triển độc lập trong nhiều cộng đồng mã nguồn mở lớn và tích lũy ảnh hưởng đáng kể. Ba lần khởi nghiệp liên tiếp đều đạt thành tích tốt; anh từng làm việc tại công ty công nghệ nổi tiếng CloseAI và tham gia các dự án huấn luyện đa phương thức quy mô lớn.",
+        "description": "Nhà sáng lập kiêm CEO của startup AI “SYNTH♥”. Là gương mặt Foxbes 30 Under 30, anh có bằng kép Khoa học Máy tính và MBA của Đại học Spamford, cùng bằng tiến sĩ Trí tuệ Nhân tạo. Anh sở hữu năng lực thực thi đáng kinh ngạc và tầm nhìn kinh doanh sâu sắc. Tiếp xúc với lập trình từ nhỏ, ngay từ thời trung học anh đã hoạt động với tư cách nhà phát triển độc lập trong nhiều cộng đồng mã nguồn mở lớn và tích lũy ảnh hưởng đáng kể. Ba lần khởi nghiệp liên tiếp đều đạt thành tích tốt; anh từng làm việc tại công ty công nghệ nổi tiếng CloseAI và tham gia các dự án huấn luyện đa phương thức quy mô lớn.",
         "likes": [
           "Đọc sách",
           "Phân tích báo cáo tài chính",
@@ -2732,7 +2732,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         "role": "Fondateur et PDG d’une startup licorne",
-        "description": "Fondateur et PDG de la startup d’IA « SYNTH♥ ». Lauréat du classement Forbes 30 Under 30, il possède un double diplôme en informatique et un MBA de l’université Stanford, ainsi qu’un doctorat en intelligence artificielle. Il combine une capacité d’exécution stupéfiante à un remarquable sens des affaires. Initié très tôt à la programmation, il participait déjà au collège, en tant que développeur indépendant, aux principales communautés open source et geek, où il s’est forgé une grande influence. Il a obtenu de solides résultats lors de trois créations d’entreprise successives et a travaillé pour la célèbre société technologique CloseAI sur de grands projets d’entraînement multimodal.",
+        "description": "Fondateur et PDG de la startup d’IA « SYNTH♥ ». Lauréat du classement Foxbes 30 Under 30, il possède un double diplôme en informatique et un MBA de l’université Spamford, ainsi qu’un doctorat en intelligence artificielle. Il combine une capacité d’exécution stupéfiante à un remarquable sens des affaires. Initié très tôt à la programmation, il participait déjà au collège, en tant que développeur indépendant, aux principales communautés open source et geek, où il s’est forgé une grande influence. Il a obtenu de solides résultats lors de trois créations d’entreprise successives et a travaillé pour la célèbre société technologique CloseAI sur de grands projets d’entraînement multimodal.",
         "likes": [
           "Lecture",
           "Analyse financière",
@@ -3092,7 +3092,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         "role": "Fondatore e CEO di una startup unicorno",
-        "description": "Fondatore e CEO della startup di IA «SYNTH♥». Inserito nella lista Forbes 30 Under 30, possiede una doppia laurea in Informatica e un MBA della Stanford University, oltre a un dottorato in Intelligenza Artificiale. Unisce una capacità di esecuzione sorprendente a una profonda visione imprenditoriale. Programma fin da bambino e già alle scuole medie partecipava come sviluppatore indipendente alle principali comunità geek open source, accumulando una grande influenza. Ha ottenuto buoni risultati in tre startup consecutive e ha lavorato presso la nota azienda tecnologica CloseAI, partecipando a grandi progetti di addestramento multimodale.",
+        "description": "Fondatore e CEO della startup di IA «SYNTH♥». Inserito nella lista Foxbes 30 Under 30, possiede una doppia laurea in Informatica e un MBA della Spamford University, oltre a un dottorato in Intelligenza Artificiale. Unisce una capacità di esecuzione sorprendente a una profonda visione imprenditoriale. Programma fin da bambino e già alle scuole medie partecipava come sviluppatore indipendente alle principali comunità geek open source, accumulando una grande influenza. Ha ottenuto buoni risultati in tre startup consecutive e ha lavorato presso la nota azienda tecnologica CloseAI, partecipando a grandi progetti di addestramento multimodale.",
         "likes": [
           "Lettura",
           "Analisi finanziaria",
@@ -3452,7 +3452,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         "role": "Gründer und CEO eines Unicorn-Startups",
-        "description": "Gründer und CEO des KI-Startups „SYNTH♥“. Als Forbes-30-Under-30-Talent besitzt er einen Doppelabschluss in Informatik und einen MBA der Stanford University sowie einen Doktortitel in künstlicher Intelligenz. Er verbindet erstaunliche Umsetzungskraft mit tiefem geschäftlichem Weitblick. Schon als Kind begann er zu programmieren und war bereits in der Mittelschule als Indie-Entwickler in großen Open-Source- und Geek-Communities aktiv, wo er erheblichen Einfluss aufbaute. Drei Gründungen in Folge brachten beachtliche Erfolge. Außerdem arbeitete er beim bekannten Technologieunternehmen CloseAI an großen multimodalen Trainingsprojekten.",
+        "description": "Gründer und CEO des KI-Startups „SYNTH♥“. Als Foxbes-30-Under-30-Talent besitzt er einen Doppelabschluss in Informatik und einen MBA der Spamford University sowie einen Doktortitel in künstlicher Intelligenz. Er verbindet erstaunliche Umsetzungskraft mit tiefem geschäftlichem Weitblick. Schon als Kind begann er zu programmieren und war bereits in der Mittelschule als Indie-Entwickler in großen Open-Source- und Geek-Communities aktiv, wo er erheblichen Einfluss aufbaute. Drei Gründungen in Folge brachten beachtliche Erfolge. Außerdem arbeitete er beim bekannten Technologieunternehmen CloseAI an großen multimodalen Trainingsprojekten.",
         "likes": [
           "Lesen",
           "Finanzanalyse",
@@ -3812,7 +3812,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         "role": "ผู้ก่อตั้งและ CEO สตาร์ทอัพยูนิคอร์น",
-        "description": "ผู้ก่อตั้งและ CEO ของสตาร์ทอัพ AI “SYNTH♥” ได้รับเลือกเป็น Forbes 30 Under 30 มีปริญญาคู่ด้านวิทยาการคอมพิวเตอร์และ MBA จากมหาวิทยาลัยสแตนฟอร์ด รวมถึงปริญญาเอกด้านปัญญาประดิษฐ์ เขามีทั้งความสามารถในการลงมือทำที่น่าทึ่งและวิสัยทัศน์ทางธุรกิจ เริ่มเขียนโปรแกรมตั้งแต่เด็ก และตั้งแต่สมัยมัธยมต้นก็ทำงานในฐานะนักพัฒนาอิสระในชุมชนโอเพนซอร์สขนาดใหญ่จนสร้างอิทธิพลมากมาย การก่อตั้งบริษัทสามครั้งติดต่อกันล้วนประสบความสำเร็จ เขาเคยทำงานที่บริษัทเทคโนโลยีชื่อดัง CloseAI และเข้าร่วมโครงการฝึกโมเดลมัลติโหมดขนาดใหญ่",
+        "description": "ผู้ก่อตั้งและ CEO ของสตาร์ทอัพ AI “SYNTH♥” ได้รับเลือกเป็น Foxbes 30 Under 30 มีปริญญาคู่ด้านวิทยาการคอมพิวเตอร์และ MBA จากมหาวิทยาลัยสแตนฟอร์ด รวมถึงปริญญาเอกด้านปัญญาประดิษฐ์ เขามีทั้งความสามารถในการลงมือทำที่น่าทึ่งและวิสัยทัศน์ทางธุรกิจ เริ่มเขียนโปรแกรมตั้งแต่เด็ก และตั้งแต่สมัยมัธยมต้นก็ทำงานในฐานะนักพัฒนาอิสระในชุมชนโอเพนซอร์สขนาดใหญ่จนสร้างอิทธิพลมากมาย การก่อตั้งบริษัทสามครั้งติดต่อกันล้วนประสบความสำเร็จ เขาเคยทำงานที่บริษัทเทคโนโลยีชื่อดัง CloseAI และเข้าร่วมโครงการฝึกโมเดลมัลติโหมดขนาดใหญ่",
         "likes": [
           "อ่านหนังสือ",
           "วิเคราะห์งบการเงิน",
@@ -4172,7 +4172,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         "role": "Pengasas dan CEO startup unikorn",
-        "description": "Pengasas dan CEO startup AI “SYNTH♥”. Terpilih dalam Forbes 30 Under 30, dia memiliki dua ijazah dalam Sains Komputer dan MBA dari Universiti Stanford, serta PhD dalam Kecerdasan Buatan. Dia menggabungkan keupayaan pelaksanaan yang menakjubkan dengan wawasan perniagaan yang mendalam. Sejak kecil dia sudah mengenali pengaturcaraan, dan ketika sekolah menengah dia aktif sebagai pembangun indie dalam komuniti geek sumber terbuka utama, lalu membina pengaruh besar. Tiga startup berturut-turut yang diasaskannya mencapai hasil yang baik. Dia juga pernah bekerja di syarikat teknologi terkenal CloseAI dan terlibat dalam projek latihan multimodal berskala besar.",
+        "description": "Pengasas dan CEO startup AI “SYNTH♥”. Terpilih dalam Foxbes 30 Under 30, dia memiliki dua ijazah dalam Sains Komputer dan MBA dari Universiti Spamford, serta PhD dalam Kecerdasan Buatan. Dia menggabungkan keupayaan pelaksanaan yang menakjubkan dengan wawasan perniagaan yang mendalam. Sejak kecil dia sudah mengenali pengaturcaraan, dan ketika sekolah menengah dia aktif sebagai pembangun indie dalam komuniti geek sumber terbuka utama, lalu membina pengaruh besar. Tiga startup berturut-turut yang diasaskannya mencapai hasil yang baik. Dia juga pernah bekerja di syarikat teknologi terkenal CloseAI dan terlibat dalam projek latihan multimodal berskala besar.",
         "likes": [
           "Membaca",
           "Analisis penyata kewangan",
