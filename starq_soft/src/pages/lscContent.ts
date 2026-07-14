@@ -601,7 +601,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
             },
           ],
         },
-        { segments: [{ t: `零经验、零资源、零薪资——`, em: 'strong' }] },
+        { segments: [{ t: `零经验、零资源、零薪资`, em: 'strong' }] },
         {
           segments: [
             { t: `唯一拥有的，是一群比你还不靠谱的合伙人，\n以及一款连名字都没取好的` },
@@ -815,7 +815,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
             },
           ],
         },
-        { segments: [{ t: `零經驗、零資源、零薪資——`, em: 'strong' }] },
+        { segments: [{ t: `零經驗、零資源、零薪資`, em: 'strong' }] },
         {
           segments: [
             { t: `唯一擁有的，是一群比你還不靠譜的合夥人，\n以及一款連名字都沒取好的` },

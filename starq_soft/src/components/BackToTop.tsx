@@ -64,17 +64,25 @@ const BackToTop = ({ variant = 'main' }: BackToTopProps) => {
     variant === 'lsc' ? 'topbutton' : 'main_top_button';
 
   useEffect(() => {
+    let frameId = 0;
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      if (frameId) return;
+      frameId = window.requestAnimationFrame(() => {
+        setIsVisible((current) => {
+          const next = window.scrollY > 300;
+          return current === next ? current : next;
+        });
+        frameId = 0;
+      });
     };
 
-    window.addEventListener('scroll', toggleVisibility);
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
 
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+      window.cancelAnimationFrame(frameId);
+    };
   }, []);
 
   const scrollToTop = () => {

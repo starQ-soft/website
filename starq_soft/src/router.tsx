@@ -21,8 +21,7 @@ const ScrollToTop = () => {
 const AppRouter: React.FC = () => {
   return (
     <LanguageProvider>
-      <React.StrictMode>
-        <BrowserRouter>
+      <BrowserRouter>
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<App />} />
@@ -30,8 +29,7 @@ const AppRouter: React.FC = () => {
             <Route path="/lsc" element={<Lsc />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
-      </React.StrictMode>
+      </BrowserRouter>
     </LanguageProvider>
   )
 }

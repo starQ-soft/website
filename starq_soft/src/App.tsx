@@ -75,6 +75,7 @@ const App = () => {
 
   // Auto-advance the hero carousel.
   useEffect(() => {
+    if (banners.length < 2) return;
     const id = setInterval(() => {
       setBanner(([prev]) => [(prev + 1) % banners.length, 1]);
     }, 5000);
