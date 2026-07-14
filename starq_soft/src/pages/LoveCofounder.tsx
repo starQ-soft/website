@@ -2,6 +2,7 @@ import { motion, type Variants } from "framer-motion";
 import styled from "styled-components";
 import { useState, useEffect, Fragment } from "react";
 import steamLogo from "../assets/steam-logo.svg";
+import { trackSteamStoreClick } from "../analytics";
 import { SteamIcon } from "../styles";
 import { StoryContainer, StoryTitle, StorySubtitle, StoryDescription, GameDescription } from "./LscStyles";
 import { useLanguage } from "../LanguageContext";
@@ -274,6 +275,10 @@ export const LoveCofounder: React.FC = () => {
                     href="https://store.steampowered.com/app/4909210/_/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackSteamStoreClick(
+                      "https://store.steampowered.com/app/4909210/_/",
+                      "love_cofounder_hero",
+                    )}
                   >
                     {/* <Play size={20} /> */}
                     <SteamIcon src={steamLogo} />

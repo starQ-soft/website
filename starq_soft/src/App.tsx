@@ -4,6 +4,7 @@ import translations from './translations.json';
 import news from './news.json';
 import logoImage from './assets/StarQ_logo.png';
 import steamLogo from './assets/steam-logo.svg';
+import { trackSteamStoreClick } from './analytics';
 import { GlobalStyle, Nav, Logo, NavActions, GlobalContainer, Hero, HeroSlides, HeroSlide, HeroDots, HeroDot, HeroContent, ButtonGroup, PrimaryButton, PreorderText, Main, SectionHeader, Twinkle, NewsRow, TypeBadge, NewsDate, ProductHeaderArea, ProductGrid, ProductBanner, ProductBannerLink, Footer, FooterContent, AboutBox, SteamIcon, CheckboxContainer, FormContainer, Input, Row, SubmitButton, Subtitle, Textarea, Title, SocialLinks, SocialLink, ScrollableContainer, FooterTop, Copyright, StatusMessage } from './styles';
 import BackToTop from './components/BackToTop';
 import { socialLinks } from './components/footer/FooterConstants';
@@ -161,6 +162,10 @@ const App = () => {
                 href="https://store.steampowered.com/app/4909210/_/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackSteamStoreClick(
+                  'https://store.steampowered.com/app/4909210/_/',
+                  'homepage_hero',
+                )}
               >
                 <SteamIcon src={steamLogo} />{t.hero.btnPrimary}
               </PrimaryButton>

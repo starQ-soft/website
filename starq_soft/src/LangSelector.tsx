@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import translations from './translations.json';
 import { useLanguage, type LanguageCode } from './LanguageContext';
+import { trackLanguageSelect } from './analytics';
 import {
   DropdownContainer,
   DropdownButton,
@@ -72,7 +73,10 @@ export const LangSelector = ({ mobileMarginTop = '0' }: LangSelectorProps) => {
     };
   }, [langOpen]);
 
-  const handleLanguageChange = (code: LanguageCode) => {
+  const handleLanguageChange = (code: LanguageCode, label: string) => {
+    if (code !== lang) {
+      trackLanguageSelect(code, label, lang);
+    }
     setLang(code);
     setLangOpen(false);
   };
@@ -115,7 +119,7 @@ export const LangSelector = ({ mobileMarginTop = '0' }: LangSelectorProps) => {
               {LANGUAGES.map(({ code, label }) => (
                 <DropdownItem
                   key={code}
-                  onClick={() => handleLanguageChange(code)}
+                  onClick={() => handleLanguageChange(code, label)}
                   aria-current={lang === code ? 'true' : undefined}
                 >
                   {label}
