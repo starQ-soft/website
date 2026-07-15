@@ -24,6 +24,12 @@ html[lang='zh-Hant'] {
   --display-font: var(--site-sans-font);
 }
 
+html[lang='zh-cn'] {
+  --site-serif-font: "Noto Serif SC", "Songti SC", "PingFang SC", "Microsoft YaHei", serif;
+  --site-sans-font: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --display-font: var(--site-sans-font);
+}
+
 html {
   min-width: 320px;
   min-height: 100%;
