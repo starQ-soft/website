@@ -171,7 +171,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
             },
           ],
         },
-        { segments: [{ t: `経験ゼロ、資金ゼロ、給料ゼロ——`, em: 'strong' }] },
+        { segments: [{ t: `経験ゼロ、資金ゼロ、給料ゼロ`, em: 'strong' }] },
         {
           segments: [
             { t: `手にあるのは、君よりも頼りない共同創業者と、\n名前すらまともに決まっていない` },
@@ -385,7 +385,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
             },
           ],
         },
-        { segments: [{ t: `No experience, no resources, no pay——`, em: 'strong' }] },
+        { segments: [{ t: `No experience, no resources, no pay`, em: 'strong' }] },
         {
           segments: [
             { t: `All you have is a group of co-founders even less reliable than you,\nand an ` },
@@ -1125,7 +1125,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "경험 제로, 자원 제로, 급여 제로——",
+              "t": "경험 제로, 자원 제로, 급여 제로",
               "em": "strong"
             }
           ]
@@ -1485,7 +1485,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Cero experiencia, cero recursos, cero sueldo——",
+              "t": "Cero experiencia, cero recursos, cero sueldo",
               "em": "strong"
             }
           ]
@@ -1845,7 +1845,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Ноль опыта, ноль ресурсов, ноль зарплаты——",
+              "t": "Ноль опыта, ноль ресурсов, ноль зарплаты",
               "em": "strong"
             }
           ]
@@ -2205,7 +2205,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Không kinh nghiệm, không tài nguyên, không lương——",
+              "t": "Không kinh nghiệm, không tài nguyên, không lương",
               "em": "strong"
             }
           ]
@@ -2565,7 +2565,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Zéro expérience, zéro ressource, zéro salaire——",
+              "t": "Zéro expérience, zéro ressource, zéro salaire",
               "em": "strong"
             }
           ]
@@ -2925,7 +2925,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Zero esperienza, zero risorse, zero stipendio——",
+              "t": "Zero esperienza, zero risorse, zero stipendio",
               "em": "strong"
             }
           ]
@@ -3285,7 +3285,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Null Erfahrung, null Ressourcen, null Gehalt——",
+              "t": "Null Erfahrung, null Ressourcen, null Gehalt",
               "em": "strong"
             }
           ]
@@ -3645,7 +3645,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "ประสบการณ์ศูนย์ ทรัพยากรศูนย์ เงินเดือนศูนย์——",
+              "t": "ประสบการณ์ศูนย์ ทรัพยากรศูนย์ เงินเดือนศูนย์",
               "em": "strong"
             }
           ]
@@ -4005,7 +4005,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Sifar pengalaman, sifar sumber, sifar gaji——",
+              "t": "Sifar pengalaman, sifar sumber, sifar gaji",
               "em": "strong"
             }
           ]
