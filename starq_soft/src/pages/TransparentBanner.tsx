@@ -22,28 +22,27 @@ const BannerContainer = styled.section`
   pointer-events: none;
 `;
 
-const getLayerSize = ($isHaruka: boolean, $isNana: boolean, $isNatsumi: boolean) => {
-  if ($isHaruka) return '85%';
-  if ($isNana) return '90%';
-  if ($isNatsumi) return '125%';
-  return '100%';
-};
+export interface BannerLayer {
+  src: string;
+  size: string;
+  left: string;
+  top: string;
+  objectFit?: 'contain' | 'cover';
+  zIndex?: number;
+}
 
 const LayeredImage = styled.img<{
   $delay: number;
-  $isHaruka: boolean;
-  $isNana: boolean;
-  $isNatsumi: boolean;
+  $layer: BannerLayer;
 }>`
   position: absolute;
-  left: ${({ $isHaruka, $isNatsumi }) => ($isHaruka ? '38%' :  $isNatsumi ? '42%' : '50%')};
-  top: ${({ $isNana, $isHaruka, $isNatsumi }) => ($isNana ? '-2%' : $isHaruka ? '8%' : $isNatsumi ? '28%' : '0%')};
+  left: ${({ $layer }) => $layer.left};
+  top: ${({ $layer }) => $layer.top};
   transform: translateX(-50%);
-  width: ${({ $isHaruka, $isNana, $isNatsumi }) => getLayerSize($isHaruka, $isNana, $isNatsumi)};
-  height: ${({ $isHaruka, $isNana, $isNatsumi }) => getLayerSize($isHaruka, $isNana, $isNatsumi).replace('%', 'vh')};
-  object-fit: ${({ $isHaruka, $isNana, $isNatsumi }) =>
-    ($isHaruka || $isNana || $isNatsumi ? 'contain' : 'cover')};
-  z-index: ${({ $isNana }) => ($isNana ? '-1' : '1')};
+  width: ${({ $layer }) => $layer.size};
+  height: ${({ $layer }) => $layer.size.replace('%', 'vh')};
+  object-fit: ${({ $layer }) => $layer.objectFit ?? 'cover'};
+  z-index: ${({ $layer }) => $layer.zIndex ?? 1};
   pointer-events: none;
   opacity: 0;
   animation: ${riseIn} 2s ease-out forwards;
@@ -72,7 +71,7 @@ const MobileBackground = styled.img`
 `;
 
 interface TransparentBannerProps {
-    images: string[];
+    images: BannerLayer[];
     mobileImage?: string;
 }
 
@@ -83,15 +82,13 @@ const TransparentBanner: React.FC<TransparentBannerProps> = ({
     return (
         <BannerContainer>
             {mobileImage && <MobileBackground src={mobileImage} alt="" draggable={false} />}
-            {images.map((src, i) => (
+            {images.map((layer, i) => (
                 <LayeredImage
-                    key={src}
-                    src={src}
+                    key={layer.src}
+                    src={layer.src}
                     alt={`Banner layer ${i + 1}`}
                     $delay={i * 0.6}
-                    $isHaruka={src.endsWith('haruka.gif')}
-                    $isNana={src.endsWith('nana.gif')}
-                    $isNatsumi={src.endsWith('natsumi.gif')}
+                    $layer={layer}
                 />
             ))}
         </BannerContainer>

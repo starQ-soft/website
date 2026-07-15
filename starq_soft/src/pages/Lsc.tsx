@@ -862,11 +862,11 @@ const Lsc = () => {
       <CherryBlossomBackground count={80} />
       <TransparentBanner
         images={[
-          `${import.meta.env.BASE_URL}haruka.gif`,
-          `${import.meta.env.BASE_URL}rin.gif`,
-          `${import.meta.env.BASE_URL}natsumi.gif`,
-          `${import.meta.env.BASE_URL}shizuka.gif`,
-          `${import.meta.env.BASE_URL}nana.gif`,
+          { src: `${import.meta.env.BASE_URL}haruka.gif`, size: '85%', left: '12%', top: '15%', objectFit: 'contain' },
+          { src: `${import.meta.env.BASE_URL}rin.gif`, size: '110%', left: '85%', top: '2%', objectFit: 'contain' },
+          { src: `${import.meta.env.BASE_URL}natsumi.gif`, size: '125%', left: '45%', top: '25%', objectFit: 'contain' },
+          { src: `${import.meta.env.BASE_URL}shizuka.gif`, size: '105%', left: '70%', top: '5%', objectFit: 'contain' },
+          { src: `${import.meta.env.BASE_URL}nana.gif`, size: '80%', left: '25%', top: '-2%', objectFit: 'contain', zIndex: -1 },
         ]}
         mobileImage={`${import.meta.env.BASE_URL}lsc_mobile.png`}
       />
