@@ -116,6 +116,10 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   useEffect(() => {
+    document.documentElement.lang = lang === 'zh-tw' ? 'zh-Hant' : lang;
+  }, [lang]);
+
+  useEffect(() => {
     if (storedLanguage.current) return;
 
     const controller = new AbortController();

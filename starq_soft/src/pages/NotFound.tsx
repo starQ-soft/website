@@ -75,7 +75,7 @@ const Illustration = styled.img`
 `;
 
 const Message = styled.section`
-  font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", serif;
+  font-family: var(--site-serif-font);
 
   h1 {
     margin: 0 0 1rem;

@@ -1,5 +1,8 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --site-serif-font: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
+  --site-sans-font: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --display-font: 'Fredoka', 'Varela Round', 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,6 +16,12 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+html[lang='zh-Hant'] {
+  --site-serif-font: "Noto Serif TC", "Songti TC", "PingFang TC", "Microsoft JhengHei", "PMingLiU", serif;
+  --site-sans-font: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --display-font: var(--site-sans-font);
 }
 
 html {
@@ -31,7 +40,7 @@ a:hover {
 }
 
 body {
-  font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
+  font-family: var(--site-serif-font);
   margin: 0;
   display: flex;
   place-items: center;

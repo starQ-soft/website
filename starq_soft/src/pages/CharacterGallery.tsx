@@ -448,7 +448,7 @@ const Description = styled.p`
   font-size: clamp(0.9rem, 2.5vw, 1.25rem);
   line-height: 1.5;
   margin-bottom: 30px;
-  font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
+  font-family: var(--site-serif-font);
 
   @media (max-width: 768px) {
     line-height: 1.65;

@@ -111,7 +111,7 @@ const SideNav = styled.nav<{ $open?: boolean }>`
   filter: drop-shadow(-2px 0 4px rgba(0, 0, 0, 0.1));
 
   a {
-    font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
+    font-family: var(--site-serif-font);
     font-size: clamp(1.05rem, 2vw, 1.75rem);
     font-weight: 700;
     color: #CC1075;
@@ -166,7 +166,7 @@ const MobileMenuBackdrop = styled.button<{ $open?: boolean }>`
 
 const LscContainer = styled.div`
   height: 100vh;
-  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: var(--site-sans-font);
   position: absolute;
   overflow-x: hidden;
   overflow-x: clip;
@@ -180,7 +180,7 @@ const contentAppear = keyframes`
 `;
 
 const ContentWrapper = styled.div`
-  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: var(--site-sans-font);
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
@@ -204,7 +204,7 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
+  font-family: var(--site-serif-font);
   width: 100%;
   box-sizing: border-box;
 
@@ -401,7 +401,7 @@ const PromotionCard = styled.div`
 `;
 
 const Footer = styled.footer`
-  font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
+  font-family: var(--site-serif-font);
   background-color: #eaeaea;
   // background-image: repeating-linear-gradient(
   //   to right,

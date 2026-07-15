@@ -37,7 +37,7 @@ export const StoryContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
+  font-family: var(--site-serif-font);
   color: #111827;
   line-height: 2;
   letter-spacing: 0.05em;

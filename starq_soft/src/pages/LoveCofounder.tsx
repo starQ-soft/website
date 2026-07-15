@@ -111,7 +111,7 @@ const HeroLogo = styled(motion.img)`
 `;
 
 const HeroDescription = styled(motion.div)`
-  font-family: "YuMincho", "Hiragino Mincho ProN", "Songti SC", "SimSun", serif;
+  font-family: var(--site-serif-font);
   font-size: 1.25rem;
   color: hsl(215.4 16.3% 46.9%);
   margin: 5rem auto;

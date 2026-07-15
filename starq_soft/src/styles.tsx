@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     margin: 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--site-sans-font);
     color: #1f2937;
     background-color: #ffffff;
     overflow-x: hidden;
@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const GlobalContainer = styled.div`
-  font-family: 'Fredoka', 'Varela Round', 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+  font-family: var(--display-font);
   letter-spacing: 0.03em;
   color: #5f4d52;
   background-color: #ffffff;
