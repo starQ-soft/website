@@ -156,7 +156,7 @@ const MobileMenuBackdrop = styled.button<{ $open?: boolean }>`
     height: 100%;
     padding: 0;
     border: 0;
-    backdrop-filter: blur(2px);
+    background: transparent;
     opacity: ${({ $open }) => ($open ? 1 : 0)};
     visibility: ${({ $open }) => ($open ? 'visible' : 'hidden')};
     transition: opacity .2s ease, visibility .2s ease;
