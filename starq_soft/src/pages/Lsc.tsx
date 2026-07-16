@@ -907,7 +907,7 @@ const Lsc = () => {
                 <SectionSubtitle>{t.pv.themeMovie}</SectionSubtitle>
                 <PvContainer>
                   <iframe
-                    src="https://www.youtube.com/watch?v=SEx_8gXgN8U"
+                    src="https://www.youtube.com/embed/SEx_8gXgN8U"
                     title={t.pv.themeMovie}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
