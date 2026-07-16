@@ -893,7 +893,7 @@ const Lsc = () => {
           <br />
           <br />
           <br />
-          {/* <Section>
+          <Section>
             <motion.div
               variants={sectionReveal}
               initial="hidden"
@@ -907,7 +907,7 @@ const Lsc = () => {
                 <SectionSubtitle>{t.pv.themeMovie}</SectionSubtitle>
                 <PvContainer>
                   <iframe
-                    src="https://www.youtube.com/embed/65X4QUW5ibc"
+                    src="https://www.youtube.com/watch?v=SEx_8gXgN8U"
                     title={t.pv.themeMovie}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -918,7 +918,7 @@ const Lsc = () => {
                 </PvContainer>
               </motion.div>
             </motion.div>
-          </Section> */}
+          </Section>
 
           <Section>
             <motion.div
