@@ -6,7 +6,7 @@ import { CharacterCard, CharacterCarousel } from "./LscStyles";
 import { useLanguage } from "../LanguageContext";
 import { lscContent } from "./lscContent";
 
-const avatars: string[] = ["me-1.png", "haijin.png", "tani.png", "hayashi.png", "nana.png", "natsumi.png", "rin.png", "takagi.png"];
+const avatars: string[] = ["me-1.png", "haijin0.png", "tani.png", "hayashi.png", "nana.png", "natsumi.png", "rin.png", "takagi.png"];
 
 // Structural (non-localized) character data. All translatable copy — role,
 // description, likes, quotes, zodiac, blood type and birthday — lives in
@@ -24,7 +24,7 @@ const characters: any[] = [
   },
   {
     name: { japanese: ["灰", "神"], read: ["はい", "じん"], english: "Hai jin" },
-    image: "haijin.png",
+    image: "haijin0.png",
     age: "24",
     height: "175cm",
     weight: "62kg",
