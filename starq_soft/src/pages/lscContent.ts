@@ -130,8 +130,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         { label: `パブリッシャー`, value: `Pairaki Games` },
         { label: `シナリオ／キャラクターデザイン`, value: `星可` },
         { label: `原画ＣＧ／SD／背景`, value: `眞海` },
-        { label: `主題歌`, value: `「Startup!★Start!!」by Wedoso` },
-        { label: `音楽`, value: `Wedoso` },
+        { label: `主題歌`, value: `「Startup!★Start!!」by Wedoso, iason` },
+        { label: `音楽`, value: `Wedoso, iason` },
         { label: `ムービー`, value: `星可` },
         { label: `動効`, value: `幽浮小花` },
         { label: `協力`, value: `終焉、 y3 ほか` },
@@ -346,8 +346,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         { label: `Publisher`, value: `Pairaki Games` },
         { label: `Scenario / Character Design`, value: `星可` },
         { label: `Art CG / SD / Backgrounds`, value: `眞海` },
-        { label: `Theme Song`, value: `"Startup!★Start!!" by Wedoso` },
-        { label: `Music`, value: `Wedoso` },
+        { label: `Theme Song`, value: `"Startup!★Start!!" by Wedoso, iason` },
+        { label: `Music`, value: `Wedoso, iason` },
         { label: `Movie`, value: `星可` },
         { label: `Motion Effects`, value: `幽浮小花` },
         { label: `Additional Support`, value: `終焉， y3 et al.` },
@@ -562,8 +562,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         { label: `发行`, value: `Pairaki Games` },
         { label: `剧本／角色设计`, value: `星可` },
         { label: `原画CG／SD／背景`, value: `眞海` },
-        { label: `主题曲`, value: `「Startup!★Start!!」by Wedoso` },
-        { label: `音乐`, value: `Wedoso` },
+        { label: `主题曲`, value: `「Startup!★Start!!」by Wedoso, iason` },
+        { label: `音乐`, value: `Wedoso, iason` },
         { label: `影片`, value: `星可` },
         { label: `动效`, value: `幽浮小花` },
         { label: `协力`, value: `终焉 等` },
@@ -776,8 +776,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         { label: `發行`, value: `Pairaki Games` },
         { label: `劇本／角色設計`, value: `星可` },
         { label: `原畫CG／SD／背景`, value: `眞海` },
-        { label: `主題曲`, value: `「Startup!★Start!!」by Wedoso` },
-        { label: `音樂`, value: `Wedoso` },
+        { label: `主題曲`, value: `「Startup!★Start!!」by Wedoso, iason` },
+        { label: `音樂`, value: `Wedoso, iason` },
         { label: `影片`, value: `星可` },
         { label: `動效`, value: `幽浮小花` },
         { label: `協力`, value: `終焉、 y3 等` },
@@ -1042,11 +1042,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "주제가",
-          "value": "「Startup!★Start!!」by Wedoso"
+          "value": "「Startup!★Start!!」by Wedoso, iason"
         },
         {
           "label": "음악",
-          "value": "Wedoso"
+          "value": "Wedoso, iason"
         },
         {
           "label": "영상",
@@ -1402,11 +1402,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Tema principal",
-          "value": "「Startup!★Start!!」by Wedoso"
+          "value": "「Startup!★Start!!」by Wedoso, iason"
         },
         {
           "label": "Música",
-          "value": "Wedoso"
+          "value": "Wedoso, iason"
         },
         {
           "label": "Vídeo",
@@ -1762,11 +1762,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Главная песня",
-          "value": "「Startup!★Start!!」by Wedoso"
+          "value": "「Startup!★Start!!」by Wedoso, iason"
         },
         {
           "label": "Музыка",
-          "value": "Wedoso"
+          "value": "Wedoso, iason"
         },
         {
           "label": "Видео",
@@ -2122,11 +2122,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Ca khúc chủ đề",
-          "value": "「Startup!★Start!!」by Wedoso"
+          "value": "「Startup!★Start!!」by Wedoso, iason"
         },
         {
           "label": "Âm nhạc",
-          "value": "Wedoso"
+          "value": "Wedoso, iason"
         },
         {
           "label": "Video",
@@ -2482,11 +2482,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Chanson thème",
-          "value": "「Startup!★Start!!」by Wedoso"
+          "value": "「Startup!★Start!!」by Wedoso, iason"
         },
         {
           "label": "Musique",
-          "value": "Wedoso"
+          "value": "Wedoso, iason"
         },
         {
           "label": "Vidéo",
@@ -2842,11 +2842,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Sigla",
-          "value": "「Startup!★Start!!」by Wedoso"
+          "value": "「Startup!★Start!!」by Wedoso, iason"
         },
         {
           "label": "Musica",
-          "value": "Wedoso"
+          "value": "Wedoso, iason"
         },
         {
           "label": "Video",
@@ -3202,11 +3202,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Titelsong",
-          "value": "「Startup!★Start!!」by Wedoso"
+          "value": "「Startup!★Start!!」by Wedoso, iason"
         },
         {
           "label": "Musik",
-          "value": "Wedoso"
+          "value": "Wedoso, iason"
         },
         {
           "label": "Video",
@@ -3562,11 +3562,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "เพลงธีม",
-          "value": "「Startup!★Start!!」by Wedoso"
+          "value": "「Startup!★Start!!」by Wedoso, iason"
         },
         {
           "label": "ดนตรี",
-          "value": "Wedoso"
+          "value": "Wedoso, iason"
         },
         {
           "label": "วิดีโอ",
@@ -3922,11 +3922,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Lagu Tema",
-          "value": "「Startup!★Start!!」by Wedoso"
+          "value": "「Startup!★Start!!」by Wedoso, iason"
         },
         {
           "label": "Muzik",
-          "value": "Wedoso"
+          "value": "Wedoso, iason"
         },
         {
           "label": "Video",
