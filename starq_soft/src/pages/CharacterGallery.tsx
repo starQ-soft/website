@@ -40,7 +40,7 @@ const characters: any[] = [
     weight: "42kg",
     BWH: "75A/58/80(cm)",
     voiceActor: "溯月",
-    sampleVoices: ["CV/tani-1.mp3", "CV/tani-2.mp3", "CV/tani-3.mp3"],
+    sampleVoices: ["CV/tani-1.mp3", "CV/tani-02.mp3", "CV/tani-4.mp3"],
   },
   {
     name: { japanese: ["林", "静花"], read: ["はやし", "しずか"], english: "Shizuka Hayashi" },

@@ -419,7 +419,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         quotes: [
           `I've got no clue where to start, but if I break the problem down piece by piece, there's always a solution.`,
           `Once I decide to do something, I see it through. Quitting halfway isn't my style.`,
-          `...It's fine. Let me sort out my thoughts and pick it up again tomorrow.`,
+          `It's okay. Let's sort out our thoughts and pick this up again tomorrow.`,
         ],
         zodiac: ``,
         bloodType: ``,
@@ -431,7 +431,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         likes: [`Poker`, `Billiards`, `Video games`],
         quotes: [
           `Bro, think BIG! You gotta open up your horizons! What does the investment world care about these days? Products? Wrong! It's emotional value!`,
-          `I put up the money, you put up your life—together we'll reach the summit!`,
+          `I'll put up the money, you put your life on the line. Together, we'll reach the top!`,
           `What do you know? What a startup needs is presence!`,
         ],
         zodiac: `Sagittarius`,
@@ -444,8 +444,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         likes: [`Visiting art exhibits`, `Crafting`, `Outdoor sketching`],
         quotes: [
           `I, um... I think... something's a little off here... Could I please fix it?`,
-          `Just leave it to me! I'll definitely... create something absolutely perfect!`,
-          `Please believe in me! Because... I believe in you, senpai!`,
+          `Leave it to me! I'll definitely... create the perfect piece!`,
+          `Because... I believe in you, senpai!`,
         ],
         zodiac: `Pisces`,
         bloodType: `A`,
@@ -469,9 +469,9 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         description: `A lively, sharp-tongued influencer and livestreamer. She started creating content at the age of 16 and was later scouted by a famous MCN agency. With a keen nose for what goes viral, she's personally churned out plenty of smash-hit short videos. Quick-witted and razor-sharp with words, she understands human nature inside out and excels at personal branding. She currently runs the "Queen Nana" account on a wildly popular social platform, cultivating an independent-woman persona and has millions of followers. She has a fierce hunger for money, forever dropping the line "that's an extra cost".`,
         likes: [`Shopping`, `Variety shows`, `Foodie hopping`],
         quotes: [
-          `Heh heh! Listen to me! These are the secrets to going viral—guaranteed to send you straight to the moon!`,
+          `Heh heh! Listen to me! These are the secrets to going viral. You'll take off in no time, guaranteed!`,
           `Sentiment, schmentiment. On the internet, anything that can't grab eyeballs is just trash!`,
-          `Just so we're clear—marrying me won't come cheap! That'll cost extra!`,
+          `Just so we're clear, I don't come cheap! That'll cost extra!`,
         ],
         zodiac: `Leo`,
         bloodType: `AB`,
@@ -484,7 +484,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         quotes: [
           `I just want to make something gentle and worthwhile.`,
           `No matter how long the road, as long as the direction is right, we'll get there in the end.`,
-          `Giving up already? Bowing to reality isn't like you.`,
+          `Compromising already? Bowing to reality isn't like you.`,
         ],
         zodiac: `Cancer`,
         bloodType: `O`,
@@ -661,8 +661,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         likes: [`逛画展`, `做手工`, `户外写生`],
         quotes: [
           `我、我觉得……这里有点怪的……可以让我修改一下吗？`,
-          `放心交给我吧！我一定会……创作出最完美的作品！`,
-          `请相信我吧！因为……我相信学长你！`,
+          `交给我吧！我一定会……创作出最完美的作品！`,
+          `因为……我相信学长你！`,
         ],
         zodiac: `双鱼座`,
         bloodType: `A型`,
@@ -850,7 +850,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         quotes: [
           `雖然暫時毫無頭緒，但只要把問題逐個拆解開，總能找到解決辦法。`,
           `既然決定要做，就會負責到底，半途而廢不是我的風格。`,
-          `……沒關係，重新整理一下思路，明天繼續吧。`,
+          `沒關係，重新整理一下思路，明天繼續吧。`,
         ],
         zodiac: ``,
         bloodType: ``,
@@ -875,8 +875,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         likes: [`逛畫展`, `做手工`, `戶外寫生`],
         quotes: [
           `我、我覺得……這裡有點怪的……可以讓我修改一下嗎？`,
-          `放心交給我吧！我一定會……創作出最完美的作品！`,
-          `請相信我吧！因為……我相信學長你！`,
+          `交給我吧！我一定會……創作出最完美的作品！`,
+          `因為……我相信學長你！`,
         ],
         zodiac: `雙魚座`,
         bloodType: `A型`,
@@ -910,7 +910,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         role: `產品經理`,
-        description: `擁有四分之一法國血統的混血美人，舉止優雅，言辭溫和，說話總是輕聲細語讓人如沐春風。有著與一般產品經理不同的罕見氣質，有自己獨特的理解和追求，在當今這種商業背景下顯得有點理想主義。非常注重使用者體驗，不想為了數據美觀而妥協，願意花大量時間進行市場調研，希望打造使用者真正需要且喜愛的產品。`,
+        description: `擁有四分之一法國血統的混血美人，舉止優雅，言辭溫和，說話總是輕聲細語讓人如沐春風。有著與不一般的罕見氣質，有自己獨特的理解和追求，在當今這種商業背景下顯得有點理想主義。非常注重使用者體驗，不想為了數據美觀而妥協，願意花大量時間進行市場調研，希望打造使用者真正需要且喜愛的產品。`,
         likes: [`插花`, `芭蕾舞`, `聽音樂會`],
         quotes: [
           `我只是想做一些溫柔而有價值的東西。`,
@@ -1182,7 +1182,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "아직은 전혀 감이 안 오지만, 문제를 하나씩 쪼개다 보면 반드시 해결책을 찾을 수 있을 거야.",
           "하겠다고 결정한 이상 끝까지 책임질 거야. 중간에 포기하는 건 내 방식이 아니야.",
-          "……괜찮아. 생각을 다시 정리하고 내일 계속하자."
+          "괜찮아. 생각을 다시 정리하고 내일 계속하자."
         ],
         "zodiac": "",
         "bloodType": "",
@@ -1197,7 +1197,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
           "비디오 게임"
         ],
         "quotes": [
-          "형제여, 스케일이야! 시야를 넓혀! 요즘 투자 업계가 보는 게 뭔데? 제품? 아니야! 감정적 가치라고!",
+          "친구야, 크게 봐야지! 시야를 넓혀! 요즘 투자 업계가 보는 게 뭔데? 제품? 아니야! 감정적 가치라고!",
           "돈은 내가 대고, 목숨은 네가 걸어. 같이 인생의 정상으로 가자!",
           "네가 뭘 알아? 스타트업에 필요한 건 바로 아우라야!"
         ],
@@ -1216,7 +1216,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "저, 저기……여기가 조금 이상한 것 같아요……제가 수정해도 될까요?",
           "저에게 맡겨 주세요! 반드시……가장 완벽한 작품을 만들어 낼게요!",
-          "저를 믿어 주세요! 왜냐하면……저도 선배를 믿으니까요!"
+          "왜냐하면……저는 선배를 믿으니까요!"
         ],
         "zodiac": "물고기자리",
         "bloodType": "A형",
@@ -1233,7 +1233,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "저기……아까 부탁하신 일은 전부 끝냈어요……또 도와드릴 일이 있을까요?",
           "역시……컴퓨터를 상대하는 편이 더 편해……",
-          "죄송해요……모두에게 폐를 끼치지 않도록 노력할게요……"
+          "죄송해요……모두의 발목을 잡지 않도록 노력할게요……"
         ],
         "zodiac": "처녀자리",
         "bloodType": "O형",
@@ -1248,9 +1248,9 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
           "맛집 탐방"
         ],
         "quotes": [
-          "흥! 내 말만 들어! 이게 전부 트래픽 공식이야. 바로 떡상하게 해 줄게!",
+          "흥흥! 내 말만 들어! 이게 다 사람들 관심을 끄는 비결이야. 바로 떡상하게 해 줄게!",
           "감성이니 뭐니 해도 인터넷에서 시선을 못 끄는 건 전부 쓰레기야!",
-          "미리 말해 두는데, 나랑 결혼하려면 비싸! 추가 비용이야!"
+          "미리 말해 두는데, 나 몸값 비싸! 돈 더 줘야 해!"
         ],
         "zodiac": "사자자리",
         "bloodType": "AB형",
@@ -1542,7 +1542,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "Aunque ahora no tenga ni idea, si descompongo el problema paso a paso, siempre acabaré encontrando una solución.",
           "Si decido hacerlo, asumiré la responsabilidad hasta el final. Abandonar a mitad de camino no va conmigo.",
-          "……No pasa nada. Ordenaré mis ideas y continuaré mañana."
+          "No pasa nada. Ordenemos las ideas y sigamos mañana."
         ],
         "zodiac": "",
         "bloodType": "",
@@ -1558,7 +1558,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "¡Hermano, perspectiva! ¡Amplía tu visión! ¿Qué mira hoy el mundo de la inversión? ¿El producto? ¡No! ¡El valor emocional!",
-          "Yo pongo el dinero y tú la vida. ¡Juntos llegaremos a la cima!",
+          "Yo pongo el dinero y tú te juegas la vida. ¡Juntos llegaremos a lo más alto!",
           "¿Qué sabrás tú? ¡Lo que necesita una startup es presencia!"
         ],
         "zodiac": "Sagitario",
@@ -1575,8 +1575,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Y-yo creo que…… aquí hay algo un poco raro…… ¿Puedo corregirlo?",
-          "¡Déjamelo a mí! Voy a…… crear la obra más perfecta.",
-          "¡Confía en mí! Porque…… yo confío en ti, senpai."
+          "¡Déjamelo a mí! ¡Estoy segura de que voy a… crear una obra perfecta!",
+          "Porque… yo confío en ti, senpai."
         ],
         "zodiac": "Piscis",
         "bloodType": "A",
@@ -1608,9 +1608,9 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
           "Descubrir restaurantes"
         ],
         "quotes": [
-          "¡Je! ¡Hazme caso! Estas son las claves del tráfico. ¡Te harán despegar al instante!",
+          "¡Je, je! ¡Hazme caso! Estas son las claves para hacerse viral. ¡Te garantizo que despegarás al instante!",
           "¿Sentimientos? En internet, todo lo que no consiga atraer miradas es basura.",
-          "Te lo advierto: casarte conmigo sale caro. ¡Eso cuesta extra!"
+          "Que quede claro: ¡yo cobro caro! ¡Eso cuesta extra!"
         ],
         "zodiac": "Leo",
         "bloodType": "AB",
@@ -1660,7 +1660,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Las emociones humanas son, en esencia, un caos de patrones. Pero los patrones pueden modelarse.",
-          "¿Amor? Es un juego hormonal ineficiente, costoso, arriesgado y lleno de redundancias.",
+          "¿Amor? Es un juego hormonal ineficiente, de alto consumo energético, de alto riesgo y lleno de redundancias.",
           "Un grupo improvisado como el vuestro debería dar gracias si no acaba en bancarrota."
         ],
         "zodiac": "Aries",
@@ -1902,7 +1902,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "Пока у меня нет ни единой зацепки, но если разбирать проблему по частям, решение обязательно найдётся.",
           "Раз уж я решил это сделать, то доведу дело до конца. Бросать на полпути — не в моём стиле.",
-          "……Ничего. Я ещё раз приведу мысли в порядок и продолжу завтра."
+          "Ничего страшного. Давай ещё раз приведём мысли в порядок и продолжим завтра."
         ],
         "zodiac": "",
         "bloodType": "",
@@ -1918,7 +1918,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Брат, масштаб! Расширь горизонты! На что сегодня смотрят инвесторы? На продукт? Нет! На эмоциональную ценность!",
-          "Я даю деньги, ты ставишь жизнь. Вместе доберёмся до вершины!",
+          "Я вкладываю деньги, ты ставишь на кон жизнь. Вместе доберёмся до вершины!",
           "Что ты понимаешь? Стартапу нужна аура!"
         ],
         "zodiac": "Стрелец",
@@ -1936,7 +1936,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "М-мне кажется…… здесь что-то немного не так…… Можно я исправлю?",
           "Положитесь на меня! Я обязательно…… создам идеальную работу!",
-          "Пожалуйста, поверьте мне! Потому что…… я верю в вас, сэмпай!"
+          "Потому что…… я верю в вас, сэмпай!"
         ],
         "zodiac": "Рыбы",
         "bloodType": "A",
@@ -1968,9 +1968,9 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
           "Поиск новых ресторанов"
         ],
         "quotes": [
-          "Хе-хе! Слушай меня! Это и есть формула трафика. Взлетишь мгновенно!",
+          "Хе-хе! Слушай меня! Это секреты вирусного успеха. Мгновенный взлёт гарантирую!",
           "Какие ещё чувства? В интернете всё, что не привлекает взгляд, — мусор!",
-          "Сразу предупреждаю: жениться на мне дорого! Это за дополнительную плату!"
+          "Сразу предупреждаю: я дорого беру! Придётся доплатить!"
         ],
         "zodiac": "Лев",
         "bloodType": "AB",
@@ -1987,7 +1987,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "Я просто хочу создавать что-то доброе и ценное.",
           "Неважно, насколько долог путь: если направление верное, мы обязательно придём.",
-          "Уже сдаёшься? Склоняться перед реальностью — это не в твоём стиле."
+          "Уже идёшь на компромисс? Склоняться перед реальностью — это не в твоём стиле."
         ],
         "zodiac": "Рак",
         "bloodType": "O",
@@ -2003,7 +2003,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Я инвестирую не в ваш нынешний продукт. Я инвестирую в тебя и твоё будущее.",
-          "Не пытайся тронуть меня мечтами. Говори данными и исполнением.",
+          "Не пытайся впечатлить меня мечтами. Говори на языке данных и докажи, что умеешь действовать.",
           "Только став достаточно сильным, человек может управлять собственной судьбой!"
         ],
         "zodiac": "Козерог",
@@ -2021,7 +2021,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "Человеческие эмоции по сути являются хаосом паттернов. Но паттерны можно моделировать.",
           "Любовь? Это неэффективная, энергозатратная, рискованная гормональная игра, полная избыточности.",
-          "Такой сборище любителей, как вы, должно радоваться уже тому, что не обанкротилось."
+          "Такое сборище дилетантов, как вы, должно радоваться уже тому, что не разорилось."
         ],
         "zodiac": "Овен",
         "bloodType": "B",
@@ -2262,7 +2262,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "Tạm thời chưa có manh mối, nhưng chỉ cần tách vấn đề ra từng phần thì chắc chắn sẽ tìm được cách giải quyết.",
           "Đã quyết định làm thì tôi sẽ chịu trách nhiệm đến cùng. Bỏ cuộc giữa chừng không phải phong cách của tôi.",
-          "……Không sao. Sắp xếp lại suy nghĩ rồi ngày mai tiếp tục."
+          "Không sao. Cứ sắp xếp lại suy nghĩ rồi ngày mai tiếp tục nhé."
         ],
         "zodiac": "",
         "bloodType": "",
@@ -2294,9 +2294,9 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
           "Vẽ ngoài trời"
         ],
         "quotes": [
-          "M-mình thấy…… chỗ này hơi lạ…… Cho mình sửa lại được không?",
-          "Cứ giao cho mình! Mình nhất định sẽ…… tạo ra tác phẩm hoàn hảo nhất!",
-          "Xin hãy tin mình! Bởi vì…… mình tin tiền bối!"
+          "E-em thấy…… chỗ này hơi lạ…… Em sửa lại một chút được không ạ?",
+          "Cứ giao cho em! Em nhất định sẽ…… tạo ra tác phẩm hoàn hảo nhất!",
+          "Bởi vì…… em tin anh, tiền bối!"
         ],
         "zodiac": "Song Ngư",
         "bloodType": "A",
@@ -2313,7 +2313,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "Ừm…… những việc được giao lúc nãy mình làm xong hết rồi…… Còn gì cần mình giúp không?",
           "Quả nhiên…… làm việc với máy tính vẫn nhẹ nhàng hơn……",
-          "Xin lỗi…… mình sẽ cố gắng không làm mọi người chậm lại……"
+          "Xin lỗi…… mình sẽ cố gắng không kéo cả nhóm tụt lại……"
         ],
         "zodiac": "Xử Nữ",
         "bloodType": "O",
@@ -2328,9 +2328,9 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
           "Khám phá quán ăn"
         ],
         "quotes": [
-          "Hừm! Nghe tôi đi! Đây đều là công thức lưu lượng, bảo đảm bay thẳng lên trời!",
-          "Tình cảm gì chứ? Trên mạng, thứ không bắt được ánh mắt đều là rác!",
-          "Nói trước nhé, cưới tôi tốn kém lắm! Phải trả thêm!"
+          "Hừ hừ! Nghe tôi đi! Đây đều là bí quyết gây sốt trên mạng, bảo đảm nổi như cồn ngay lập tức!",
+          "Tâm huyết với tình cảm gì chứ? Trên mạng, thứ gì không thu hút được sự chú ý thì đều là rác!",
+          "Nói trước nhé, giá của tôi cao lắm đấy! Phải trả thêm!"
         ],
         "zodiac": "Sư Tử",
         "bloodType": "AB",
@@ -2379,7 +2379,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
           "Nghiên cứu thị trường chứng khoán"
         ],
         "quotes": [
-          "Cảm xúc của con người về bản chất là một hỗn loạn của các mẫu hình. Nhưng mẫu hình có thể được mô hình hóa.",
+          "Cảm xúc của con người về bản chất là sự hỗn loạn của các mẫu hình. Nhưng mẫu hình thì có thể được mô hình hóa.",
           "Tình yêu? Đó là trò chơi hormone kém hiệu quả, tốn năng lượng, rủi ro cao và đầy dư thừa.",
           "Một đội ngũ chắp vá như các người, không phá sản đã là may lắm rồi."
         ],
@@ -2622,7 +2622,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "Je n’ai encore aucune piste, mais si je décompose le problème étape par étape, je finirai forcément par trouver une solution.",
           "Puisque j’ai décidé de le faire, j’en assumerai la responsabilité jusqu’au bout. Abandonner en chemin, ce n’est pas mon genre.",
-          "……Ce n’est rien. Je vais remettre mes idées en ordre et reprendre demain."
+          "Ce n’est pas grave. Remettons nos idées en ordre et reprenons demain."
         ],
         "zodiac": "",
         "bloodType": "",
@@ -2638,7 +2638,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Frérot, vois grand ! Élargis ton horizon ! Qu’est-ce que les investisseurs regardent aujourd’hui ? Le produit ? Faux ! La valeur émotionnelle !",
-          "Je mets l’argent, tu mets ta vie. Ensemble, on atteindra le sommet !",
+          "Je mets l’argent, tu risques ta vie. Ensemble, on atteindra le sommet !",
           "Qu’est-ce que tu en sais ? Une startup, ça a besoin d’aura !"
         ],
         "zodiac": "Sagittaire",
@@ -2655,8 +2655,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "J-je crois que…… quelque chose cloche un peu ici…… Je peux le corriger ?",
-          "Laissez-moi faire ! Je vais…… créer l’œuvre la plus parfaite possible !",
-          "Faites-moi confiance ! Parce que…… moi aussi, je crois en vous, senpai !"
+          "Laissez-moi faire ! Je vais forcément… créer une œuvre parfaite !",
+          "Parce que… je crois en vous, senpai !"
         ],
         "zodiac": "Poissons",
         "bloodType": "A",
@@ -2690,7 +2690,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "Hé hé ! Écoute-moi ! Ce sont les recettes du buzz. Je te garantis que ça va décoller !",
           "Les sentiments ? Sur Internet, tout ce qui n’attire pas l’œil est bon pour la poubelle !",
-          "Je te préviens : m’épouser coûte cher ! Ce sera en supplément !"
+          "Je te préviens : mes services coûtent cher ! Il faudra payer un supplément !"
         ],
         "zodiac": "Lion",
         "bloodType": "AB",
@@ -2707,7 +2707,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "Je veux simplement créer quelque chose de doux et de précieux.",
           "Peu importe la longueur du chemin : tant que la direction est la bonne, nous finirons par arriver.",
-          "Tu renonces déjà ? Baisser la tête devant la réalité, ça ne te ressemble pas."
+          "Tu fais déjà des concessions ? Baisser la tête devant la réalité, ça ne te ressemble pas."
         ],
         "zodiac": "Cancer",
         "bloodType": "O",
@@ -2723,7 +2723,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Je n’investis pas dans votre produit actuel. J’investis en toi et dans ton avenir.",
-          "N’essaie pas de m’émouvoir avec des rêves. Parle-moi avec des données et de l’exécution.",
+          "N’essaie pas de m’impressionner avec des rêves. Montre-moi des données et ta capacité à passer à l’action.",
           "Ce n’est qu’en devenant assez fort que l’on peut maîtriser son propre destin !"
         ],
         "zodiac": "Capricorne",
@@ -2739,7 +2739,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
           "Étude des marchés boursiers"
         ],
         "quotes": [
-          "Les émotions humaines sont, au fond, un chaos de motifs. Mais les motifs peuvent être modélisés.",
+          "Les émotions humaines sont, au fond, un chaos de schémas. Mais les schémas peuvent être modélisés.",
           "L’amour ? Un jeu hormonal inefficace, énergivore, risqué et saturé de redondances.",
           "Une bande d’amateurs comme vous devrait déjà s’estimer heureuse de ne pas faire faillite."
         ],
@@ -2982,7 +2982,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "Per ora non ho la minima idea, ma se scompongo il problema un passo alla volta, prima o poi troverò una soluzione.",
           "Se ho deciso di farlo, me ne assumerò la responsabilità fino alla fine. Mollare a metà non è da me.",
-          "……Va bene. Riordinerò le idee e continuerò domani."
+          "Non fa niente. Riordiniamo le idee e continuiamo domani."
         ],
         "zodiac": "",
         "bloodType": "",
@@ -2998,7 +2998,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Fratello, pensa in grande! Allarga gli orizzonti! Che cosa guarda oggi il mondo degli investimenti? Il prodotto? Sbagliato! Il valore emotivo!",
-          "Io metto i soldi, tu metti la vita. Insieme raggiungeremo la vetta!",
+          "Io metto i soldi, tu rischi la vita. Insieme raggiungeremo la vetta!",
           "Che ne sai tu? A una startup serve presenza!"
         ],
         "zodiac": "Sagittario",
@@ -3015,8 +3015,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "I-io credo che…… qui ci sia qualcosa di un po’ strano…… Posso correggerlo?",
-          "Lasciate fare a me! Creerò…… l’opera più perfetta possibile!",
-          "Credetemi! Perché…… anch’io credo in voi, senpai!"
+          "Lascia fare a me! Sono certa che riuscirò a…… creare un’opera perfetta!",
+          "Perché…… io credo in te, senpai!"
         ],
         "zodiac": "Pesci",
         "bloodType": "A",
@@ -3048,9 +3048,9 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
           "Scoprire ristoranti"
         ],
         "quotes": [
-          "Ehi! Ascolta me! Queste sono le regole della viralità. Ti faranno decollare all’istante!",
+          "Eh eh! Ascolta me! Questi sono i segreti per diventare virali. Ti garantisco che decollerai all’istante!",
           "Sentimenti? Su Internet, tutto ciò che non cattura l’attenzione è spazzatura!",
-          "Te lo dico subito: sposarmi costa caro! Questo costa extra!"
+          "Te lo dico subito: le mie tariffe sono alte! Dovrai pagare un extra!"
         ],
         "zodiac": "Leone",
         "bloodType": "AB",
@@ -3067,7 +3067,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "Voglio soltanto creare qualcosa di gentile e prezioso.",
           "Non importa quanto sia lunga la strada: finché la direzione è giusta, prima o poi arriveremo.",
-          "Ti arrendi già? Chinare la testa davanti alla realtà non è da te."
+          "Scendi già a compromessi? Chinare la testa davanti alla realtà non è da te."
         ],
         "zodiac": "Cancro",
         "bloodType": "O",
@@ -3100,7 +3100,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Le emozioni umane sono, in sostanza, un caos di schemi. Ma gli schemi possono essere modellati.",
-          "L’amore? È un gioco ormonale inefficiente, dispendioso, rischioso e pieno di ridondanze.",
+          "L’amore? È un gioco ormonale inefficiente, ad alto consumo energetico, ad alto rischio e pieno di ridondanze.",
           "Un gruppo improvvisato come il vostro dovrebbe già ringraziare di non essere fallito."
         ],
         "zodiac": "Ariete",
@@ -3342,7 +3342,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "Im Moment habe ich noch keinen Plan, aber wenn ich das Problem Schritt für Schritt zerlege, finde ich bestimmt eine Lösung.",
           "Wenn ich mich dafür entschieden habe, übernehme ich bis zum Ende die Verantwortung. Auf halbem Weg aufzugeben, passt nicht zu mir.",
-          "……Schon gut. Ich ordne meine Gedanken neu und mache morgen weiter."
+          "Schon gut. Ordnen wir unsere Gedanken neu und machen morgen weiter."
         ],
         "zodiac": "",
         "bloodType": "",
@@ -3375,8 +3375,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "I-ich glaube…… hier stimmt etwas nicht ganz…… Darf ich es ändern?",
-          "Überlassen Sie es mir! Ich werde…… das vollkommenste Werk erschaffen!",
-          "Bitte vertrauen Sie mir! Denn…… ich vertraue Ihnen auch, Senpai!"
+          "Überlassen Sie es mir! Ich werde ganz bestimmt…… ein perfektes Werk schaffen!",
+          "Denn…… ich vertraue Ihnen, Senpai!"
         ],
         "zodiac": "Fische",
         "bloodType": "A",
@@ -3392,7 +3392,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Ähm…… ich habe alles erledigt, worum Sie mich vorhin gebeten haben…… Kann ich sonst noch etwas tun?",
-          "Wie gedacht…… mit Computern umzugehen ist viel einfacher……",
+          "Wie ich dachte…… mit Computern umzugehen ist einfach entspannter……",
           "Entschuldigung…… ich werde mich bemühen, niemanden aufzuhalten……"
         ],
         "zodiac": "Jungfrau",
@@ -3408,9 +3408,9 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
           "Restaurants entdecken"
         ],
         "quotes": [
-          "Hehe! Hör auf mich! Das sind die Formeln des Traffics. Damit hebst du sofort ab!",
+          "Hehe! Hör auf mich! Das sind die Geheimnisse viraler Hits. Damit hebst du garantiert sofort ab!",
           "Gefühle hin oder her: Im Internet ist alles Müll, was keine Aufmerksamkeit erregt!",
-          "Nur damit das klar ist: Mich zu heiraten ist teuer! Das kostet extra!"
+          "Nur damit das klar ist: Ich bin teuer! Da musst du schon mehr zahlen!"
         ],
         "zodiac": "Löwe",
         "bloodType": "AB",
@@ -3443,7 +3443,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Ich investiere nicht in euer heutiges Produkt. Ich investiere in dich und in deine Zukunft.",
-          "Versuch nicht, mich mit Träumen zu bewegen. Sprich mit Daten und Umsetzungskraft.",
+          "Versuch nicht, mich mit Träumen zu beeindrucken. Überzeuge mich mit Daten und zeig, dass du deine Pläne umsetzen kannst.",
           "Nur wer stark genug ist, kann sein eigenes Schicksal beherrschen!"
         ],
         "zodiac": "Steinbock",
@@ -3460,7 +3460,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Menschliche Gefühle sind im Kern ein Chaos aus Mustern. Aber Muster lassen sich modellieren.",
-          "Liebe? Ein ineffizientes, energieintensives, riskantes Hormonsystem voller Redundanzen.",
+          "Liebe? Ein ineffizientes, energieintensives, hochriskantes Hormonspiel voller Redundanzen.",
           "Eine zusammengewürfelte Amateurtruppe wie ihr kann froh sein, wenn sie nicht bankrottgeht."
         ],
         "zodiac": "Widder",
@@ -3702,7 +3702,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "ตอนนี้อาจยังมองไม่เห็นทาง แต่ถ้าแยกปัญหาออกทีละส่วน ยังไงก็ต้องหาวิธีแก้ได้",
           "ในเมื่อเลือกจะทำแล้ว ฉันจะรับผิดชอบให้ถึงที่สุด การเลิกกลางคันไม่ใช่สไตล์ของฉัน",
-          "……ไม่เป็นไร จัดความคิดใหม่แล้วพรุ่งนี้ค่อยทำต่อ"
+          "ไม่เป็นไร จัดความคิดกันใหม่แล้วพรุ่งนี้ค่อยทำต่อ"
         ],
         "zodiac": "",
         "bloodType": "",
@@ -3736,7 +3736,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "ค-คือว่า……ฉันรู้สึกว่าตรงนี้แปลกนิดหน่อย……ขอแก้ได้ไหมคะ?",
           "ฝากไว้กับฉันได้เลย! ฉันจะ……สร้างผลงานที่สมบูรณ์แบบที่สุดให้ได้!",
-          "โปรดเชื่อฉันนะคะ! เพราะว่า……ฉันก็เชื่อในตัวรุ่นพี่เหมือนกัน!"
+          "เพราะว่า……ฉันเชื่อในตัวรุ่นพี่ค่ะ!"
         ],
         "zodiac": "ราศีมีน",
         "bloodType": "A",
@@ -3768,9 +3768,9 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
           "ตระเวนร้านอาหาร"
         ],
         "quotes": [
-          "ฮึ่ม! ฟังฉันสิ! นี่แหละสูตรเรียกทราฟฟิก รับรองพุ่งทันที!",
+          "หึ ๆ! ฟังฉันสิ! นี่แหละเคล็ดลับสร้างกระแส รับรองดังเปรี้ยงทันที!",
           "อารมณ์ความรู้สึกอะไรนั่นน่ะ บนอินเทอร์เน็ต ของที่ดึงสายตาไม่ได้ก็เป็นขยะทั้งนั้น!",
-          "บอกไว้ก่อนนะ แต่งงานกับฉันแพงมาก! ต้องจ่ายเพิ่ม!"
+          "บอกไว้ก่อนนะ ค่าตัวฉันแพง! ต้องจ่ายเพิ่ม!"
         ],
         "zodiac": "ราศีสิงห์",
         "bloodType": "AB",
@@ -3787,7 +3787,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "ฉันแค่อยากสร้างสิ่งที่อ่อนโยนและมีคุณค่าเท่านั้นค่ะ",
           "ไม่ว่าทางจะไกลแค่ไหน ตราบใดที่ทิศทางถูกต้อง สักวันเราจะไปถึงแน่นอน",
-          "จะยอมแพ้แล้วเหรอ? ก้มหัวให้ความจริงไม่ใช่สไตล์ของคุณเลยนะ"
+          "จะยอมประนีประนอมแล้วเหรอ? ก้มหัวให้ความจริงไม่ใช่สไตล์ของคุณเลยนะ"
         ],
         "zodiac": "ราศีกรกฎ",
         "bloodType": "O",
@@ -3821,7 +3821,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "อารมณ์ของมนุษย์โดยพื้นฐานคือความโกลาหลของรูปแบบ แต่รูปแบบสามารถสร้างแบบจำลองได้",
           "ความรักเหรอ? มันคือเกมฮอร์โมนที่ไร้ประสิทธิภาพ ใช้พลังงานสูง เสี่ยงสูง และเต็มไปด้วยความซ้ำซ้อน",
-          "ทีมสมัครเล่นปะติดปะต่อแบบพวกนาย แค่ไม่ล้มละลายก็ควรขอบคุณแล้ว"
+          "ทีมสมัครเล่นปะติดปะต่อแบบพวกนาย แค่ไม่เจ๊งก็บุญแล้ว"
         ],
         "zodiac": "ราศีเมษ",
         "bloodType": "B",
@@ -4062,7 +4062,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "Walaupun saya belum nampak jalan keluarnya, jika masalah dipecahkan satu demi satu, pasti ada penyelesaian.",
           "Jika saya sudah memutuskan untuk melakukannya, saya akan bertanggungjawab hingga akhir. Berhenti di tengah jalan bukan gaya saya.",
-          "……Tidak mengapa. Saya akan susun semula fikiran dan sambung esok."
+          "Tidak mengapa. Mari kita susun semula fikiran dan sambung esok."
         ],
         "zodiac": "",
         "bloodType": "",
@@ -4096,7 +4096,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         "quotes": [
           "S-saya rasa…… ada sesuatu yang agak pelik di sini…… Boleh saya betulkan?",
           "Serahkan kepada saya! Saya pasti akan…… menghasilkan karya yang paling sempurna!",
-          "Tolong percayakan saya! Kerana…… saya juga percaya pada senior!"
+          "Kerana…… saya percaya pada senior!"
         ],
         "zodiac": "Pisces",
         "bloodType": "A",
@@ -4112,8 +4112,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Er…… semua yang diminta tadi sudah saya siapkan…… Ada apa-apa lagi yang boleh saya bantu?",
-          "Seperti yang saya sangka…… berurusan dengan komputer jauh lebih mudah……",
-          "Maaf…… saya akan berusaha supaya tidak menyusahkan semua orang……"
+          "Memang pun…… berurusan dengan komputer lebih menenangkan……",
+          "Maaf…… saya akan berusaha supaya tidak menghalang kemajuan semua orang……"
         ],
         "zodiac": "Virgo",
         "bloodType": "O",
@@ -4128,9 +4128,9 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
           "Mencuba restoran baharu"
         ],
         "quotes": [
-          "Heh! Dengar cakap aku! Ini semua formula trafik. Pasti terus meletup!",
+          "Hehe! Dengar cakap aku! Inilah rahsia untuk jadi tular. Aku jamin kau terus meletup!",
           "Sentimen apa semua itu? Di Internet, apa-apa yang tidak menarik perhatian hanyalah sampah!",
-          "Aku beri amaran awal: mengahwini aku mahal! Itu caj tambahan!"
+          "Aku cakap siap-siap, upah aku mahal! Kena bayar lebih!"
         ],
         "zodiac": "Leo",
         "bloodType": "AB",
@@ -4163,7 +4163,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Saya tidak melabur dalam produk semasa kamu. Saya melabur dalam diri kamu dan masa depan kamu.",
-          "Jangan cuba menggerakkan saya dengan impian. Bercakaplah dengan data dan keupayaan pelaksanaan.",
+          "Jangan cuba mempengaruhi saya dengan impian. Yakinkan saya dengan data dan keupayaan melaksanakan rancangan.",
           "Hanya apabila seseorang cukup kuat, barulah dia boleh menguasai nasibnya sendiri!"
         ],
         "zodiac": "Capricorn",
@@ -4180,7 +4180,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         ],
         "quotes": [
           "Emosi manusia pada asasnya ialah kekacauan corak. Tetapi corak boleh dimodelkan.",
-          "Cinta? Itu permainan hormon yang tidak cekap, menggunakan banyak tenaga, berisiko tinggi dan penuh lebihan.",
+          "Cinta? Itu permainan hormon yang tidak cekap, menggunakan banyak tenaga, berisiko tinggi dan penuh unsur berlebihan.",
           "Kumpulan amatur seperti kamu patut bersyukur jika tidak muflis."
         ],
         "zodiac": "Aries",
