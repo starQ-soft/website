@@ -206,7 +206,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         quotes: [
           `今はまるで見当もつかないけど、問題を一つずつ分解していけば、必ず解決策は見つかるはずだ。`,
           `やると決めた以上は最後まで責任を持つ。途中で投げ出すのは性に合わない。`,
-          `……大丈夫、もう一度考えを整理して、明日また続けよう。`,
+          `大丈夫、もう一度考えを整理して、明日また続けよう。`,
         ],
         zodiac: ``,
         bloodType: ``,
@@ -258,7 +258,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         quotes: [
           `ふふん！あたしに任せて！これ全部バズの法則、一気に跳ねること間違いなしよ！`,
           `情緒だなんだって、ネットじゃ目を引けないものは全部ゴミなの！`,
-          `言っとくけど、あたしを嫁にするのは高いわよ！追加料金ね！`,
+          `言っとくけど、あたしは高いわよ！追加料金ね！`,
         ],
         zodiac: `獅子座`,
         bloodType: `AB型`,
@@ -688,7 +688,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         quotes: [
           `哼哼！听我的！这些都是流量密码，包你直接原地起飞！`,
           `什么情怀不情怀的，在互联网上，抓不住眼球的东西通通都是垃圾！`,
-          `先说好了，娶我可是很贵的！得加钱！`,
+          `先说好了，我可是很贵的！得加钱！`,
         ],
         zodiac: `狮子座`,
         bloodType: `AB型`,
@@ -902,7 +902,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         quotes: [
           `哼哼！聽我的！這些都是流量密碼，包你直接原地起飛！`,
           `什麼情懷不情懷的，在網路上，抓不住眼球的東西通通都是垃圾！`,
-          `先說好了，娶我可是很貴的！得加錢！`,
+          `先說好了，我可是很貴的！得加錢！`,
         ],
         zodiac: `獅子座`,
         bloodType: `AB型`,

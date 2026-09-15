@@ -60,7 +60,7 @@ const characters: any[] = [
     weight: "45kg",
     BWH: "80B/60/82(cm)",
     voiceActor: "小鼓单",
-    sampleVoices: ["CV/nana-1.mp3", "CV/nana-2.mp3", "CV/nana-3.mp3"],
+    sampleVoices: ["CV/nana-1.mp3", "CV/nana-2.mp3", "CV/nana-4.mp3"],
   },
   {
     name: { japanese: ["夏未", "ブラン"], read: ["なつみ", "ぶらん"], english: "Natsumi　Blanc" },
