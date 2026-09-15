@@ -130,8 +130,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         { label: `パブリッシャー`, value: `Pairaki Games` },
         { label: `シナリオ／キャラクターデザイン`, value: `星可` },
         { label: `原画ＣＧ／SD／背景`, value: `眞海` },
-        { label: `主題歌`, value: `「Startup!★Start!!」by Wedoso, iason` },
-        { label: `音楽`, value: `Wedoso, iason` },
+        { label: `主題歌`, value: `「Startup!★Start!!」by iason, Wedoso` },
+        { label: `音楽`, value: `iason, Wedoso` },
         { label: `ムービー`, value: `星可` },
         { label: `動効`, value: `幽浮小花` },
         { label: `協力`, value: `終焉、 y3 ほか` },
@@ -214,10 +214,10 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         role: `大学新卒（引きこもり）`,
-        description: `主人公のルームメイトであり、長年の遊び仲間。茨木大学経営学科を卒業したが、ビジネスの常識はまるでない。ボサボサの銀灰色の髪と、いつも寝足りなさそうな目つきが特徴。かつては絵に描いたような御曹司だったが、その後実家は没落した。生まれつき自由奔放で、何事も気分次第。チャラついて見えるが、意外と裏ワザに詳しく、口を開けば名言の連発。口先の達人で、夢物語を語らせれば右に出る者なし。`,
+        description: `主人公のルームメイトであり、長年の遊び仲間。茨木大学経営学科を卒業したが、ビジネスの常識はまるでない。ボサボサの銀灰色の髪と、いつも眠たげな目つきが特徴。かつては絵に描いたような御曹司だったが、実家は没落してしまった。生まれつき自由奔放で、何事も気分次第。チャラついて見えるが、意外と裏ワザに詳しく、口を開けば名言の連発。口が達者で、夢物語を語らせれば右に出る者なし。`,
         likes: [`ポーカー`, `ビリヤード`, `ゲーム`],
         quotes: [
-          `兄弟、スケールだよ！視野を広げろ！今の投資業界が見てるのは何だ？製品か？違う！感情的価値だ！`,
+          `相棒、視野だ！視野を広げろ！今の投資業界が見てるのは何だ？製品か？違う！感情的価値だ！`,
           `金は俺が出す、お前は命を張れ。一緒に人生の頂点へ行こうぜ！`,
           `お前に何が分かる？スタートアップに必要なのはオーラだ！`,
         ],
@@ -240,7 +240,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         role: `ジュニアフロントエンドエンジニア`,
-        description: `横で結んだ緩く巻いたサイドポニーが特徴の、目立たない女の子。いつも細いフレームの眼鏡をかけている。物静かで内向的、口数は少なく、軽い人見知りもあるようだ。二流大学の出身であることに引け目を感じ、たいていの社交の場では居心地が悪い。仕事には極めて真面目で、文句一つ言わず黙々とこなす。細かい作業は丁寧だが、やや杓子定規なところも。コミュニケーションは苦手で、ひたすらコードを書くほうが性に合い、人より機械と向き合うほうが気楽だと思っている。`,
+        description: `緩く巻いたサイドポニーが特徴の、目立たない女の子。いつも細いフレームの眼鏡をかけている。物静かで内向的、口数は少なく、少し人見知りもあるようだ。二流大学の出身であることに引け目を感じ、たいていの社交の場では居心地が悪い。仕事には極めて真面目で、文句一つ言わず黙々とこなす。細かい作業は丁寧だが、やや杓子定規なところも。コミュニケーションは苦手で、ひたすらコードを書くほうが性に合い、人より機械と向き合うほうが気楽だと思っている。`,
         likes: [`手帳をつける`, `書店めぐり`, `ドラマ鑑賞`],
         quotes: [
           `あの……さっき頼まれたことは全部終わりました……ほかに手伝えることはありますか？`,
@@ -253,7 +253,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         role: `マーケティングプランナー`,
-        description: `明るくて少々毒舌な人気配信者。16歳でSNS発信を始め、のちに有名MCNにスカウトされた。「バズの法則」への嗅覚が鋭く、これまで数々のバズり短編動画を自ら生み出してきた。弁が立ち頭の回転も速く、人間心理を見抜くのが得意で、IPブランディングに長ける。現在は大人気SNSで「ナナ女王様」アカウントを運営し、自立した女性像を打ち出して数千万のフォロワーを獲得。お金への執着が強く、何かと「追加料金ね」が口癖。`,
+        description: `明るくて少々毒舌な人気配信者。16歳でSNS発信を始め、のちに有名MCNにスカウトされた。「バズの法則」への嗅覚が鋭く、これまで数々のバズり短編動画を自ら生み出してきた。弁が立ち頭の回転も速く、人の心理を見抜くのが得意で、IPブランディングに長ける。現在は大人気SNSで「ナナ女王様」アカウントを運営し、自立した女性像を打ち出して数千万のフォロワーを獲得。お金への執着が強く、「追加料金ね」が口癖。`,
         likes: [`ショッピング`, `バラエティ番組`, `食べ歩き`],
         quotes: [
           `ふふん！あたしに任せて！これ全部バズの法則、一気に跳ねること間違いなしよ！`,
@@ -266,7 +266,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       },
       {
         role: `プロダクトマネージャー`,
-        description: `フランスの血を四分の一引く混血の美女。立ち居振る舞いは優雅で言葉遣いも穏やか、いつも柔らかな声音で話し、その場を和ませる。一般的なプロダクトマネージャーとは違う稀有な雰囲気を持ち、独自の理解と理想を抱いていて、今のビジネス環境ではやや理想主義に映る。ユーザー体験を何より重視し、数字の見栄えのために妥協することを嫌う。市場調査に惜しみなく時間をかけ、ユーザーが本当に必要とし愛する製品を作りたいと願っている。`,
+        description: `フランスの血を引くクオーターの美女。立ち居振る舞いは優雅で言葉遣いも穏やか、柔らかな声で、その場を和ませる。稀有な雰囲気を持ち、独自の理解と理想を抱いていて、今のビジネス環境ではやや理想主義に映る。ユーザー体験を何より重視し、数字の見栄えのために妥協することを嫌う。市場調査に惜しみなく時間をかけ、ユーザーが本当に必要とし愛する製品を作りたいと願っている。`,
         likes: [`生け花`, `バレエ`, `コンサート鑑賞`],
         quotes: [
           `わたしはただ、優しくて価値のあるものを作りたいだけなんです。`,
@@ -346,8 +346,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         { label: `Publisher`, value: `Pairaki Games` },
         { label: `Scenario / Character Design`, value: `星可` },
         { label: `Art CG / SD / Backgrounds`, value: `眞海` },
-        { label: `Theme Song`, value: `"Startup!★Start!!" by Wedoso, iason` },
-        { label: `Music`, value: `Wedoso, iason` },
+        { label: `Theme Song`, value: `"Startup!★Start!!" by iason, Wedoso` },
+        { label: `Music`, value: `iason, Wedoso` },
         { label: `Movie`, value: `星可` },
         { label: `Motion Effects`, value: `幽浮小花` },
         { label: `Additional Support`, value: `終焉， y3 et al.` },
@@ -562,8 +562,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         { label: `发行`, value: `Pairaki Games` },
         { label: `剧本／角色设计`, value: `星可` },
         { label: `原画CG／SD／背景`, value: `眞海` },
-        { label: `主题曲`, value: `「Startup!★Start!!」by Wedoso, iason` },
-        { label: `音乐`, value: `Wedoso, iason` },
+        { label: `主题曲`, value: `「Startup!★Start!!」by iason, Wedoso` },
+        { label: `音乐`, value: `iason, Wedoso` },
         { label: `影片`, value: `星可` },
         { label: `动效`, value: `幽浮小花` },
         { label: `协力`, value: `终焉 等` },
@@ -776,8 +776,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         { label: `發行`, value: `Pairaki Games` },
         { label: `劇本／角色設計`, value: `星可` },
         { label: `原畫CG／SD／背景`, value: `眞海` },
-        { label: `主題曲`, value: `「Startup!★Start!!」by Wedoso, iason` },
-        { label: `音樂`, value: `Wedoso, iason` },
+        { label: `主題曲`, value: `「Startup!★Start!!」by iason, Wedoso` },
+        { label: `音樂`, value: `iason, Wedoso` },
         { label: `影片`, value: `星可` },
         { label: `動效`, value: `幽浮小花` },
         { label: `協力`, value: `終焉、 y3 等` },
@@ -1042,11 +1042,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "주제가",
-          "value": "「Startup!★Start!!」by Wedoso, iason"
+          "value": "「Startup!★Start!!」by iason, Wedoso"
         },
         {
           "label": "음악",
-          "value": "Wedoso, iason"
+          "value": "iason, Wedoso"
         },
         {
           "label": "영상",
@@ -1402,11 +1402,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Tema principal",
-          "value": "「Startup!★Start!!」by Wedoso, iason"
+          "value": "「Startup!★Start!!」by iason, Wedoso"
         },
         {
           "label": "Música",
-          "value": "Wedoso, iason"
+          "value": "iason, Wedoso"
         },
         {
           "label": "Vídeo",
@@ -1762,11 +1762,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Главная песня",
-          "value": "「Startup!★Start!!」by Wedoso, iason"
+          "value": "「Startup!★Start!!」by iason, Wedoso"
         },
         {
           "label": "Музыка",
-          "value": "Wedoso, iason"
+          "value": "iason, Wedoso"
         },
         {
           "label": "Видео",
@@ -2122,11 +2122,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Ca khúc chủ đề",
-          "value": "「Startup!★Start!!」by Wedoso, iason"
+          "value": "「Startup!★Start!!」by iason, Wedoso"
         },
         {
           "label": "Âm nhạc",
-          "value": "Wedoso, iason"
+          "value": "iason, Wedoso"
         },
         {
           "label": "Video",
@@ -2482,11 +2482,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Chanson thème",
-          "value": "「Startup!★Start!!」by Wedoso, iason"
+          "value": "「Startup!★Start!!」by iason, Wedoso"
         },
         {
           "label": "Musique",
-          "value": "Wedoso, iason"
+          "value": "iason, Wedoso"
         },
         {
           "label": "Vidéo",
@@ -2842,11 +2842,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Sigla",
-          "value": "「Startup!★Start!!」by Wedoso, iason"
+          "value": "「Startup!★Start!!」by iason, Wedoso"
         },
         {
           "label": "Musica",
-          "value": "Wedoso, iason"
+          "value": "iason, Wedoso"
         },
         {
           "label": "Video",
@@ -3202,11 +3202,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Titelsong",
-          "value": "「Startup!★Start!!」by Wedoso, iason"
+          "value": "「Startup!★Start!!」by iason, Wedoso"
         },
         {
           "label": "Musik",
-          "value": "Wedoso, iason"
+          "value": "iason, Wedoso"
         },
         {
           "label": "Video",
@@ -3562,11 +3562,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "เพลงธีม",
-          "value": "「Startup!★Start!!」by Wedoso, iason"
+          "value": "「Startup!★Start!!」by iason, Wedoso"
         },
         {
           "label": "ดนตรี",
-          "value": "Wedoso, iason"
+          "value": "iason, Wedoso"
         },
         {
           "label": "วิดีโอ",
@@ -3922,11 +3922,11 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         },
         {
           "label": "Lagu Tema",
-          "value": "「Startup!★Start!!」by Wedoso, iason"
+          "value": "「Startup!★Start!!」by iason, Wedoso"
         },
         {
           "label": "Muzik",
-          "value": "Wedoso, iason"
+          "value": "iason, Wedoso"
         },
         {
           "label": "Video",
