@@ -14,6 +14,7 @@ import LangSelector from '../LangSelector';
 import { useLanguage } from '../LanguageContext';
 import { lscContent } from './lscContent';
 import { Link } from 'react-router-dom';
+import { useDismissOnOutsideClick } from '../useDismissOnOutsideClick';
 
 export const LscNav = styled.nav<{ $showBackground: boolean }>`
   display: flex;
@@ -708,6 +709,12 @@ const Lsc = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showNavBackground, setShowNavBackground] = useState(false);
+  const menuRef = useRef<HTMLElement>(null);
+  const menuButtonRef = useRef<HTMLDivElement>(null);
+  const galleryModalRef = useRef<HTMLDivElement>(null);
+
+  useDismissOnOutsideClick(menuOpen, () => setMenuOpen(false), menuRef, menuButtonRef);
+  useDismissOnOutsideClick(selectedIndex !== null, () => setSelectedIndex(null), galleryModalRef);
 
   const t = lscContent[lang] ?? lscContent['zh-cn']!;
 
@@ -832,6 +839,7 @@ const Lsc = () => {
             <LangSelector mobileMarginTop="50vh" />
           </LangSwitcherContainer>
           <Ham
+            ref={menuButtonRef}
             $open={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
             aria-label="Toggle navigation"
@@ -851,7 +859,7 @@ const Lsc = () => {
         aria-label="Close navigation"
         tabIndex={menuOpen ? 0 : -1}
       />
-      <SideNav $open={menuOpen} aria-hidden={!menuOpen}>
+      <SideNav ref={menuRef} $open={menuOpen} aria-hidden={!menuOpen}>
         {navSections.map(({ id, label }) => (
           <a key={id} href={`#${id}`} onClick={(e) => handleNavClick(e, id)}>
             {label}
@@ -1037,7 +1045,7 @@ const Lsc = () => {
       <BackToTop variant="lsc" />
       {selectedIndex !== null && (
         <ModalOverlay onClick={() => setSelectedIndex(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          <div ref={galleryModalRef} className="modal-content" onClick={(e) => e.stopPropagation()}>
             <img src={screenshots[selectedIndex].src} alt={screenshots[selectedIndex].alt} />
             <button className="close-btn" onClick={() => setSelectedIndex(null)} aria-label="Close">✕</button>
             <button className="slick-prev" onClick={showPrev} aria-label="Previous image" />

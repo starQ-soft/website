@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import translations from './translations.json';
 import { useLanguage, type LanguageCode } from './LanguageContext';
 import { trackLanguageSelect } from './analytics';
+import { useDismissOnOutsideClick } from './useDismissOnOutsideClick';
 import {
   DropdownContainer,
   DropdownButton,
@@ -41,19 +42,7 @@ export const LangSelector = ({ mobileMarginTop = '0' }: LangSelectorProps) => {
 
   const t = translations[lang];
 
-  // Close the dropdown when clicking anywhere outside of it.
-  useEffect(() => {
-    if (!langOpen) return;
-
-    const handleClickOutside = (event: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        setLangOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [langOpen]);
+  useDismissOnOutsideClick(langOpen, () => setLangOpen(false), containerRef);
 
   useEffect(() => {
     if (!langOpen) return;
