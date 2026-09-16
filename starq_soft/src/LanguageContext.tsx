@@ -100,6 +100,7 @@ const inferLanguageFromCountry = (country: string): LanguageCode =>
 interface LanguageContextValue {
   lang: LanguageCode;
   setLang: (lang: LanguageCode) => void;
+  country: string | null;
 }
 
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
@@ -108,6 +109,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const storedLanguage = useRef(getStoredLanguage());
   const userSelectedLanguage = useRef(false);
   const [lang, setLangState] = useState<LanguageCode>(storedLanguage.current ?? DEFAULT_LANG);
+  const [country, setCountry] = useState<string | null>(null);
 
   const setLang = useCallback((language: LanguageCode) => {
     userSelectedLanguage.current = true;
@@ -120,13 +122,11 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   }, [lang]);
 
   useEffect(() => {
-    if (storedLanguage.current) return;
-
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), 4000);
 
     const detectLanguage = async () => {
-      let detectedLanguage = DEFAULT_LANG;
+      let detectedLanguage: LanguageCode = DEFAULT_LANG;
 
       try {
         const response = await fetch(IP_COUNTRY_ENDPOINT, {
@@ -140,13 +140,14 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
           throw new Error('Country lookup returned no country code');
         }
         detectedLanguage = inferLanguageFromCountry(data.country);
+        if (!controller.signal.aborted) setCountry(data.country.toUpperCase());
       } catch {
         detectedLanguage = DEFAULT_LANG;
       } finally {
         window.clearTimeout(timeout);
       }
 
-      if (controller.signal.aborted || userSelectedLanguage.current) return;
+      if (controller.signal.aborted || storedLanguage.current || userSelectedLanguage.current) return;
       setLangState(detectedLanguage);
       storeLanguage(detectedLanguage);
     };
@@ -159,7 +160,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   return (
-    <LanguageContext.Provider value={{ lang, setLang }}>
+    <LanguageContext.Provider value={{ lang, setLang, country }}>
       {children}
     </LanguageContext.Provider>
   );

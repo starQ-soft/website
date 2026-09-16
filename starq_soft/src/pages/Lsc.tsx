@@ -705,7 +705,7 @@ const stepStyle = {
 } as const;
 
 const Lsc = () => {
-  const { lang } = useLanguage();
+  const { lang, country } = useLanguage();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showNavBackground, setShowNavBackground] = useState(false);
@@ -915,7 +915,9 @@ const Lsc = () => {
                 <SectionSubtitle>{t.pv.themeMovie}</SectionSubtitle>
                 <PvContainer>
                   <iframe
-                    src="https://www.youtube.com/embed/SEx_8gXgN8U"
+                    src={country === 'CN'
+                      ? 'https://player.bilibili.com/player.html?bvid=BV1YyNX6DEyy&autoplay=0'
+                      : 'https://www.youtube.com/embed/SEx_8gXgN8U'}
                     title={t.pv.themeMovie}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -44,7 +44,7 @@ const characters: any[] = [
   },
   {
     name: { japanese: ["林", "静花"], read: ["はやし", "しずか"], english: "Shizuka Hayashi" },
-    image: "hayashi.png",
+    image: "hayasi.png",
     age: "24",
     height: "162cm",
     weight: "48kg",
