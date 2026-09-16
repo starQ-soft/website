@@ -706,6 +706,7 @@ const stepStyle = {
 
 const Lsc = () => {
   const { lang, country } = useLanguage();
+  const useStaticBanner = country === null || country === 'CN';
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showNavBackground, setShowNavBackground] = useState(false);
@@ -870,11 +871,11 @@ const Lsc = () => {
       <CherryBlossomBackground count={80} />
       <TransparentBanner
         images={[
-          { src: `${import.meta.env.BASE_URL}haruka.gif`, size: '85%', left: '12%', top: '15%', objectFit: 'contain' },
-          { src: `${import.meta.env.BASE_URL}rin.gif`, size: '110%', left: '85%', top: '2%', objectFit: 'contain' },
-          { src: `${import.meta.env.BASE_URL}natsumi.gif`, size: '125%', left: '45%', top: '25%', objectFit: 'contain' },
-          { src: `${import.meta.env.BASE_URL}shizuka.gif`, size: '105%', left: '70%', top: '5%', objectFit: 'contain' },
-          { src: `${import.meta.env.BASE_URL}nana.gif`, size: '80%', left: '25%', top: '-2%', objectFit: 'contain', zIndex: -1 },
+          { src: `${import.meta.env.BASE_URL}${useStaticBanner ? 'haruka-header.png' : 'haruka.gif'}`, size: '85%', left: '12%', top: '15%', objectFit: 'contain' },
+          { src: `${import.meta.env.BASE_URL}${useStaticBanner ? 'rin-header.png' : 'rin.gif'}`, size: '110%', left: '85%', top: '2%', objectFit: 'contain' },
+          { src: `${import.meta.env.BASE_URL}${useStaticBanner ? 'natsumi-header.png' : 'natsumi.gif'}`, size: '125%', left: '45%', top: '25%', objectFit: 'contain' },
+          { src: `${import.meta.env.BASE_URL}${useStaticBanner ? 'hayashi-header.png' : 'shizuka.gif'}`, size: '105%', left: '70%', top: '5%', objectFit: 'contain' },
+          { src: `${import.meta.env.BASE_URL}${useStaticBanner ? 'nana-header.png' : 'nana.gif'}`, size: '80%', left: '25%', top: '-2%', objectFit: 'contain', zIndex: -1 },
         ]}
         mobileImage={`${import.meta.env.BASE_URL}lsc_mobile.png`}
       />
