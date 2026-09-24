@@ -104,6 +104,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
     },
     galleryNote: `※素材は全て開発中のものであり、予告なく変更される場合があります。`,
     progressNotes: [
+      { date: '2025/06/18', text: `ゲームプロジェクトの制作が決定しました。` },
       { date: '2026/07/11', text: `公式サイトを正式公開しました。` },
       { date: '2026/07/12', text: `初公開PVを公開しました。` },
       { date: '2026/07/13', text: `Steamストアページを公開しました。` },
@@ -320,6 +321,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
     },
     galleryNote: `* All assets shown are in development and subject to change without notice.`,
     progressNotes: [
+      { date: '2025/06/18', text: `Production of the game project has been confirmed.` },
       { date: '2026/07/11', text: `The official website is now live.` },
       { date: '2026/07/12', text: `The first promotional video has been released.` },
       { date: '2026/07/13', text: `The Steam store page is now live.` },
@@ -533,6 +535,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
     },
     galleryNote: `※所有素材均为开发中内容，可能在不另行通知的情况下发生变更。`,
     progressNotes: [
+      { date: '2025/06/18', text: `游戏项目制作决定。` },
       { date: '2026/07/11', text: `官方网站正式上线。` },
       { date: '2026/07/12', text: `首曝PV影片公开。` },
       { date: '2026/07/13', text: `Steam商店页面已上线。` },
@@ -750,6 +753,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
     },
     galleryNote: `※所有素材均為開發中內容，可能在不另行通知的情況下發生變更。`,
     progressNotes: [
+      { date: '2025/06/18', text: `遊戲專案製作決定。` },
       { date: '2026/07/11', text: `官方網站正式上線。` },
       { date: '2026/07/12', text: `首支PV影片公開。` },
       { date: '2026/07/13', text: `Steam商店頁面已上線。` },
@@ -963,6 +967,10 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
     },
     "galleryNote": "※모든 소재는 개발 중인 내용이며, 별도의 공지 없이 변경될 수 있습니다.",
     "progressNotes": [
+      {
+        "date": "2025/06/18",
+        "text": "게임 프로젝트 제작이 결정되었습니다."
+      },
       {
         "date": "2026/07/11",
         "text": "공식 웹사이트가 정식으로 공개되었습니다."
@@ -1324,6 +1332,10 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
     "galleryNote": "※Todos los materiales pertenecen a una versión en desarrollo y pueden cambiar sin previo aviso.",
     "progressNotes": [
       {
+        "date": "2025/06/18",
+        "text": "Se ha confirmado la producción del proyecto de videojuego."
+      },
+      {
         "date": "2026/07/11",
         "text": "Se ha inaugurado oficialmente el sitio web."
       },
@@ -1683,6 +1695,10 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
     },
     "galleryNote": "※Все материалы находятся в разработке и могут быть изменены без предварительного уведомления.",
     "progressNotes": [
+      {
+        "date": "2025/06/18",
+        "text": "Принято решение о разработке игры."
+      },
       {
         "date": "2026/07/11",
         "text": "Официальный сайт запущен."
@@ -2044,6 +2060,10 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
     "galleryNote": "※Tất cả tư liệu đều đang trong quá trình phát triển và có thể thay đổi mà không báo trước.",
     "progressNotes": [
       {
+        "date": "2025/06/18",
+        "text": "Đã quyết định triển khai dự án trò chơi."
+      },
+      {
         "date": "2026/07/11",
         "text": "Trang web chính thức đã ra mắt."
       },
@@ -2403,6 +2423,10 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
     },
     "galleryNote": "※Tous les éléments présentés sont en cours de développement et peuvent être modifiés sans préavis.",
     "progressNotes": [
+      {
+        "date": "2025/06/18",
+        "text": "La production du projet de jeu est confirmée."
+      },
       {
         "date": "2026/07/11",
         "text": "Le site officiel est désormais en ligne."
@@ -2764,6 +2788,10 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
     "galleryNote": "※Tutti i materiali mostrati sono in fase di sviluppo e possono cambiare senza preavviso.",
     "progressNotes": [
       {
+        "date": "2025/06/18",
+        "text": "La produzione del progetto di gioco è stata confermata."
+      },
+      {
         "date": "2026/07/11",
         "text": "Il sito ufficiale è ora online."
       },
@@ -3123,6 +3151,10 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
     },
     "galleryNote": "※Alle gezeigten Inhalte befinden sich in Entwicklung und können ohne vorherige Ankündigung geändert werden.",
     "progressNotes": [
+      {
+        "date": "2025/06/18",
+        "text": "Die Entwicklung des Spielprojekts wurde beschlossen."
+      },
       {
         "date": "2026/07/11",
         "text": "Die offizielle Website ist jetzt online."
@@ -3484,6 +3516,10 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
     "galleryNote": "※สื่อทั้งหมดอยู่ระหว่างการพัฒนาและอาจเปลี่ยนแปลงโดยไม่แจ้งให้ทราบล่วงหน้า",
     "progressNotes": [
       {
+        "date": "2025/06/18",
+        "text": "ยืนยันการพัฒนาโครงการเกมแล้ว"
+      },
+      {
         "date": "2026/07/11",
         "text": "เว็บไซต์ทางการเปิดให้บริการแล้ว"
       },
@@ -3843,6 +3879,10 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
     },
     "galleryNote": "※Semua bahan masih dalam pembangunan dan mungkin berubah tanpa notis terlebih dahulu.",
     "progressNotes": [
+      {
+        "date": "2025/06/18",
+        "text": "Pembangunan projek permainan telah diputuskan."
+      },
       {
         "date": "2026/07/11",
         "text": "Laman web rasmi kini dilancarkan."
