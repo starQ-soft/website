@@ -14,7 +14,8 @@
       "venueLabel": "会場",
       "venueValue": "Stellar Ball (品川)",
       "btnPrimary": "ウィッシュリストに追加",
-      "preorder": "『恋と起業とコファウンダー』Steamストアページ公開中！",
+      "title": "『恋と起業とコファウンダー』",
+      "subtitle": "Steamストアページ公開中！",
       "goToBanner": "バナーへ移動"
     },
     "product": {
@@ -89,7 +90,8 @@
       "venueLabel": "Venue",
       "venueValue": "Stellar Ball (Shinagawa)",
       "btnPrimary": "Add to Wishlist",
-      "preorder": "The Steam store for \"Love, Startup & Co-founder\" is now open!",
+      "title": "Love, Startup & Co-founder",
+      "subtitle": "The Steam store page is now live!",
       "goToBanner": "Go to banner"
     },
     "product": {
@@ -164,7 +166,8 @@
       "venueLabel": "会场",
       "venueValue": "Stellar Ball (品川)",
       "btnPrimary": "加入愿望单",
-      "preorder": "《恋爱、创业、合伙人》Steam商店现已公开！",
+      "title": "《恋爱、创业、合伙人》",
+      "subtitle": "Steam商店页面现已公开！",
       "goToBanner": "跳转到横幅"
     },
     "product": {
@@ -239,7 +242,8 @@
       "venueLabel": "會場",
       "venueValue": "Stellar Ball (品川)",
       "btnPrimary": "加入願望清單",
-      "preorder": "《戀愛、創業、合夥人》Steam商店現已公開！",
+      "title": "《戀愛、創業、合夥人》",
+      "subtitle": "Steam商店頁面現已公開！",
       "goToBanner": "跳轉到橫幅"
     },
     "product": {
@@ -314,7 +318,8 @@
       "venueLabel": "행사장",
       "venueValue": "Stellar Ball (시나가와)",
       "btnPrimary": "위시리스트에 추가",
-      "preorder": "《사랑, 창업, 그리고 코파운더》 Steam 스토어 페이지가 공개되었습니다!",
+      "title": "《사랑, 창업, 그리고 코파운더》",
+      "subtitle": "Steam 스토어 페이지가 공개되었습니다!",
       "goToBanner": "배너로 이동"
     },
     "product": {
@@ -389,7 +394,8 @@
       "venueLabel": "Lugar",
       "venueValue": "Stellar Ball (Shinagawa)",
       "btnPrimary": "Añadir a la lista de deseos",
-      "preorder": "¡La página de la tienda Steam de «Love, Startup & Co-founder» ya está disponible!",
+      "title": "Love, Startup & Co-founder",
+      "subtitle": "¡La página de la tienda de Steam ya está disponible!",
       "goToBanner": "Ir al banner"
     },
     "product": {
@@ -464,7 +470,8 @@
       "venueLabel": "Место",
       "venueValue": "Stellar Ball (Синагава)",
       "btnPrimary": "Добавить в список желаемого",
-      "preorder": "Страница «Love, Startup & Co-founder» в магазине Steam уже открыта!",
+      "title": "Love, Startup & Co-founder",
+      "subtitle": "Страница в магазине Steam уже открыта!",
       "goToBanner": "Перейти к баннеру"
     },
     "product": {
@@ -539,7 +546,8 @@
       "venueLabel": "Địa điểm",
       "venueValue": "Stellar Ball (Shinagawa)",
       "btnPrimary": "Thêm vào danh sách mong muốn",
-      "preorder": "Trang cửa hàng Steam của «Love, Startup & Co-founder» đã ra mắt!",
+      "title": "Love, Startup & Co-founder",
+      "subtitle": "Trang cửa hàng Steam đã ra mắt!",
       "goToBanner": "Chuyển đến banner"
     },
     "product": {
@@ -614,7 +622,8 @@
       "venueLabel": "Lieu",
       "venueValue": "Stellar Ball (Shinagawa)",
       "btnPrimary": "Ajouter à la liste de souhaits",
-      "preorder": "La page Steam de « Love, Startup & Co-founder » est maintenant disponible !",
+      "title": "Love, Startup & Co-founder",
+      "subtitle": "La page Steam est maintenant disponible !",
       "goToBanner": "Aller à la bannière"
     },
     "product": {
@@ -689,7 +698,8 @@
       "venueLabel": "Sede",
       "venueValue": "Stellar Ball (Shinagawa)",
       "btnPrimary": "Aggiungi alla lista dei desideri",
-      "preorder": "La pagina Steam di « Love, Startup & Co-founder » è ora disponibile!",
+      "title": "Love, Startup & Co-founder",
+      "subtitle": "La pagina Steam è ora disponibile!",
       "goToBanner": "Vai al banner"
     },
     "product": {
@@ -764,7 +774,8 @@
       "venueLabel": "Veranstaltungsort",
       "venueValue": "Stellar Ball (Shinagawa)",
       "btnPrimary": "Zur Wunschliste hinzufügen",
-      "preorder": "Die Steam-Shopseite von „Love, Startup & Co-founder“ ist jetzt verfügbar!",
+      "title": "Love, Startup & Co-founder",
+      "subtitle": "Die Steam-Shopseite ist jetzt verfügbar!",
       "goToBanner": "Zum Banner"
     },
     "product": {
@@ -839,7 +850,8 @@
       "venueLabel": "สถานที่",
       "venueValue": "Stellar Ball (Shinagawa)",
       "btnPrimary": "เพิ่มลงในรายการที่อยากได้",
-      "preorder": "หน้า Steam ของ “Love, Startup & Co-founder” เปิดให้เข้าชมแล้ว!",
+      "title": "Love, Startup & Co-founder",
+      "subtitle": "หน้า Steam เปิดให้เข้าชมแล้ว!",
       "goToBanner": "ไปยังแบนเนอร์"
     },
     "product": {
@@ -914,7 +926,8 @@
       "venueLabel": "Tempat",
       "venueValue": "Stellar Ball (Shinagawa)",
       "btnPrimary": "Tambah ke senarai hajat",
-      "preorder": "Halaman Steam untuk “Love, Startup & Co-founder” kini telah dibuka!",
+      "title": "Love, Startup & Co-founder",
+      "subtitle": "Halaman kedai Steam kini telah dibuka!",
       "goToBanner": "Pergi ke sepanduk"
     },
     "product": {

@@ -245,13 +245,25 @@ export const HeroContent = styled.div`
 export const ButtonGroup = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.75rem;
-  width: 50%;
-  margin-top: 1.5rem;
+  width: 80%;
+  margin: 1.5rem auto 0;
+  transform: translateY(18vh);
 
   @media (max-width: 768px) {
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: auto;
     font-size: 1rem;
-    width: 60%;
+    transform: translateY(5vh);
+    width: 80%;
+
+    & > * {
+      margin-left: 0;
+      margin-right: 0;
+      text-align: left;
+    }
   }
 `;
 

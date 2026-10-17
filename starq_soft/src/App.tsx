@@ -52,8 +52,8 @@ const App = () => {
   );
 
   const banners = [isMobile
-    ? `${import.meta.env.BASE_URL}banner4_mobile.png`
-    : `${import.meta.env.BASE_URL}banner4.png`,
+    ? `${import.meta.env.BASE_URL}banner2_mobile.png`
+    : `${import.meta.env.BASE_URL}banner2.png`,
     // `${import.meta.env.BASE_URL}banner2.png`, `${import.meta.env.BASE_URL}banner3.png`
   ];
 
@@ -158,7 +158,8 @@ const App = () => {
             </EventInfoRow> */}
 
             <ButtonGroup>
-              <PreorderText>{t.hero.preorder}</PreorderText>
+              <PreorderText>{t.hero.title}</PreorderText>
+              <PreorderText>{t.hero.subtitle}</PreorderText>
               <PrimaryButton
                 href="https://store.steampowered.com/app/4909210/_/"
                 target="_blank"
