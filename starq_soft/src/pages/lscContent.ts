@@ -176,7 +176,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           segments: [
             { t: `手にあるのは、君よりも頼りない共同創業者と、\n名前すらまともに決まっていない` },
-            { t: `「AI彼女計画」`, em: 'span' },
+            { t: `「AI彼女育成計画」`, em: 'span' },
             { t: `だけ。` },
           ],
         },
@@ -608,7 +608,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           segments: [
             { t: `唯一拥有的，是一群比你还不靠谱的合伙人，\n以及一款连名字都没取好的` },
-            { t: `「AI女友计划」`, em: 'span' },
+            { t: `「AI女友养成计划」`, em: 'span' },
             { t: `。` },
           ],
         },
@@ -823,7 +823,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           segments: [
             { t: `唯一擁有的，是一群比你還不靠譜的合夥人，\n以及一款連名字都沒取好的` },
-            { t: `「AI女友計畫」`, em: 'span' },
+            { t: `「AI女友養成計畫」`, em: 'span' },
             { t: `。` },
           ],
         },
