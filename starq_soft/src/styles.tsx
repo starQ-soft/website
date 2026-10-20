@@ -174,7 +174,7 @@ export const NavActions = styled.div`
 export const Hero = styled.header<{ $bgImage?: string }>`
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 100vh;
   min-height: 600px;
   background: linear-gradient(to right, #1e3a8a, #6b21a8, #831843);
   background-image: ${({ $bgImage }) => $bgImage ? `url(${$bgImage})` : 'none'};
@@ -247,37 +247,30 @@ export const ButtonGroup = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  width: 80%;
+  width: 100%;
   margin: 1.5rem auto 0;
-  transform: translateY(18vh);
+  transform: translateY(10vh);
 
   @media (max-width: 768px) {
-    align-items: flex-start;
-    margin-left: 0;
-    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 1rem;
-    transform: translateY(5vh);
+    transform: translateY(-3vh);
     width: 80%;
-
-    & > * {
-      margin-left: 0;
-      margin-right: 0;
-      text-align: left;
-    }
   }
 `;
 
 export const PrimaryButton = styled.a`
   width: fit-content;
-  padding: 1rem 2rem;
-  min-width: 300px;
+  padding: 1rem 1rem;
+  min-width: 250px;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s;
   margin: 1rem auto;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -335,7 +328,7 @@ export const SteamIcon = styled.img`
 `;
 
 export const PreorderText = styled.div`
-  font-size: 3rem;
+  font-size: 5rem;
   text-align: center;
   font-weight: 500;
   text-shadow: 

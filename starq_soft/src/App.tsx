@@ -152,11 +152,6 @@ const App = () => {
             )}
           </HeroSlides>
           <HeroContent>
-            {/* <EventInfoRow>
-              <Badge>{t.hero.dateLabel}</Badge>
-              <HeroDate>{t.hero.dateValue}</HeroDate>
-            </EventInfoRow> */}
-
             <ButtonGroup>
               <PreorderText>{t.hero.title}</PreorderText>
               <PreorderText>{t.hero.subtitle}</PreorderText>
