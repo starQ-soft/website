@@ -259,7 +259,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         quotes: [
           `ふふん！あたしに任せて！これ全部バズの法則、一気に跳ねること間違いなしよ！`,
           `情緒だなんだって、ネットじゃ目を引けないものは全部ゴミなの！`,
-          `言っとくけど、あたしは高いわよ！追加料金ね！`,
+          `言っとくけど、あたしは高いわ！追加料金になるよ〜！`,
         ],
         zodiac: `獅子座`,
         bloodType: `AB型`,
