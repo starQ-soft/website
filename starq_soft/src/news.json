@@ -5,13 +5,13 @@
     "subTitle": "最新情報",
     "items": [
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "10月24日 シアトルの彼世界コンへの出展が決定！！",
         "date": "2026.10.21",
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "10月6日 北京ビジュアルノベルONLY即売会への出展が決定！！",
         "date": "2026.08.21",
         "link": ""
@@ -23,7 +23,7 @@
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "7月25～26日 上海ビジュアルノベルONLY即売会への出展が決定！！",
         "date": "2026.06.20",
         "link": ""
@@ -60,13 +60,13 @@
     "subTitle": "Announcements",
     "items": [
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "Exhibiting at the Seattle Sekai Beyond Con 2.0 event on October 24 confirmed!!",
         "date": "2026.10.21",
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "Exhibiting at the Beijing Visual Novel ONLY event on October 6 confirmed!!",
         "date": "2026.08.21",
         "link": ""
@@ -78,7 +78,7 @@
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "Exhibiting at the Shanghai Visual Novel ONLY event on July 25–26 confirmed!!",
         "date": "2026.06.20",
         "link": ""
@@ -115,13 +115,13 @@
     "subTitle": "最新通知",
     "items": [
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "10月24日西雅图彼世界漫展2.0参展决定！！",
         "date": "2026.10.21",
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "10月6日北京视觉小说only展参展决定！！",
         "date": "2026.08.21",
         "link": ""
@@ -133,7 +133,7 @@
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "7月25~26日上海视觉小说only展参展决定！！",
         "date": "2026.06.20",
         "link": ""
@@ -170,13 +170,13 @@
     "subTitle": "最新通知",
     "items": [
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "10月24日西雅圖彼世界漫展參展決定！！",
         "date": "2026.10.21",
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "10月6日北京視覺小說ONLY展參展決定！！",
         "date": "2026.08.21",
         "link": ""
@@ -188,7 +188,7 @@
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "7月25~26日上海視覺小說ONLY展參展決定！！",
         "date": "2026.06.20",
         "link": ""
@@ -225,13 +225,13 @@
     "subTitle": "최신 소식",
     "items": [
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "10월 24일 시애틀 Sekai Beyond Con 2.0 행사 부스 참가 결정!!",
         "date": "2026.10.21",
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "10월 6일 베이징 비주얼 노벨 ONLY 행사 참가 결정!!",
         "date": "2026.08.21",
         "link": ""
@@ -243,7 +243,7 @@
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "7월 25~26일 상하이 비주얼 노벨 ONLY 행사 참가 결정!!",
         "date": "2026.06.20",
         "link": ""
@@ -280,13 +280,13 @@
     "subTitle": "Novedades",
     "items": [
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "¡Participación como expositores confirmada en Sekai Beyond Con 2.0 en Seattle el 24 de octubre!",
         "date": "2026.10.21",
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "¡Participación confirmada en el evento ONLY de novelas visuales de Pekín del 6 de octubre!",
         "date": "2026.08.21",
         "link": ""
@@ -298,7 +298,7 @@
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "¡Participación confirmada en el evento ONLY de novelas visuales de Shanghái del 25 al 26 de julio!",
         "date": "2026.06.20",
         "link": ""
@@ -335,13 +335,13 @@
     "subTitle": "Новости",
     "items": [
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "Подтверждено участие со стендом на Sekai Beyond Con 2.0 в Сиэтле 24 октября!",
         "date": "2026.10.21",
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "Подтверждено участие в пекинском мероприятии ONLY по визуальным новеллам 6 октября!",
         "date": "2026.08.21",
         "link": ""
@@ -353,7 +353,7 @@
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "Подтверждено участие в шанхайском мероприятии ONLY по визуальным новеллам 25–26 июля!",
         "date": "2026.06.20",
         "link": ""
@@ -390,13 +390,13 @@
     "subTitle": "Tin tức mới nhất",
     "items": [
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "Xác nhận tham gia trưng bày tại sự kiện Sekai Beyond Con 2.0 ở Seattle ngày 24 tháng 10!",
         "date": "2026.10.21",
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "Xác nhận tham gia sự kiện ONLY tiểu thuyết hình ảnh tại Bắc Kinh ngày 6 tháng 10!",
         "date": "2026.08.21",
         "link": ""
@@ -408,7 +408,7 @@
         "link": ""
       },
       {
-        "type": "NEWS",
+        "type": "EVENT",
         "text": "Xác nhận tham gia sự kiện ONLY tiểu thuyết hình ảnh tại Thượng Hải ngày 25~26 tháng 7!",
         "date": "2026.06.20",
         "link": ""
