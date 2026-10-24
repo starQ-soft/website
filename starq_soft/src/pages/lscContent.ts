@@ -172,7 +172,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
             },
           ],
         },
-        { segments: [{ t: `経験ゼロ、リソースゼロ、給料ゼロ`, em: 'strong' }] },
+        { segments: [{ t: `経験ゼロ、コネゼロ、資金ゼロ`, em: 'strong' }] },
         {
           segments: [
             { t: `君にあるのは、君よりも頼りない共同創業者と、\nまだ名前すら決まっていない` },
