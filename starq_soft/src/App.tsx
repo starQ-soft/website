@@ -51,10 +51,14 @@ const App = () => {
     typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
   );
 
-  const banners = [isMobile
-    ? `${import.meta.env.BASE_URL}banner2_mobile.png`
-    : `${import.meta.env.BASE_URL}banner2.png`,
-    // `${import.meta.env.BASE_URL}banner2.png`, `${import.meta.env.BASE_URL}banner3.png`
+  const banners = [
+    {
+      image: isMobile
+        ? `${import.meta.env.BASE_URL}banner2_mobile.png`
+        : `${import.meta.env.BASE_URL}banner2.png`,
+      link: 'https://starqsoft.com/love-startup-cofounder',
+      label: 'Love Startup Cofounder',
+    },
   ];
 
   useEffect(() => {
@@ -130,7 +134,9 @@ const App = () => {
               <MotionHeroSlide
                 key={bannerIndex}
                 custom={direction}
-                $bgImage={banners[bannerIndex]}
+                $bgImage={banners[bannerIndex].image}
+                href={banners[bannerIndex].link}
+                aria-label={banners[bannerIndex].label}
                 variants={heroSlideVariants}
                 initial="enter"
                 animate="center"

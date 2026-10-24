@@ -192,7 +192,7 @@ export const HeroSlides = styled.div`
   overflow: hidden;
 `;
 
-export const HeroSlide = styled.div<{ $bgImage?: string }>`
+export const HeroSlide = styled.a<{ $bgImage?: string }>`
   position: absolute;
   inset: 0;
   background-image: ${({ $bgImage }) => $bgImage ? `url(${$bgImage})` : 'none'};
@@ -236,6 +236,11 @@ export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  pointer-events: none;
+
+  a, button {
+    pointer-events: auto;
+  }
 
   @media (max-width: 768px) {
     font-size: 0.5rem;
