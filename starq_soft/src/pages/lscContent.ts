@@ -164,27 +164,27 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
       title: `// ストーリー`,
       subtitle: `「一緒に起業しよう！」`,
       paragraphs: [
-        { segments: [{ t: `共に始まる冒険！`, em: 'span' }] },
+        { segments: [{ t: `一緒に始める冒険！`, em: 'span' }] },
         {
           segments: [
             {
-              t: `大学を卒業し、就職もままならない君は、ルームメイトに丸め込まれ、\n思いもよらなかった道へと足を踏み入れる……`,
+              t: `大学卒業後、就職活動に失敗したあなた、\nルームメイトに誘われ、思いもよらなかった道へと足を踏み入れる……`,
             },
           ],
         },
-        { segments: [{ t: `経験ゼロ、資金ゼロ、給料ゼロ`, em: 'strong' }] },
+        { segments: [{ t: `経験ゼロ、リソースゼロ、給料ゼロ`, em: 'strong' }] },
         {
           segments: [
-            { t: `手にあるのは、君よりも頼りない共同創業者と、\n名前すらまともに決まっていない` },
+            { t: `君にあるのは、君よりも頼りない共同創業者と、\nまだ名前すら決まっていない` },
             { t: `「AI彼女育成計画」`, em: 'span' },
             { t: `だけ。` },
           ],
         },
         {
           segments: [
-            { t: `成功するかどうかも分からない冒険。人生の空白期に、\n` },
+            { t: `成功の保証なんてない冒険。\n人生のこの真っ白な一章で、\n君は` },
             { t: `「自分だけの答えを創り出す」`, em: 'span' },
-            { t: `ことに挑む。` },
+            { t: `ために踏み出す！` },
           ],
         },
       ],
@@ -369,8 +369,8 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         [{ big: `Co-founder`, small: ``, size: '1.5em' }],
       ],
       description: [
-        `One shared apartment, a group of wildly different companions,`,
-        `and a passionate, bewildering, heart-fluttering journey of creating together.`,
+        `One shared apartment, a group of wildly different partners,`,
+        `and a passionate, heart-fluttering journey of creating together.`,
       ],
       gameDescription: `The Steam Store is Now Open!`,
       wishlist: `Add to Wishlist`,
@@ -383,22 +383,22 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           segments: [
             {
-              t: `After graduating from college with no success in your job search, your roommate talks you into it,\nand you stumble onto a path you'd never imagined...`,
+              t: `After graduating from college and failing your job search, \nyour roommate talks you into a path you'd never imagined...`,
             },
           ],
         },
         { segments: [{ t: `No experience, no resources, no pay`, em: 'strong' }] },
         {
           segments: [
-            { t: `All you have is a group of co-founders even less reliable than you,\nand an ` },
+            { t: `All you have is a co-founder even less reliable than you,\nand an ` },
             { t: `"AI Girlfriend Project"`, em: 'span' },
-            { t: ` that doesn't even have a proper name yet.` },
+            { t: ` that doesn't even have a name yet.` },
           ],
         },
         {
           segments: [
-            { t: `It's an adventure with no guarantee of success. In this blank chapter of life,\nyou set out to ` },
-            { t: `"create your own answer."`, em: 'span' },
+            { t: `It's an adventure with no guarantee of success.\n In this blank chapter of life,\nyou set out to ` },
+            { t: `"create your own answer"!`, em: 'span' },
           ],
         },
       ],
@@ -607,9 +607,9 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         { segments: [{ t: `零经验、零资源、零薪资`, em: 'strong' }] },
         {
           segments: [
-            { t: `唯一拥有的，是一群比你还不靠谱的合伙人，\n以及一款连名字都没取好的` },
+            { t: `唯一拥有的，是比你还不靠谱的合伙人，\n以及一款连名字都没取好的` },
             { t: `「AI女友养成计划」`, em: 'span' },
-            { t: `。` },
+            { t: `!` },
           ],
         },
         {
@@ -822,7 +822,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         { segments: [{ t: `零經驗、零資源、零薪資`, em: 'strong' }] },
         {
           segments: [
-            { t: `唯一擁有的，是一群比你還不靠譜的合夥人，\n以及一款連名字都沒取好的` },
+            { t: `唯一擁有的，是比你還不靠譜的合夥人，\n以及一款連名字都沒取好的` },
             { t: `「AI女友養成計畫」`, em: 'span' },
             { t: `。` },
           ],
@@ -831,7 +831,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
           segments: [
             { t: `這是一次不知能否成功的冒險，在人生的空白期裡，\n嘗試去` },
             { t: `「創造自己的答案」`, em: 'span' },
-            { t: `。` },
+            { t: `！` },
           ],
         },
       ],
@@ -1118,7 +1118,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "함께 시작하는 모험!",
+              "t": "우리가 함께 시작하는 모험!",
               "em": "span"
             }
           ]
@@ -1126,14 +1126,14 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "대학을 졸업했지만 취업에 실패한 당신은 룸메이트의 말에 휘말려,\n생각지도 못했던 길에 얼떨결에 발을 들이게 된다……"
+              "t": "대학을 졸업하고도 일자리를 구하지 못한 당신은,\n룸메이트의 설득으로 상상도 못 했던 길에 들어선다…"
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "경험 제로, 자원 제로, 급여 제로",
+              "t": "경험도, 자원도, 급여도 없다",
               "em": "strong"
             }
           ]
@@ -1141,7 +1141,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "가진 것이라곤 당신보다 더 믿음직스럽지 못한 공동 창업자들과,\n이름조차 제대로 정하지 못한 "
+              "t": "가진 것이라곤 당신보다도 더 믿음직하지 못한 공동 창업자 한 명과,\n아직 이름조차 없는 "
             },
             {
               "t": "「AI 여자친구 프로젝트」",
@@ -1155,14 +1155,14 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "성공할 수 있을지조차 알 수 없는 모험. 인생의 공백기 속에서,\n"
+              "t": "성공이 보장되지 않는 모험.\n인생의 이 텅 빈 장에서,\n당신은 "
             },
             {
-              "t": "「나만의 답을 만들어 내는 것」",
+              "t": "「나만의 답을 만들어 내기」",
               "em": "span"
             },
             {
-              "t": "에 도전한다."
+              "t": " 위해 첫발을 내딛는다!"
             }
           ]
         }
@@ -1482,7 +1482,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "¡Una aventura que comienza juntos!",
+              "t": "¡Una aventura que comenzamos juntos!",
               "em": "span"
             }
           ]
@@ -1490,14 +1490,14 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Tras graduarte de la universidad sin conseguir empleo, tu compañero de piso te convence y,\nsin saber muy bien cómo, acabas tomando un camino que jamás habías imaginado……"
+              "t": "Tras graduarte de la universidad y no conseguir trabajo,\ntu compañero de piso te convence para tomar un camino que jamás habías imaginado…"
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Cero experiencia, cero recursos, cero sueldo",
+              "t": "Sin experiencia, sin recursos, sin sueldo",
               "em": "strong"
             }
           ]
@@ -1505,28 +1505,28 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Lo único que tienes es un grupo de socios aún menos fiables que tú\ny un "
+              "t": "Lo único que tienes es un cofundador aún menos fiable que tú\ny un "
             },
             {
               "t": "«Proyecto Novia IA»",
               "em": "span"
             },
             {
-              "t": " que ni siquiera tiene un nombre definitivo."
+              "t": " que ni siquiera tiene nombre todavía."
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Una aventura cuyo éxito nadie puede garantizar. En este vacío de tu vida,\nintentarás "
+              "t": "Es una aventura sin garantía de éxito.\nEn este capítulo en blanco de tu vida,\n¡te propones "
             },
             {
               "t": "«crear tu propia respuesta»",
               "em": "span"
             },
             {
-              "t": "."
+              "t": "!"
             }
           ]
         }
@@ -1846,7 +1846,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Приключение, которое начинается вместе!",
+              "t": "Приключение, которое мы начинаем вместе!",
               "em": "span"
             }
           ]
@@ -1854,14 +1854,14 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "После университета ты так и не находишь работу. Сосед по квартире уговаривает тебя,\nи ты неожиданно вступаешь на путь, о котором прежде даже не думал……"
+              "t": "После окончания университета и безуспешных поисков работы\nты поддаёшься уговорам соседа по квартире и выбираешь путь, о котором даже не думал…"
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Ноль опыта, ноль ресурсов, ноль зарплаты",
+              "t": "Ни опыта, ни ресурсов, ни зарплаты",
               "em": "strong"
             }
           ]
@@ -1869,28 +1869,28 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "У тебя есть лишь партнёры, которые ещё менее надёжны, чем ты,\nи "
+              "t": "Всё, что у тебя есть, — сооснователь, ещё менее надёжный, чем ты,\nи "
             },
             {
               "t": "«Проект ИИ-девушки»",
               "em": "span"
             },
             {
-              "t": ", у которого пока даже нет нормального названия."
+              "t": ", у которого пока нет даже названия."
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Приключение без гарантии успеха. В этот пустой период жизни\nты пытаешься "
+              "t": "Это приключение без гарантии успеха.\nВ этой ещё не написанной главе своей жизни\nты берёшься "
             },
             {
               "t": "«создать собственный ответ»",
               "em": "span"
             },
             {
-              "t": "."
+              "t": "!"
             }
           ]
         }
@@ -2210,7 +2210,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Cuộc phiêu lưu bắt đầu cùng nhau!",
+              "t": "Cuộc phiêu lưu chúng ta cùng bắt đầu!",
               "em": "span"
             }
           ]
@@ -2218,14 +2218,14 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Sau khi tốt nghiệp đại học nhưng không tìm được việc, bạn bị người bạn cùng phòng thuyết phục,\nrồi bất ngờ bước lên một con đường chưa từng tưởng tượng……"
+              "t": "Sau khi tốt nghiệp đại học và tìm việc không thành,\nbạn được người bạn cùng phòng thuyết phục bước vào một con đường chưa từng tưởng tượng…"
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Không kinh nghiệm, không tài nguyên, không lương",
+              "t": "Không kinh nghiệm, không nguồn lực, không lương",
               "em": "strong"
             }
           ]
@@ -2233,28 +2233,28 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Thứ duy nhất bạn có là một nhóm đồng sáng lập còn thiếu tin cậy hơn cả bạn,\ncùng một "
+              "t": "Tất cả những gì bạn có là một người đồng sáng lập còn kém đáng tin hơn cả bạn,\nvà một "
             },
             {
-              "t": "「Dự án Bạn gái AI」",
+              "t": "“Dự án Bạn gái AI”",
               "em": "span"
             },
             {
-              "t": " thậm chí còn chưa có tên chính thức."
+              "t": " thậm chí còn chưa có tên."
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Đây là cuộc phiêu lưu chưa ai biết có thành công hay không. Trong khoảng trống của cuộc đời,\nbạn thử "
+              "t": "Đây là một cuộc phiêu lưu không có gì đảm bảo sẽ thành công.\nTrong chương còn bỏ trống này của cuộc đời,\nbạn bắt đầu hành trình "
             },
             {
-              "t": "「tạo ra câu trả lời của riêng mình」",
+              "t": "“tạo ra câu trả lời của riêng mình”",
               "em": "span"
             },
             {
-              "t": "."
+              "t": "!"
             }
           ]
         }
@@ -2574,7 +2574,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Une aventure qui commence ensemble !",
+              "t": "Une aventure que nous commençons ensemble !",
               "em": "span"
             }
           ]
@@ -2582,14 +2582,14 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Fraîchement diplômé mais sans emploi, tu te laisses convaincre par ton colocataire\net t’engages, presque malgré toi, sur une voie que tu n’avais jamais envisagée……"
+              "t": "Après tes études universitaires et une recherche d’emploi infructueuse,\nton colocataire te convainc de t’engager sur une voie que tu n’avais jamais imaginée…"
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Zéro expérience, zéro ressource, zéro salaire",
+              "t": "Ni expérience, ni ressources, ni salaire",
               "em": "strong"
             }
           ]
@@ -2597,28 +2597,28 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Tu n’as pour tout bagage qu’une équipe d’associés encore moins fiables que toi\net un "
+              "t": "Tout ce que tu as, c’est un cofondateur encore moins fiable que toi\net un "
             },
             {
               "t": "« Projet Petite Amie IA »",
               "em": "span"
             },
             {
-              "t": " qui n’a même pas encore de vrai nom."
+              "t": " qui n’a même pas encore de nom."
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Une aventure dont personne ne peut garantir le succès. Dans ce passage à vide de ta vie,\ntu tenteras de "
+              "t": "C’est une aventure sans garantie de succès.\nDans ce chapitre encore vierge de ta vie,\ntu te lances pour "
             },
             {
               "t": "« créer ta propre réponse »",
               "em": "span"
             },
             {
-              "t": "."
+              "t": " !"
             }
           ]
         }
@@ -2938,7 +2938,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Un’avventura che comincia insieme!",
+              "t": "Un’avventura che iniziamo insieme!",
               "em": "span"
             }
           ]
@@ -2946,14 +2946,14 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Dopo la laurea, senza essere riuscito a trovare lavoro, ti lasci convincere dal tuo coinquilino\ne finisci per imboccare una strada che non avevi mai immaginato……"
+              "t": "Dopo la laurea e una ricerca di lavoro senza successo,\nil tuo coinquilino ti convince a imboccare una strada che non avevi mai immaginato…"
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Zero esperienza, zero risorse, zero stipendio",
+              "t": "Niente esperienza, niente risorse, niente stipendio",
               "em": "strong"
             }
           ]
@@ -2961,28 +2961,28 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Tutto ciò che hai è un gruppo di soci ancora meno affidabili di te\ne un "
+              "t": "Tutto ciò che hai è un cofondatore ancora meno affidabile di te\ne un "
             },
             {
               "t": "«Progetto Fidanzata IA»",
               "em": "span"
             },
             {
-              "t": " che non ha nemmeno un vero nome."
+              "t": " che non ha nemmeno un nome."
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Un’avventura dal successo incerto. In questo vuoto della tua vita,\nproverai a "
+              "t": "È un’avventura senza alcuna garanzia di successo.\nIn questo capitolo ancora bianco della tua vita,\nti metti in cammino per "
             },
             {
               "t": "«creare la tua risposta»",
               "em": "span"
             },
             {
-              "t": "."
+              "t": "!"
             }
           ]
         }
@@ -3310,14 +3310,14 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Nach dem Studium findest du keinen Job. Dein Mitbewohner redet so lange auf dich ein,\nbis du plötzlich einen Weg einschlägst, den du dir nie vorgestellt hättest……"
+              "t": "Nach dem Studium bleibt deine Jobsuche erfolglos.\nDein Mitbewohner überredet dich, einen Weg einzuschlagen, den du dir nie vorgestellt hättest…"
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Null Erfahrung, null Ressourcen, null Gehalt",
+              "t": "Keine Erfahrung, keine Ressourcen, kein Gehalt",
               "em": "strong"
             }
           ]
@@ -3325,28 +3325,28 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Alles, was du hast, sind Partner, die noch unzuverlässiger sind als du,\nund ein "
+              "t": "Alles, was du hast, ist ein Mitgründer, der noch unzuverlässiger ist als du,\nund ein "
             },
             {
               "t": "„KI-Freundin-Projekt“",
               "em": "span"
             },
             {
-              "t": ", das nicht einmal einen richtigen Namen hat."
+              "t": ", das noch nicht einmal einen Namen hat."
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Ein Abenteuer ohne Erfolgsgarantie. In dieser Leerstelle deines Lebens\nversuchst du, "
+              "t": "Es ist ein Abenteuer ohne Erfolgsgarantie.\nIn diesem noch unbeschriebenen Kapitel deines Lebens\nmachst du dich daran, "
             },
             {
               "t": "„deine eigene Antwort zu erschaffen“",
               "em": "span"
             },
             {
-              "t": "."
+              "t": "!"
             }
           ]
         }
@@ -3666,7 +3666,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "การผจญภัยที่เริ่มต้นไปด้วยกัน!",
+              "t": "การผจญภัยที่เราเริ่มต้นไปด้วยกัน!",
               "em": "span"
             }
           ]
@@ -3674,14 +3674,14 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "หลังเรียนจบแต่หางานไม่ได้ คุณถูกเพื่อนร่วมห้องเกลี้ยกล่อม\nจนก้าวเข้าสู่เส้นทางที่ไม่เคยจินตนาการไว้……"
+              "t": "หลังเรียนจบมหาวิทยาลัยและหางานไม่สำเร็จ\nเพื่อนร่วมห้องก็เกลี้ยกล่อมให้คุณก้าวเข้าสู่เส้นทางที่ไม่เคยจินตนาการไว้…"
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "ประสบการณ์ศูนย์ ทรัพยากรศูนย์ เงินเดือนศูนย์",
+              "t": "ไม่มีประสบการณ์ ไม่มีทรัพยากร ไม่มีค่าจ้าง",
               "em": "strong"
             }
           ]
@@ -3689,28 +3689,28 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "สิ่งเดียวที่คุณมีคือเหล่าผู้ร่วมก่อตั้งที่ไว้ใจได้น้อยกว่าคุณเสียอีก\nและ "
+              "t": "ทั้งหมดที่คุณมีคือผู้ร่วมก่อตั้งหนึ่งคนที่พึ่งพาได้น้อยกว่าคุณเสียอีก\nและ "
             },
             {
-              "t": "「โครงการแฟนสาว AI」",
+              "t": "“โครงการแฟนสาว AI”",
               "em": "span"
             },
             {
-              "t": " ที่ยังไม่มีแม้แต่ชื่ออย่างเป็นทางการ"
+              "t": " ที่ยังไม่มีแม้แต่ชื่อ"
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "นี่คือการผจญภัยที่ไม่มีใครรู้ว่าจะสำเร็จหรือไม่ ในช่วงว่างเปล่าของชีวิต\nคุณจะลอง "
+              "t": "นี่คือการผจญภัยที่ไม่มีหลักประกันว่าจะสำเร็จ\nในบทที่ยังว่างเปล่าของชีวิตนี้\nคุณออกเดินทางเพื่อ "
             },
             {
-              "t": "「สร้างคำตอบของตัวเอง」",
+              "t": "“สร้างคำตอบของตัวเอง”",
               "em": "span"
             },
             {
-              "t": ""
+              "t": "!"
             }
           ]
         }
@@ -4030,7 +4030,7 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Pengembaraan yang bermula bersama!",
+              "t": "Pengembaraan yang kita mulakan bersama!",
               "em": "span"
             }
           ]
@@ -4038,14 +4038,14 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Selepas tamat universiti tetapi gagal mendapat pekerjaan, anda dipujuk oleh rakan serumah\ndan tanpa disangka melangkah ke jalan yang tidak pernah anda bayangkan……"
+              "t": "Selepas tamat universiti dan gagal mendapat pekerjaan,\nrakan serumah memujuk anda untuk menempuh jalan yang tidak pernah anda bayangkan…"
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Sifar pengalaman, sifar sumber, sifar gaji",
+              "t": "Tiada pengalaman, tiada sumber, tiada gaji",
               "em": "strong"
             }
           ]
@@ -4053,28 +4053,28 @@ export const lscContent: Partial<Record<LanguageCode, LscContent>> = {
         {
           "segments": [
             {
-              "t": "Apa yang anda miliki hanyalah sekumpulan pengasas bersama yang lebih tidak boleh diharap daripada anda,\nserta "
+              "t": "Apa yang anda miliki hanyalah seorang pengasas bersama yang lebih sukar diharap daripada anda,\ndan sebuah "
             },
             {
               "t": "“Projek Teman Wanita AI”",
               "em": "span"
             },
             {
-              "t": " yang masih belum mempunyai nama rasmi."
+              "t": " yang belum pun mempunyai nama."
             }
           ]
         },
         {
           "segments": [
             {
-              "t": "Sebuah pengembaraan tanpa jaminan kejayaan. Dalam kekosongan hidup ini,\nanda cuba "
+              "t": "Ini pengembaraan tanpa jaminan kejayaan.\nDalam bab kehidupan yang masih kosong ini,\nanda memulakan langkah untuk "
             },
             {
               "t": "“mencipta jawapan anda sendiri”",
               "em": "span"
             },
             {
-              "t": "."
+              "t": "!"
             }
           ]
         }
